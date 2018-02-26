@@ -1,0 +1,10 @@
+message I18NPHNPhoneNumber {
+	required int32 countryCode = 1;
+	required uint64 nationalNumber = 2;
+	optional string extension = 3;
+	optional bool italianLeadingZero = 4;
+	optional string rawInput = 5;
+	optional I18NPHNPhoneNumber_CountryCodeSource countryCodeSource = 6;
+	optional string preferredDomesticCarrierCode = 7;
+	optional int32 numberOfLeadingZeros = 8;
+}

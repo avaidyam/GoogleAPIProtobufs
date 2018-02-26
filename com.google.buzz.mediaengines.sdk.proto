@@ -1,0 +1,35 @@
+message VideoCallOptions {
+	optional bool useP2P = 1;
+	optional bool isPstnOnlyClient = 2;
+	optional bool useGracefulCallDegradation = 3;
+	optional bool enableSinglecast = 4;
+	optional int32 startBitrate = 5;
+	optional bool enableOpusFec = 6;
+	optional bool allowH264 = 7;
+	optional int32 bitrateMode = 8;
+	optional VideoCallOptions_OpusPreference opusPreference = 10;
+	optional bool enableBitrateProbing = 11;
+	optional bool enableUsePaddingForBitrateProbing = 12;
+	optional bool enableCombinedAudioVideoBwe = 13;
+	optional bool enableScreenshareLayerRates = 14;
+	optional int32 screenshareLayerTargetBitrate = 15;
+	optional int32 screenshareLayerMaxBitrate = 16;
+	optional int32 lowVideoBandwidthThreshold = 18;
+	optional bool enableOpusDtx = 19;
+	optional float bandwidthRampupRate = 20;
+	optional int32 bandwidthRampupConstantBps = 21;
+	optional int32 lowVideoBandwidthConsecutiveFramesRequired = 23;
+	optional int32 callStartStatsWarmupFrames = 24;
+	optional bool enableQos = 25;
+	optional bool enableDirectRendering = 26;
+	optional int32 participantFastPollPeriodMillis = 27;
+	optional int32 sessionFastPollPeriodMillis = 28;
+	optional bool enablePeerconnection = 29;
+	optional bool reportRtpPushes = 30;
+	optional int32 minVideoBitrateBps = 31;
+	optional bool suspendBelowMinBitrate = 32;
+	optional bool enableLevelControl = 33;
+}
+
+message VideoGlobalOptions {
+}

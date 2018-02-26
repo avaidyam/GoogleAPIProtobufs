@@ -1,0 +1,102 @@
+message GFIFlightsSearchHeader {
+	optional string title = 1;
+	optional string departureDateFormatted = 2;
+	optional string returnDateFormatted = 3;
+	optional bool sponsored = 4;
+	optional GFISeatingClass seatingClass = 5;
+	optional int32 passengerCount = 6;
+	optional string specificAirlineId = 7;
+	optional string specificAirlineName = 8;
+	optional string sponsoredLabel = 9;
+}
+
+message GFIScheduleLocations_ScheduleLocation {
+	optional string locationNameFormatted = 1;
+	optional string durationFormatted = 2;
+	optional string logoId = 3;
+	optional string airlineNamesFormatted = 4;
+	optional GFIImage airlineLogo = 5;
+}
+
+message GFIScheduleLocations {
+	repeated GFIScheduleLocations_ScheduleLocation locationsArray = 1;
+}
+
+message GFISpecificFlights_SpecificFlight {
+	optional string logoId = 1;
+	optional string airlineNamesFormatted = 2;
+	optional string departureTimeFormatted = 3;
+	optional string arrivalTimeFormatted = 4;
+	optional int32 arrivalDateDelta = 5;
+	optional string durationFormatted = 6;
+	optional string stopsFormatted = 7;
+	optional string departureAirportCode = 8;
+	optional string arrivalAirportCode = 9;
+	optional string priceFormatted = 10;
+	optional GFILink directLink = 11;
+	optional GFIImage airlineLogo = 12;
+}
+
+message GFISpecificFlights {
+	repeated GFISpecificFlights_SpecificFlight specificFlightsArray = 1;
+}
+
+message GFIAirlineGroups_AirlineGroup_Airline {
+	optional string logoId = 1;
+	optional string airlineName = 2;
+	optional string priceFormatted = 3;
+	optional GFIImage airlineLogo = 4;
+}
+
+message GFIAirlineGroups_AirlineGroup {
+	optional string durationFormatted = 1;
+	repeated GFIAirlineGroups_AirlineGroup_Airline airlinesArray = 2;
+}
+
+message GFIAirlineGroups {
+	optional GFIAirlineGroups_AirlineGroup nonstopAirlines = 1;
+	optional GFIAirlineGroups_AirlineGroup connectingAirlines = 2;
+	optional GFIAirlineGroups_AirlineGroup trains = 3;
+	optional string nonstopFlightsText = 4;
+	optional string connectingFlightsText = 5;
+	optional string fromPriceText = 6;
+	optional string trainsText = 7;
+}
+
+message GFIPricedDestinationInfos_PricedDestinationInfo {
+	optional string destinationName = 1;
+	optional string durationFormatted = 2;
+	optional string priceFormatted = 3;
+}
+
+message GFIPricedDestinationInfos {
+	repeated GFIPricedDestinationInfos_PricedDestinationInfo destinationsArray = 1;
+	optional string fromPriceText = 2;
+}
+
+message GFIConnectingScheduleEntry {
+	optional string durationFormatted = 1;
+	optional string logoId = 2;
+	optional string airlineNamesFormatted = 3;
+	optional string connectingCityNamesFormatted = 4;
+	optional GFIImage airlineLogo = 5;
+}
+
+message GFINonStopFlightScheduleEntry {
+	optional string departureTimeFormatted = 1;
+	optional string arrivalTimeFormatted = 2;
+	optional int32 arrivalDateDelta = 3;
+	optional string departureAirportCode = 4;
+	optional string arrivalAirportCode = 5;
+	optional string airlineId = 6;
+	optional string airlineName = 7;
+	optional int32 flightCode = 8;
+	optional GFIImage airlineLogo = 9;
+}
+
+message GFIScheduleEntries {
+	repeated GFINonStopFlightScheduleEntry flightEntriesArray = 1;
+	repeated GFIConnectingScheduleEntry connectingEntriesArray = 2;
+	optional string nonstopFlightsText = 3;
+	optional string connectingFlightsText = 4;
+}

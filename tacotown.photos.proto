@@ -1,0 +1,177 @@
+message PhotosLocation {
+	optional double latitude = 1;
+	optional double longitude = 2;
+	optional string name = 3;
+	optional string clusterId = 4;
+	optional string URL = 5;
+}
+
+message Photosdata_User {
+	required string id_p = 1;
+	optional string profileURL = 2;
+	optional string deprecatedEmailAddress = 3;
+	optional string displayName = 4;
+	optional string profilePhotoURL = 5;
+	optional string givenName = 6;
+	optional int32 photoResultCount = 7;
+	optional string detectedFaceURL = 8;
+	optional string mediaKey = 9;
+}
+
+message Photosdata_Album {
+	optional Photosdata_Provider provider = 1;
+	optional Photosdata_Photo cover = 2;
+	required string title = 3;
+	optional string description_p = 4;
+	optional int32 photoCount = 5;
+	required string id_p = 6;
+	optional PhotosAlbumType albumType = 7;
+	optional string timestampSeconds = 8;
+	optional string pwaManageURL = 9;
+	optional string albumAcl = 10;
+	repeated Photosdata_Photo sampleArray = 11;
+	repeated string childIdArray = 13;
+	optional Photosdata_User owner = 14;
+	repeated string eventIdArray = 16;
+	optional string deprecatedAudienceString = 18;
+	optional bool isReshareDisabled = 19;
+	optional int32 numGaiaRecipients = 21;
+	optional int32 numNonGaiaRecipients = 22;
+	optional bool showVisibilityInspector = 23;
+	optional int32 numSoftDeletedPhotos = 24;
+	optional int32 numGeoPhotos = 25;
+	optional bool showGeoInfo = 26;
+	optional string authkey = 27;
+	optional int32 namedShapeCount = 28;
+	optional int32 unnamedShapeCount = 29;
+	optional string downloadURL = 31;
+	optional int64 entityVersion = 32;
+	optional bool coverSelectedByUser = 33;
+	optional int64 modTime = 34;
+	repeated string labelsArray = 35;
+	repeated PhotosCollectionMetadata collectionMetadataArray = 36;
+	optional bool deleted = 37;
+	optional string mediaKey = 40;
+	optional bool userOrderedAlbum = 41;
+	optional string envelopeMediaKey = 44;
+}
+
+message Photosdata_Photo {
+	optional string pageURL = 1;
+	required Photosdata_Provider provider = 2;
+	required Photosdata_Image original = 3;
+	repeated Photosdata_Image thumbnailArray = 4;
+	optional string caption = 5;
+	optional string id_p = 6;
+	optional Photosdata_User owner = 8;
+	optional string title = 9;
+	optional int32 totalComments = 10;
+	optional Photosdata_Album album = 12;
+	optional Photosdata_Video video = 13;
+	optional int64 totalLikes = 14;
+	optional string description_p = 15;
+	optional double timestampSeconds = 16;
+	optional string geoLocation = 19;
+	optional double uploadTimestampSeconds = 20;
+	optional bool softDeleted = 21;
+	optional bool viewerCanTag = 22;
+	optional bool countryAwareTakenDown = 23;
+	optional Photosdata_Image unfiltered = 26;
+	optional bool viewerCanComment = 27;
+	optional bool viewerCanPlusOne = 28;
+	optional string pixyFilter = 29;
+	optional int64 fileSize = 32;
+	optional int64 viewCount = 33;
+	optional bool public_p = 34;
+	optional bool copyrightViolation = 36;
+	optional string reportAbuseToken = 38;
+	optional bool isYoutubeVideo = 39;
+	optional bool isPanorama = 40;
+	optional int32 albumSummaryRank = 42;
+	optional int64 entityVersion = 43;
+	repeated string activityIdArray = 45;
+	repeated string streamIdArray = 46;
+	optional int64 imageVersion = 50;
+	optional string projectionType = 51;
+	optional int32 fullPanoWidthPixels = 52;
+	optional int32 fullPanoHeightPixels = 53;
+	optional int32 croppedAreaImageWidthPixels = 54;
+	optional int32 croppedAreaImageHeightPixels = 55;
+	optional int32 croppedAreaLeftPixels = 56;
+	optional int32 croppedAreaTopPixels = 57;
+	optional bool photoWasShared = 58;
+	optional bool isYouTourPhoto = 59;
+	optional string mediaKey = 60;
+	optional bool isFaceDetectionComplete = 61;
+	optional string copyrightNoticeDetailsURL = 62;
+	optional string hmacSha512 = 63;
+	optional bool deleted = 64;
+	repeated PhotosCollectionMetadata collectionMetadataArray = 65;
+	optional bool autoenhanced = 68;
+	optional bool isPendingTag = 69;
+	optional bool autoComposition = 72;
+	optional bool viewerCanDownload = 73;
+	repeated string duplicateIdArray = 75;
+	optional bool isAnimated = 77;
+	optional Photosdata_Image unfilteredWithTransforms = 78;
+	optional bool isHighlighted = 81;
+	optional string downloadURL = 82;
+	optional int32 mimeType = 83;
+	optional string sha1 = 87;
+	optional string sourceSha1 = 88;
+	optional float poseHeadingDegrees = 89;
+	optional float posePitchDegrees = 90;
+	optional float poseRollDegrees = 91;
+	optional bool is360Panorama = 92;
+	optional string downloadOriginalURL = 93;
+	optional int64 timeZoneOffsetSec = 94;
+	optional bool autoEnhanceImpactful = 95;
+	optional string localDedupKey = 98;
+}
+
+message Photosdata_Video {
+	optional string id_p = 1;
+	optional Photosdata_Video_Status status = 2;
+	repeated Photosdata_VideoStream streamArray = 3;
+	optional int64 durationMillis = 4;
+	optional string downloadURL = 6;
+	optional bool validThumbnail = 7;
+	optional Photosdata_VideoStream original = 8;
+	repeated Photosdata_VideoStream autoEnhancePreviewStreamArray = 10;
+}
+
+message Photosdata_VideoStream {
+	required int32 formatId = 1;
+	required int32 width = 2;
+	required int32 height = 3;
+	optional string URL = 4;
+}
+
+message Photosdata_Image {
+	required string URL = 1;
+	optional int32 width = 2;
+	optional int32 height = 3;
+	optional int32 rotation = 4;
+}
+
+message Photosdata {
+}
+
+message PhotosViewerData {
+	repeated string associatedAlbumIdArray = 2;
+}
+
+message PhotosCollectionMetadata {
+	optional string collectionId = 1;
+	optional string title = 2;
+	optional int64 photoCount = 3;
+	optional string relativeURL = 4;
+	optional PhotosCollectionMetadata_Type type = 5;
+	optional string authKey = 7;
+	repeated PhotosLocation locationArray = 10;
+	optional int64 summaryPhotoCount = 11;
+	optional string mediaId = 12;
+	optional string ownerId = 13;
+	optional string fullURL = 14;
+	optional string equivalenceToken = 15;
+}

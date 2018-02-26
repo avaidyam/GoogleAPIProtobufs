@@ -1,0 +1,583 @@
+message HOPBHangoutClientPushNotification {
+	optional CPBClientStateUpdateHeader stateUpdateHeader = 1;
+	optional HOPBPushNotification notification = 2;
+}
+
+message HOPBPushNotification {
+	optional HOPBHangoutParticipantsPushNotification hangoutParticipantsUpdate = 1;
+	optional HOPBHangoutsPushNotification hangoutsUpdate = 8;
+	optional bytes meetingsNotification = 12;
+}
+
+message HOPBHangoutParticipantsPushNotification {
+	optional HOPBSyncMetadata syncMetadata = 1;
+	repeated HOPBHangoutParticipant modifiedArray = 2;
+	repeated HOPBHangoutParticipantIdentifier deletedArray = 3;
+	optional EndCause endCause = 4;
+	optional HOPBHangoutParticipantIdentifier resyncCollection = 5;
+}
+
+message HOPBHangoutsPushNotification {
+	optional HOPBSyncMetadata syncMetadata = 1;
+	repeated HOPBHangout modifiedArray = 2;
+}
+
+message HOPBHangoutClientBatchNotification {
+	repeated HOPBHangoutClientPushNotification notificationArray = 1;
+}
+
+message HOPBHangoutInvitationAckResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+}
+
+message HOPBHangoutInvitationAckRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBHangoutInvitationAck ack = 2;
+}
+
+message HOPBHangoutInvitationAck {
+	optional int64 invitationId = 1;
+	optional string hangoutId = 2;
+	optional int64 receivedTimestampUs = 3;
+	optional int64 ringDurationMs = 4;
+	optional HOPBHangoutInvitationAck_IndirectUserAction indirectAction = 5;
+	optional HOPBHangoutInvitationAck_UserAction userAction = 6;
+}
+
+message HOPBHangoutParticipantRemoveResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBSyncMetadata syncMetadata = 2;
+}
+
+message HOPBHangoutParticipantRemoveRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional string participantId = 3;
+	optional HOPBSyncMetadata syncMetadata = 4;
+	optional EndCause endCause = 5;
+	repeated string resourceIdArray = 6;
+	repeated HOPBHangoutParticipantIdentifier resourceArray = 7;
+}
+
+message HOPBHangoutParticipantModifyResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBHangoutParticipant participant = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBHangoutParticipant resourceArray = 4;
+}
+
+message HOPBHangoutParticipantModifyRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBHangoutParticipant participant = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBHangoutParticipant resourceArray = 4;
+}
+
+message HOPBHangoutParticipantQueryResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBHangoutParticipant participant = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBHangoutParticipantQueryRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional string participantId = 3;
+	optional HOPBSyncMetadata syncMetadata = 4;
+}
+
+message HOPBHangoutParticipantAddResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBHangoutParticipant participant = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	optional HOPBHangoutParticipantAddErrorCode errorCode = 4;
+	repeated HOPBHangoutParticipant resourceArray = 5;
+}
+
+message HOPBHangoutParticipantAddRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBHangoutParticipant participant = 2;
+	optional bool overrideRoomsize = 4;
+	optional HOPBSyncMetadata syncMetadata = 5;
+	repeated HOPBHangoutParticipant resourceArray = 6;
+}
+
+message HOPBHangoutParticipantSearchResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	repeated HOPBHangoutParticipant participantArray = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBHangoutParticipantSearchRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBHangoutModifyResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBHangout hangout = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBHangout resourceArray = 4;
+}
+
+message HOPBHangoutModifyRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBHangout hangout = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBHangout resourceArray = 4;
+}
+
+message HOPBHangoutResolveResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional string hangoutId = 2;
+	optional string sharingURL = 4;
+	optional HOPBSyncMetadata syncMetadata = 5;
+}
+
+message HOPBHangoutResolveRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBExternalKey externalKey = 2;
+	repeated CPBClientInviteeId inviteeArray = 3;
+	optional HOPBNamedHangout namedHangout = 4;
+	optional bool isJoining = 5;
+	optional HOPBHangout_HangoutMediaType mediaType = 6;
+	optional string sharingURL = 7;
+	optional HOPBSyncMetadata syncMetadata = 8;
+}
+
+message HOPBHangoutQueryResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBHangout hangout = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBHangoutQueryRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBHangoutAddResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBHangout hangout = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	optional string sharingURL = 4;
+	repeated HOPBHangout resourceArray = 5;
+}
+
+message HOPBHangoutAddRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBHangout hangout = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBHangout resourceArray = 4;
+}
+
+message HOPBNamedHangout {
+	optional string name = 1;
+	optional string domain = 2;
+	optional string calendarId = 3;
+	optional string eventId = 4;
+}
+
+message HOPBHangoutParticipant {
+	optional string hangoutId = 1;
+	optional string participantId = 2;
+	optional string userId = 3;
+	optional string displayName = 4;
+	optional string avatarURL = 5;
+	optional bool recording = 6;
+	optional bool presenting = 7;
+	repeated string blockedUserIdArray = 8;
+	optional bool inCircles = 9;
+	optional string givenName = 10;
+	optional string familyName = 11;
+	optional HOPBRole role = 12;
+	optional HOPBHangoutParticipant_ClientType clientType = 13;
+	optional HOPBHangoutParticipant_ParticipantState participantState = 17;
+	optional bool joined = 18;
+	repeated HOPBHangoutParticipant_Privilege privilegeArray = 19;
+	optional bool acceptedTos = 21;
+	optional int64 invitationId = 23;
+	optional string userMessage = 25;
+	repeated string mediaSessionIdArray = 26;
+}
+
+message HOPBHangout {
+	optional string hangoutId = 1;
+	optional HOPBHangout_HangoutType type = 2;
+	optional HOPBExternalKey externalKey = 3;
+	optional bool active = 4;
+	optional int64 createdMs = 6;
+	optional int64 lastActivityMs = 7;
+	optional string topic = 8;
+	optional CPBClientConversationId conversationId = 9;
+	optional bool byInvitationOnly = 10;
+	optional int64 startTimeMs = 11;
+	optional int64 durationMs = 12;
+	optional string organizerId = 13;
+	optional HOPBHangout_HangoutMediaType mediaType = 14;
+	repeated string tagArray = 15;
+	optional bool allowsMinors = 16;
+	optional HOPBPresenter presenter = 17;
+	optional bool knockable = 18;
+	optional HOPBTristate externalInvited = 21;
+	optional HOPBTristate onStage = 22;
+	optional HOPBTristate defaultOffStage = 23;
+	optional HOPBTristate adultsOnly = 24;
+	optional HOPBTristate knockingEnabled = 25;
+	optional string companyTitle = 27;
+	optional string meetingRoomName = 28;
+	optional string meetingDomain = 29;
+	optional string sharingURL = 30;
+}
+
+message HOPBPresenter {
+	optional string presenterParticipantId = 1;
+	optional string byParticipantId = 2;
+}
+
+message HOPBExternalKey {
+	optional string service = 1;
+	optional string value = 2;
+}
+
+message HOPBLogData {
+	optional string clientId = 1;
+	optional string hangoutId = 2;
+	optional string participantId = 3;
+	optional CallPerfLogEntry callPerfLogEntry = 4;
+	optional ConnectivityCheckLogEntry connectivityCheckLogEntry = 6;
+	optional SystemInfoLogEntry systemInfoLogEntry = 8;
+	optional HOPBLogData_LogSource logSource = 9;
+	optional CallStartupEntry callStartupEntry = 10;
+	repeated string buzzExperimentShortCodeArray = 11;
+	optional bool plusPage = 12;
+	optional string logProperty = 13;
+	optional string participantLogId = 14;
+	optional HandoffLogEntry handoffLogEntry = 15;
+	optional string syntheticId = 16;
+	optional bool rugbyUser = 18;
+	optional int64 clientReportedTimestampMsec = 19;
+	optional int64 clientSentTimestampMsec = 20;
+	optional string localSessionId = 21;
+}
+
+message HOPBHangoutParticipantIdentifier {
+	optional string hangoutId = 1;
+	optional string participantId = 2;
+}
+
+message HOPBSyncMetadata_HangoutCookie {
+	optional string cookie = 1;
+	optional int64 timestamp = 2;
+}
+
+message HOPBSyncMetadata {
+	optional int64 version = 1;
+	optional string changedBy = 2;
+	optional HOPBSyncMetadata_HangoutCookie hangoutCookie = 3;
+}
+
+message HOPBCommonAnnouncementRemoveResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBSyncMetadata syncMetadata = 2;
+}
+
+message HOPBCommonAnnouncementRemoveRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional string announcementId = 3;
+	optional HOPBSyncMetadata syncMetadata = 4;
+	repeated string resourceIdArray = 5;
+}
+
+message HOPBCommonAnnouncementSearchResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	repeated HOPBCommonAnnouncement announcementArray = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBCommonAnnouncementSearchRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	optional string locale = 4;
+}
+
+message HOPBCommonAnnouncementAddResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBCommonAnnouncement announcement = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBCommonAnnouncement resourceArray = 4;
+}
+
+message HOPBCommonAnnouncementAddRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBCommonAnnouncement announcement = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBCommonAnnouncement resourceArray = 4;
+}
+
+message HOPBCommonAnnouncement {
+	optional string hangoutId = 1;
+	optional string announcementId = 2;
+	optional HOPBAnnouncementType announcementType = 3;
+	optional string senderId = 4;
+	optional string subjectId = 5;
+	repeated string recipientIdArray = 6;
+	optional string locale = 7;
+	optional HOPBCommonAnnouncement_Action action = 8;
+	optional string title = 9;
+	optional string body = 10;
+	optional HOPBCommonAnnouncement_LifeTime lifeTime = 11;
+}
+
+message HOPBMediaSessionLogResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBSyncMetadata syncMetadata = 2;
+}
+
+message HOPBMediaSessionLogRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string sessionId = 2;
+	optional HOPBLogData logData = 3;
+	optional HOPBSyncMetadata syncMetadata = 4;
+}
+
+message HOPBMediaSourceRemoveResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBSyncMetadata syncMetadata = 2;
+}
+
+message HOPBMediaSourceRemoveRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional string participantId = 3;
+	optional string sourceId = 4;
+	optional HOPBSyncMetadata syncMetadata = 5;
+	repeated string resourceIdArray = 6;
+}
+
+message HOPBMediaSourceModifyResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBMediaSource source = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBMediaSource resourceArray = 4;
+}
+
+message HOPBMediaSourceModifyRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBMediaSource source = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBMediaSource resourceArray = 4;
+}
+
+message HOPBMediaSourceQueryResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBMediaSource source = 2;
+}
+
+message HOPBMediaSourceQueryRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional string participantId = 3;
+	optional string sourceId = 4;
+}
+
+message HOPBMediaSourceAddResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBMediaSource source = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBMediaSource resourceArray = 4;
+}
+
+message HOPBMediaSourceAddRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBMediaSource source = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBMediaSource resourceArray = 4;
+}
+
+message HOPBMediaSourceSearchResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	repeated HOPBMediaSource resultArray = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBMediaSourceSearchRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional string participantId = 3;
+	optional HOPBSyncMetadata syncMetadata = 4;
+}
+
+message HOPBMediaSource_PlayLevelRequest {
+	required string byParticipantId = 1;
+	optional float playLevel = 2;
+}
+
+message HOPBMediaSource_VideoDetails_Region {
+	required float x = 1;
+	required float y = 2;
+	required float width = 3;
+	required float height = 4;
+}
+
+message HOPBMediaSource_VideoDetails {
+	optional HOPBMediaSource_VideoDetails_CaptureType captureType = 1;
+	optional HOPBVideoResolution capturedResolution = 2;
+	repeated HOPBMediaSource_VideoDetails_Region interestRegionArray = 3;
+}
+
+message HOPBMediaSource_MuteRequest {
+	required string byParticipantId = 1;
+}
+
+message HOPBMediaSource_MuteState {
+	required bool muted = 1;
+	optional string byParticipantId = 2;
+	optional float playLevel = 3;
+}
+
+message HOPBMediaSource {
+	optional string hangoutId = 1;
+	optional string participantId = 2;
+	optional string sourceId = 3;
+	optional HOPBMediaType mediaType = 4;
+	optional HOPBMediaSource_MuteState muteState = 5;
+	optional HOPBMediaSource_MuteRequest muteRequest = 6;
+	optional HOPBMediaSource_VideoDetails videoDetails = 7;
+	optional HOPBMediaSource_PlayLevelRequest playLevelRequest = 8;
+}
+
+message HOPBVideoResolution {
+	optional int32 height = 1;
+	optional int32 width = 2;
+	optional int32 frameRate = 3;
+}
+
+message HOPBBroadcastSearchResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	repeated HOPBBroadcast broadcastArray = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBBroadcastSearchRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBBroadcastQueryResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBBroadcast broadcast = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+}
+
+message HOPBBroadcastQueryRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional string broadcastId = 3;
+	optional HOPBSyncMetadata syncMetadata = 4;
+}
+
+message HOPBBroadcastModifyResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBBroadcast broadcast = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBBroadcast resourceArray = 4;
+}
+
+message HOPBBroadcastModifyRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBBroadcast broadcast = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBBroadcast resourceArray = 4;
+}
+
+message HOPBBroadcastRemoveResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBSyncMetadata syncMetadata = 2;
+}
+
+message HOPBBroadcastRemoveRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional string hangoutId = 2;
+	optional string broadcastId = 3;
+	optional HOPBSyncMetadata syncMetadata = 4;
+	optional string onBehalfOfParticipantId = 5;
+	repeated string resourceIdArray = 6;
+}
+
+message HOPBBroadcastAddResponse {
+	optional CPBClientResponseHeader responseHeader = 1;
+	optional HOPBBroadcast broadcast = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBBroadcast resourceArray = 4;
+}
+
+message HOPBBroadcastAddRequest {
+	optional CPBClientRequestHeader requestHeader = 1;
+	optional HOPBBroadcast broadcast = 2;
+	optional HOPBSyncMetadata syncMetadata = 3;
+	repeated HOPBBroadcast resourceArray = 4;
+}
+
+message HOPBBroadcast_RecordingStatus {
+	optional HOPBBroadcast_RecordingStatus_Status currentStatus = 1;
+	optional HOPBBroadcast_RecordingStatus_Status targetStatus = 2;
+}
+
+message HOPBBroadcast_LiveStreamStatus {
+	optional HOPBBroadcast_LiveStreamStatus_Status currentState = 3;
+	optional int64 liveStartTimeMs = 4;
+	optional bool shouldGoLive = 5;
+}
+
+message HOPBBroadcast_AbuseRecordingDetails {
+	optional HOPBBroadcast_AbuseRecordingDetails_Status status = 1;
+	optional string defendantParticipantId = 2;
+	optional string userComments = 3;
+}
+
+message HOPBBroadcast_LiveStreamDetails {
+	optional string youtubeLiveId = 1;
+	optional string topic = 2;
+	optional bool enableMonitorStream = 3;
+	repeated string tagArray = 5;
+}
+
+message HOPBBroadcast_GooglePlusRecordingDetails {
+	optional string ownerId = 1;
+	optional int64 albumId = 2;
+	optional string title = 3;
+	optional string photoId = 4;
+}
+
+message HOPBBroadcast_UiDescription {
+	optional string currentSpeakerParticipantId = 1;
+}
+
+message HOPBBroadcast_RecordingDetails {
+	optional int64 startTimeMs = 1;
+	optional string fixedMainScreenParticipantId = 3;
+	optional HOPBBroadcast_GooglePlusRecordingDetails gplusRecording = 5;
+	optional HOPBBroadcast_AbuseRecordingDetails abuseRecording = 6;
+}
+
+message HOPBBroadcast {
+	optional string hangoutId = 1;
+	optional string broadcastId = 2;
+	optional string projectId = 3;
+	optional HOPBBroadcast_Resolution resolution = 4;
+	optional string producerParticipantId = 5;
+	optional HOPBBroadcast_UiDescription uiDescription = 6;
+	optional HOPBBroadcast_RecordingDetails recordingDetails = 8;
+	optional HOPBBroadcast_LiveStreamDetails liveStreamDetails = 9;
+	optional string ownerProfileId = 10;
+	optional HOPBBroadcast_LiveStreamStatus liveStreamStatus = 11;
+	optional HOPBBroadcast_RecordingStatus recordingStatus = 12;
+	optional HOPBBroadcastUseCase useCase = 13;
+	repeated string visibleParticipantIdArray = 14;
+}

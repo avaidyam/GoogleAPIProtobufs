@@ -1,0 +1,15 @@
+message GWSClientDataHeader {
+	repeated int32 experimentIdArray = 1;
+	optional int64 configTimeUsec = 2;
+	repeated int32 triggerExperimentIdArray = 3;
+	optional string overrideZwiebackNid = 7;
+	optional GWSDeviceProperties deviceProperties = 9;
+	optional string serverToken = 10;
+}
+
+message GWSDeviceProperties {
+	optional int32 densityDpi = 1;
+	optional int32 widthPixels = 2;
+	optional int32 heightPixels = 3;
+	repeated string supportedAbiArray = 4;
+}

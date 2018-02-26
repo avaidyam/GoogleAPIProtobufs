@@ -1,0 +1,234 @@
+message GFIImageTile {
+	optional GFIImage thumbnail = 1;
+	optional GFIVisualElementLog veLog = 2;
+	optional GFILink resultLink = 3;
+	optional GFIImage image = 4;
+	optional string docid = 5;
+	optional GFIVeLogInfo veLogInfo = 6;
+}
+
+message GFIDelayTrigger {
+	optional GFILink link = 1;
+	optional int32 delayMs = 2;
+	optional string cancelAccessibilityText = 3;
+	optional string navigateAccessibilityText = 4;
+}
+
+message GFITable_TableRow {
+	repeated string cellArray = 1;
+}
+
+message GFITable {
+	optional GFITable_TableRow header = 1;
+	repeated GFITable_TableRow rowArray = 2;
+	optional GFITable_TableRow footer = 3;
+}
+
+message GFIFact_Source {
+	optional string name = 1;
+	optional GFILink link = 2;
+}
+
+message GFIFact {
+	optional string key = 1;
+	repeated GFILocalizedMessage valueArray = 2;
+	optional GFILink moreLink = 3;
+	optional GFIVisualElementLog veLog = 4;
+	repeated GFIFact_Source sourceArray = 5;
+	optional GFIExpandableVisibility expandableVisibility = 6;
+	optional string colonText = 7;
+	optional string moreLinkText = 8;
+	optional string nameListSeparator = 9;
+}
+
+message GFIDirectionsSummary {
+	optional GFILocalizedMessage duration = 1;
+	optional string distance = 2;
+	optional string route = 3;
+}
+
+message GFIAppInstallState {
+	optional GFIAppInstallState_State value = 1;
+}
+
+message GFILink {
+	optional GFIVisualElementLog veLog = 1;
+	optional MSPUrl webURL = 3;
+	optional MSPAppLink appLink = 4;
+	optional int64 actionType = 6;
+	optional GFILink_LinkType linkType = 7;
+	optional string pingURL = 8;
+	optional GFIVeLogInfo veLogInfo = 9;
+}
+
+message GFIRating {
+	optional double value = 1;
+	optional string formattedValue = 2;
+	optional GFIRating_Style style = 4;
+	optional string formattedReviewCount = 6;
+}
+
+message GFIStockFact_Disclaimer {
+	optional string text = 1;
+	optional GFILink disclaimerURL = 2;
+}
+
+message GFIStockFact_StockPrice_StockChange {
+	optional bool negative = 1;
+	optional string change = 2;
+}
+
+message GFIStockFact_StockPrice {
+	optional string price = 1;
+	optional GFIStockFact_StockPrice_StockChange stockChange = 2;
+}
+
+message GFIStockFact {
+	optional string key = 1;
+	optional GFILocalizedMessage value = 2;
+	optional GFIStockFact_StockPrice stockPrice = 3;
+	optional string tradeTime = 4;
+	optional GFIStockFact_Disclaimer disclaimer = 5;
+	optional string colonText = 6;
+	optional string tradeTimeSeparator = 7;
+	optional string stockPriceSeparator = 8;
+}
+
+message GFIDisclaimerSmall {
+	optional string labelText = 1;
+	optional string disclaimerText = 2;
+	optional GFILink disclaimerLink = 3;
+}
+
+message GFIThumbnailRefinementTile {
+	optional GFIImageFrame thumbnail = 1;
+	optional string entityName = 2;
+	optional string metadata = 3;
+	optional GFILink link = 4;
+	optional string mainValue = 5;
+	optional GFIVeLogInfo veLogInfo = 6;
+	optional bool highlighted = 7;
+	optional bool selected = 8;
+}
+
+message GFIWhyThisAdDialog {
+	optional string title = 1;
+	optional GFILink adsSettingsLink = 2;
+	optional string adsSettingsText = 3;
+	optional string closeText = 4;
+	optional string listHeaderText = 5;
+	repeated GFILocalizedMessage reasonArray = 6;
+	optional GFIVeLogInfo wtaLinkVeLogInfo = 7;
+	optional GFIVeLogInfo wtaDialogVeLogInfo = 8;
+	optional string wtaAccessibilityText = 9;
+}
+
+message GFIActionButton {
+	optional GFIActionButton_Type type = 1;
+	optional GFILink link = 2;
+	optional string linkText = 3;
+}
+
+message GFISelectionTile_StoryTile {
+	optional string title = 1;
+	optional string description_p = 2;
+	optional GFIImage image = 3;
+}
+
+message GFISelectionTile {
+	optional GFILink link = 1;
+	optional int32 widthDp = 2;
+	optional GFISelectionTile_StoryTile storyTile = 3;
+	optional bool lazyLoaded = 4;
+	optional GFIVeLogInfo veLogInfo = 5;
+}
+
+message GFIAppGridItem {
+	optional GFIImage icon = 1;
+	optional string name = 2;
+	optional string ratingMessage = 4;
+	optional string priceString = 5;
+	optional GFILink link = 6;
+	optional GTPColor backgroundColor = 7;
+	optional GTPColor secondaryBackgroundColor = 8;
+	optional GFIVisualElementLog veLog = 9;
+	optional GFIRating rating = 10;
+}
+
+message GFILocalizedMessage_Span {
+	optional string rawText = 1;
+	optional MSPTextStyle style = 2;
+	optional GFILink link = 3;
+	optional string className = 4;
+}
+
+message GFILocalizedMessage {
+	repeated GFILocalizedMessage_Span spanArray = 1;
+	optional bool debugRenderingProblem = 2;
+}
+
+message GFIIcon {
+	optional GFIIconType type = 1;
+	optional GFIIconColor color = 2;
+}
+
+message GFIImage {
+	optional MSPUrl src = 1;
+	optional int32 width = 2;
+	optional int32 height = 3;
+	optional string accessibilityText = 5;
+	optional GTPColor dominantColor = 6;
+	optional GFIImage_LoadingMode loadingMode = 7;
+	optional string attribution = 8;
+}
+
+message GFIVideoThumbnail {
+	optional GFIImage image = 1;
+	optional string duration = 2;
+}
+
+message GFITwoLineSitelinks_Sitelink {
+	optional string title = 1;
+	optional GFILink link = 2;
+}
+
+message GFITwoLineSitelinks {
+	repeated GFITwoLineSitelinks_Sitelink multiSitelinksArray = 1;
+}
+
+message GFIImageFrame {
+	optional GFIImage image = 1;
+	optional int32 width = 2;
+	optional int32 height = 3;
+}
+
+message GFIShareButton {
+	optional string shareText = 1;
+	optional string shareURL = 2;
+	optional string shareTextDelimiter = 3;
+}
+
+message GFISource {
+	repeated string breadcrumbArray = 2;
+	optional MSPStyledText name = 3;
+}
+
+message GFIFinePrint_Item {
+	optional string text = 1;
+	optional GFILink link = 2;
+}
+
+message GFIFinePrint {
+	optional bool attribution = 1;
+	repeated GFIFinePrint_Item itemArray = 2;
+	optional bool reference = 3;
+	optional string sourceIncludeText = 4;
+}
+
+message GFITextAttributeList {
+	repeated string itemArray = 1;
+}
+
+message GFITimestamp {
+	optional int64 seconds = 1;
+}

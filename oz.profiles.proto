@@ -1,0 +1,93 @@
+message ProfileSimpleProfile {
+	optional string obfuscatedGaiaId = 1;
+	optional ProfileCommonConfig config = 3;
+	optional ProfileCommonContent content = 4;
+	optional ProfileUser user = 5;
+	optional string displayName = 7;
+	optional string emailAddress = 9;
+}
+
+message ProfileCommonConfig {
+	optional bool showFollowerCounts = 3;
+	optional bool googleMeEnabled = 4;
+	optional bool inAbuseiamQueue = 5;
+	optional string canonicalProfileURL = 9;
+	optional ProfileSocialGraphData socialGraphData = 10;
+	optional bool isLockedUntilSet = 11;
+}
+
+message ProfileSocialGraphData {
+	optional TSGdata_CirclePerson circlePerson = 1;
+	optional bool blocked = 2;
+	optional bool muted = 3;
+	repeated TSGdata_CircleData circleDataArray = 4;
+	repeated TSGdata_CircleData allCircleDataArray = 5;
+}
+
+message ProfileCommonContent {
+	optional ProfileContacts contacts = 2;
+	optional string photoURL = 5;
+	optional ProfileScrapBook scrapbook = 8;
+	optional ProfileName name = 9;
+	optional bool imageIsDefault = 10;
+}
+
+message ProfileContacts {
+}
+
+message ProfileUser {
+	optional ProfileName name = 1;
+	optional bool profilePageCrawlable = 13;
+	optional string publicUsername = 14;
+	optional bool enableLocal = 16;
+	optional ProfileDeviceLocations deviceLocations = 18;
+	optional bool canChangeName = 20;
+}
+
+message ProfileScrapBook {
+	repeated ProfileScrapBookEntry entryArray = 2;
+	optional string albumId = 3;
+	optional string albumURL = 4;
+	optional ProfileScrapBookEntry coverPhotoEntry = 5;
+	optional string defaultCoverPhotoURL = 6;
+	optional string defaultCoverPhotoBlurredURL = 7;
+}
+
+message ProfileScrapBookEntry {
+	optional string URL = 1;
+	optional string cropURL = 2;
+	optional string photoId = 3;
+	optional int32 photoWidth = 4;
+	optional int32 photoHeight = 5;
+	optional string mediaKey = 6;
+	optional bool isAnimated = 7;
+	optional string blurredURL = 8;
+	optional int32 blurredWidth = 9;
+	optional int32 blurredHeight = 10;
+}
+
+message ProfileDeviceLocation {
+	optional ProfileDeviceLocation_Type type = 2;
+	optional double lat = 3;
+	optional double lng = 4;
+	optional int64 timestampMsec = 5;
+	optional int32 accuracyMeters = 6;
+	optional string displayName = 7;
+	optional string mapImageURL = 8;
+	optional string mapImageURLFullBleed = 9;
+	optional string mapImageURLMobile = 10;
+	optional int64 altitudeMeters = 11;
+}
+
+message ProfileDeviceLocations {
+	repeated ProfileDeviceLocation deviceLocationArray = 2;
+	optional bool sharingEnabled = 4;
+}
+
+message ProfileName {
+	optional string given = 2;
+	optional string family = 3;
+	optional string display = 4;
+	optional bool verified = 5;
+	optional int64 lastModifiedTime = 6;
+}

@@ -1,0 +1,167 @@
+message Whitelist {
+	repeated string emailsArray = 1;
+	repeated int64 groupsArray = 2;
+	repeated string numbersArray = 3;
+}
+
+message BotAccess {
+	optional BotAccess_Type type = 1;
+	optional Whitelist whitelist = 3;
+}
+
+message CardContent {
+	optional Card primaryCard = 1;
+	optional Card fallbackCard = 2;
+}
+
+message RequestedCard {
+	optional CardContent cardContent = 1;
+}
+
+message BotSuggestion {
+	optional string messageId = 1;
+	repeated Suggestion suggestionsArray = 2;
+}
+
+message AppAction {
+	optional AppAction_Platform platform = 1;
+	optional string packageName = 2;
+	optional string text = 3;
+	optional string actionUri = 4;
+	optional string iconUri = 5;
+	optional bool dropIfGbotAppBarSupported = 6;
+}
+
+message AppActionSuggestion {
+	repeated AppAction itemArray = 1;
+}
+
+message UpdateTransition {
+	optional Transition targetTransition = 1;
+	optional UpdateTransition_TransitionHint transitionHint = 2;
+}
+
+message CompletedTransition {
+	optional Transition completedTransition = 1;
+	optional string oldActionId = 2;
+	optional bool declinedAction = 3;
+	optional string interpretationId = 4;
+	optional int64 confidence = 5;
+}
+
+message SuggestionTransition {
+	optional Transition transition = 1;
+	optional int64 actionConfidence = 2;
+}
+
+message ScoredInterpretation {
+	optional string interpretationId = 1;
+	optional int64 confidence = 2;
+	optional Transition transition = 3;
+}
+
+message Transition {
+	optional string newActionId = 1;
+	map<string, Value> changedVariables = 2;
+	repeated string clearParameterIdsArray = 3;
+}
+
+message Value {
+	optional string stringValue = 1;
+	optional TimePoint timePoint = 2;
+	optional TimeRange timeRange = 3;
+}
+
+message Suggestion {
+	optional string suggestionText = 1;
+	optional AppActionSuggestion appAction = 2;
+	optional SuggestionTransition suggestionTransition = 3;
+}
+
+message TimeRange {
+	optional TimePoint start = 1;
+	optional TimePoint end = 2;
+}
+
+message TimePoint {
+	optional int32 year = 1;
+	optional Month month = 2;
+	optional int32 day = 3;
+	optional int32 hour = 4;
+	optional int32 minute = 5;
+	optional string timezone = 6;
+	optional int32 seconds = 7;
+}
+
+message MediaMessage {
+	optional string contentType = 1;
+	optional string uri = 2;
+	optional bytes rawBytes = 3;
+}
+
+message TextCard {
+	optional string title = 1;
+	optional string textContent = 2;
+	optional CardAction action = 3;
+}
+
+message TableRow {
+	repeated string cellsArray = 1;
+}
+
+message TableCard {
+	optional string title = 1;
+	repeated TableRow rowsArray = 2;
+	optional CardColor backgroundColor = 3;
+	optional CardColor textColor = 4;
+	optional CardColor accentColor = 5;
+}
+
+message ImageCard {
+	optional string title = 1;
+	optional string subtitle = 2;
+	optional string imageURL = 3;
+	optional CardAction action = 4;
+	optional int32 imageWidth = 5;
+	optional int32 imageHeight = 6;
+	optional CardColor backgroundColor = 7;
+	optional CardColor textColor = 8;
+	optional CardAction cardAction = 9;
+	optional ImageCard_Position captionPosition = 10;
+}
+
+message CardColor {
+	optional float red = 1;
+	optional float green = 2;
+	optional float blue = 3;
+	optional float alpha = 4;
+}
+
+message CardAction {
+	optional string description_p = 1;
+	optional string webURL = 2;
+	optional string androidAppLink = 3;
+	optional string androidPackageId = 4;
+	optional string iconURL = 5;
+	optional int32 iconWidth = 6;
+	optional int32 iconHeight = 7;
+}
+
+message CardCarousel {
+	optional string title = 1;
+	repeated SingleCard cardsArray = 2;
+	optional bool fixedSize = 3;
+	optional int32 width = 4;
+	optional int32 height = 5;
+}
+
+message SingleCard {
+	optional TextCard textCard = 1;
+	optional ImageCard imageCard = 2;
+	optional TableCard tableCard = 3;
+}
+
+message Card {
+	optional SingleCard singleCard = 1;
+	optional CardCarousel cardCarousel = 2;
+}

@@ -1,0 +1,52 @@
+message LogResponse {
+	optional int64 nextRequestWaitMillis = 1;
+}
+
+message LogRequest {
+	optional ClientInfo clientInfo = 1;
+	optional LogRequest_LogSource logSource = 2;
+	repeated LogEvent logEventArray = 3;
+	optional int64 requestTimeMs = 4;
+	repeated bytes serializedLogEventsArray = 5;
+	optional string logSourceName = 6;
+	optional string zwiebackCookie = 7;
+	optional int64 requestUptimeMs = 8;
+}
+
+message ClientInfo {
+	optional ClientInfo_ClientType clientType = 1;
+	optional IosClientInfo iosClientInfo = 4;
+	optional string remoteHost = 6;
+	optional string remoteHost6 = 7;
+}
+
+message IosClientInfo {
+	optional string clientId = 1;
+	optional string loggingId = 2;
+	optional string osMajorVersion = 3;
+	optional string osFullVersion = 4;
+	optional string applicationBuild = 5;
+	optional string country = 6;
+	optional string model = 7;
+	optional string languageCode = 8;
+}
+
+message LogEvent {
+	optional int64 eventTimeMs = 1;
+	optional string tag = 2;
+	optional bytes store = 4;
+	optional bytes sourceExtension = 6;
+	optional string sourceExtensionJs = 8;
+	optional bool isUserInitiated = 10;
+	optional int32 eventCode = 11;
+	optional int32 eventFlowId = 12;
+	optional string sourceExtensionJson = 13;
+	optional string testId = 14;
+	optional sint64 timezoneOffsetSeconds = 15;
+	optional int64 eventUptimeMs = 17;
+	optional bytes clientVe = 18;
+	repeated int32 testCodeArray = 20;
+	optional int64 sequencePosition = 21;
+	optional int64 bootCount = 22;
+	optional string clientVeJs = 24;
+}

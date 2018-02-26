@@ -1,0 +1,89 @@
+message MSPDeferredImage {
+	optional string URL = 1;
+	optional bytes data_p = 2;
+	optional bool failed = 3;
+}
+
+message MSPRenderedCard {
+	optional QLTComponent component = 1;
+	repeated MSPDeferredImage deferredImageArray = 2;
+	optional MSPStyleConfig styleConfig = 3;
+}
+
+message MSPNamedFeature {
+	optional string name = 1;
+	optional MSPFeature feature = 2;
+}
+
+message MSPCardApiRequestContext {
+	map<string, string> headers = 1;
+	map<string, string> queryParameters = 2;
+	optional GWSClientDataHeader clientDataHeader = 3;
+	optional MSPCardTraits traits = 4;
+	optional QLTVersionSpec componentSets = 6;
+	optional MSPPlatform platform = 7;
+	optional string clientVersion = 8;
+}
+
+message MSPCardTraits {
+	repeated MSPCardTraits_Size sizeArray = 1;
+	optional bool fullscreen = 2;
+}
+
+message MSPGetRenderedCardsStreamingResponse {
+	optional MSPSrpFeatureData srpFeatureData = 3;
+	optional MSPNamedFeature namedFeature = 4;
+	optional bool finalResponse = 5;
+	optional MSPTextToSpeech textToSpeech = 6;
+	optional string naturalLanguageResponse = 7;
+}
+
+message MSPGetRenderedCardsRequest {
+	optional MSPSearchRequest searchRequest = 1;
+	optional SingleEntityRequest entityRequest = 2;
+	optional MSPCardApiRequestContext requestContext = 3;
+}
+
+message MSPFeature {
+	optional MSPRenderedCard renderedCardProto = 1;
+	optional string queryDisplayText = 2;
+}
+
+message MSPSrpFeatureData_TermsFooter {
+	optional string termsText = 1;
+	optional MSPUrl termsLink = 2;
+}
+
+message MSPSrpFeatureData_MobileFriendlyFooter {
+	optional string mobileFriendlyText = 1;
+	optional string mobileFriendlyLink = 2;
+}
+
+message MSPSrpFeatureData {
+	optional MSPPagination pagination = 1;
+	optional string rewrittenQuery = 3;
+	optional bool isPersonalAnswerOrAction = 5;
+	optional int64 estimatedResponseBytes = 7;
+	optional bool actionCardPresent = 9;
+	optional EIDEventIdMessage eventId = 10;
+	optional MSPSrpFeatureData_MobileFriendlyFooter mobileFriendlyFooter = 11;
+	optional string nextButtonText = 12;
+	optional string pageIndexText = 13;
+	optional string previousPageAccessibilityText = 14;
+	optional string nextPageAccessibilityText = 15;
+	optional string firstPageAccessibilityText = 16;
+	optional MSPSrpFeatureData_TermsFooter termsFooter = 17;
+	optional bool isRtl = 18;
+}
+
+message GBTMSPRenderedCard {
+	optional GBTQLTComponent component = 1;
+	repeated GBTMSPDeferredImage deferredImageArray = 2;
+	optional GBTMSPStyleConfig styleConfig = 3;
+}
+
+message GBTMSPDeferredImage {
+	optional string URL = 1;
+	optional bytes data_p = 2;
+	optional bool failed = 3;
+}

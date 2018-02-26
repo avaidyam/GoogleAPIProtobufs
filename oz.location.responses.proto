@@ -1,0 +1,6 @@
+message LocationSnapToPlaceResponse {
+	repeated LocationLocationResult localPlaceArray = 1;
+	optional LocationLocationResult preciseLocation = 2;
+	optional LocationLocationResult cityLocation = 3;
+	optional bool userIsAtFirstPlace = 4;
+}

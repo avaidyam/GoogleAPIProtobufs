@@ -1,0 +1,37 @@
+message QLTLogInfo {
+	optional LOGClickTrackingCGI clickTrackingCgi = 1;
+	optional bool enableClickTrack = 2;
+	optional QLTLogInfo_Visibility visibility = 3;
+	optional string signature = 100;
+	optional string ved = 200;
+	optional string escapedEventId = 300;
+	optional string shownQueryInfo = 400;
+}
+
+message QLTComponent {
+	optional string id_p = 1;
+	optional string type = 2;
+	optional QLTComponent implRoot = 4;
+	optional QLTLogInfo logInfo = 6;
+}
+
+message QLTVersionSpec {
+	map<string, int32> componentSetToVersion = 1;
+}
+
+message GBTQLTLogInfo {
+	optional GTPLogsClickTrackingCGI clickTrackingCgi = 1;
+	optional bool enableClickTrack = 2;
+	optional GBTQLTLogInfo_Visibility visibility = 3;
+	optional string signature = 100;
+	optional string ved = 200;
+	optional string escapedEventId = 300;
+	optional string shownQueryInfo = 400;
+}
+
+message GBTQLTComponent {
+	optional string id_p = 1;
+	optional string type = 2;
+	optional GBTQLTComponent implRoot = 4;
+	optional GBTQLTLogInfo logInfo = 6;
+}

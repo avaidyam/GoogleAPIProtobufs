@@ -1,0 +1,20 @@
+message Target {
+}
+
+message Icon {
+	optional string URL = 1;
+}
+
+message Identifier {
+	optional string appId = 1;
+	optional string key = 2;
+	optional uint64 version = 3;
+	optional string ctrToken = 4;
+	optional string clientKey = 5;
+}
+
+message Payload {
+	optional Identifier identifier = 2;
+	optional bool isDismissed = 3;
+	optional Target defaultTarget = 5;
+}

@@ -1,0 +1,3 @@
+message HangoutInfo {
+	optional string URL = 1;
+}

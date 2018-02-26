@@ -1,0 +1,78 @@
+message EXHExperimentsAndConfigsResponse {
+	repeated EXHApplicationResponse applicationResponseArray = 1;
+	optional bytes requestConfigTag = 2;
+	optional string pseudonymousCookie = 3;
+	optional int64 serverConfigurationVersion = 4;
+	optional int64 serverBuildVersion = 5;
+}
+
+message EXHExperimentsAndConfigsRequest {
+	optional EXHClientProperties clientProperties = 1;
+	repeated EXHApplicationRequest applicationRequestArray = 2;
+	optional bytes requestConfigTag = 3;
+	optional int32 clientType = 5;
+	optional string fetchConfigPackage = 7;
+}
+
+message EXHApplicationRequest {
+	optional EXHScope scope = 1;
+	optional bytes applicationProperties = 2;
+	repeated EXHParamPartitionTag paramPartitionTagArray = 3;
+}
+
+message EXHParamPartitionTag {
+	optional int64 id_p = 1;
+	optional bytes tag = 2;
+}
+
+message EXHClientProperties {
+	optional bool authenticated = 1;
+	optional int64 userId = 2;
+	optional int64 pseudonymousId = 3;
+	optional ClientInfo clientInfo = 4;
+	optional string pseudonymousCookie = 5;
+	optional bytes dogfoodToken = 6;
+	optional bool isMaybeGooglerGmscore = 7;
+}
+
+message EXHApplicationResponse {
+	optional EXHScope scope = 1;
+	repeated EXHParamPartition paramPartitionArray = 2;
+	optional bytes experimentToken = 3;
+	optional string serverTriggerToken = 4;
+	repeated int32 clientExperimentIdArray = 5;
+	repeated EXHCrossAppDescriptor crossAppDescriptorArray = 6;
+}
+
+message EXHCrossAppDescriptor {
+	optional EXHScope fromScope = 1;
+	optional bytes experimentToken = 2;
+	optional EXHCrossAppDescriptor_DiversionProvenance provenance = 3;
+}
+
+message EXHParamPartition {
+	optional EXHParamPartitionTag paramPartitionTag = 1;
+	repeated EXHParam paramArray = 2;
+	optional EXHParamPartition_UpdateType updateType = 3;
+}
+
+message EXHScope {
+	optional string configPackage = 1;
+	optional int64 versionCode = 2;
+}
+
+message EXHParam_ExtensionValue {
+	optional bytes serializedValue = 1;
+}
+
+message EXHParam {
+	optional string name = 1;
+	optional int64 intValue = 2;
+	optional bool boolValue = 3;
+	optional double float64Value = 4;
+	optional string stringValue = 5;
+	optional EXHParam_ExtensionValue extensionValue = 6;
+	optional bool deleted = 7;
+	optional EXHParam_ParamStorageType paramStorageType = 8;
+	optional EXHParam_ParamValueType valueType = 9;
+}

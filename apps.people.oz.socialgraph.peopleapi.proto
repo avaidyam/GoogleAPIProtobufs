@@ -1,0 +1,26 @@
+message POSPMergedPersonLookupRequest {
+}
+
+message POSPMergedPeopleListRequest {
+	optional APOEAPageSelection pageSelection = 1;
+	optional APOEAPeople2ListParams params = 2;
+}
+
+message POSPMergedPeopleAutocompleteResponse {
+	optional POSPMergedPeopleNextListSelection header = 1;
+}
+
+message POSPMergedPersonLookupResponse {
+	repeated POEMPerson mergedPersonArray = 1;
+}
+
+message POSPMergedPeopleNextListSelection {
+	optional int64 totalCount = 1;
+	optional string nextPageToken = 2;
+	optional string nextSyncToken = 3;
+}
+
+message POSPMergedPeopleListResponse {
+	optional POSPMergedPeopleNextListSelection selection = 1;
+	repeated POEMPerson mergedPersonArray = 2;
+}

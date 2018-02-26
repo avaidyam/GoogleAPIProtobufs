@@ -1,0 +1,153 @@
+message GFIWebQuoteItem {
+	optional string text = 1;
+}
+
+message GFISportsHeader {
+	optional string title = 1;
+	optional string context = 2;
+	optional string date = 3;
+	optional string venue = 4;
+}
+
+message GFIColoredWebResultHeader {
+	optional GFISource source = 1;
+	optional GFIImage favicon = 2;
+	optional GTPColor backgroundColor = 3;
+	optional GFILink resultLink = 4;
+}
+
+message GFICurrencyConversion {
+	optional string title = 1;
+	optional string subtitle = 2;
+	optional GFIFinePrint finePrint = 3;
+}
+
+message GFISelectionCarousel {
+	repeated GFISelectionTile tileArray = 1;
+}
+
+message GFIFlightHeader {
+	optional string flightNumMsg = 1;
+}
+
+message GFIWebAnswerImage {
+	optional GFIImage image = 1;
+	optional GFILink link = 2;
+}
+
+message GFIStockPrice {
+	optional string lastPrice = 1;
+	optional int64 lastPriceTimestampSeconds = 2;
+	optional bool isPriceChangeNonnegative = 3;
+	optional string priceChange = 4;
+	optional string percentChange = 5;
+}
+
+message GFIStockHeader {
+	optional string fullname = 1;
+	optional string symbol = 2;
+	optional string exchangeCode = 3;
+	optional string exchangeTimezone = 4;
+	optional string exchangeTimezoneFullname = 5;
+	optional GFIStockPrice stockPrice = 11;
+}
+
+message GFIPaddedHeader {
+	optional string title = 1;
+	optional string subtitle = 2;
+	optional GFIImage image = 3;
+	optional GFILink imageLink = 4;
+	optional GFITextAttributeList starRatings = 5;
+}
+
+message GFIContentPreviewTitle {
+	optional string title = 1;
+	optional GFILink resultLink = 2;
+}
+
+message GFINewsArticleTile {
+	optional string title = 1;
+	optional GFILink link = 2;
+	optional GFISource source = 3;
+	optional GFITimestamp timestamp = 4;
+	optional GFIImage image = 5;
+	optional GFIVideoThumbnail videoThumbnail = 6;
+	optional GFIVeLogInfo veLogInfo = 7;
+}
+
+message GFIStreamCarousel {
+	repeated GFINewsArticleTile newsArticleTileArray = 1;
+}
+
+message GFIFlightDetails_Endpoint {
+	optional string airportCode = 1;
+	optional string city = 2;
+	optional string terminal = 3;
+	optional string gate = 4;
+	optional string timeActualIso = 5;
+	optional string timeScheduledIso = 6;
+	optional string localizedTime = 7;
+	optional string localizedDate = 8;
+	optional string airportMsg = 100;
+}
+
+message GFIFlightDetails {
+	optional string flightstatsId = 3;
+	optional GFIFlightDetails_Endpoint departure = 4;
+	optional GFIFlightDetails_Endpoint arrival = 5;
+	optional GFIFlightDetails_Endpoint diverted = 6;
+	optional GFIFlightDetails_StatusCode statusCode = 7;
+	optional string timeText = 8;
+	optional string terminalText = 9;
+	optional string gateText = 10;
+	optional string dateText = 11;
+	optional string statusMsg = 100;
+	optional string statusInfoMsg = 101;
+}
+
+message GFIMatchScore_Team {
+	optional string name = 1;
+	optional string score = 2;
+	optional GFIImage logo = 3;
+}
+
+message GFIMatchScore {
+	optional GFIMatchScore_Team homeTeam = 1;
+	optional GFIMatchScore_Team awayTeam = 2;
+	optional bool displayHomeTeamFirst = 3;
+}
+
+message GFIMatchResult {
+	optional string result = 1;
+}
+
+message GFIDictionaryEntry_SenseFamily {
+	repeated GFIDictionaryEntry_PartOfSpeech partsOfSpeechArray = 1;
+	repeated GFIDictionaryEntry_Sense sensesArray = 2;
+}
+
+message GFIDictionaryEntry_Sense {
+	optional GFIDictionaryEntry_AnnotatedText definition = 1;
+}
+
+message GFIDictionaryEntry_AnnotatedText {
+	optional MSPStyledText styledText = 1;
+}
+
+message GFIDictionaryEntry_PartOfSpeech {
+	optional string value = 1;
+}
+
+message GFIDictionaryEntry_Phonetic {
+	optional string text = 1;
+}
+
+message GFIDictionaryEntry {
+	optional string headword = 1;
+	optional string syllabifiedHeadword = 2;
+	repeated GFIDictionaryEntry_Phonetic phoneticsArray = 3;
+	repeated GFIDictionaryEntry_SenseFamily senseFamiliesArray = 4;
+	optional int32 homographIndex = 5;
+	optional string displayedHomographIndex = 6;
+	optional GFILink link = 7;
+}

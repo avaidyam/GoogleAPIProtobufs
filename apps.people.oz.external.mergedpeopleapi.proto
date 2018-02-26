@@ -1,0 +1,83 @@
+message POEMAffinity {
+	optional POEMAffinity_AffinityType affinityType = 1;
+	optional double value = 2;
+	optional string loggingId = 3;
+	optional string containerId = 5;
+}
+
+message POEMPhone {
+	optional POEMPersonFieldMetadata metadata = 1;
+	optional string value = 2;
+	optional string type = 3;
+	optional string canonicalizedForm = 4;
+	optional string formattedType = 5;
+	optional string uri = 7;
+}
+
+message POEMEmail {
+	optional POEMPersonFieldMetadata metadata = 1;
+	optional string value = 2;
+	optional string type = 3;
+	optional string formattedType = 4;
+	optional string displayName = 6;
+}
+
+message POEMName {
+	optional POEMPersonFieldMetadata metadata = 1;
+	optional string displayName = 2;
+	optional string formattedName = 3;
+	optional string givenName = 4;
+	optional string familyName = 5;
+	optional string middleName = 6;
+	optional string honorificPrefix = 7;
+	optional string honorificSuffix = 8;
+	optional string yomiGivenName = 9;
+	optional string yomiFamilyName = 10;
+	optional string yomiHonorificPrefix = 11;
+	optional string yomiHonorificSuffix = 12;
+	optional string displayNameLastFirst = 13;
+	optional string yomiFullName = 14;
+	optional string yomiMiddleName = 15;
+}
+
+message POEMPersonFieldMetadata {
+	optional bool writeable = 1;
+	optional POEMPersonFieldMetadata_Container container = 2;
+	optional bool primary = 3;
+	optional bool edgeKey = 4;
+	optional int64 deprecatedContactContainerId = 5;
+	optional bool verified = 7;
+	optional int64 containerId = 8;
+	optional string encodedContainerId = 9;
+	repeated POEMAffinity affinityArray = 10;
+	optional bool containerPrimary = 12;
+}
+
+message POEMPersonMetadata {
+	optional bool deleted = 1;
+	repeated int64 deprecatedMembershipCircleIdArray = 2;
+	repeated int64 deprecatedMembershipContactGroupIdArray = 3;
+	optional string ownerId = 4;
+	repeated int64 contactIdArray = 6;
+	optional bool deprecatedBlocked = 7;
+	repeated string circleIdArray = 8;
+	repeated string contactGroupIdArray = 9;
+	optional bool inViewerDomain = 12;
+	repeated string attributionArray = 15;
+	optional int64 lastUpdateTimeMicros = 16;
+	repeated POEMAffinity affinityArray = 17;
+	repeated string previousPersonIdArray = 19;
+}
+
+message POEMPerson {
+	optional string personId = 1;
+	optional POEMPersonMetadata metadata = 2;
+	repeated POEMName nameArray = 3;
+	repeated POEMEmail emailArray = 10;
+	repeated POEMPhone phoneArray = 12;
+	optional string profileURL = 21;
+	repeated POEMPerson linkedPersonArray = 23;
+	optional string locale = 24;
+	optional string fingerprint = 26;
+	repeated POEMPerson peopleInCommonArray = 33;
+}

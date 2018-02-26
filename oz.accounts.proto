@@ -1,0 +1,41 @@
+message OZACWipeoutExternalContactsResponse {
+	required OZACWipeoutExternalContactsResponse_StatusEnum status = 1;
+}
+
+message OZACUploadExternalContactsResponse {
+	required OZACUploadExternalContactsResponse_StatusEnum status = 1;
+	optional string versionInfo = 2;
+}
+
+message OZACWipeoutExternalContactsRequest {
+	optional string ownerId = 1;
+	optional int32 domainId = 2;
+	optional string entityId = 3;
+}
+
+message OZACUploadExternalContactsRequest_ExternalContact_TaggedField {
+	optional string tag = 1;
+	optional string value = 2;
+}
+
+message OZACUploadExternalContactsRequest_ExternalContact {
+	optional int64 remoteContactId = 1;
+	optional string firstName = 2;
+	optional string middleName = 3;
+	optional string lastName = 4;
+	optional string honorificPrefix = 5;
+	optional string honorificSuffix = 6;
+	repeated OZACUploadExternalContactsRequest_ExternalContact_TaggedField phoneArray = 7;
+	repeated OZACUploadExternalContactsRequest_ExternalContact_TaggedField emailArray = 8;
+}
+
+message OZACUploadExternalContactsRequest {
+	optional string ownerId = 1;
+	optional int32 domainId = 2;
+	optional string entityId = 3;
+	optional string entityName = 4;
+	repeated OZACUploadExternalContactsRequest_ExternalContact contactToUpdateArray = 5;
+	repeated int64 remoteContactIdToDeleteArray = 6;
+	optional bool mayCreateEntity = 7;
+	optional string versionInfo = 8;
+}

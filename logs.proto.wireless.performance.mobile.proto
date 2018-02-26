@@ -1,0 +1,296 @@
+message GTPLogsJankMetric {
+	optional int32 jankyFrameCount = 1;
+	optional int32 renderedFrameCount = 2;
+	optional int32 maxFrameRenderTimeMs = 3;
+	optional int32 durationMs = 4;
+}
+
+message GTPLogsPackageMetric {
+	optional int64 cacheSize = 1;
+	optional int64 codeSize = 2;
+	optional int64 dataSize = 3;
+	optional int64 externalCacheSize = 4;
+	optional int64 externalCodeSize = 5;
+	optional int64 externalDataSize = 6;
+	optional int64 externalMediaSize = 7;
+	optional int64 externalObbSize = 8;
+	optional string packageName = 9;
+}
+
+message GTPLogsPrimesStats {
+	optional GTPLogsPrimesStats_PrimesEvent primesEvent = 1;
+	optional int32 estimatedCount = 2;
+}
+
+message GTPLogsObjectInfo {
+	optional string className = 1;
+	optional int32 releasedCount = 2;
+	optional int32 leakedCount = 3;
+	optional string leakPath = 4;
+}
+
+message GTPLogsMemoryLeakMetric {
+	repeated GTPLogsObjectInfo objectInfoArray = 1;
+}
+
+message GTPLogsCrashMetric {
+	optional bool hasCrashed = 1;
+	optional GTPLogsProcessStats processStats = 2;
+}
+
+message GTPLogsApplicationInfo {
+	optional string applicationPackage = 1;
+	optional string applicationVersionName = 2;
+	optional GTPLogsApplicationInfo_HardwareVariant hardwareVariant = 3;
+	optional int64 primesVersion = 4;
+}
+
+message GTPLogsFrameRateMetric {
+	optional float averageFramesPerSecond = 1;
+	optional int32 maxFrameRenderTimeMs = 2;
+	optional int32 durationMs = 3;
+}
+
+message GTPLogsTimerMetric {
+	optional int64 durationMs = 1;
+}
+
+message GTPLogsSystemHealthMetric {
+	optional GTPLogsMemoryUsageMetric memoryUsageMetric = 1;
+	optional fixed64 hashedCustomEventName = 2;
+	optional string customEventName = 3;
+	optional GTPLogsTimerMetric timerMetric = 4;
+	optional GTPLogsApplicationInfo applicationInfo = 5;
+	optional WPMNMNetworkUsageMetric networkUsageMetric = 6;
+	optional GTPLogsCrashMetric crashMetric = 7;
+	optional GTPLogsPrimesStats primesStats = 8;
+	optional GTPLogsPackageMetric packageMetric = 9;
+	optional GTPLogsBatteryUsageMetric batteryUsageMetric = 10;
+	optional GTPLogsFrameRateMetric frameRateMetric = 11;
+	optional GTPLogsJankMetric jankMetric = 12;
+	optional GTPLogsMemoryLeakMetric memoryLeakMetric = 13;
+	optional GTPLogsMetricExtension metricExtension = 14;
+}
+
+message GTPLogsIosProcessStats {
+}
+
+message GTPLogsAndroidProcessStats {
+	optional int64 processElapsedTimeMs = 1;
+	optional bool isInForeground = 2;
+	optional int32 threadCount = 3;
+	optional string processName = 4;
+}
+
+message GTPLogsProcessStats {
+	optional GTPLogsAndroidProcessStats androidProcessStats = 1;
+	optional GTPLogsIosProcessStats iosProcessStats = 2;
+}
+
+message WPMNMNetworkConnectionInfo {
+	optional WPMNMNetworkConnectionInfo_NetworkType networkType = 1;
+}
+
+message WPMNMSubRequestData {
+	optional string requestPath = 1;
+}
+
+message WPMNMNetworkEventUsage {
+	optional string contentType = 1;
+	optional string requestPath = 2;
+	optional int32 timeToResponseDataFinishMs = 3;
+	optional int32 timeToResponseHeaderMs = 4;
+	optional int32 HTTPStatusCode = 5;
+	optional uint32 responseSizeBytes = 6;
+	optional uint32 requestSizeBytes = 7;
+	optional WPMNMRequestNegotiatedProtocol requestNegotiatedProtocol = 8;
+	repeated WPMNMSubRequestData subRequestArray = 9;
+	optional GTPLogsAndroidProcessStats processStats = 10;
+	optional WPMNMNetworkConnectionInfo networkConnectionInfo = 11;
+}
+
+message WPMNMNetworkUsageMetric {
+	repeated WPMNMNetworkEventUsage networkEventUsageArray = 1;
+	optional GTPLogsAndroidProcessStats processStats = 2;
+}
+
+message GTPLogsDeviceStats {
+	optional bool isScreenOn = 1;
+}
+
+message GTPLogsIosMemoryStats {
+	optional int32 usedKb = 1;
+	optional int32 freeKb = 2;
+	optional int32 totalMemoryMb = 3;
+}
+
+message GTPLogsAndroidMemoryStats {
+	optional int32 dalvikPssKb = 1;
+	optional int32 nativePssKb = 2;
+	optional int32 otherPssKb = 3;
+	optional int32 dalvikPrivateDirtyKb = 4;
+	optional int32 nativePrivateDirtyKb = 5;
+	optional int32 otherPrivateDirtyKb = 6;
+	optional int32 totalPrivateCleanKb = 7;
+	optional int32 totalSharedDirtyKb = 8;
+	optional int32 totalSwappablePssKb = 9;
+	optional int32 otherGraphicsPssKb = 10;
+	optional int32 summaryJavaHeapKb = 11;
+	optional int32 summaryCodeKb = 12;
+	optional int32 summaryStackKb = 13;
+	optional int32 summaryGraphicsKb = 14;
+	optional int32 summaryPrivateOtherKb = 15;
+	optional int32 summarySystemKb = 16;
+}
+
+message GTPLogsMemoryStats {
+	optional GTPLogsAndroidMemoryStats androidMemoryStats = 1;
+	optional GTPLogsIosMemoryStats iosMemoryStats = 2;
+}
+
+message GTPLogsMemoryUsageMetric {
+	optional GTPLogsMemoryStats memoryStats = 1;
+	optional GTPLogsProcessStats processStats = 2;
+	optional GTPLogsMemoryUsageMetric_MemoryEventCode memoryEventCode = 3;
+	optional GTPLogsDeviceStats deviceStats = 4;
+	optional string activityName = 5;
+}
+
+message GTPLogsMetricExtension {
+	optional GTPLogsGmailExtension gmailExtension = 1;
+}
+
+message GTPLogsGmailExtension {
+}
+
+message GTPLogsSyncStats {
+	optional GTPLogsHashedString name = 1;
+	optional int32 count = 2;
+	optional int64 durationMs = 3;
+}
+
+message GTPLogsWakelockStats {
+	optional GTPLogsHashedString name = 1;
+	optional int32 count = 2;
+	optional int64 durationMs = 3;
+}
+
+message GTPLogsHashedString {
+	optional fixed64 hash_p = 1;
+	optional string unhashedName = 2;
+}
+
+message GTPLogsCounter {
+	optional int32 count = 1;
+	optional GTPLogsHashedString name = 2;
+}
+
+message GTPLogsTimer {
+	optional int32 count = 1;
+	optional int64 durationMs = 2;
+	optional GTPLogsHashedString name = 3;
+}
+
+message GTPLogsServiceHealthProto {
+	optional int32 startServiceCount = 1;
+	optional int32 launchCount = 2;
+	optional GTPLogsHashedString name = 3;
+}
+
+message GTPLogsPackageHealthProto {
+	repeated GTPLogsServiceHealthProto statsServicesArray = 1;
+	repeated GTPLogsCounter wakeupAlarmsCountArray = 2;
+	optional GTPLogsHashedString name = 3;
+}
+
+message GTPLogsProcessHealthProto {
+	optional int64 userTimeMs = 1;
+	optional int64 systemTimeMs = 2;
+	optional int64 startsCount = 3;
+	optional int64 crashesCount = 4;
+	optional int64 anrCount = 5;
+	optional int64 foregroundMs = 6;
+	optional GTPLogsHashedString name = 7;
+}
+
+message GTPLogsPidHealthProto {
+}
+
+message GTPLogsUidHealthProto {
+	optional int64 realtimeBatteryMs = 1;
+	optional int64 uptimeBatteryMs = 2;
+	optional int64 realtimeScreenOffBatteryMs = 3;
+	optional int64 uptimeScreenOffBatteryMs = 4;
+	repeated GTPLogsTimer wakelocksFullArray = 5;
+	repeated GTPLogsTimer wakelocksPartialArray = 6;
+	repeated GTPLogsTimer wakelocksWindowArray = 7;
+	repeated GTPLogsTimer wakelocksDrawArray = 8;
+	repeated GTPLogsTimer syncsArray = 9;
+	repeated GTPLogsTimer jobsArray = 10;
+	optional GTPLogsTimer gpsSensor = 11;
+	repeated GTPLogsTimer sensorsArray = 12;
+	repeated GTPLogsPidHealthProto statsPidsArray = 13;
+	repeated GTPLogsProcessHealthProto statsProcessesArray = 14;
+	repeated GTPLogsPackageHealthProto statsPackagesArray = 15;
+	optional int64 wifiIdleMs = 16;
+	optional int64 wifiRxMs = 17;
+	optional int64 wifiTxMs = 18;
+	optional int64 wifiPowerMams = 19;
+	optional int64 bluetoothIdleMs = 20;
+	optional int64 bluetoothRxMs = 21;
+	optional int64 bluetoothTxMs = 22;
+	optional int64 bluetoothPowerMams = 23;
+	optional int64 mobileIdleMs = 24;
+	optional int64 mobileRxMs = 25;
+	optional int64 mobileTxMs = 26;
+	optional int64 mobilePowerMams = 27;
+	optional int64 wifiRunningMs = 28;
+	optional int64 wifiFullLockMs = 29;
+	optional GTPLogsTimer wifiScan = 30;
+	optional int64 wifiMulticastMs = 31;
+	optional GTPLogsTimer audio = 32;
+	optional GTPLogsTimer video = 33;
+	optional GTPLogsTimer flashlight = 34;
+	optional GTPLogsTimer camera = 35;
+	optional GTPLogsTimer foregroundActivity = 36;
+	optional GTPLogsTimer bluetoothScan = 37;
+	optional GTPLogsTimer processStateTopMs = 38;
+	optional GTPLogsTimer processStateForegroundServiceMs = 39;
+	optional GTPLogsTimer processStateTopSleepingMs = 40;
+	optional GTPLogsTimer processStateForegroundMs = 41;
+	optional GTPLogsTimer processStateBackgroundMs = 42;
+	optional GTPLogsTimer processStateCachedMs = 43;
+	optional GTPLogsTimer vibrator = 44;
+	optional int64 otherUserActivityCount = 45;
+	optional int64 buttonUserActivityCount = 46;
+	optional int64 touchUserActivityCount = 47;
+	optional int64 mobileRxBytes = 48;
+	optional int64 mobileTxBytes = 49;
+	optional int64 wifiRxBytes = 50;
+	optional int64 wifiTxBytes = 51;
+	optional int64 bluetoothRxBytes = 52;
+	optional int64 bluetoothTxBytes = 53;
+	optional int64 mobileRxPackets = 54;
+	optional int64 mobileTxPackets = 55;
+	optional int64 wifiRxPackets = 56;
+	optional int64 wifiTxPackets = 57;
+	optional int64 bluetoothRxPackets = 58;
+	optional int64 bluetoothTxPackets = 59;
+	optional GTPLogsTimer mobileRadioActive = 61;
+	optional int64 userCpuTimeMs = 62;
+	optional int64 systemCpuTimeMs = 63;
+	optional int64 cpuPowerMams = 64;
+}
+
+message GTPLogsBatteryStatsDiff {
+	optional GTPLogsBatteryStatsDiff_SampleInfo startInfo = 1;
+	optional GTPLogsBatteryStatsDiff_SampleInfo endInfo = 2;
+	optional int64 durationMs = 3;
+	repeated GTPLogsWakelockStats wakelockStatsArray = 4;
+	repeated GTPLogsSyncStats syncStatsArray = 5;
+	optional GTPLogsUidHealthProto uidHealthProtoDiff = 6;
+}
+
+message GTPLogsBatteryUsageMetric {
+	optional GTPLogsBatteryStatsDiff batteryStatsDiff = 1;
+}

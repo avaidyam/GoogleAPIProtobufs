@@ -1,0 +1,7 @@
+message GWSZwiebackCookieRequestContext {
+	optional string nid = 1;
+}
+
+message GWSUserAgentContext {
+	optional string userAgent = 1;
+}

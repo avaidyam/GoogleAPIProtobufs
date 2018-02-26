@@ -1,0 +1,18 @@
+message GCVContactPhoneNumber {
+	optional GCVPhoneNumber phoneNumber = 1;
+	optional string type = 3;
+	optional string formattedType = 4;
+}
+
+message GCVPhoneNumber_I18nData {
+	optional string nationalNumber = 1;
+	optional string internationalNumber = 2;
+	optional int32 countryCode = 3;
+	optional string regionCode = 4;
+	optional bool isValid = 5;
+}
+
+message GCVPhoneNumber {
+	optional string e164 = 1;
+	optional GCVPhoneNumber_I18nData i18NData = 2;
+}

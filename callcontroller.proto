@@ -1,0 +1,149 @@
+message CCCCallControllerMessage {
+	optional CCCSetupRequest setupRequest = 1;
+	optional CCCSetupResponse setupResponse = 2;
+	optional CCCReleaseRequest releaseRequest = 3;
+	optional CCCReleaseResponse releaseResponse = 4;
+	optional CCCReleaseAckRequest releaseAckRequest = 5;
+	optional CCCReleaseAckResponse releaseAckResponse = 6;
+	optional CCCAcceptAckRequest acceptAckRequest = 7;
+	optional CCCAcceptAckResponse acceptAckResponse = 8;
+	optional CCCAcceptRequest acceptRequest = 9;
+	optional CCCAcceptResponse acceptResponse = 10;
+	optional CCCRingingRequest ringingRequest = 11;
+	optional CCCRingingResponse ringingResponse = 12;
+	optional CCCProceedRequest proceedRequest = 13;
+	optional CCCProceedResponse proceedResponse = 14;
+	optional CCCUpdateRequest updateRequest = 15;
+	optional CCCUpdateResponse updateResponse = 16;
+	optional CCCRequestHeader header = 100;
+}
+
+message CCCReleaseAckResponse {
+}
+
+message CCCReleaseAckRequest {
+	optional CCCCallId callId = 1;
+	optional CCCResponseCode responseCode = 2;
+	optional CCCClientData clientData = 3;
+}
+
+message CCCReleaseResponse {
+}
+
+message CCCReleaseRequest {
+	optional CCCCallId callId = 1;
+	optional CCCResponseCode responseCode = 2;
+	optional CCCClientData clientData = 3;
+}
+
+message CCCAcceptAckResponse {
+}
+
+message CCCAcceptAckRequest {
+	optional CCCCallId callId = 1;
+	optional CCCMediaDescription mediaDescription = 2;
+	optional CCCClientData clientData = 3;
+}
+
+message CCCAcceptResponse {
+}
+
+message CCCAcceptRequest {
+	optional CCCCallId callId = 1;
+	optional CCCMediaDescription mediaDescription = 2;
+	optional CCCClientData clientData = 3;
+}
+
+message CCCRingingResponse {
+}
+
+message CCCRingingRequest {
+	optional CCCCallId callId = 1;
+	optional CCCMediaDescription mediaDescription = 2;
+	optional CCCClientData clientData = 3;
+}
+
+message CCCUpdateResponse {
+}
+
+message CCCUpdateRequest {
+	optional CCCCallId callId = 1;
+	optional CCCMediaDescription mediaDescription = 2;
+	optional CCCClientData clientData = 3;
+}
+
+message CCCProceedResponse {
+}
+
+message CCCProceedRequest {
+	optional CCCCallId callId = 1;
+	optional CCCMediaDescription mediaDescription = 2;
+	optional CCCClientData clientData = 3;
+}
+
+message CCCSetupResponse {
+	optional CCCCallId callId = 1;
+	optional CCCClientData clientData = 2;
+	optional CCCMediaDescription mediaDescription = 3;
+}
+
+message CCCSetupRequest {
+	optional CCCCallId callId = 1;
+	optional CCCCallingParty callingParty = 2;
+	optional CCCCalledParty calledParty = 3;
+	optional CCCMediaDescription mediaDescription = 4;
+	optional CCCClientData clientData = 5;
+	optional bool setupMediaBeforeResponse = 6;
+}
+
+message CCCResponseCode {
+	optional CCCResponseCode_Code code = 1;
+	optional string payload = 2;
+}
+
+message CCCClientData {
+	optional CCCHangoutsClientData hangoutsClientData = 1;
+	optional CCCGoogleVoiceClientData googleVoiceClientData = 2;
+}
+
+message CCCGoogleVoiceClientData {
+	optional string googleVoiceCallId = 1;
+	optional string sipCallId = 2;
+}
+
+message CCCHangoutsClientData {
+	optional string hangoutId = 1;
+	optional string participantId = 2;
+	optional string invitationId = 3;
+}
+
+message CCCCalledParty {
+	optional CCCPhoneNumber phoneNumber = 1;
+	optional bool isEmergency = 2;
+}
+
+message CCCCallingParty {
+	optional CCCPhoneNumber phoneNumber = 1;
+	optional bool isCallerIdBlocked = 2;
+	optional string callerId = 3;
+	optional int64 gaiaId = 4;
+	optional string clientIp = 5;
+}
+
+message CCCPhoneNumber {
+	optional I18NPHNPhoneNumber phoneNumber = 1;
+	optional string userInput = 2;
+}
+
+message CCCMediaDescription {
+	optional string sdp = 1;
+}
+
+message CCCCallId {
+	optional string sessionId = 1;
+	optional int64 callTag = 2;
+}
+
+message CCCRequestHeader {
+	optional string requestId = 1;
+}

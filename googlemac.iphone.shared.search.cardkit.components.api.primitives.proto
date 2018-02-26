@@ -1,0 +1,30 @@
+message ICEPBehavior {
+	optional bool interactionDisabled = 1;
+}
+
+message ICEPStyle_Shadow {
+	optional GTPColor shadowColor = 1;
+	optional float shadowOpacity = 2;
+	optional ICEPStyle_Size shadowOffset = 3;
+	optional float shadowRadius = 4;
+}
+
+message ICEPStyle_Size {
+	optional float width = 1;
+	optional float height = 2;
+}
+
+message ICEPStyle_EdgeInsets {
+	optional int32 top = 1;
+	optional int32 bottom = 2;
+	optional int32 leading = 3;
+	optional int32 trailing = 4;
+}
+
+message ICEPStyle {
+	optional GTPColor backgroundColor = 1;
+	optional ICEPStyle_EdgeInsets edgeInsets = 2;
+	optional ICEPStyle_Size minSize = 3;
+	optional ICEPStyle_Size maxSize = 4;
+	optional ICEPStyle_Shadow shadow = 5;
+}

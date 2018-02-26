@@ -1,0 +1,189 @@
+message CPBLChatEventId {
+	optional string id_p = 1;
+	optional uint64 firstEventTimestamp = 7;
+}
+
+message CPBLParticipantId {
+	optional int64 gaiaId = 1;
+	optional bool plusUser = 2;
+	optional string nextHop = 5;
+	optional string thisHop = 6;
+}
+
+message CPBLConversationId {
+	optional string id_p = 1;
+}
+
+message CPBLNodeDefs {
+}
+
+message CPBLHangoutLogRequest {
+	optional CPBLHangoutLogEntry hangoutLogEntry = 1;
+	optional CPBLTransportEvent transportEvent = 2;
+	optional CPBLClientState clientState = 3;
+	optional CPBLHangoutGWSLogData gwslogData = 4;
+	optional RtcClient rtcClient = 5;
+}
+
+message CPBLHangoutGWSLogData {
+	optional int64 rpcGlobalId = 1;
+}
+
+message CPBLChatDefs {
+}
+
+message CPBLTransportEvent {
+	required CPBLNodeDefs_NodeType source = 1;
+	optional CPBLConversationId conversationId = 2;
+	optional CPBLTransportEvent_MessageType messageType = 3;
+	optional CPBLTransportEvent_EventType eventType = 4;
+	optional CPBLNodeDefs_NodeType destination = 5;
+	optional int32 forwardCount = 6;
+	optional string deliveryReceipt = 8;
+	optional string deliveryRequest = 9;
+	repeated CPBLParticipantId recipientIdArray = 10;
+	optional uint64 eventTimestamp = 11;
+	repeated CPBLXsDefs_ChatAction actionArray = 12;
+	optional CPBLParticipantId sourceId = 13;
+	optional string eventDetail = 14;
+	optional uint64 clientGeneratedId = 15;
+	optional uint32 retryAttempt = 16;
+	optional CPBLXsDefs_ClientType clientType = 17;
+	optional bool isPersisted = 18;
+	optional uint64 localTimestamp = 19;
+	optional string hangoutId = 20;
+	optional CPBLChatDefs_ActiveClientState activeClientState = 21;
+	optional CPBLEventDetail structuredEventDetail = 22;
+	optional CPBLTransportEvent_EventDeliveryMechanism eventDeliveryMechanism = 23;
+	optional CPBLChatEventId eventId = 24;
+	optional string clientId = 25;
+	optional uint64 latencyMillis = 28;
+	optional string negotiatedProtocol = 29;
+	optional string resourceId = 30;
+	repeated CPBLEventDetail databaseEventDetailArray = 31;
+}
+
+message CPBLEventDetail {
+	optional string eventDetail = 1;
+	optional int32 detailValue = 6;
+	optional uint64 latencyMs = 9;
+	optional uint64 detailedLongValue = 11;
+}
+
+message CPBLXsDefs {
+}
+
+message CPBLGroupSearchData {
+	optional uint64 id_p = 1;
+	repeated uint32 termLengthArray = 2;
+	optional uint32 resultCount = 3;
+	optional uint32 selectedIndexInResults = 5;
+	optional uint32 selectedIndexInAdapter = 6;
+}
+
+message CPBLUmaEventData {
+	optional uint64 id_p = 1;
+	optional CPBLUmaEventData_HistogramType type = 2;
+	optional int32 value = 3;
+}
+
+message CPBLAttachmentLogData {
+	optional int32 videoLengthMs = 1;
+	optional int32 index = 2;
+	optional int32 numPhotosSent = 3;
+	optional int32 numVideosSent = 4;
+}
+
+message CPBLImpressionEntry_ImpressionData {
+	optional string strValue = 1;
+	optional int32 numValue = 2;
+	optional BUZZRtcMark_Id markId = 5;
+}
+
+message CPBLImpressionEntry {
+	optional int32 type = 1;
+	optional string extraData = 2;
+	optional CPBLImpressionEntry_ImpressionData additionalData = 3;
+	optional CPBLAttachmentLogData attachmentData = 4;
+	optional CPBLUmaEventData umaEventData = 9;
+	optional CPBLGroupSearchData groupSearchData = 12;
+}
+
+message CPBLHangoutClientInfo {
+	optional int64 msecSinceCallStart = 1;
+	repeated string buzzExperimentShortCodeArray = 2;
+	optional bool plusPage = 3;
+	optional string propertyName = 4;
+	optional bool rugbyUser = 5;
+}
+
+message CPBLHangoutIdentifier {
+	optional string resourceId = 1;
+	optional string sessionId = 2;
+	optional string hangoutId = 3;
+	optional string participantId = 4;
+	optional string participantLogId = 5;
+	optional CPBLConversationId conversationId = 6;
+	optional string machineId = 7;
+	optional string userJid = 8;
+	optional string remoteNumber = 9;
+	optional string localSessionId = 10;
+	optional string chatSessionId = 11;
+	optional string localNumber = 12;
+}
+
+message CPBLHangoutLogEntry {
+	optional CPBLHangoutIdentifier hangoutIdentifier = 1;
+	optional CallPerfLogEntry callPerfLogEntry = 2;
+	optional CallStartupEntry callStartupEntry = 3;
+	optional ConnectivityCheckLogEntry connectivityCheckLogEntry = 5;
+	optional SystemInfoLogEntry systemInfoLogEntry = 7;
+	optional CPBLImpressionEntry impressionEntry = 8;
+	optional CPBLHangoutClientInfo hangoutClientInfo = 9;
+	optional HandoffLogEntry handoffLogEntry = 10;
+	optional CPBLHangoutTimingLogEntry clientTiming = 14;
+}
+
+message CPBLClientState_AppState {
+	optional bool isBackground = 1;
+}
+
+message CPBLClientState_UserState {
+	optional bool wasDnd = 1;
+	optional CPBLChatDefs_ActiveClientState activeClientState = 2;
+}
+
+message CPBLClientState_EventState {
+	optional bool notified = 1;
+	optional bool wasNewest = 2;
+	optional bool pastWatermark = 3;
+	optional CPBLChatDefs_NotificationLevel notificationLevel = 4;
+	optional int64 deviceTimestampReceived = 5;
+	optional string eventId = 6;
+	optional bool isSingleConversation = 7;
+	optional int64 messageTimestamp = 8;
+	optional int64 selfWatermarkTimestamp = 9;
+	optional int64 seenChatMessageWatermarkTimestamp = 10;
+	optional CPBLClientState_EventState_ClientEventObservedStatus observedStatusServer = 11;
+	optional CPBLClientState_EventState_ClientEventObservedStatus observedStatusClient = 12;
+	optional bool existsInDb = 13;
+	optional bool notifiedByApns = 14;
+	optional bool isSenderBlocked = 15;
+}
+
+message CPBLClientState {
+	optional CPBLClientState_EventState eventState = 1;
+	optional CPBLClientState_UserState userState = 3;
+	optional int64 parentRpcGlobalId = 4;
+	optional CPBLClientState_AppState appState = 6;
+}
+
+message CPBLMark {
+	optional BUZZRtcMark_Id id_p = 1;
+	optional int64 timestampMs = 2;
+}
+
+message CPBLHangoutTimingLogEntry {
+	repeated CPBLMark marksArray = 2;
+	repeated BUZZRtcAction_Id actionsArray = 3;
+}

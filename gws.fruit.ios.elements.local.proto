@@ -1,0 +1,14 @@
+message GFIOpeningHoursFact {
+	optional string localizedStatusLine = 1;
+	optional GFITable hours = 2;
+	optional MSPStyledText holidayMessage = 3;
+}
+
+message GFIHotelAmenity {
+	optional GFIHotelAmenityType hotelAmenityType = 1;
+	optional string hotelAmenityText = 2;
+}
+
+message GFILetterPin {
+	optional string letter = 1;
+}

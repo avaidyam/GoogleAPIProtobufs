@@ -1,0 +1,175 @@
+message GBPBConversationNetworkTypeList {
+	repeated uint32 networkTypeArray = 1;
+}
+
+message GBPBConversationDeliveryMediumOptionList {
+	repeated CPBClientConversation_ClientUserConversationState_ClientDeliveryMediumOption deliveryMediumOptionArray = 1;
+}
+
+message GBPBMemberIds {
+	repeated GBPBMemberId memberIdArray = 1;
+}
+
+message GBPBMemberId {
+	optional string email = 1;
+	optional string obfuscatedGaiaId = 2;
+	optional string focusId = 3;
+	optional string phone = 4;
+	optional string URL = 5;
+}
+
+message GBPBCrawledContactId_Data {
+	optional GBPBCrawledContactId_DataType type = 1;
+	optional string value = 2;
+}
+
+message GBPBCrawledContactId {
+	repeated GBPBCrawledContactId_Data dataArray = 1;
+}
+
+message GBPBConversationFallbackInfoList {
+	repeated GBPBConversationFallbackInfo fallbackInfoArray = 1;
+}
+
+message GBPBConversationFallbackInfo {
+	optional string personId = 1;
+	optional string fallbackName = 2;
+}
+
+message GBPBConversationParticipantWatermarkList {
+	repeated GBPBConversationParticipantWatermark participantWatermarkArray = 1;
+}
+
+message GBPBConversationParticipantWatermark {
+	optional string personId = 1;
+	optional uint64 latestReadTimestamp = 2;
+}
+
+message GBPBConversationParticipantsList {
+	repeated GBPBConversationParticipant participantArray = 1;
+}
+
+message GBPBConversationParticipant {
+	optional string personId = 1;
+}
+
+message GBPBConversationEventSyncState {
+	optional bytes storageContinuationToken = 1;
+	optional bool isFullySyncedBackwards = 2;
+}
+
+message GBPBLocalEvent {
+	optional GBPBLocalEventHeader localEventHeader = 1;
+	optional GBPBLocalChatMessage chatMessage = 2;
+	optional GBPBLocalAddUsers addUsers = 3;
+	optional GBPBLocalConversationRename conversationRename = 4;
+	optional GBPBLocalOTRModify otrModify = 5;
+	optional GBPBLocalNotificationLevelChange notificationLevelChange = 6;
+	optional GBPBLocalConversationViewChange viewChange = 7;
+	optional GBPBLocalGroupLinkStatusModify groupLinkStatusModify = 8;
+	optional GBPBLocalRemoveUser removeUser = 9;
+}
+
+message GBPBLocalGroupLinkStatusModify {
+	optional CPBClientGroupLinkSharingStatus status = 1;
+}
+
+message GBPBLocalConversationViewChange {
+	optional CPBClientConversationView view = 1;
+	optional uint64 lastEventTimestamp = 2;
+}
+
+message GBPBLocalNotificationLevelChange {
+	optional CPBClientNotificationLevel level = 1;
+}
+
+message GBPBLocalOTRModify {
+	optional CPBClientOffTheRecordStatus otrStatus = 1;
+}
+
+message GBPBLocalConversationRename {
+	optional string newName = 1;
+}
+
+message GBPBLocalRemoveUser {
+	optional CPBClientParticipantId participantId = 1;
+}
+
+message GBPBLocalAddUsers {
+	optional GBPBClientInviteeIds inviteeIds = 1;
+	optional bool hasForkError = 2;
+	optional bool hasForceOtrConflictError = 3;
+}
+
+message GBPBClientInviteeIds {
+	repeated CPBClientInviteeId inviteeIdArray = 1;
+}
+
+message GBPBLocalChatMessage {
+	repeated SocialSegment segmentArray = 1;
+	optional CPBClientExistingMedia existingMedia = 2;
+	optional GBPBLocalPhoto localPhoto = 3;
+	optional CPBClientInviteeId otherInviteeId = 4;
+	optional GBPBLocalPlace localPlace = 5;
+	optional GBPBLocalVideo localVideo = 6;
+	optional GBPBRemotePhoto remotePhoto = 7;
+	optional GBPBLocalImageObject localImageObject = 8;
+	optional GBPBLocalAudioMessage localAudioMessage = 9;
+}
+
+message GBPBRemotePhoto {
+	optional string URL = 1;
+	optional string thumbnailURL = 2;
+	optional int32 width = 3;
+	optional int32 height = 4;
+	optional string ownerId = 5;
+	optional string photoId = 6;
+}
+
+message GBPBLocalAudioMessage {
+	optional string localFileURL = 1;
+	optional string mediaKey = 2;
+	optional string transcription = 3;
+	optional double duration = 4;
+}
+
+message GBPBLocalImageObject {
+	optional string proxyURL = 1;
+	optional string originalURL = 2;
+	optional int32 width = 3;
+	optional int32 height = 4;
+	optional string containingWebpage = 5;
+	optional string imageDescription = 6;
+	optional string containingWebpageTitle = 7;
+	optional string containingWebpageURLString = 8;
+}
+
+message GBPBLocalVideo {
+	optional string URL = 1;
+	optional string thumbnailURL = 2;
+	optional int32 width = 3;
+	optional int32 height = 4;
+	optional string photoId = 5;
+	optional double durationMs = 6;
+}
+
+message GBPBLocalPlace {
+	optional string URL = 1;
+	optional double latitude = 2;
+	optional double longitude = 3;
+	optional string name = 4;
+	optional string address = 5;
+}
+
+message GBPBLocalPhoto {
+	optional string URL = 1;
+	optional int32 width = 2;
+	optional int32 height = 3;
+	optional string mimeType = 4;
+	optional string uploadURL = 5;
+}
+
+message GBPBLocalEventHeader {
+	optional CPBClientOffTheRecordStatus expectedOtr = 1;
+	optional CPBClientDeliveryMedium deliveryMedium = 2;
+}

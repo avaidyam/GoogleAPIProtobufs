@@ -1,0 +1,17 @@
+message Feature {
+	optional int32 top = 1;
+	optional int32 left = 2;
+	optional int32 width = 3;
+	optional int32 height = 4;
+	optional float meanY = 5;
+	optional float meanCb = 6;
+	optional float meanCr = 7;
+	optional float varY = 8;
+	optional float varCb = 9;
+	optional float varCr = 10;
+	optional float score = 11;
+	optional int32 bin = 12;
+	optional float rgeY = 13;
+	optional float rgeCb = 14;
+	optional float rgeCr = 15;
+}

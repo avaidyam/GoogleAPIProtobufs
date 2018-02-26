@@ -1,0 +1,8 @@
+message StatusProto {
+	optional int32 code = 1;
+	optional string space = 2;
+	optional string message = 3;
+	optional TypedMessage payload = 4;
+	optional MessageSet messageSet = 5;
+	optional int32 canonicalCode = 6;
+}

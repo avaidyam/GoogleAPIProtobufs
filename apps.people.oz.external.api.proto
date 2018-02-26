@@ -1,0 +1,40 @@
+message APOEAPeople2RequestMask {
+	repeated APOEAPeople2RequestMask_Field includeFieldArray = 1;
+	repeated POEMPersonFieldMetadata_Container includeContainerArray = 2;
+}
+
+message APOEAPeople2ConsistencyContext {
+	optional int64 fbsRequireAllImportantWritesUpToMicroTimestamp = 2;
+	optional string fbsVersionInfo = 3;
+	optional string base64EncodedZookie = 4;
+}
+
+message APOEAPeople2ConnectedSiteParams {
+	repeated APOEAPeople2ConnectedSiteParams_ConnectedSiteType connectedSiteTypeArray = 1;
+}
+
+message APOEAPeople2ListParams {
+	optional string personId = 1;
+	required APOEAPeople2ListParams_Collection collection = 2;
+	optional APOEAPageSelection pageSelection = 3;
+	optional string syncToken = 5;
+	optional bool includeOthers = 7;
+	optional APOEAPeople2RequestMask requestMask = 10;
+	optional string deprecatedVersionInfo = 13;
+	optional APOEAPeople2ConnectedSiteParams connectedSiteParams = 15;
+	optional bool delayFullSync = 16;
+	optional bool includeAllReachablePeople = 17;
+	optional APOEAPeople2MergedPersonSourceOptions mergedPersonOptions = 18;
+}
+
+message APOEAPeople2MergedPersonSourceOptions {
+	optional APOEAPeople2ConnectedSiteParams connectedSiteParams = 3;
+	repeated POEMAffinity_AffinityType includeAffinityArray = 4;
+	optional bool includeAccountLocale = 5;
+	optional bool includeMuteState = 7;
+}
+
+message APOEAPageSelection {
+	optional string token = 1;
+	optional uint32 maxResults = 2;
+}

@@ -1,0 +1,196 @@
+message GFIWeatherCurrentSmall {
+	optional string temperature = 1;
+	optional string location = 2;
+	optional string tempInLocation = 3;
+	optional string condition = 4;
+	optional string hiTemp = 5;
+	optional string loTemp = 6;
+	optional GFIImage image = 7;
+	optional GFILink actionLink = 8;
+}
+
+message GFITranslateSmall {
+	optional string sourceText = 1;
+	optional string sourceTextLanguage = 2;
+	optional string translatedText = 3;
+	optional string translatedTextLanguage = 4;
+	optional GFILink googleTranslateLink = 5;
+	optional int32 resultIndex = 6;
+	optional string translatedTextTransliteration = 7;
+}
+
+message GFIAppActionTraySmall {
+	repeated GFIAppActionItem itemArray = 1;
+}
+
+message GFIAppActionItem {
+	optional string text = 1;
+	optional GFIImage icon = 2;
+	optional GFIClientFilteredAppLinkProto clientFilteredAppLink = 3;
+	optional GFIVeLogInfo veLog = 4;
+}
+
+message GFIStockSmallProto {
+	optional string fullname = 1;
+	optional string symbol = 2;
+	optional string exchangeCode = 3;
+	optional string lastPrice = 4;
+	optional string lastPriceCurrency = 5;
+	optional bool isPriceChangeNonnegative = 6;
+	optional string priceChange = 7;
+	optional string percentChange = 8;
+	optional GFILink actionLink = 9;
+	optional GFIDisclaimerSmall disclaimerSmall = 10;
+	optional string timestamp = 11;
+}
+
+message GFIGameFooterSmall {
+	optional GFILink link = 1;
+	optional GFILink forwardLink = 2;
+	optional string linkText = 3;
+	optional string forwardLinkText = 4;
+}
+
+message GFIPersonalCalendarEventsSmall {
+	repeated GFIPersonalCalendarEvent eventArray = 1;
+}
+
+message GFIPersonalCalendarEvent {
+	optional string shortStartDate = 1;
+	optional string shortStartTime = 2;
+	optional string title = 3;
+	optional string location = 4;
+	optional GFILink link = 5;
+}
+
+message GFIWeatherForecastSmall_Forecast {
+	optional string weekday = 1;
+	optional string hiTemp = 2;
+	optional string loTemp = 3;
+	optional string windSpeed = 4;
+	optional GFIImage conditionImage = 5;
+}
+
+message GFIWeatherForecastSmall {
+	repeated GFIWeatherForecastSmall_Forecast forecastArray = 1;
+	optional string header = 2;
+}
+
+message GFIWebAnswerSmall {
+	optional GFIImage image = 1;
+	optional string text = 2;
+	optional int32 numTextMaxLines = 3;
+	optional string shortAnswer = 8;
+	optional int32 numShortAnswerMaxLines = 9;
+	repeated string listTextArray = 12;
+	optional int32 numListItemMaxLines = 13;
+	optional GFILink imageLink = 14;
+}
+
+message GFIHotlineSmall {
+	optional string name = 1;
+	optional string helpText = 2;
+	optional string phoneNumber = 3;
+	optional GFILink phoneNumberLink = 4;
+	repeated GFIFact factArray = 5;
+	optional GFILink actionLink = 6;
+}
+
+message GFISportsStandingsSmall_TeamStandingsEntry {
+	optional int32 rank = 1;
+	optional GFIImage logo = 2;
+	optional GFILocalizedMessage teamName = 3;
+	repeated GFILocalizedMessage scoreValuesArray = 4;
+}
+
+message GFISportsStandingsSmall {
+	optional GFILocalizedMessage standingsTitle = 1;
+	optional GFILocalizedMessage groupName = 2;
+	repeated GFISportsStandingsSmall_TeamStandingsEntry teamsArray = 3;
+	repeated GFILocalizedMessage columnTitleArray = 4;
+}
+
+message GFIPersonalFlightReservationSmall_Endpoint {
+	optional string code = 1;
+	optional string city = 2;
+	optional string terminal = 3;
+	optional string gate = 4;
+	optional string date = 5;
+	optional string time = 6;
+}
+
+message GFIPersonalFlightReservationSmall {
+	optional string title = 1;
+	optional GFIPersonalFlightReservationSmall_Endpoint departure = 2;
+	optional GFIPersonalFlightReservationSmall_Endpoint arrival = 3;
+	optional GFIPersonalFlightReservationSmall_FlightStatus flightStatus = 4;
+	optional string statusInfo = 5;
+	optional double flightPercent = 6;
+	optional GFILink moreLink = 7;
+}
+
+message GFIPersonalHotelReservationSmall {
+	optional string title = 1;
+	optional GFIImage image = 2;
+	optional string location = 3;
+	optional GFIStructuredData structuredData = 4;
+	optional GFILink link = 5;
+}
+
+message GFIGmailInfoItemSmall {
+	optional MSPStyledText title = 1;
+	optional MSPStyledText snippet = 2;
+	optional MSPStyledText sender = 3;
+	optional MSPStyledText lastUpdateTime = 4;
+	optional GFILink moreLink = 5;
+}
+
+message GFIShowtimesHeaderSmall {
+	optional string header = 1;
+}
+
+message GFISportsScoreSmall_TeamInfo {
+	optional GFILocalizedMessage name = 1;
+	optional GFILocalizedMessage score = 2;
+	optional GFIImage image = 3;
+}
+
+message GFISportsScoreSmall {
+	repeated GFISportsScoreSmall_TeamInfo teamsArray = 2;
+	optional string datetime = 4;
+	optional GFILocalizedMessage eventStatus = 5;
+	optional string tournamentRound = 6;
+	optional string summary = 7;
+	optional GFILink actionLink = 8;
+}
+
+message GFIScreenieContentSmall {
+	optional string title = 1;
+	optional int32 numTitleLines = 2;
+	optional string starScore = 3;
+	optional float starCount = 4;
+	optional MSPStyledText subtitle = 5;
+	optional int32 numSubtitleLines = 6;
+	optional string subtext = 7;
+	optional int32 numSubtextLines = 8;
+	optional GFIImage image = 9;
+	optional GFILink actionLink = 10;
+	optional string description_p = 11;
+	optional int32 numDescriptionLines = 12;
+	optional GFIDisclaimerSmall disclaimerSmall = 13;
+	optional string subsubtext = 14;
+	optional int32 numSubsubtextLines = 15;
+}
+
+message GFIFlightSmall {
+	optional string title = 1;
+	optional string departureAirport = 2;
+	optional string arrivalAirport = 3;
+	optional GFIFlightSmall_FlightStatus flightStatus = 4;
+	optional string statusInfo = 5;
+	optional double flightPercent = 6;
+	optional string timeInfo = 7;
+	optional GFILink actionLink = 10;
+	optional string terminalInfo = 11;
+	optional string gateInfo = 12;
+}

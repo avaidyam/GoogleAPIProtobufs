@@ -1,0 +1,5 @@
+message SCSocialClient {
+	optional SCDevice device = 1;
+	optional SCApplication application = 2;
+	optional SCPlatform platform = 3;
+}

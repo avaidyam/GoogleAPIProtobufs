@@ -1,0 +1,37 @@
+message GFIComposableInteraction {
+	optional string id_p = 1;
+	optional GFIComposableInteraction_GestureType gestureType = 2;
+	optional GFIComposableLinkAction linkAction = 3;
+}
+
+message GFIComposableBehavior {
+	optional bool interactionDisabled = 1;
+	repeated GFIComposableInteraction interactionsArray = 2;
+}
+
+message GFIComposableStyle_Shadow {
+	optional GTPColor shadowColor = 1;
+	optional float shadowOpacity = 2;
+	optional GFIComposableStyle_Size shadowOffset = 3;
+	optional float shadowRadius = 4;
+}
+
+message GFIComposableStyle_Size {
+	optional float width = 1;
+	optional float height = 2;
+}
+
+message GFIComposableStyle_EdgeInsets {
+	optional int32 top = 1;
+	optional int32 bottom = 2;
+	optional int32 leading = 3;
+	optional int32 trailing = 4;
+}
+
+message GFIComposableStyle {
+	optional GTPColor backgroundColor = 1;
+	optional GFIComposableStyle_EdgeInsets edgeInsets = 2;
+	optional GFIComposableStyle_Size minSize = 3;
+	optional GFIComposableStyle_Size maxSize = 4;
+	optional GFIComposableStyle_Shadow shadow = 5;
+}

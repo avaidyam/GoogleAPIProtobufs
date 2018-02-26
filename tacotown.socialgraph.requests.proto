@@ -1,0 +1,29 @@
+message TSGLoadSocialNetworkRequest_PersonListOptions {
+	optional bool includePeople = 1;
+	repeated TSGdata_GoogleProfile profileTypesToFilterArray = 2;
+	optional int32 maxPeople = 3;
+	optional TSGdata_SyncStateToken syncStateToken = 4;
+	optional bool includeExtendedProfileInfo = 5;
+	repeated int64 deprecatedCircleIdsToFilterArray = 6;
+	optional bool includeMobileOidMappings = 7;
+}
+
+message TSGLoadSocialNetworkRequest {
+	optional TSGLoadSocialNetworkRequest_PersonListOptions personListOptions = 3;
+	optional string versionInfo = 4;
+}
+
+message TSGLoadCircleMembersRequest {
+	optional string circleId = 1;
+	optional string versionInfo = 2;
+}
+
+message TSGLoadBlockedPeopleRequest {
+	optional bool includeChatBlocked = 1;
+}
+
+message TSGBlockUserRequest {
+	optional TSGdata_MembersToBlock membersToBlock = 1;
+	optional bool ignore = 2;
+	optional bool legacyChatUnblock = 4;
+}

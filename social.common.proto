@@ -1,0 +1,39 @@
+message SocialHashtagData {
+	optional string searchText = 1;
+}
+
+message SocialUserMentionData {
+	optional int64 userGaiaId = 1;
+	optional string userId = 2;
+	optional string email = 3;
+}
+
+message SocialLinkData {
+	optional string linkTarget = 1;
+	optional string displayURL = 2;
+	optional Attachment attachment = 3;
+	optional string title = 4;
+}
+
+message SocialFormatting {
+	optional bool bold = 1;
+	optional bool italics = 2;
+	optional bool strikethrough = 3;
+	optional bool underline = 4;
+}
+
+message SocialSegment {
+	optional SocialSegmentType_SegmentTypeEnum type = 1;
+	optional string text = 2;
+	optional SocialFormatting formatting = 3;
+	optional SocialLinkData linkData = 4;
+	optional SocialUserMentionData userMentionData = 5;
+	optional SocialHashtagData hashtagData = 6;
+}
+
+message SocialSegmentType {
+}
+
+message SocialSegments {
+	repeated SocialSegment segmentsArray = 1;
+}

@@ -1,0 +1,200 @@
+message SetChatAclsResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional ChatSettingsSetChatAclsResponse response = 2;
+}
+
+message SetChatAclsRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional ChatSettingsSetChatAclsRequest params = 2;
+}
+
+message GetChatAclsResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional ChatSettingsGetChatAclsResponse response = 2;
+}
+
+message GetChatAclsRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional ChatSettingsGetChatAclsRequest params = 2;
+}
+
+message SnapToPlaceResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional LocationSnapToPlaceResponse response = 2;
+}
+
+message SnapToPlaceRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional LocationSnapToPlaceRequest params = 2;
+}
+
+message CreatePhotoAlbumResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional OZPRPCreateAlbumResponse response = 2;
+}
+
+message CreatePhotoAlbumRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional Photorequests_CreateAlbumRequest params = 2;
+}
+
+message UploadMediaResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional PhotoInsertMediaResponse response = 2;
+}
+
+message UploadMediaRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional PhotoInsertMediaRequest params = 2;
+}
+
+message GetPhotoResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional OZPRPGetPhotoResponse response = 2;
+}
+
+message GetPhotoRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional Photorequests_GetPhotoRequest params = 2;
+}
+
+message UserPhotoAlbumsResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional OZPRPProfileAlbumsResponse response = 2;
+}
+
+message UserPhotoAlbumsRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional Photorequests_UserAlbumsRequest params = 2;
+}
+
+message ReadCollectionResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional PhotoReadCollectionResponse response = 2;
+}
+
+message ReadCollectionRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional PhotoReadCollectionRequest params = 2;
+}
+
+message ReadItemsByIdResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional PhotosMCReadItemsByIdResponse response = 2;
+}
+
+message ReadItemsByIdRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional PhotosMCReadItemsByIdRequest params = 2;
+}
+
+message WipeoutExternalContactsResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional OZACWipeoutExternalContactsResponse response = 2;
+}
+
+message WipeoutExternalContactsRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional OZACWipeoutExternalContactsRequest params = 2;
+}
+
+message UploadExternalContactsResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional OZACUploadExternalContactsResponse response = 2;
+}
+
+message UploadExternalContactsRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional OZACUploadExternalContactsRequest params = 2;
+}
+
+message LoadSocialNetworkResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional TSGLoadSocialNetworkResponse response = 2;
+}
+
+message LoadSocialNetworkRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional TSGLoadSocialNetworkRequest params = 2;
+}
+
+message LoadCircleMembersResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional TSGLoadCirclesResponse response = 2;
+}
+
+message LoadCircleMembersRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional TSGLoadCircleMembersRequest params = 2;
+}
+
+message LoadBlockedPeopleResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional TSGLoadBlockedPeopleResponse response = 2;
+}
+
+message LoadBlockedPeopleRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional TSGLoadBlockedPeopleRequest params = 2;
+}
+
+message MergedPeopleListResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional POSPMergedPeopleListResponse response = 2;
+}
+
+message MergedPeopleListRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional POSPMergedPeopleListRequest params = 2;
+}
+
+message BlockUserResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional TSGBlockUserResponse response = 2;
+}
+
+message BlockUserRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional TSGBlockUserRequest params = 2;
+}
+
+message GetVideosDataResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional ProfileGetVideosDataResponse response = 2;
+}
+
+message GetVideosDataRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional ProfileGetVideosDataRequest params = 2;
+}
+
+message GetPeopleDataResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional ProfileGetPeopleDataResponse response = 2;
+}
+
+message GetPeopleDataRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional ProfileGetPeopleDataRequest params = 2;
+}
+
+message GetSimpleProfileResponse {
+	optional ApiResponseHeader apiHeader = 1;
+	optional ProfileGetSimpleProfileResponse response = 2;
+}
+
+message GetSimpleProfileRequest {
+	optional ApiRequestHeader apiHeader = 1;
+	optional ProfileGetSimpleProfileRequest params = 2;
+}
+
+message ApiResponseHeader {
+	optional string fbsVersionInfo = 3;
+}
+
+message ApiRequestHeader {
+	optional bool enableTracing = 2;
+	optional APOAPApiaryFields commonFields = 3;
+	optional string fbsVersionInfo = 4;
+	optional string consistencyTokenJar = 5;
+}

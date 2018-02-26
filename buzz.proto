@@ -1,0 +1,11 @@
+message BUZZNetworkTypeEnum {
+}
+
+message BUZZImpressionLogEnum {
+}
+
+message BUZZRtcAction {
+}
+
+message BUZZRtcMark {
+}

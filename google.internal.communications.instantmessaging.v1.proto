@@ -1,0 +1,1579 @@
+message GTPNotifyRegistrationStateResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPNotifyRegistrationStateRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPUserRegistrationState state = 2;
+}
+
+message GTPAddSpamSignalResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPAddSpamSignalRequest_UserSpamSignal {
+	optional GTPSpamSignal_Type spamType = 1;
+	optional GTPId userId = 2;
+	optional string messageId = 3;
+}
+
+message GTPAddSpamSignalRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPAddSpamSignalRequest_UserSpamSignal userSpamSignalsArray = 2;
+}
+
+message GTPLookupBlockersResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPId blockersArray = 2;
+}
+
+message GTPLookupBlockersRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPId possibleBlockersArray = 2;
+}
+
+message GTPGetBlockedUsersResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPId userIdsArray = 2;
+}
+
+message GTPGetBlockedUsersRequest {
+	optional GTPRequestHeader header = 1;
+}
+
+message GTPUnblockUsersResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPUnblockUsersRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPId userIdsArray = 2;
+}
+
+message GTPBlockUsersResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPBlockUsersRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPId userIdsArray = 2;
+}
+
+message GTPSetPresenceSubscriptionsResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPIdPresence presencesArray = 2;
+}
+
+message GTPSetPresenceSubscriptionsRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPId userIdsArray = 2;
+}
+
+message GTPGetPresenceResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPIdPresence presencesArray = 2;
+}
+
+message GTPGetPresenceRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPId userIdsArray = 2;
+}
+
+message GTPPresenceCheck {
+}
+
+message GTPIdPresence {
+	optional GTPId userId = 1;
+	optional GTPPresence presence = 2;
+}
+
+message GTPPresence {
+	optional int64 timestampMillis = 1;
+	optional GTPPresenceState_Type state = 2;
+}
+
+message GTPUpdatePresenceResponse {
+	optional GTPResponseHeader header = 1;
+	optional int32 timeoutSecs = 2;
+}
+
+message GTPUpdatePresenceRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPPresenceState_Type state = 2;
+}
+
+message GTPNeedPreKeysPush {
+}
+
+message GTPSetPreKeysResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPSetPreKeysRequest_PreKeySet {
+	optional int32 version = 1;
+	repeated GTPPreKey preKeysArray = 2;
+	repeated GTPPreKey signedPreKeysArray = 3;
+}
+
+message GTPSetPreKeysRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPSetPreKeysRequest_PreKeySet setsArray = 2;
+}
+
+message GTPGetPreKeyResult {
+	optional string requestId = 1;
+	optional int32 signedPreKeyId = 2;
+}
+
+message GTPGetPreKeyResponse_PreKeyBundle {
+	optional int32 version = 1;
+	optional bytes identityKey = 2;
+	optional GTPPreKey preKey = 3;
+	optional GTPPreKey signedPreKey = 4;
+}
+
+message GTPGetPreKeyResponse {
+	optional GTPResponseHeader header = 1;
+	optional GTPGetPreKeyResponse_PreKeyBundle preKeyBundle = 2;
+}
+
+message GTPGetPreKeyRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPId userId = 2;
+	optional int32 minVersion = 3;
+	optional int32 maxVersion = 4;
+}
+
+message GTPPreKey {
+	optional int32 keyId = 1;
+	optional bytes pubKey = 2;
+	optional bytes signature = 3;
+}
+
+message GTPSetAclsResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPSetAclsRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPUserDataAcls acls = 2;
+}
+
+message GTPSetProfileResponse {
+	optional GTPResponseHeader header = 1;
+	optional int64 txnTimestampUsec = 2;
+}
+
+message GTPSetProfileRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPProfile deprecatedProfile = 2;
+	optional GTPPartialProfile profileChanges = 3;
+}
+
+message GTPUserDataAcls {
+	optional GTPUserDataAccessClass_Type profileAccess = 1;
+	optional GTPUserDataAccessClass_Type presenceAccess = 2;
+}
+
+message GTPGetProfileResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPIdProfile profilesArray = 2;
+}
+
+message GTPGetProfileRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPId userIdsArray = 2;
+}
+
+message GTPIdProfile {
+	optional GTPId userId = 1;
+	optional GTPProfile profile = 2;
+	optional GTPRegistrationStateValue regState = 3;
+	optional GTPClientCapabilitiesValue caps = 4;
+}
+
+message GTPLookupSenderNameResponse {
+	optional GTPResponseHeader header = 1;
+	optional GPBStringValue profileName = 2;
+	optional GPBStringValue contactName = 3;
+}
+
+message GTPLookupSenderNameRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPId sender = 2;
+	optional GTPId receiver = 3;
+}
+
+message GTPRemoveContactsResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPRemoveContactsRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPId contactIdsArray = 2;
+}
+
+message GTPAddContactsResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPIdProfile registeredContactsArray = 2;
+}
+
+message GTPAddContactsRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPContactEntry contactsArray = 2;
+}
+
+message GTPSetContactsResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPIdProfile registeredContactsArray = 2;
+}
+
+message GTPSetContactsRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPContactEntry contactsArray = 2;
+}
+
+message GTPContactEntry {
+	optional GTPId contactId = 1;
+	optional string name = 2;
+}
+
+message GTPChangePresencePush {
+	optional GTPId userId = 1;
+	optional GTPPresence presence = 2;
+}
+
+message GTPChangeProfilePush {
+	optional GTPId userId = 1;
+	optional GTPProfile deprecatedProfile = 2;
+	optional GTPPartialProfile profileChanges = 3;
+	optional int64 txnTimestampUsec = 4;
+	optional GTPRegistrationStateValue regState = 5;
+	optional GTPClientCapabilitiesValue caps = 6;
+}
+
+message GTPClientCapabilitiesValue {
+	repeated int32 valuesArray = 1;
+}
+
+message GTPRegistrationStateValue {
+	optional GTPRegistrationState_Type value = 1;
+}
+
+message GTPUnregisterPush {
+	optional GTPId userId = 1;
+}
+
+message GTPRegisterPush {
+	optional GTPId userId = 1;
+	optional GTPProfile profile = 2;
+}
+
+message GTPRegistrationChangePush {
+	optional GTPId userId = 1;
+	optional GTPProfile profile = 2;
+	optional GTPRegistrationState state = 3;
+}
+
+message GTPMediaDownloadResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPMediaDownloadRequest {
+	optional GTPMediaId mediaId = 1;
+	optional GTPRequestHeader header = 2;
+}
+
+message GTPMediaUploadResponse {
+	optional GTPMediaId mediaId = 1;
+	optional GTPResponseHeader header = 2;
+}
+
+message GTPMediaUploadRequest {
+	optional GTPMediaClass_Type mediaClass = 1;
+	optional GTPRequestHeader header = 2;
+	optional GTPId destination = 3;
+	optional GTPId profile = 4;
+}
+
+message GTPGroupMessageReceipt_Receipt {
+	optional GTPMessageReceiptType_Type type = 1;
+	optional GTPId memberId = 2;
+	optional int64 timestampUsec = 3;
+	optional int32 error = 4;
+}
+
+message GTPGroupMessageReceipt {
+	optional string messageId = 1;
+	optional int64 messageTimestampUsec = 2;
+	repeated GTPGroupMessageReceipt_Receipt receiptsArray = 3;
+}
+
+message GTPGetGroupReceiptsResponse {
+	optional GTPResponseHeader header = 1;
+	optional GTPId groupId = 2;
+	repeated GTPGroupMessageReceipt groupReceiptsArray = 3;
+}
+
+message GTPGetGroupReceiptsRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPId groupId = 2;
+	repeated string messageIdsArray = 3;
+}
+
+message GTPLeaveAllGroupsResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPLeaveAllGroupsRequest {
+	optional GTPRequestHeader header = 1;
+}
+
+message GTPGetGroupInfosResponse {
+	optional GTPResponseHeader header = 1;
+	optional int64 txnTimestampUsec = 2;
+	repeated GTPGroupInfo groupInfosArray = 3;
+}
+
+message GTPGetGroupInfosRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPId groupIdsArray = 2;
+}
+
+message GTPGetGroupIdsResponse {
+	optional GTPResponseHeader header = 1;
+	optional int64 txnTimestampUsec = 2;
+	repeated GTPId groupIdsArray = 3;
+}
+
+message GTPGetGroupIdsRequest {
+	optional GTPRequestHeader header = 1;
+}
+
+message GTPChangeGroupProfilePush {
+	optional GTPId requesterId = 1;
+	optional int64 txnTimestampUsec = 2;
+	optional GTPGroupInfo groupInfo = 3;
+	optional GTPPartialProfile profileChanges = 4;
+}
+
+message GTPChangeGroupProfileResponse {
+	optional GTPResponseHeader header = 1;
+	optional int64 txnTimestampUsec = 2;
+}
+
+message GTPChangeGroupProfileRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPId groupId = 2;
+	optional GTPProfile deprecatedProfile = 3;
+	optional GTPPartialProfile profileChanges = 4;
+	optional GTPChangeGroupProfileRequest_UpdatePolicy updatePolicy = 5;
+}
+
+message GTPKickGroupUsersPush {
+	optional GTPId requesterId = 1;
+	optional int64 txnTimestampUsec = 2;
+	optional GTPGroupInfo groupInfo = 3;
+	repeated GTPId kickedUsersArray = 4;
+}
+
+message GTPKickGroupUsersResponse {
+	optional GTPResponseHeader header = 1;
+	optional int64 txnTimestampUsec = 2;
+	repeated GTPId kickedUsersArray = 3;
+}
+
+message GTPKickGroupUsersRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPId groupId = 2;
+	repeated GTPId usersArray = 3;
+}
+
+message GTPAddGroupUsersPush {
+	optional GTPId requesterId = 1;
+	optional int64 txnTimestampUsec = 2;
+	optional GTPGroupInfo groupInfo = 3;
+	repeated GTPId addedUsersArray = 4;
+}
+
+message GTPAddGroupUsersResponse {
+	optional GTPResponseHeader header = 1;
+	optional int64 txnTimestampUsec = 2;
+}
+
+message GTPAddGroupUsersRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPId groupId = 2;
+	repeated GTPId usersArray = 3;
+}
+
+message GTPCreateGroupPush {
+	optional GTPId requesterId = 1;
+	optional int64 txnTimestampUsec = 2;
+	optional GTPGroupInfo groupInfo = 3;
+}
+
+message GTPCreateGroupResponse {
+	optional GTPResponseHeader header = 1;
+	optional int64 txnTimestampUsec = 2;
+}
+
+message GTPCreateGroupRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPId groupId = 2;
+	optional GTPProfile profile = 3;
+	repeated GTPId usersArray = 4;
+}
+
+message GTPGroupInfo {
+	optional GTPId groupId = 1;
+	optional GTPProfile profile = 2;
+	repeated GTPId usersArray = 3;
+}
+
+message GTPRemoveAllConversationMutesResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPRemoveAllConversationMutesRequest {
+	optional GTPRequestHeader header = 1;
+}
+
+message GTPSetConversationMutesResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPSetConversationMutesRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPConversationMute conversationMutesArray = 2;
+}
+
+message GTPConversationMute {
+	optional GTPId otherPartyId = 1;
+	optional GTPMuteState_Type type = 2;
+	optional GPBInt64Value durationSeconds = 3;
+}
+
+message GTPBindStream {
+}
+
+message GTPNotifyDeviceEvent {
+}
+
+message GTPConnectedCallEndCause {
+}
+
+message GTPCallSetupCode {
+}
+
+message GTPConversationType {
+}
+
+message GTPTachyonEventDetailType {
+}
+
+message GTPLogFile {
+}
+
+message GTPSpamClassification {
+}
+
+message GTPSpamAction {
+}
+
+message GTPPlatform {
+}
+
+message GTPSwitchableFeature {
+}
+
+message GTPAppPermission {
+}
+
+message GTPPermissionStatus {
+}
+
+message GTPMuteState {
+}
+
+message GTPPublicKeyType {
+}
+
+message GTPRegistrationState {
+}
+
+message GTPCallQualityRating {
+}
+
+message GTPCallQualityFeedback {
+}
+
+message GTPMessageReceiptError {
+}
+
+message GTPMessageReceiptType {
+}
+
+message GTPSpamSignal {
+}
+
+message GTPRegistrationWarning {
+}
+
+message GTPVersionWarning {
+}
+
+message GTPApiVersion {
+}
+
+message GTPPresenceState {
+}
+
+message GTPUserDataAccessClass {
+}
+
+message GTPSmartSuggestionType {
+}
+
+message GTPTransportEventDetail {
+}
+
+message GTPMessageClass {
+}
+
+message GTPMessageType {
+}
+
+message GTPTransportEventType {
+}
+
+message GTPMediaClass {
+}
+
+message GTPDirection {
+}
+
+message GTPLocationType {
+}
+
+message GTPMedia {
+}
+
+message GTPCellNetwork {
+}
+
+message GTPNetwork {
+}
+
+message GTPTraceLevel {
+}
+
+message GTPIceCandidateType {
+}
+
+message GTPIceProtocol {
+}
+
+message GTPChallenge {
+}
+
+message GTPExperimentLayer {
+}
+
+message GTPExperiment {
+}
+
+message GTPDeviceIdType {
+}
+
+message GTPIdType {
+}
+
+message GTPMethod {
+}
+
+message GTPError {
+}
+
+message GTPNode {
+}
+
+message GTPEvent {
+}
+
+message GTPPublicKey {
+	optional GTPPublicKeyType_Type type = 1;
+	optional bytes key = 2;
+}
+
+message GTPUserRegistrationState {
+	optional GTPId id_p = 1;
+	optional GTPRegistrationState_Type state = 2;
+	repeated int32 capsArray = 3;
+}
+
+message GTPPartialProfile {
+	optional GPBStringValue name = 1;
+	optional GTPMediaReference photo = 2;
+	optional GTPMediaData thumbnail = 3;
+}
+
+message GTPProfile {
+	optional string name = 1;
+	optional string photoUri = 2;
+	optional GTPMediaId photoId = 3;
+	optional string photoContentType = 4;
+	optional bytes thumbnail = 5;
+	optional string thumbnailContentType = 6;
+}
+
+message GTPMediaData {
+	optional bytes content = 1;
+	optional string contentType = 2;
+}
+
+message GTPMediaReference {
+	optional GTPMediaId id_p = 1;
+	optional string contentType = 2;
+}
+
+message GTPMediaId {
+	optional string blobId = 1;
+	optional GTPMediaClass_Type mediaClass = 2;
+	optional GPBInt32Value region = 3;
+}
+
+message GTPUnencryptedAuthToken {
+	optional GTPId id_p = 1;
+	optional int64 timeout = 2;
+	optional bool verified = 3;
+	optional int64 timeoutSeconds = 4;
+	optional bool unverified = 5;
+}
+
+message GTPAuthToken {
+	optional bytes payload = 1;
+	optional int64 expiresIn = 2;
+}
+
+message GTPResponseHeader {
+	optional uint64 rpcGlobalId = 2;
+	optional bytes routingCookie = 102;
+	optional GTPApiVersionWarning apiVersionWarning = 103;
+}
+
+message GTPRequestHeader {
+	optional string requestId = 1;
+	optional string app = 3;
+	optional string userAgent = 4;
+	optional bytes authTokenPayload = 6;
+	optional GTPClientInfo clientInfo = 7;
+	optional string asApp = 8;
+	optional bytes requestIdBinary = 9;
+	optional bytes routingCookie = 102;
+}
+
+message GTPRegistrationCheckWarning {
+	optional GTPRegistrationWarning_Type type = 1;
+}
+
+message GTPVersionCheckWarning {
+	optional GTPVersionWarning_Type type = 1;
+}
+
+message GTPApiVersionWarning {
+	optional GTPApiVersion_Value grumbleAt = 1;
+	optional GTPApiVersion_Value failAt = 2;
+}
+
+message GTPClientInfo {
+	optional string name = 1;
+	optional string platform = 2;
+	optional int32 major = 3;
+	optional int32 minor = 4;
+	optional int32 point = 5;
+	optional string details = 6;
+	optional GTPApiVersion_Value apiVersion = 7;
+	optional GTPNode_Type node = 8;
+	optional GTPPlatform_Type platformType = 9;
+}
+
+message GTPLocation {
+	optional double deprecatedLatitude = 1;
+	optional double deprecatedLongitude = 2;
+	optional FBGTPLatLng coordinates = 3;
+	optional string placeId = 4;
+	optional GTPLocationType_Type type = 5;
+	optional string placeName = 6;
+	optional string placeAddress = 7;
+}
+
+message GTPDeviceInfo {
+	optional string os = 1;
+	optional string hardware = 2;
+}
+
+message GTPDeviceId {
+	optional GTPDeviceIdType_Type type = 1;
+	optional string id_p = 2;
+}
+
+message GTPId {
+	optional GTPIdType_Type type = 1;
+	optional string id_p = 2;
+	optional string app = 3;
+}
+
+message GTPTachyonCapability {
+}
+
+message GTPMediaParametersRequest {
+	optional int32 maxVideoBitrate = 2;
+}
+
+message GTPToggleVideoMode {
+	optional bool videoEnabled = 2;
+	optional GTPToggleVideoMode_Reason reason = 3;
+}
+
+message GTPBye {
+}
+
+message GTPAcceptInvitation {
+	optional bool audioOnly = 2;
+	optional bool videoEnabled = 3;
+}
+
+message GTPAckInvitation {
+	optional string codecDescription = 2;
+	optional bool useVideoRing = 3;
+	repeated GTPVideoCodecCapability videoCodecCapabilitiesArray = 4;
+}
+
+message GTPDeclineInvitation {
+	optional string reason = 2;
+}
+
+message GTPCancelInvitation {
+}
+
+message GTPInvitation {
+	optional bool videoEnabled = 3;
+	optional bool useSetTrackForMediaWarmup = 5;
+	optional bool useVideoRing = 6;
+	repeated GTPVideoCodecCapability videoCodecCapabilitiesArray = 7;
+}
+
+message GTPVideoCodecCapability {
+	optional GTPVideoCodecCapability_VideoCodecType codec = 1;
+	optional GTPVideoCodecCapability_VideoCodecRole role = 2;
+	optional bool hardwareAccelerated = 3;
+	optional int32 maxWidth = 4;
+	optional int32 maxHeight = 5;
+	optional int32 maxFps = 6;
+}
+
+message GTPIceCandidatesUpdate {
+	optional GTPIceCandidatesUpdate_Operation operation = 1;
+	repeated GTPIceCandidate candidatesArray = 3;
+}
+
+message GTPIceCandidate {
+	optional string id_p = 1;
+	optional int32 label = 2;
+	optional string candidate = 3;
+}
+
+message GTPSessionDescriptionAnswer {
+	optional string description_p = 1;
+}
+
+message GTPSessionDescriptionOffer {
+	optional string description_p = 1;
+}
+
+message GTPClientMessage {
+	optional GTPSessionDescriptionOffer offer = 1;
+	optional GTPSessionDescriptionAnswer answer = 2;
+	optional GTPIceCandidate iceCandidate = 3;
+	optional GTPInvitation invitation = 4;
+	optional GTPDeclineInvitation declineInvitation = 5;
+	optional GTPAckInvitation ackInvitation = 6;
+	optional GTPCancelInvitation cancelInvitation = 7;
+	optional GTPAcceptInvitation acceptInvitation = 8;
+	optional GTPBye bye = 9;
+	optional GTPToggleVideoMode videoMode = 10;
+	optional GTPIceCandidatesUpdate iceCandidatesUpdate = 11;
+	optional GTPMediaParametersRequest mediaParametersRequest = 12;
+}
+
+message GTPClientMessageBundle {
+	repeated GTPClientMessage messagesArray = 1;
+}
+
+message GTPGetBotMetadataResponse {
+	optional GTPResponseHeader header = 1;
+	optional GTPGetBotMetadataResponse_GetBotResult result = 2;
+	repeated GTPBotMetadata botInfoArray = 3;
+}
+
+message GTPGetBotMetadataRequest {
+	optional GTPRequestHeader header = 1;
+	optional string botId = 2;
+	optional GTPBotRequestHeader botRequestHeader = 4;
+}
+
+message GTPGetBotListResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPBotMetadata botsArray = 2;
+}
+
+message GTPGetBotListRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPBotRequestHeader botRequestHeader = 3;
+}
+
+message GTPBotRequestHeader {
+	optional string oauthToken = 1;
+	repeated string experimentsArray = 2;
+	optional GTPId id_p = 3;
+}
+
+message GTPBotMetadata {
+	optional string id_p = 1;
+	optional string displayName = 2;
+	optional GTPMediaReference avatar = 3;
+	optional GTPMediaData thumbnail = 4;
+	optional string description_p = 5;
+	optional GTPBotMetadata_BotType type = 6;
+}
+
+message GTPGetConversationsResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPId idsArray = 2;
+}
+
+message GTPGetConversationsRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPConversationType_Type type = 2;
+}
+
+message GTPResetBadgeCountResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPResetBadgeCountRequest {
+	optional GTPRequestHeader header = 1;
+}
+
+message GTPBindStateDeleteResponse {
+}
+
+message GTPBindStateUpdateResponse {
+}
+
+message GTPBindState {
+	optional string regId = 1;
+	optional string application = 2;
+	optional string bns = 3;
+	optional int64 connectedAt = 4;
+	optional string userId = 5;
+	optional GTPId user = 6;
+}
+
+message GTPBindResponse_AckResult {
+	optional GTPBindResponse_Header header = 1;
+	optional int32 result = 2;
+}
+
+message GTPBindResponse_EndOfPull {
+	optional GTPBindResponse_Header header = 1;
+}
+
+message GTPBindResponse_StartOfPull {
+	optional int32 count = 1;
+	optional GTPBindResponse_Header header = 2;
+}
+
+message GTPBindResponse_Pong {
+	optional GTPBindResponse_Header header = 1;
+}
+
+message GTPBindResponse_RefreshResult {
+	optional GTPBindResponse_Header header = 1;
+	optional GTPRegisterRefreshResponse registerRefreshResponse = 2;
+	optional int32 statusCode = 3;
+}
+
+message GTPBindResponse_OpenStarted {
+	optional GTPBindResponse_Header header = 1;
+}
+
+message GTPBindResponse_Header {
+	optional int32 requestNum = 1;
+}
+
+message GTPBindResponse {
+	optional GTPInboxMessage inboxMessage = 1;
+	optional GTPBindResponse_Pong pong = 2;
+	optional GTPBindResponse_EndOfPull endOfPull = 3;
+	optional GTPTransportEventDetail_Value pushPath = 4;
+	optional GTPBindResponse_StartOfPull startOfPull = 5;
+	optional GTPBindResponse_AckResult ackResult = 6;
+	optional GTPBindResponse_OpenStarted openStarted = 7;
+	optional GTPBindResponse_RefreshResult refreshResult = 8;
+}
+
+message GTPBindRequest_Close {
+	optional GTPBindRequest_Header header = 1;
+}
+
+message GTPBindRequest_Ack {
+	optional GTPBindRequest_Header header = 1;
+	repeated string messageIdsArray = 2;
+}
+
+message GTPBindRequest_Reload {
+	optional GTPBindRequest_Header header = 1;
+}
+
+message GTPBindRequest_Ping {
+	optional GTPBindRequest_Header header = 1;
+}
+
+message GTPBindRequest_Open {
+	optional GTPRequestHeader header = 1;
+	optional GTPRegisterRefreshRequest registerRefreshRequest = 2;
+	optional GTPBindStream_Type streamType = 3;
+}
+
+message GTPBindRequest_Header {
+	optional int32 requestNum = 1;
+}
+
+message GTPBindRequest {
+	optional GTPBindRequest_Open open = 4;
+	optional GTPBindRequest_Ping ping = 5;
+	optional GTPBindRequest_Reload reload = 6;
+	optional GTPBindRequest_Close close = 7;
+	optional GTPBindRequest_Ack ack = 8;
+}
+
+message GTPInboxPullResponse {
+	repeated GTPInboxMessage messagesArray = 1;
+	optional GTPResponseHeader header = 2;
+}
+
+message GTPInboxPullRequest {
+	optional int64 startTimestamp = 1;
+	optional GTPRequestHeader header = 2;
+}
+
+message GTPInboxAckResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPInboxAckRequest_AckMessageAndDest {
+	optional GTPAckMessage ackMessage = 1;
+	optional GTPId destId = 2;
+}
+
+message GTPInboxAckRequest {
+	repeated string messageIdsArray = 1;
+	optional GTPRequestHeader header = 2;
+	optional int64 clientStatus = 3;
+	repeated GTPInboxAckRequest_AckMessageAndDest acksArray = 4;
+	optional GTPId sendAs = 5;
+}
+
+message GTPInboxPush {
+	optional GTPId destId = 1;
+	optional GTPInboxMessage message = 2;
+}
+
+message GTPInboxSendResponse {
+	optional GTPResponseHeader header = 1;
+	optional int64 timestamp = 2;
+}
+
+message GTPInboxSendRequest {
+	optional GTPId destId = 1;
+	optional GTPInboxMessage message = 2;
+	optional GTPRequestHeader header = 3;
+	optional int64 timeToLive = 5;
+	optional GTPId sendAs = 7;
+}
+
+message GTPMessageReceipt_ReceiptInfo {
+	optional string messageId = 1;
+	optional int64 messageTimestampUsec = 2;
+	optional int32 error = 3;
+}
+
+message GTPMessageReceipt {
+	optional GTPMessageReceiptType_Type receiptType = 1;
+	repeated GTPMessageReceipt_ReceiptInfo receiptsArray = 2;
+}
+
+message GTPInboxMessage {
+	optional string messageId = 1;
+	optional GTPInboxMessage_MessageType messageType = 2;
+	optional int64 timestamp = 3;
+	optional GTPInboxMessage_MessageClass messageClass = 5;
+	optional int64 expiredAt = 6;
+	optional int64 age = 7;
+	optional GTPId senderId = 8;
+	optional GTPId receiverId = 9;
+	optional GTPId groupId = 10;
+	optional string senderIp = 11;
+	optional bytes message = 12;
+	optional GTPAckMessage ackPayload = 100;
+	optional GTPFireballMessage fireballPayload = 101;
+	optional GTPTachyonMessage tachyonPayload = 102;
+	optional GTPBasicMessage basicPayload = 103;
+	optional GTPGroupMessage groupPayload = 104;
+	optional GTPUserDataMessage userdataPayload = 106;
+	optional GTPMessageReceipt receiptPayload = 107;
+	optional GTPSecureMessage securePayload = 108;
+}
+
+message GTPSystemMessage {
+	optional GTPSystemMessage_Type type = 1;
+	optional string text = 2;
+	optional string URL = 3;
+}
+
+message GTPSecureMessage {
+	optional bytes payload = 2;
+}
+
+message GTPCleartextEnvelope {
+	optional GTPInboxMessage_MessageType messageType = 1;
+	optional bytes payload = 2;
+	optional bytes cryptoMessageId = 3;
+}
+
+message GTPUserDataMessage {
+	optional GTPUserDataMessage_MessageType messageType = 1;
+	optional GTPRegisterPush deprecatedRegisterPush = 101;
+	optional GTPUnregisterPush deprecatedUnregisterPush = 102;
+	optional GTPChangeProfilePush changeProfilePush = 103;
+	optional GTPChangePresencePush changePresencePush = 104;
+	optional GTPRegistrationChangePush registrationChangePush = 105;
+	optional GTPNeedPreKeysPush needPreKeysPush = 106;
+}
+
+message GTPGroupMessage {
+	optional GTPGroupMessage_MessageType messageType = 1;
+	optional GTPCreateGroupPush createGroupPush = 105;
+	optional GTPAddGroupUsersPush addGroupUsersPush = 106;
+	optional GTPKickGroupUsersPush kickGroupUsersPush = 107;
+	optional GTPChangeGroupProfilePush changeGroupProfilePush = 108;
+}
+
+message GTPBasicMessage {
+	optional string data_p = 1;
+}
+
+message GTPAckMessage {
+	optional string messageId = 1;
+	optional int64 clientStatus = 2;
+	optional int32 result = 3;
+}
+
+message GTPTachyonMessage {
+	optional GTPTachyonMessage_MessageType messageType = 1;
+	optional bytes message = 2;
+	optional string sessionId = 3;
+	optional int32 sequenceNumber = 4;
+	optional GTPClientMessage clientMessage = 5;
+}
+
+message GTPVerifyResponse {
+	optional bool alreadyVerified = 1;
+	optional GTPResponseHeader header = 3;
+	optional GTPAuthToken authToken = 4;
+	optional bool existingAccountDataDeleted = 5;
+	optional bool isNewAccount = 6;
+}
+
+message GTPVerifyRequest {
+	optional GTPRequestHeader header = 1;
+	optional string pin = 2;
+}
+
+message GTPLookupRegisteredResponse {
+	optional GTPResponseHeader header = 1;
+	repeated GTPId registeredUsersArray = 2;
+	repeated GTPId notRegisteredUsersArray = 3;
+	repeated GTPUserRegistrationState usersArray = 4;
+}
+
+message GTPLookupRegisteredRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPId usersArray = 2;
+	optional bool omitRequesterApp = 3;
+}
+
+message GTPClearConversationHistoryResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPClearConversationHistoryRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPId destId = 2;
+}
+
+message GTPDeleteUserMessagesResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPDeleteUserMessagesRequest_MessageInfo {
+	optional string messageId = 1;
+	optional GTPMediaId mediaId = 2;
+	optional GTPId destId = 3;
+}
+
+message GTPDeleteUserMessagesRequest {
+	optional GTPRequestHeader header = 1;
+	repeated GTPDeleteUserMessagesRequest_MessageInfo messagesArray = 2;
+}
+
+message GTPDeleteAccountResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPDeleteAccountRequest {
+	optional GTPRequestHeader header = 1;
+}
+
+message GTPUnregisterResponse {
+	optional GTPResponseHeader header = 1;
+}
+
+message GTPUnregisterRequest {
+	optional GTPRequestHeader header = 1;
+}
+
+message GTPRegisterRefreshResponse {
+	optional GTPResponseHeader header = 1;
+	optional GTPAuthToken authToken = 2;
+	optional bool retryWithServerTimestamp = 3;
+	optional int64 serverTimestamp = 4;
+	optional GTPVersionCheckWarning versionCheckWarning = 5;
+	optional GTPRegistrationCheckWarning registrationCheckWarning = 6;
+}
+
+message GTPRegisterRefreshRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPId id_p = 2;
+	optional int64 issuedAt = 3;
+	optional bytes signature = 4;
+	optional string iidToken = 5;
+	optional bytes apnPushToken = 6;
+	optional string apnApp = 7;
+	optional bytes pubKey = 8;
+	optional GTPDeviceId deviceIdForRevalidation = 10;
+	optional GTPPublicKey identityKey = 11;
+	optional string droidguardResult = 12;
+	optional GTPRegisterData registerData = 13;
+	optional GTPId idHintForRevalidation = 14;
+	optional bool isGoogler = 15;
+}
+
+message GTPRegisterSilentResponse {
+	optional GTPResponseHeader header = 1;
+	optional GTPId id_p = 2;
+	optional GTPAuthToken authToken = 4;
+	optional bool existingAccountDataDeleted = 5;
+	optional GTPVersionCheckWarning versionCheckWarning = 6;
+	optional GTPRegistrationCheckWarning registrationCheckWarning = 7;
+	optional bool idUnreachable = 8;
+	optional bool isNewAccount = 9;
+}
+
+message GTPRegisterSilentRequest {
+	optional GTPRequestHeader header = 1;
+	optional string iidToken = 2;
+	optional bytes pubKey = 3;
+	optional GTPDeviceId deviceId = 4;
+	optional GTPId idHint = 5;
+	optional string locale = 7;
+	optional bool hideRegistration = 8;
+	optional GTPPublicKey identityKey = 9;
+	optional string app = 10;
+	optional string droidguardResult = 11;
+	optional GTPRegisterData registerData = 18;
+	optional bool isGoogler = 19;
+}
+
+message GTPRegisterResponse {
+	optional GTPResponseHeader header = 1;
+	optional bool registrationVerified = 2;
+	optional GTPChallenge_Type challenge = 3;
+	optional GTPAuthToken authToken = 5;
+	optional bool existingAccountDataDeleted = 6;
+	optional GTPVersionCheckWarning versionCheckWarning = 7;
+	optional int64 serverTimestampUs = 8;
+	optional GTPRegistrationCheckWarning registrationCheckWarning = 9;
+	optional bool isNewAccount = 10;
+}
+
+message GTPICEServer {
+	optional string username = 1;
+	optional string credential = 2;
+	optional int64 expiresIn = 3;
+	repeated string urlsArray = 4;
+}
+
+message GTPGetICEServerResponse {
+	optional GTPResponseHeader header = 1;
+	optional GTPICEServer server = 2;
+}
+
+message GTPGetICEServerRequest {
+	optional GTPRequestHeader header = 1;
+}
+
+message GTPRegisterRequest {
+	optional string locale = 3;
+	optional bytes apnPushToken = 4;
+	optional GTPRequestHeader header = 6;
+	optional string iidToken = 7;
+	optional bytes pubKey = 8;
+	optional GTPId id_p = 10;
+	optional string apnApp = 11;
+	optional GTPDeviceId deviceId = 14;
+	optional GTPPublicKey identityKey = 16;
+	optional string droidguardResult = 17;
+	optional GTPRegisterData registerData = 18;
+	optional GTPChallenge_Type challenge = 19;
+	optional bool isGoogler = 20;
+}
+
+message GTPRegisterData {
+	optional GTPDeviceId deviceId = 1;
+	optional GTPDeviceInfo deviceInfo = 2;
+	optional string iidToken = 3;
+	optional bytes apnPushToken = 4;
+	optional string apnApp = 5;
+	optional GTPPublicKey identityKey = 6;
+	optional string droidguardResult = 7;
+	optional string locale = 8;
+	repeated int32 capsArray = 9;
+}
+
+message GTPEnvelope {
+	optional string messageId = 1;
+	optional GTPMethod_Type method = 3;
+	optional string userAgent = 4;
+	optional GTPInboxSendRequest inboxSendRequest = 27;
+	optional GTPInboxSendResponse inboxSendResponse = 28;
+	optional GTPInboxPush inboxPush = 29;
+	optional GTPInboxAckRequest inboxAckRequest = 30;
+	optional GTPInboxAckResponse inboxAckResponse = 31;
+	optional GTPInboxPullRequest inboxPullRequest = 33;
+	optional GTPInboxPullResponse inboxPullResponse = 34;
+	optional string regId = 100;
+	optional string application = 101;
+	optional GTPId userId = 102;
+	optional StatusProto status = 200;
+	optional uint64 rpcGlobalId = 202;
+}
+
+message GTPSetAuxiliaryContactInfoResponse {
+	optional GTPResponseHeader header = 1;
+	optional int32 numContactsSaved = 2;
+}
+
+message GTPSetAuxiliaryContactInfoRequest {
+	optional GTPRequestHeader header = 1;
+	optional GTPUserInfo userInfo = 2;
+}
+
+message GTPUserInfo {
+	optional GTPId userId = 1;
+	repeated GTPContactInfo contactInfoArray = 2;
+}
+
+message GTPContactInfo {
+	optional GTPId contactId = 1;
+	optional GTPAuxiliaryInfo info = 2;
+}
+
+message GTPAuxiliaryInfo_EmailId {
+	optional string domain = 1;
+	optional string type = 2;
+}
+
+message GTPAuxiliaryInfo_PhoneNumber {
+	optional string phoneNumber = 1;
+	optional string type = 2;
+}
+
+message GTPAuxiliaryInfo_InteractionSummary {
+	optional string account = 1;
+	optional int32 numTimes = 2;
+	optional int64 lastContactedUs = 3;
+}
+
+message GTPAuxiliaryInfo {
+	repeated GTPAuxiliaryInfo_InteractionSummary interactionSummariesArray = 2;
+	optional GTPAuxiliaryInfo_ContactType contactType = 3;
+	repeated GTPAuxiliaryInfo_PhoneNumber phoneNumbersArray = 4;
+	repeated GTPAuxiliaryInfo_EmailId emailIdsArray = 5;
+	optional string relationship = 6;
+}
+
+message GTPStarterSuggestionSet {
+	repeated GTPSuggestionItem suggestionsArray = 1;
+}
+
+message GTPStarterItem_TriggerDate {
+	optional int32 day = 1;
+	optional int32 month = 2;
+}
+
+message GTPStarterItem {
+	optional GTPStarterItem_TriggerDate triggerDate = 1;
+	optional GTPStarterSuggestionSet starterSuggestion = 2;
+}
+
+message GTPConversationStarter {
+	repeated GTPStarterItem startersArray = 1;
+}
+
+message GTPLocationPrediction_LikelyPlace {
+	optional string name = 1;
+	optional double likelihood = 2;
+}
+
+message GTPLocationPrediction {
+	repeated GTPLocationPrediction_LikelyPlace likelyPlacesArray = 1;
+}
+
+message GTPAppAction {
+	optional GTPAppAction_Platform platform = 1;
+	optional string packageName = 2;
+	optional string text = 3;
+	optional string actionUri = 4;
+	optional string iconUri = 5;
+	optional bool dropIfGbotAppBarSupported = 6;
+}
+
+message GTPAppActionSuggestion {
+	repeated GTPAppAction itemArray = 1;
+}
+
+message GTPBotEntityPrediction {
+	optional string botName = 1;
+	optional string entityText = 2;
+}
+
+message GTPShortMessagePrediction {
+	optional string text = 1;
+}
+
+message GTPFullMessagePrediction {
+	optional string text = 1;
+}
+
+message GTPSuggestionItem {
+	optional int32 id_p = 1;
+	optional GTPSmartSuggestionType_Type type = 2;
+	optional GTPFullMessagePrediction fullMessagePrediction = 3;
+	optional GTPBotEntityPrediction botEntityPrediction = 4;
+	optional GTPShortMessagePrediction shortMessagePrediction = 5;
+	optional GTPAppActionSuggestion appActionSuggestion = 6;
+	optional GTPLocationPrediction locationPrediction = 7;
+}
+
+message GTPSmartSuggestion {
+	optional string messageId = 1;
+	repeated GTPSuggestionItem suggestionsArray = 4;
+	optional string id_p = 5;
+	optional GTPId messageSenderId = 6;
+	optional int64 minContextMessageTimestampUs = 7;
+}
+
+message GTPPreviewResponse {
+	optional bool wasAccepted = 1;
+	optional GPBAny botMetadata = 2;
+}
+
+message GTPPreviewMetadata {
+	optional string prompt = 1;
+	optional string affirmativeText = 2;
+	optional string negativeText = 3;
+	optional GPBAny botMetadata = 4;
+}
+
+message GTPClientProperties {
+	optional FBGTPLatLng deviceLocation = 1;
+	optional string language = 2;
+	optional bytes ipAddress = 3;
+	optional string displayName = 4;
+	optional GTPDeviceProperties deviceProperties = 5;
+	repeated GPBAny experimentalPropertiesArray = 100;
+}
+
+message GTPRichCardResponse {
+	optional GBTMSPRenderedCard primaryCard = 1;
+	optional GBTMSPRenderedCard fallbackCard = 2;
+	optional string fallbackText = 3;
+}
+
+message GTPStartConversation {
+}
+
+message GTPFireballConversationParticipants {
+	repeated GTPId participantsArray = 1;
+}
+
+message GTPFireballReadReceipt {
+	repeated string messageIdsArray = 1;
+}
+
+message GTPFireballMedia {
+	optional string contentType = 1;
+	optional string deprecatedUri = 2;
+	optional int32 width = 3;
+	optional int32 height = 4;
+	optional int32 duration = 5;
+	optional int32 size = 6;
+	optional bytes thumbnail = 7;
+	optional GTPMediaClass_Type deprecatedMediaClass = 8;
+	optional GTPFireballMedia_MediaLocatorType locatorType = 9;
+	optional GTPMediaId mediaId = 50;
+	optional string uri = 51;
+}
+
+message GTPFireballMessage {
+	optional GTPFireballMessage_MessageType messageType = 1;
+	optional string text = 2;
+	optional GTPId groupId = 3;
+	optional GTPSmartSuggestion deprecatedSuggestion = 5;
+	optional GTPFireballMedia mediaReference = 6;
+	optional GTPSmartSuggestion suggestion = 7;
+	optional GTPFireballReadReceipt readReceipt = 8;
+	optional GTPLocation sharedLocation = 10;
+	optional GTPSticker sticker = 11;
+	optional GTPFireballConversationParticipants conversationParticipants = 12;
+	optional GPBAny gBotResponse = 13;
+	optional GTPClientProperties clientProperties = 14;
+	optional GTPStartConversation startConversation = 15;
+	optional GTPRichCardResponse richCardResponse = 16;
+	optional GTPPreviewMetadata previewMetadata = 17;
+	repeated GTPMessageContent contentsArray = 100;
+	optional GTPMessageProperties messageProperties = 101;
+	optional GTPSenderProperties senderProperties = 102;
+}
+
+message GTPMessageUpdateInfo {
+	optional string updateMessageId = 1;
+}
+
+message GTPMessageProperties {
+	optional GPBAny botContext = 1;
+	optional GTPId botCommandOriginId = 2;
+	optional GTPDonationState donationState = 3;
+	optional GPBInt32Value messageExpirationSeconds = 4;
+	optional GPBAny botMessageProperties = 5;
+	optional GTPMessageUpdateInfo updateInfo = 6;
+}
+
+message GTPDonationState {
+	optional bool donateBotData = 1;
+}
+
+message GTPDeviceProperties {
+	optional int32 densityDpi = 1;
+	optional int32 widthPixels = 2;
+	optional int32 heightPixels = 3;
+}
+
+message GTPSenderProperties {
+	optional FBGTPLatLng location = 1;
+	optional string language = 2;
+	repeated GPBAny anyPropertiesArray = 3;
+	optional bytes ipAddress = 4;
+	optional string displayName = 5;
+	optional GTPDeviceProperties deviceProperties = 6;
+	optional string zwiebackNidCookie = 7;
+	optional string botConsistencyToken = 8;
+	optional GTPLocationUnavailabilityReason locationUnavailabilityReason = 9;
+}
+
+message GTPLocationUnavailabilityReason {
+	optional GTPLocationUnavailabilityReason_Reason reason = 1;
+}
+
+message GTPBotConversationActionFinished {
+	optional GTPBotConversationActionFinished_BotConversationAction action = 1;
+	optional int32 resultCode = 2;
+	optional string actionId = 3;
+	optional GPBAny actionProperties = 4;
+}
+
+message GTPSenderEvent {
+	optional GTPSenderEvent_Event event = 1;
+	optional GTPBotConversationActionFinished botConversationActionFinished = 4;
+	optional GTPPreviewResponse previewResponse = 5;
+}
+
+message GTPSenderStatus {
+	optional GTPSenderStatus_Status status = 1;
+}
+
+message GTPMessageReceiptDeprecated {
+	optional GTPMessageReceiptDeprecated_Type receiptType = 1;
+	repeated string messageIdsArray = 2;
+}
+
+message GTPConversationStateUpdate {
+	optional GPBInt32Value messageExpirationSeconds = 1;
+	optional GPBInt32Value conversationThemeId = 2;
+}
+
+message GTPSticker {
+	optional string fallbackUri = 1;
+	optional string stickerSetId = 2;
+	optional int32 stickerId = 3;
+	optional int32 version = 4;
+	optional bytes thumbnail = 5;
+	optional string thumbnailContentType = 6;
+}
+
+message GTPMediaInfo {
+	optional string contentType = 1;
+	optional int32 width = 2;
+	optional int32 height = 3;
+	optional int32 duration = 4;
+	optional int32 size = 5;
+	optional bytes thumbnail = 6;
+	optional string thumbnailContentType = 7;
+	optional GTPMediaInfo_MediaLocatorType locatorType = 8;
+	optional bytes encryptionKey = 9;
+	optional bytes digest = 10;
+	optional GTPMediaId mediaId = 50;
+	optional string uri = 51;
+}
+
+message GTPRichText {
+	optional string text = 1;
+	optional double textSizeMultiplier = 2;
+}
+
+message GTPMessageContent {
+	optional GTPMessageContent_ContentType contentType = 1;
+	optional GPBAny anyValue = 2;
+	optional GTPRichText richText = 3;
+	optional GTPMediaInfo mediaInfo = 4;
+	optional GTPSticker sticker = 5;
+	optional GTPLocation location = 6;
+	optional GTPMessageReceiptDeprecated receipt = 7;
+	optional GTPSmartSuggestion suggestion = 8;
+	optional GTPSenderStatus senderStatus = 9;
+	optional GTPSenderEvent senderEvent = 10;
+	optional GTPConversationStateUpdate conversationStateUpdate = 11;
+}

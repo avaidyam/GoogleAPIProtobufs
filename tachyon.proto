@@ -1,0 +1,369 @@
+message GTAFireballConversationTheme {
+}
+
+message GTAFireballCapability {
+}
+
+message GTAOAuthToken {
+	optional string token = 1;
+}
+
+message GTAGameProperties {
+	optional GameId gameId = 1;
+	optional int32 sessionHighScore = 2;
+	optional bool displayHighScore = 3;
+}
+
+message GTARichCard {
+	optional MSPRenderedCard primaryCard = 1;
+	optional MSPRenderedCard fallbackCard = 2;
+	optional string fallbackText = 3;
+}
+
+message SmartSuggestionSource {
+}
+
+message GTPDTachyonLogRequest {
+	optional GTPLogsTachyonEvent event = 1;
+}
+
+message GTPDBindStream {
+}
+
+message GTPDNotifyDeviceEvent {
+}
+
+message GTPDConnectedCallEndCause {
+}
+
+message GTPDCallSetupCode {
+}
+
+message GTPDConversationType {
+}
+
+message GTPDTachyonEventDetailType {
+}
+
+message GTPDLogFile {
+}
+
+message GTPDSpamClassification {
+}
+
+message GTPDSpamAction {
+}
+
+message GTPDPlatform {
+}
+
+message GTPDSwitchableFeature {
+}
+
+message GTPDAppPermission {
+}
+
+message GTPDPermissionStatus {
+}
+
+message GTPDMuteState {
+}
+
+message GTPDPublicKeyType {
+}
+
+message GTPDRegistrationState {
+}
+
+message GTPDCallQualityRating {
+}
+
+message GTPDCallQualityFeedback {
+}
+
+message GTPDMessageReceiptError {
+}
+
+message GTPDMessageReceiptType {
+}
+
+message GTPDSpamSignal {
+}
+
+message GTPDRegistrationWarning {
+}
+
+message GTPDVersionWarning {
+}
+
+message GTPDApiVersion {
+}
+
+message GTPDPresenceState {
+}
+
+message GTPDUserDataAccessClass {
+}
+
+message GTPDSmartSuggestionType {
+}
+
+message GTPDTransportEventDetail {
+}
+
+message GTPDMessageClass {
+}
+
+message GTPDMessageType {
+}
+
+message GTPDTransportEventType {
+}
+
+message GTPDMediaClass {
+}
+
+message GTPDDirection {
+}
+
+message GTPDLocationType {
+}
+
+message GTPDMedia {
+}
+
+message GTPDCellNetwork {
+}
+
+message GTPDNetwork {
+}
+
+message GTPDTraceLevel {
+}
+
+message GTPDIceCandidateType {
+}
+
+message GTPDIceProtocol {
+}
+
+message GTPDChallenge {
+}
+
+message GTPDExperimentLayer {
+}
+
+message GTPDExperiment {
+}
+
+message GTPDDeviceIdType {
+}
+
+message GTPDIdType {
+}
+
+message GTPDMethod {
+}
+
+message GTPDError {
+}
+
+message GTPDNode {
+}
+
+message GTPDEvent {
+}
+
+message GTPDPublicKey {
+	optional GTPDPublicKeyType_Type type = 1;
+	optional bytes key = 2;
+}
+
+message GTPDUserRegistrationState {
+	optional GTPDId id_p = 1;
+	optional GTPDRegistrationState_Type state = 2;
+	repeated int32 capsArray = 3;
+}
+
+message GTPDPartialProfile {
+	optional GPBStringValue name = 1;
+	optional GTPDMediaReference photo = 2;
+	optional GTPDMediaData thumbnail = 3;
+}
+
+message GTPDProfile {
+	optional string name = 1;
+	optional string photoUri = 2;
+	optional GTPDMediaId photoId = 3;
+	optional string photoContentType = 4;
+	optional bytes thumbnail = 5;
+	optional string thumbnailContentType = 6;
+}
+
+message GTPDMediaData {
+	optional bytes content = 1;
+	optional string contentType = 2;
+}
+
+message GTPDMediaReference {
+	optional GTPDMediaId id_p = 1;
+	optional string contentType = 2;
+}
+
+message GTPDMediaId {
+	optional string blobId = 1;
+	optional GTPDMediaClass_Type mediaClass = 2;
+	optional GPBInt32Value region = 3;
+}
+
+message GTPDUnencryptedAuthToken {
+	optional GTPDId id_p = 1;
+	optional int64 timeout = 2;
+	optional bool verified = 3;
+	optional int64 timeoutSeconds = 4;
+	optional bool unverified = 5;
+}
+
+message GTPDAuthToken {
+	optional bytes payload = 1;
+	optional int64 expiresIn = 2;
+}
+
+message GTPDResponseHeader {
+	optional uint64 rpcGlobalId = 2;
+	optional bytes routingCookie = 102;
+	optional GTPDApiVersionWarning apiVersionWarning = 103;
+}
+
+message GTPDRequestHeader {
+	optional string requestId = 1;
+	optional string app = 3;
+	optional string userAgent = 4;
+	optional bytes authTokenPayload = 6;
+	optional GTPDClientInfo clientInfo = 7;
+	optional string asApp = 8;
+	optional bytes requestIdBinary = 9;
+	optional bytes routingCookie = 102;
+}
+
+message GTPDRegistrationCheckWarning {
+	optional GTPDRegistrationWarning_Type type = 1;
+}
+
+message GTPDVersionCheckWarning {
+	optional GTPDVersionWarning_Type type = 1;
+}
+
+message GTPDApiVersionWarning {
+	optional GTPDApiVersion_Value grumbleAt = 1;
+	optional GTPDApiVersion_Value failAt = 2;
+}
+
+message GTPDClientInfo {
+	optional string name = 1;
+	optional string platform = 2;
+	optional int32 major = 3;
+	optional int32 minor = 4;
+	optional int32 point = 5;
+	optional string details = 6;
+	optional GTPDApiVersion_Value apiVersion = 7;
+	optional GTPDNode_Type node = 8;
+	optional GTPDPlatform_Type platformType = 9;
+}
+
+message GTPDLocation {
+	optional double deprecatedLatitude = 1;
+	optional double deprecatedLongitude = 2;
+	optional FBGTPLatLng coordinates = 3;
+	optional string placeId = 4;
+	optional GTPDLocationType_Type type = 5;
+	optional string placeName = 6;
+	optional string placeAddress = 7;
+}
+
+message GTPDDeviceInfo {
+	optional string os = 1;
+	optional string hardware = 2;
+}
+
+message GTPDDeviceId {
+	optional GTPDDeviceIdType_Type type = 1;
+	optional string id_p = 2;
+}
+
+message GTPDId {
+	optional GTPDIdType_Type type = 1;
+	optional string id_p = 2;
+	optional string app = 3;
+}
+
+message GTPDStarterSuggestionSet {
+	repeated GTPDSuggestionItem suggestionsArray = 1;
+}
+
+message GTPDStarterItem_TriggerDate {
+	optional int32 day = 1;
+	optional int32 month = 2;
+}
+
+message GTPDStarterItem {
+	optional GTPDStarterItem_TriggerDate triggerDate = 1;
+	optional GTPDStarterSuggestionSet starterSuggestion = 2;
+}
+
+message GTPDConversationStarter {
+	repeated GTPDStarterItem startersArray = 1;
+}
+
+message GTPDLocationPrediction_LikelyPlace {
+	optional string name = 1;
+	optional double likelihood = 2;
+}
+
+message GTPDLocationPrediction {
+	repeated GTPDLocationPrediction_LikelyPlace likelyPlacesArray = 1;
+}
+
+message GTPDAppAction {
+	optional GTPDAppAction_Platform platform = 1;
+	optional string packageName = 2;
+	optional string text = 3;
+	optional string actionUri = 4;
+	optional string iconUri = 5;
+	optional bool dropIfGbotAppBarSupported = 6;
+}
+
+message GTPDAppActionSuggestion {
+	repeated GTPDAppAction itemArray = 1;
+}
+
+message GTPDBotEntityPrediction {
+	optional string botName = 1;
+	optional string entityText = 2;
+}
+
+message GTPDShortMessagePrediction {
+	optional string text = 1;
+}
+
+message GTPDFullMessagePrediction {
+	optional string text = 1;
+}
+
+message GTPDSuggestionItem {
+	optional int32 id_p = 1;
+	optional GTPDSmartSuggestionType_Type type = 2;
+	optional GTPDFullMessagePrediction fullMessagePrediction = 3;
+	optional GTPDBotEntityPrediction botEntityPrediction = 4;
+	optional GTPDShortMessagePrediction shortMessagePrediction = 5;
+	optional GTPDAppActionSuggestion appActionSuggestion = 6;
+	optional GTPDLocationPrediction locationPrediction = 7;
+}
+
+message GTPDSmartSuggestion {
+	optional string messageId = 1;
+	repeated GTPDSuggestionItem suggestionsArray = 4;
+	optional string id_p = 5;
+	optional GTPDId messageSenderId = 6;
+	optional int64 minContextMessageTimestampUs = 7;
+}

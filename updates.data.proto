@@ -1,0 +1,18 @@
+message UpdateLocation {
+	optional float latitude = 1;
+	optional float longitude = 2;
+	optional string locationTag = 3;
+	optional string bestAddress = 4;
+	optional string clusterId = 5;
+	optional string mapURL = 6;
+	optional string language = 8;
+	optional string mapsPageURL = 9;
+	optional string placePageURL = 10;
+	optional string mapThumbURL = 11;
+	optional bool isAddressOnly = 12;
+	optional double precisionMeters = 13;
+	optional int32 latitudeE7 = 14;
+	optional int32 longitudeE7 = 15;
+	optional bool seenIncludeLocation = 16;
+	optional string plusPageObfuscatedId = 17;
+}

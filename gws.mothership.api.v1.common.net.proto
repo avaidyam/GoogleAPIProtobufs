@@ -1,0 +1,3 @@
+message MSPUrl {
+	optional string rawURL = 1;
+}

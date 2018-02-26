@@ -1,0 +1,98 @@
+message UFProductSpecificData {
+	required string key = 1;
+	optional string value = 2;
+	optional bool externallyVisible = 4;
+}
+
+message UFDimensions {
+	required float width = 1;
+	required float height = 2;
+}
+
+message UFImage {
+	required string mimeType = 1;
+	required bytes content = 2;
+	optional UFDimensions imageDimension = 3;
+}
+
+message UFUserInitiatedFeedbackData {
+	optional string accounts = 1;
+	optional string deviceId = 3;
+	optional UFImage screenshot = 4;
+	optional int32 productId = 5;
+	optional string categoryTag = 6;
+	optional string bucket = 7;
+}
+
+message UFMobileBugReport {
+	required UFCommonData commonData = 1;
+	optional int32 reportType = 3;
+	optional UFMobileBugReport_OsType osType = 4;
+}
+
+message UFIOSBuildData {
+	required string device = 1;
+	required string buildId = 2;
+	required string buildType = 3;
+	required string model = 4;
+	required string product = 5;
+	optional string release_p = 7;
+}
+
+message UFIOSPackageData {
+	required string packageName = 1;
+	required string installerPackageName = 2;
+	required string processName = 3;
+	optional int32 packageVersion = 4;
+	optional string packageVersionName = 5;
+}
+
+message UFIOSSystemData {
+	required fixed64 timestamp = 1;
+	optional string systemLog = 2;
+}
+
+message UFIOSData {
+	required UFIOSSystemData systemData = 1;
+	required UFIOSPackageData packageData = 2;
+	required UFIOSBuildData buildData = 3;
+	optional UFUserInitiatedFeedbackData userInitiatedFeedbackData = 9;
+	optional int32 reportType = 10;
+	optional bool ctlAllowed = 13;
+	optional UFMobileBugReport_OsType osType = 17;
+}
+
+message UFIOSBugReport {
+	required UFCommonData commonData = 1;
+	required UFIOSData iosData = 2;
+	optional int32 reportType = 3;
+	optional UFMobileBugReport_OsType osType = 4;
+}
+
+message UFCommonData {
+	optional fixed64 gaiaId = 1;
+	optional string description_p = 2;
+	optional string userEmail = 3;
+	optional string descriptionTranslated = 4;
+	optional string sourceDescriptionLanguage = 5;
+	optional string uiLanguage = 6;
+	optional string uniqueReportIdentifier = 7;
+	repeated string productSpecificBinaryDataNameArray = 8;
+	optional string productVersion = 10;
+	repeated UFProductSpecificData productSpecificDataArray = 11;
+	optional fixed64 obfuscatedGaiaId = 12;
+	optional string obfuscatedGaiaType = 13;
+	optional string gaiaUserType = 14;
+	optional string productSpecificContext = 15;
+	optional string obfuscatedGaiaIdString = 16;
+	optional int32 spellingErrorCount = 17;
+	repeated UFProductSpecificData additionalFormContentArray = 19;
+	optional string helpFlowSessionId = 20;
+	optional UFCommonData_ReportType reportType = 21;
+	optional string countryCode = 22;
+	optional double translationConfidence = 23;
+	repeated string externallyInvisibleProductSpecificBinaryDataNameArray = 25;
+	optional string normalizedLocale = 27;
+	optional string originDetail = 51;
+	optional string triggerDetail = 53;
+}

@@ -1,0 +1,5 @@
+message FLOGTreeRef {
+	optional EIDEventIdMessage eventId = 1;
+	optional EIDClientEventIdMessage clientEventId = 2;
+	optional int32 featureIndex = 3;
+}

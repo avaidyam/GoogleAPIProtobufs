@@ -1,0 +1,109 @@
+message PhotoInsertMediaResponse {
+	optional Photosdata_Photo photo = 1;
+	optional bool setProfilePhotoSucceeded = 2;
+	optional PhotosMCMediaItem item = 5;
+}
+
+message PhotoInsertMediaRequest {
+	optional string ownerId = 1;
+	optional string albumId = 2;
+	optional bool setProfilePhoto = 3;
+	optional string albumLabel = 4;
+	optional string albumTitle = 5;
+	optional bool autoResize = 6;
+	optional string displayName = 7;
+	optional string description_p = 8;
+	optional string clientAssignedId = 10;
+	optional string eventId = 11;
+	optional int32 offset = 13;
+	optional int32 deleted15 = 15;
+	optional uint64 timestampSeconds = 16;
+	optional string sourceSha1 = 18;
+	repeated string streamIdArray = 20;
+	optional PhotoInsertMediaRequest_AutoEnhanceOverride autoEnhanceOverride = 21;
+	optional uint64 creationTimeMs = 22;
+	optional uint64 modTimeMs = 23;
+	optional uint64 captureTimeMs = 24;
+	optional string localFolderName = 25;
+	optional Photorequests_DataFormat responseFormat = 27;
+	optional PhotosMCMediaItemMask itemMask = 28;
+	optional string md5ForLegacyReconciliation = 30;
+	optional string albumMediaKey = 33;
+	optional bool isCameraBurstPrimaryOverride = 38;
+}
+
+message Photorequests_CreateAlbumRequest {
+	optional string albumTitle = 1;
+}
+
+message Photorequests_GetPhotoRequest {
+	optional string ownerId = 1;
+	optional string photoId = 2;
+	optional Photorequests_PhotoOptions photoOptions = 3;
+	optional string authkey = 4;
+}
+
+message Photorequests_UserAlbumsRequest {
+	optional string ownerId = 1;
+	optional bool sharedAlbumsOnly = 2;
+	repeated PhotosAlbumType albumTypesArray = 3;
+	optional int32 maxPreviewCount = 4;
+	optional int32 maxResults = 5;
+	optional int32 offset = 6;
+	optional Photorequests_DataFormat responseFormat = 7;
+	optional string resumeToken = 8;
+	optional bool returnPhotosOfUser = 9;
+	optional bool excludeDriveAlbums = 10;
+	optional bool useResumableQuery = 11;
+}
+
+message Photorequests_PhotoOptions {
+	optional bool returnComments = 1;
+	optional bool returnShapes = 2;
+	optional bool returnVideoUrls = 3;
+	optional bool returnPlusOnes = 4;
+	optional bool returnOwnerInfo = 5;
+	optional bool returnPhotos = 6;
+	optional bool returnAlbumInfo = 7;
+	optional bool returnDownloadability = 8;
+	optional bool returnAsbeUpdates = 9;
+	optional Photorequests_DataFormat responseFormat = 11;
+	optional bool returnEditList = 12;
+	optional bool returnContentUrls = 13;
+	optional bool readFromCacheOk = 14;
+	optional bool returnHashtags = 16;
+}
+
+message Photorequests {
+}
+
+message PhotoEmptyTrashResponse {
+}
+
+message PhotoEmptyTrashRequest {
+}
+
+message PhotoDeletePhotosResponse {
+	required bool success = 1;
+	optional string kansasVersionInfo = 2;
+	repeated string deletedPhotoIdArray = 3;
+}
+
+message PhotoDeletePhotosRequest {
+	repeated int64 photoIdArray = 1;
+	repeated string stringPhotoIdArray = 2;
+	optional bool alsoDeleteExactDuplicates = 4;
+	optional bool eligibleForDeletionInDrive = 5;
+	repeated string mediaKeyArray = 6;
+	repeated string localDedupKeyArray = 7;
+	optional bool eligibleForLocalDelete = 9;
+}
+
+message PhotoCreateTagResponse {
+}
+
+message PhotoCreateTagRequest {
+	optional string obfuscatedOwnerId = 1;
+	optional int64 photoId = 2;
+	optional int64 detectedShapeId = 4;
+}

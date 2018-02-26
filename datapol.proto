@@ -1,0 +1,31 @@
+message MessageDetails {
+	repeated SemanticType semanticTypeArray = 1;
+}
+
+message FieldDetails {
+	repeated SemanticType semanticTypeArray = 1;
+}
+
+message LocationQualifier {
+	optional bool nonUserLocation = 1;
+	optional bool preciseLocation = 2;
+}
+
+message Qualifier {
+	optional bool isPublic = 1;
+	optional bool isGoogle = 2;
+	optional bool otherUser = 3;
+	optional bool isPartner = 4;
+	optional bool isPublisher = 5;
+	optional bool hasExplicitConsent = 6;
+	optional bool isEncrypted = 7;
+	optional int32 relatedField = 8;
+	optional bool nonUserLocation = 9;
+	optional bool limitedAccess = 10;
+	optional bool autoDeleteWithinWipeout = 11;
+}
+
+message RetentionSpec {
+	optional RetentionTag desiredRetention = 1;
+	optional string context = 2;
+}

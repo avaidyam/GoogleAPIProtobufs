@@ -1,0 +1,9 @@
+message GFIComposableLink {
+	optional string rawURLString = 1;
+	optional GFIComposableLink_Type type = 2;
+}
+
+message GFIComposableLinkAction {
+	optional GFIComposableLink link = 1;
+	optional GFIComposableLinkAction_Type type = 2;
+}

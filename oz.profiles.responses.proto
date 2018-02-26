@@ -1,0 +1,9 @@
+message ProfileGetVideosDataResponse {
+}
+
+message ProfileGetPeopleDataResponse {
+}
+
+message ProfileGetSimpleProfileResponse {
+	required ProfileSimpleProfile profile = 1;
+}

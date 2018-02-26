@@ -1,0 +1,78 @@
+message BatteryUsageMetric {
+	optional float drainPerSec = 1;
+}
+
+message LaunchTimeMetric {
+	optional int64 coldStartAppLaunch = 1;
+}
+
+message NetworkStats {
+	optional int64 requestSize = 1;
+	optional int64 responseSize = 2;
+	optional string endURL = 3;
+	optional int32 statusCode = 4;
+	optional string contentType = 5;
+	optional int32 roundTripTime = 6;
+}
+
+message NetworkUsageMetric {
+	repeated NetworkStats networkStatsArray = 1;
+}
+
+message MemoryStats {
+	optional int32 totalMemoryMb = 1;
+}
+
+message MemoryUsageMetric {
+	optional MemoryStats memoryStats = 1;
+	optional ProcessStats processStats = 2;
+}
+
+message ProcessStats {
+	optional int32 threadCount = 1;
+}
+
+message CPUUsageMetric {
+	optional float totalCpuUsage = 1;
+	optional ProcessStats processStats = 2;
+}
+
+message FrameRateMetric {
+	optional float durationMs = 1;
+	optional float average = 2;
+	optional float minimum = 3;
+	optional int32 jankyFrameCount = 4;
+	optional int32 renderedFrameCount = 5;
+	optional int32 maxFrameRenderTimeMs = 6;
+	optional int32 jankDurationMs = 7;
+	optional int32 meanFrameRenderTimeMs = 8;
+	optional float stdFrameRenderTimeMicros = 9;
+	optional int32 minFrameRenderTimeMs = 10;
+}
+
+message TimerMetric {
+	optional int64 durationMs = 1;
+}
+
+message ApplicationInfo {
+	optional string bundleIdentifier = 1;
+}
+
+message IosSystemHealthMetrics {
+	optional fixed64 hashedCustomEventName = 1;
+	optional string customEventName = 2;
+	optional MemoryUsageMetric memoryUsageMetric = 3;
+	optional TimerMetric timerMetric = 4;
+	optional FrameRateMetric frameRateMetric = 5;
+	optional CPUUsageMetric cpuUsageMetric = 6;
+	optional IosSystemHealthMetrics_MetricEventCode metricEventCode = 7;
+	optional ApplicationInfo applicationInfo = 8;
+	optional string viewControllerName = 9;
+	optional NetworkUsageMetric networkUsageMetric = 10;
+	optional LaunchTimeMetric launchTimeMetric = 11;
+	optional uint64 primesBuildVersion = 12;
+	optional BatteryUsageMetric batteryUsageMetric = 13;
+	optional bool isOnWifi = 14;
+	optional bool lowPowerModeEnabled = 15;
+	optional IosSystemHealthMetrics_ApplicationState applicationState = 16;
+}

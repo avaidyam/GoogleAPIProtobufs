@@ -1,0 +1,67 @@
+message GFIKnowledgeAnswer {
+	optional string answerText = 1;
+	optional string supportingInfo = 2;
+	optional GFIImage image = 3;
+	optional GFILink imageLink = 4;
+	optional GFILink answerLink = 5;
+	optional bool useSmallerFontSize = 6;
+}
+
+message GFIFactsSection {
+	repeated GFIFact factArray = 1;
+	optional GFIExpandableVisibility expandableVisibility = 2;
+}
+
+message GFIKnowledgeFactsSection_Fact {
+	optional GFIFact standard = 1;
+	optional GFIStockFact stock = 2;
+}
+
+message GFIKnowledgeFactsSection {
+	repeated GFIKnowledgeFactsSection_Fact factArray = 1;
+	optional GFIExpandableVisibility expandableVisibility = 2;
+}
+
+message GFILyricsSection {
+	repeated string verseArray = 1;
+	optional GFILink link = 2;
+	optional string lyricsText = 3;
+	optional string fullLyricsText = 4;
+}
+
+message GFIAppIconCarouselItem {
+	optional GFIImage logo = 1;
+	optional string name = 2;
+	optional string metadata = 3;
+	optional GFILink link = 4;
+	optional GFIVeLogInfo veLog = 5;
+}
+
+message GFIAppIconCarousel {
+	optional string title = 1;
+	repeated GFIAppIconCarouselItem itemArray = 2;
+	optional GFIExpandableVisibility expandableVisibility = 3;
+}
+
+message GFIReviewSummaryRating {
+	optional GFILink link = 1;
+	optional string rating = 2;
+	optional string source = 3;
+}
+
+message GFIReviewSummarySection {
+	repeated GFIReviewSummaryRating reviewSummaryRatingArray = 1;
+	optional GFIExpandableVisibility expandableVisibility = 2;
+}
+
+message GFIAnswerHeader_Breadcrumb {
+	optional MSPStyledText title = 1;
+	optional GFILink link = 2;
+}
+
+message GFIAnswerHeader {
+	optional GFIImage thumbnail = 3;
+	optional GTPColor backgroundColor = 4;
+	repeated GFIAnswerHeader_Breadcrumb breadcrumbArray = 5;
+	optional string knowledgeBreadcrumbsDivider = 6;
+}

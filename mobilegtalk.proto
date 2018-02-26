@@ -1,0 +1,116 @@
+message GtalkDataMessageStanza {
+	optional int64 rmqId = 1;
+	optional string id_p = 2;
+	required string from = 3;
+	optional string to = 4;
+	required string category = 5;
+	optional string token = 6;
+	repeated GtalkAppData appDataArray = 7;
+	optional bool fromTrustedServer = 8;
+	optional string persistentId = 9;
+	optional int32 streamId = 10;
+	optional int32 lastStreamIdReceived = 11;
+	optional string permission = 12;
+	optional string regId = 13;
+	optional string pkgSignature = 14;
+	optional string clientId = 15;
+	optional int64 deviceUserId = 16;
+	optional int32 ttl = 17;
+	optional int64 sent = 18;
+	optional int32 queued = 19;
+	optional int64 status = 20;
+	optional bytes rawData = 21;
+	optional int32 maxDelay = 22;
+	optional int32 actualDelay = 23;
+	optional bool immediateAck = 24;
+	optional bool deliveryReceiptRequested = 25;
+	optional string externalMessageId = 26;
+	optional int64 flags = 27;
+	optional int32 priority = 29;
+}
+
+message GtalkAppData {
+	required string key = 1;
+	required string value = 2;
+}
+
+message GtalkIqStanza {
+	optional int64 rmqId = 1;
+	required GtalkIqStanza_IqType type = 2;
+	required string id_p = 3;
+	optional string from = 4;
+	optional string to = 5;
+	optional GtalkErrorInfo error = 6;
+	optional GtalkExtension extension = 7;
+	optional string persistentId = 8;
+	optional int32 streamId = 9;
+	optional int32 lastStreamIdReceived = 10;
+	optional int64 accountId = 11;
+	optional int64 status = 12;
+}
+
+message GtalkExtension {
+	required int32 id_p = 1;
+	required string data_p = 2;
+}
+
+message GtalkClose {
+}
+
+message GtalkLoginResponse {
+	required string id_p = 1;
+	optional string jid = 2;
+	optional GtalkErrorInfo error = 3;
+	repeated GtalkSetting settingArray = 4;
+	optional int32 streamId = 5;
+	optional int32 lastStreamIdReceived = 6;
+	optional int64 serverTimestamp = 8;
+}
+
+message GtalkLoginRequest {
+	required string id_p = 1;
+	required string domain = 2;
+	required string user = 3;
+	required string resource = 4;
+	required string authToken = 5;
+	optional string deviceId = 6;
+	optional int64 lastRmqId = 7;
+	repeated GtalkSetting settingArray = 8;
+	optional int32 compress = 9;
+	repeated string receivedPersistentIdArray = 10;
+	optional bool includeStreamIds = 11;
+	optional bool useRmq2 = 14;
+	optional int64 accountId = 15;
+	optional GtalkLoginRequest_AuthService authService = 16;
+	optional int32 networkType = 17;
+	optional int64 status = 18;
+	optional string tokenVersionInfo = 19;
+	optional uint64 gcmStartTimeMs = 21;
+	optional bool onFallback = 23;
+}
+
+message GtalkSetting {
+	required string name = 1;
+	required string value = 2;
+}
+
+message GtalkErrorInfo {
+	required int32 code = 1;
+	optional string message = 2;
+	optional string type = 3;
+	optional GtalkExtension extension = 4;
+}
+
+message GtalkHeartbeatAck {
+	optional int32 streamId = 1;
+	optional int32 lastStreamIdReceived = 2;
+	optional int64 status = 3;
+	optional int32 intervalMs = 5;
+}
+
+message GtalkHeartbeatPing {
+	optional int32 streamId = 1;
+	optional int32 lastStreamIdReceived = 2;
+	optional int64 status = 3;
+	optional int32 intervalMs = 5;
+}

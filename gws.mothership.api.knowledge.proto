@@ -1,0 +1,269 @@
+message MSPPagination {
+	optional string nextPageToken = 1;
+	optional string previousPageToken = 2;
+	optional int32 pageIndex = 3;
+	optional string firstPageToken = 4;
+}
+
+message MSPSearchRequestOptions {
+	optional int32 pageSize = 1;
+	optional string pageToken = 2;
+	optional MSPSearchRequestOptions_SafeSearchMode safeSearchMode = 3;
+	optional bool autoCorrectSpelling = 4;
+	optional bool returnNonResultTts = 5;
+}
+
+message MSPSearchQuery {
+	optional string rawQuery = 1;
+	optional MSPPushkarQuery pushkarQuery = 2;
+}
+
+message MSPClientId {
+	optional MSPClientId_ClientType clientType = 1;
+	optional string version = 2;
+	optional int64 changelist = 3;
+	repeated MSPClientId ancillaryClientIdsArray = 4;
+}
+
+message MSPSearchRequestContext {
+	optional GWSZwiebackCookieRequestContext zwiebackCookieContext = 2;
+}
+
+message MSPResponseShape {
+	optional int32 acceptWeatherData = 1;
+	optional int32 acceptShowtimesData = 4;
+	optional int32 acceptNewsResults = 6;
+	optional int32 acceptImageResult = 8;
+	optional int32 acceptKnowledgeCardResult = 9;
+	optional int32 acceptOrganicSearchResult = 10;
+	optional int32 acceptKontikiLocalResult = 11;
+	optional int32 acceptImageResults = 12;
+	optional int32 acceptFinanceResult = 13;
+	optional int32 acceptActionResult = 14;
+	optional int32 acceptLocalTimeResult = 15;
+	optional int32 acceptDictionaryResult = 16;
+	optional int32 acceptWhenIsResult = 17;
+	optional int32 acceptTranslateResult = 18;
+	optional int32 acceptAppbarResult = 19;
+	optional int32 acceptSunriseSunsetResult = 20;
+	optional int32 acceptFlightStatusResult = 21;
+	optional int32 acceptAppsUniversalResult = 22;
+	optional int32 acceptSportsResult = 24;
+	optional int32 acceptCurrencyResult = 27;
+	optional int32 acceptCalculatorResult = 28;
+	optional int32 acceptHotlineResult = 29;
+	optional int32 acceptAnswerResult = 30;
+	optional int32 acceptMiniKnowledgeCardResult = 31;
+	optional int32 acceptEntityWithVideoResult = 32;
+	optional int32 acceptVideoResult = 33;
+	optional int32 acceptKnowledgePanelEntityResult = 34;
+	optional int32 acceptDialogResult = 35;
+	optional int32 acceptTwitterResults = 36;
+	optional int32 acceptGeoResult = 37;
+	optional int32 acceptDirectionsResult = 38;
+	optional int32 acceptStatisticsResult = 39;
+	optional int32 acceptParkingLocationResult = 40;
+	optional int32 acceptFlightsSearchResult = 42;
+	optional int32 acceptTimeAtHomeResult = 43;
+	optional int32 acceptUnitConversionResult = 44;
+	optional int32 acceptStreamCarouselResult = 45;
+	optional int32 acceptAppsUniversalResults = 46;
+	optional int32 acceptVisualRefinementsResult = 47;
+	optional int32 acceptEntityWithAnswerResult = 48;
+	optional int32 acceptGbotFullscreenGameResult = 49;
+	optional int32 acceptPushkarResult = 50;
+	optional int32 acceptFlightsScheduleDestinationOnlyResult = 51;
+	optional int32 acceptFlightsScheduleOriginDestinationResult = 52;
+	optional int32 acceptFlightsScheduleOriginOnlyResult = 53;
+	optional int32 acceptFlightsSearchOriginDestinationResult = 54;
+	optional int32 acceptFlightsSearchOriginOnlyResult = 55;
+	optional int32 acceptFlightsSearchRegionDestinationResult = 56;
+	optional int32 acceptSimpleSearchResult = 57;
+	optional int32 acceptLotteryResult = 58;
+	optional int32 acceptWhatIsMyIpResult = 59;
+	optional int32 acceptGbotSelectionCarouselResult = 60;
+	optional int32 acceptIndexedAppResults = 61;
+	optional int32 acceptFlightsSearchSpecificFlightsResult = 62;
+	optional int32 acceptNewsOneboxResult = 63;
+	optional int32 acceptPersonalResult = 64;
+	optional int32 acceptNutritionResult = 65;
+	optional int32 acceptSongLyricsResult = 66;
+	optional int32 acceptCustomItinerariesResult = 68;
+	optional int32 acceptWebQuoteResult = 69;
+	optional int32 acceptPodcastResult = 70;
+	optional int32 acceptFlightsSearchDestinationOnlyResult = 71;
+	optional int32 acceptFlightsSearchLocationlessResult = 72;
+	optional int32 acceptPublicAlertsResult = 73;
+	optional int32 acceptTipResult = 74;
+	optional int32 acceptHealthResult = 75;
+	optional int32 acceptSnowConditionsResult = 76;
+	optional int32 acceptVotemortResult = 77;
+	optional int32 acceptPackageTrackingLookupResult = 78;
+	optional int32 acceptEarthquakesResult = 79;
+	optional int32 acceptKcubeOneboxResult = 80;
+	optional int32 acceptRelatedQuestionsResult = 81;
+	optional int32 acceptCalendarEventResult = 82;
+	optional int32 acceptLiveblogResult = 83;
+	optional int32 acceptEventResult = 84;
+	optional int32 acceptLoanCalculatorResult = 85;
+}
+
+message MSPSearchMask {
+	optional bool returnWeatherData = 1;
+	optional bool returnShowtimesData = 4;
+	optional bool returnNewsResults = 6;
+	optional bool returnImageResult = 8;
+	optional bool returnKnowledgeCardResult = 9;
+	optional bool returnOrganicSearchResult = 10;
+	optional bool returnKontikiLocalResult = 11;
+	optional bool returnImageResults = 12;
+	optional bool returnFinanceResult = 13;
+	optional bool returnActionResult = 14;
+	optional bool returnLocalTimeResult = 15;
+	optional bool returnDictionaryResult = 16;
+	optional bool returnWhenIsResult = 17;
+	optional bool returnTranslateResult = 18;
+	optional bool returnAppbarResult = 19;
+	optional bool returnSunriseSunsetResult = 20;
+	optional bool returnFlightStatusResult = 21;
+	optional bool returnAppsUniversalResult = 22;
+	optional bool returnSportsResult = 24;
+	optional bool returnCurrencyResult = 27;
+	optional bool returnCalculatorResult = 28;
+	optional bool returnHotlineResult = 29;
+	optional bool returnAnswerResult = 30;
+	optional bool returnMiniKnowledgeCardResult = 31;
+	optional bool returnEntityWithVideoResult = 32;
+	optional bool returnVideoResult = 33;
+	optional bool returnKnowledgePanelEntityResult = 34;
+	optional bool returnDialogResult = 35;
+	optional bool returnTwitterResults = 36;
+	optional bool returnGeoResult = 37;
+	optional bool returnDirectionsResult = 38;
+	optional bool returnStatisticsResult = 39;
+	optional bool returnParkingLocationResult = 40;
+	optional bool returnFlightsSearchResult = 42;
+	optional bool returnTimeAtHomeResult = 43;
+	optional bool returnUnitConversionResult = 44;
+	optional bool returnStreamCarouselResult = 45;
+	optional bool returnAppsUniversalResults = 46;
+	optional bool returnVisualRefinementsResult = 47;
+	optional bool returnEntityWithAnswerResult = 48;
+	optional bool returnGbotFullscreenGameResult = 49;
+	optional bool returnPushkarResult = 50;
+	optional bool returnFlightsScheduleDestinationOnlyResult = 51;
+	optional bool returnFlightsScheduleOriginDestinationResult = 52;
+	optional bool returnFlightsScheduleOriginOnlyResult = 53;
+	optional bool returnFlightsSearchOriginDestinationResult = 54;
+	optional bool returnFlightsSearchOriginOnlyResult = 55;
+	optional bool returnFlightsSearchRegionDestinationResult = 56;
+	optional bool returnSimpleSearchResult = 57;
+	optional bool returnLotteryResult = 58;
+	optional bool returnWhatIsMyIpResult = 59;
+	optional bool returnGbotSelectionCarouselResult = 60;
+	optional bool returnIndexedAppResults = 61;
+	optional bool returnFlightsSearchSpecificFlightsResult = 62;
+	optional bool returnNewsOneboxResult = 63;
+	optional bool returnPersonalResult = 64;
+	optional bool returnNutritionResult = 65;
+	optional bool returnSongLyricsResult = 66;
+	optional bool returnCustomItinerariesResult = 68;
+	optional bool returnWebQuoteResult = 69;
+	optional bool returnPodcastResult = 70;
+	optional bool returnFlightsSearchDestinationOnlyResult = 71;
+	optional bool returnFlightsSearchLocationlessResult = 72;
+	optional bool returnPublicAlertsResult = 73;
+	optional bool returnTipResult = 74;
+	optional bool returnHealthResult = 75;
+	optional bool returnSnowConditionsResult = 76;
+	optional bool returnVotemortResult = 77;
+	optional bool returnPackageTrackingLookupResult = 78;
+	optional bool returnEarthquakesResult = 79;
+	optional bool returnKcubeOneboxResult = 80;
+	optional bool returnRelatedQuestionsResult = 81;
+	optional bool returnCalendarEventResult = 82;
+	optional bool returnLiveblogResult = 83;
+	optional bool returnEventResult = 84;
+	optional bool returnLoanCalculatorResult = 85;
+}
+
+message MSPSearchRequest {
+	optional MSPSearchQuery query = 1;
+	optional MSPSearchMask mask = 2;
+	optional MSPSearchRequestOptions options = 3;
+	optional MSPClientId clientId = 4;
+	optional bool humanInitiated = 5;
+	optional GWSUserAgentContext userAgentContext = 6;
+	optional MSPSearchRequestContext requestContext = 7;
+	optional MSPResponseShape responseShape = 9;
+}
+
+message MSPPushkarNotificationQuery {
+}
+
+message MSPPushkarNewsFeedQuery {
+	optional GPBTimestamp untilTimestamp = 1;
+	optional GPBTimestamp fromTimestamp = 2;
+}
+
+message MSPPushkarQuery {
+	optional MSPPushkarNewsFeedQuery newsFeedQuery = 1;
+	optional MSPPushkarNotificationQuery notificationQuery = 2;
+}
+
+message GBTResult {
+	optional int32 organicSearchResult = 1;
+	optional int32 weatherData = 3;
+	optional int32 showtimesData = 4;
+	optional int32 imageResult = 5;
+	optional int32 newsResults = 6;
+	optional int32 knowledgeCardResult = 7;
+	optional int32 kontikiLocalResult = 8;
+	optional int32 imageResults = 9;
+	optional int32 financeResult = 10;
+	optional int32 actionResult = 11;
+	optional int32 localTimeResult = 12;
+	optional int32 dictionaryResult = 13;
+	optional int32 whenIsResult = 14;
+	optional int32 translateResult = 15;
+	optional int32 appbarResult = 16;
+	optional int32 sunriseSunsetResult = 17;
+	optional int32 flightStatusResult = 18;
+	optional int32 appsUniversalResult = 19;
+	optional int32 sportsResult = 21;
+	optional int32 currencyResult = 24;
+	optional int32 calculatorResult = 25;
+	optional int32 hotlineResult = 26;
+	optional int32 answerResult = 27;
+	optional int32 miniKnowledgeCardResult = 28;
+	optional int32 entityWithVideoResult = 29;
+	optional int32 videoResult = 30;
+	optional int32 knowledgePanelEntityResult = 31;
+	optional int32 dialogResult = 32;
+	optional int32 twitterResults = 33;
+	optional int32 geoResult = 35;
+	optional int32 directionsResult = 36;
+	optional int32 statisticsResult = 37;
+	optional int32 parkingLocationResult = 38;
+	optional int32 flightsSearchResult = 40;
+	optional int32 timeAtHomeResult = 41;
+	optional int32 unitConversionResult = 42;
+	optional int32 streamCarouselResult = 43;
+	optional int32 appsUniversalResults = 44;
+	optional int32 visualRefinementsResult = 46;
+	optional int32 entityWithAnswerResult = 47;
+	optional int32 gbotFullscreenGameResult = 48;
+	optional int32 pushkarResult = 49;
+	optional int32 simpleSearchResult = 50;
+	optional int32 flightsScheduleDestinationOnlyResult = 51;
+	optional int32 flightsScheduleOriginDestinationResult = 52;
+	optional int32 flightsScheduleOriginOnlyResult = 53;
+	optional int32 flightsSearchOriginDestinationResult = 54;
+	optional int32 flightsSearchOriginOnlyResult = 55;
+	optional int32 flightsSearchRegionDestinationResult = 56;
+	optional int32 lotteryResult = 57;
+	optional int32 whatIsMyIpResult = 58;
+	optional int32 gbotSelectionCarouselResult = 59;
+	optional int32 indexedAppResults = 60;
+	optional int32 flightsSearchSpecificFlightsResult = 62;
+}

@@ -1,0 +1,15 @@
+message ProfileGetVideosDataRequest {
+}
+
+message ProfileGetPeopleDataRequest {
+	optional string ownerId = 1;
+}
+
+message ProfileGetSimpleProfileRequest {
+	optional string ownerId = 1;
+	optional bool includeViewerCircles = 2;
+	optional bool includeIncomingMembership = 3;
+	optional bool useCachedDataForCircles = 4;
+	optional bool includeAclData = 5;
+	optional bool includeEmail = 6;
+}

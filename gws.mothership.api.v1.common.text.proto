@@ -1,0 +1,33 @@
+message MSPFontStyle {
+	optional MSPFontStyle_Value value = 1;
+}
+
+message MSPFontSize {
+	optional int32 size = 1;
+	optional MSPFontSize_Unit unit = 2;
+}
+
+message MSPFontWeight {
+	optional MSPFontWeight_Value value = 1;
+}
+
+message MSPTextStyle {
+	optional MSPFontWeight fontWeight = 1;
+	optional GTPColor color = 2;
+	optional MSPBaselineOffset baselineOffset = 3;
+	optional MSPDirectionality directionality = 4;
+	optional MSPFontSize fontSize = 5;
+	optional MSPFontStyle fontStyle = 6;
+	optional bool emphasis = 7;
+}
+
+message MSPStyledTextSpan {
+	optional int32 startIndex = 1;
+	optional int32 finishIndex = 2;
+	optional MSPTextStyle style = 3;
+}
+
+message MSPStyledText {
+	optional string rawText = 1;
+	repeated MSPStyledTextSpan styledSpanArray = 2;
+}

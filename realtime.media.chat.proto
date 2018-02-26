@@ -1,0 +1,7 @@
+message ChatMessage {
+	optional int32 clientId = 1;
+	optional string chatMessage = 2;
+	optional int32 sequenceNumber = 3;
+	optional int32 retryNumber = 4;
+	optional bool isTest = 5;
+}

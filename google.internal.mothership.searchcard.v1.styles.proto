@@ -1,0 +1,23 @@
+message MSPStyleDeclaration {
+}
+
+message MSPStyleRule {
+	optional MSPStyleDeclaration styleDeclaration = 2;
+	optional string id_p = 3;
+}
+
+message MSPStyleConfig {
+	repeated MSPStyleRule styleRuleArray = 1;
+}
+
+message GBTMSPStyleDeclaration {
+}
+
+message GBTMSPStyleRule {
+	optional GBTMSPStyleDeclaration styleDeclaration = 2;
+	optional string id_p = 3;
+}
+
+message GBTMSPStyleConfig {
+	repeated GBTMSPStyleRule styleRuleArray = 1;
+}

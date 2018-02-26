@@ -1,0 +1,28 @@
+message GFICarouselComposable {
+	optional GFIComposableBehavior behavior = 1;
+	optional GFIComposableStyle style = 2;
+	repeated QLTComponent childComposablesArray = 3;
+}
+
+message GFITableComposable {
+	optional GFIComposableBehavior behavior = 2;
+	optional GFIComposableStyle style = 3;
+	repeated QLTComponent childComposablesArray = 4;
+	optional int32 numberOfRows = 5;
+	optional int32 numberOfColumns = 6;
+}
+
+message GFIStackComposable {
+	repeated QLTComponent childComposablesArray = 1;
+	optional GFIStackComposable_Direction direction = 2;
+	optional GFIComposableBehavior behavior = 3;
+	optional GFIComposableStyle style = 4;
+}
+
+message GFIHuggingComposable {
+	optional QLTComponent firstChildComposable = 1;
+	optional QLTComponent secondChildComposable = 2;
+	optional bool hugsFirstChild = 3;
+	optional GFIComposableBehavior behavior = 4;
+	optional GFIComposableStyle style = 5;
+}

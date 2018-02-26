@@ -1,0 +1,99 @@
+message LogSamplingConfig_KeepRatio {
+	required uint64 keep = 1;
+	required uint64 of = 2;
+}
+
+message LogSamplingConfig {
+	optional LogSamplingConfig_Key by = 1;
+	optional float keepRatio = 2;
+	optional LogSamplingConfig_KeepRatio keepRatioMod = 3;
+	optional string correlationToken = 4;
+}
+
+message Pubsub2RoutingDestination {
+	optional string topic = 1;
+	optional string publisherId = 2;
+	optional string translatorClass = 3;
+	optional string keystoreCrypter = 4;
+}
+
+message FootprintsRoutingDestination {
+	optional Corpus corpus = 1;
+	optional DataType dataType = 2;
+	optional string translatorClass = 3;
+}
+
+message SemanticTypeClearFieldsSpec {
+	repeated SemanticType categoryArray = 1;
+	repeated SemanticType exceptExactArray = 2;
+}
+
+message ClearFieldsSpec {
+	optional SemanticTypeClearFieldsSpec semanticType = 1;
+	optional bool androidId = 2;
+}
+
+message SawmillRoutingDestination_IncludeOptions_NetworkConnectionInfo {
+	optional bool networkType = 1;
+	optional bool mobileSubtype = 2;
+}
+
+message SawmillRoutingDestination_IncludeOptions_Chimera {
+	optional bool configInfo = 1;
+}
+
+message SawmillRoutingDestination_IncludeOptions_ExternalTimestamp {
+	optional bool timeMs = 1;
+	optional bool uptimeMs = 2;
+	optional bool source = 3;
+}
+
+message SawmillRoutingDestination_IncludeOptions_DeviceStatus {
+	optional bool isUnmetered = 1;
+	optional bool isCharging = 2;
+	optional bool autoTimeStatus = 3;
+	optional bool isGooglerDevice = 4;
+}
+
+message SawmillRoutingDestination_IncludeOptions {
+	optional SawmillRoutingDestination_IncludeOptions_DeviceStatus deviceStatus = 1;
+	optional SawmillRoutingDestination_IncludeOptions_ExternalTimestamp externalTimestamp = 2;
+	optional bool bootCount = 3;
+	optional bool timezoneOffsetSeconds = 4;
+	optional bool clientElapsedRealtimeMillis = 5;
+	optional SawmillRoutingDestination_IncludeOptions_Chimera chimera = 6;
+	optional bool dusi = 7;
+	optional SawmillRoutingDestination_IncludeOptions_NetworkConnectionInfo networkConnectionInfo = 8;
+}
+
+message SawmillRoutingDestination {
+	optional string logSource = 1;
+	optional string logType = 2;
+	optional bool personalOrphanedPrivacyApproved = 3;
+	optional string translatorClass = 4;
+	optional ClearFieldsSpec clearFields = 5;
+	optional SawmillRoutingDestination_IdCategory preferTmpIds = 7;
+	optional SawmillRoutingDestination_IncludeOptions includeFields = 16;
+}
+
+message RoutingDestinationConfig {
+	optional string name = 1;
+	optional RoutingDestinationConfig_OnOffState whenWebHistoryIs = 2;
+	optional LogSamplingConfig sampling = 3;
+	optional SawmillRoutingDestination sawmill = 4;
+	optional FootprintsRoutingDestination footprints = 5;
+	optional LogSamplingConfig manualSampling = 6;
+	optional string clientType = 7;
+	optional Pubsub2RoutingDestination pubsub2 = 8;
+	optional RoutingDestinationConfig_OnOffState whenGaiaIdIs = 9;
+	optional RoutingDestinationConfig_OnOffState whenZwiebackIdIs = 10;
+}
+
+message EventCodeRoutingConfig {
+	repeated RoutingDestinationConfig toArray = 1;
+}
+
+message LogEventRoutingConfig {
+	repeated RoutingDestinationConfig toArray = 1;
+	repeated string streamzIncrementerClassArray = 2;
+}

@@ -1,0 +1,36 @@
+message GFIVisualElementLog_ResultIndex {
+	optional GFIVisualElementLog_ResultIndex_ResultIndexType resultIndexType = 1;
+	optional int32 resultIndexValue = 2;
+}
+
+message GFIVisualElementLog_Index {
+	optional GFIVisualElementLog_Index_IndexType indexType = 1;
+	optional int32 indexValue = 2;
+}
+
+message GFIVisualElementLog {
+	optional string name = 1;
+	optional bool enableClicktrack = 2;
+	optional GFIVisualElementLog_Visibility visibility = 3;
+	optional GFIVisualElementLog_Index index = 4;
+	optional GFIVisualElementLog_ResultIndex resultIndex = 5;
+	optional FLOGTreeRef featureTreeRef = 6;
+}
+
+message GFIVeLogInfo {
+	optional LOGClickTrackingCGI vedProto = 1;
+}
+
+message GFIClientFilteredAppLinkCandidateProto {
+	optional MSPAppLinkConditions conditions = 1;
+	optional MSPAppLink appLink = 2;
+	optional GFIVeLogInfo veLogInfo = 3;
+}
+
+message GFIClientFilteredAppLinkProto {
+	repeated GFIClientFilteredAppLinkCandidateProto candidateArray = 1;
+}
+
+message GFIExpandableVisibility {
+	optional GFIExpandableVisibility_Visibility visibility = 1;
+}

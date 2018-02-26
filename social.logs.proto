@@ -1,0 +1,59 @@
+message SLOGSocialAffinityExtension_SocialAffinityClientInterface {
+	optional SDISSaes_SocialAffinityEventSource eventSource = 2;
+	optional SCSocialClient socialClient = 3;
+	optional string callingApplication = 4;
+	optional string versionName = 5;
+}
+
+message SLOGSocialAffinityExtension_AutocompleteSessions {
+	optional int64 queryId = 1;
+	optional int64 selectionId = 2;
+	optional int64 submissionId = 3;
+}
+
+message SLOGSocialAffinityExtension_AutocompleteMetadata {
+	optional int32 queryLength = 1;
+	optional string query = 2;
+	optional SLOGSocialAffinityExtension_AutocompleteSessions sessions = 3;
+}
+
+message SLOGSocialAffinityExtension_SocialAffinityMetadata {
+	optional SLOGSocialAffinityExtension_AutocompleteMetadata autocompleteMetadata = 1;
+	optional int32 affinityVersion = 2;
+}
+
+message SLOGSocialAffinityExtension_SocialAffinityEntityProfile {
+	optional string name = 1;
+}
+
+message SLOGSocialAffinityExtension_SocialAffinityEntityPosition {
+	optional int32 row = 1;
+	optional int32 column = 2;
+}
+
+message SLOGSocialAffinityExtension_SocialAffinityEntityMetadata {
+	optional SLOGSocialAffinityExtension_SocialAffinityEntityPosition position = 1;
+	optional SLOGSocialAffinityExtension_SocialAffinityEntityProfile profile = 2;
+	repeated SLOGSocialAffinityExtension_SocialAffinityEntityPosition additionalPositionArray = 4;
+}
+
+message SLOGSocialAffinityExtension_SocialAffinityEntityId {
+	optional string email = 1;
+	optional string phone = 2;
+	optional string obfuscatedGaiaId = 3;
+}
+
+message SLOGSocialAffinityExtension_SocialAffinityEntity {
+	optional string loggingId = 1;
+	optional string obfuscatedGaiaId = 2;
+	optional SLOGSocialAffinityExtension_SocialAffinityEntityMetadata metadata = 3;
+	optional SLOGSocialAffinityExtension_SocialAffinityEntityId entityId = 4;
+}
+
+message SLOGSocialAffinityExtension {
+	optional SLOGSocialAffinityExtension_SocialAffinityEventType eventType = 1;
+	repeated SLOGSocialAffinityExtension_SocialAffinityEntity entityArray = 2;
+	optional SLOGSocialAffinityExtension_SocialAffinityMetadata metadata = 4;
+	optional SLOGSocialAffinityExtension_SocialAffinityClientInterface clientInterface = 5;
+	optional int64 eventTimestampUsec = 6;
+}

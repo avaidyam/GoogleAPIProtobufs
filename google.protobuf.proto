@@ -1,0 +1,325 @@
+message GPBGeneratedCodeInfo_Annotation {
+	repeated int32 pathArray = 1;
+	optional string sourceFile = 2;
+	optional int32 begin = 3;
+	optional int32 end = 4;
+}
+
+message GPBGeneratedCodeInfo {
+	repeated GPBGeneratedCodeInfo_Annotation annotationArray = 1;
+}
+
+message GPBSourceCodeInfo_Location {
+	repeated int32 pathArray = 1;
+	repeated int32 spanArray = 2;
+	optional string leadingComments = 3;
+	optional string trailingComments = 4;
+	repeated string leadingDetachedCommentsArray = 6;
+}
+
+message GPBSourceCodeInfo {
+	repeated GPBSourceCodeInfo_Location locationArray = 1;
+}
+
+message GPBUninterpretedOption_NamePart {
+	required string namePart = 1;
+	required bool isExtension = 2;
+}
+
+message GPBUninterpretedOption {
+	repeated GPBUninterpretedOption_NamePart nameArray = 2;
+	optional string identifierValue = 3;
+	optional uint64 positiveIntValue = 4;
+	optional int64 negativeIntValue = 5;
+	optional double doubleValue = 6;
+	optional bytes stringValue = 7;
+	optional string aggregateValue = 8;
+}
+
+message GPBMethodOptions {
+	optional bool deprecated = 33;
+	repeated GPBUninterpretedOption uninterpretedOptionArray = 999;
+}
+
+message GPBServiceOptions {
+	optional bool deprecated = 33;
+	repeated GPBUninterpretedOption uninterpretedOptionArray = 999;
+}
+
+message GPBEnumValueOptions {
+	optional bool deprecated = 1;
+	repeated GPBUninterpretedOption uninterpretedOptionArray = 999;
+}
+
+message GPBEnumOptions {
+	optional bool allowAlias = 2;
+	optional bool deprecated = 3;
+	repeated GPBUninterpretedOption uninterpretedOptionArray = 999;
+}
+
+message GPBFieldOptions {
+	optional GPBFieldOptions_CType ctype = 1;
+	optional bool packed = 2;
+	optional bool deprecated = 3;
+	optional bool lazy = 5;
+	optional GPBFieldOptions_JSType jstype = 6;
+	optional bool weak = 10;
+	repeated GPBUninterpretedOption uninterpretedOptionArray = 999;
+}
+
+message GPBMessageOptions {
+	optional bool messageSetWireFormat = 1;
+	optional bool noStandardDescriptorAccessor = 2;
+	optional bool deprecated = 3;
+	optional bool mapEntry = 7;
+	repeated GPBUninterpretedOption uninterpretedOptionArray = 999;
+}
+
+message GPBFileOptions {
+	optional string javaPackage = 1;
+	optional string javaOuterClassname = 8;
+	optional GPBFileOptions_OptimizeMode optimizeFor = 9;
+	optional bool javaMultipleFiles = 10;
+	optional string goPackage = 11;
+	optional bool ccGenericServices = 16;
+	optional bool javaGenericServices = 17;
+	optional bool pyGenericServices = 18;
+	optional bool javaGenerateEqualsAndHash = 20;
+	optional bool deprecated = 23;
+	optional bool javaStringCheckUtf8 = 27;
+	optional bool ccEnableArenas = 31;
+	optional string objcClassPrefix = 36;
+	optional string csharpNamespace = 37;
+	repeated GPBUninterpretedOption uninterpretedOptionArray = 999;
+}
+
+message GPBMethodDescriptorProto {
+	optional string name = 1;
+	optional string inputType = 2;
+	optional string outputType = 3;
+	optional GPBMethodOptions options = 4;
+	optional bool clientStreaming = 5;
+	optional bool serverStreaming = 6;
+}
+
+message GPBServiceDescriptorProto {
+	optional string name = 1;
+	repeated GPBMethodDescriptorProto methodArray = 2;
+	optional GPBServiceOptions options = 3;
+}
+
+message GPBEnumValueDescriptorProto {
+	optional string name = 1;
+	optional int32 number = 2;
+	optional GPBEnumValueOptions options = 3;
+}
+
+message GPBEnumDescriptorProto {
+	optional string name = 1;
+	repeated GPBEnumValueDescriptorProto valueArray = 2;
+	optional GPBEnumOptions options = 3;
+}
+
+message GPBOneofDescriptorProto {
+	optional string name = 1;
+}
+
+message GPBFieldDescriptorProto {
+	optional string name = 1;
+	optional string extendee = 2;
+	optional int32 number = 3;
+	optional GPBFieldDescriptorProto_Label label = 4;
+	optional GPBFieldDescriptorProto_Type type = 5;
+	optional string typeName = 6;
+	optional string defaultValue = 7;
+	optional GPBFieldOptions options = 8;
+	optional int32 oneofIndex = 9;
+	optional string jsonName = 10;
+}
+
+message GPBDescriptorProto_ReservedRange {
+	optional int32 start = 1;
+	optional int32 end = 2;
+}
+
+message GPBDescriptorProto_ExtensionRange {
+	optional int32 start = 1;
+	optional int32 end = 2;
+}
+
+message GPBDescriptorProto {
+	optional string name = 1;
+	repeated GPBFieldDescriptorProto fieldArray = 2;
+	repeated GPBDescriptorProto nestedTypeArray = 3;
+	repeated GPBEnumDescriptorProto enumTypeArray = 4;
+	repeated GPBDescriptorProto_ExtensionRange extensionRangeArray = 5;
+	repeated GPBFieldDescriptorProto extensionArray = 6;
+	optional GPBMessageOptions options = 7;
+	repeated GPBOneofDescriptorProto oneofDeclArray = 8;
+	repeated GPBDescriptorProto_ReservedRange reservedRangeArray = 9;
+	repeated string reservedNameArray = 10;
+}
+
+message GPBFileDescriptorProto {
+	optional string name = 1;
+	optional string package = 2;
+	repeated string dependencyArray = 3;
+	repeated GPBDescriptorProto messageTypeArray = 4;
+	repeated GPBEnumDescriptorProto enumTypeArray = 5;
+	repeated GPBServiceDescriptorProto serviceArray = 6;
+	repeated GPBFieldDescriptorProto extensionArray = 7;
+	optional GPBFileOptions options = 8;
+	optional GPBSourceCodeInfo sourceCodeInfo = 9;
+	repeated int32 publicDependencyArray = 10;
+	repeated int32 weakDependencyArray = 11;
+	optional string syntax = 12;
+}
+
+message GPBFileDescriptorSet {
+	repeated GPBFileDescriptorProto fileArray = 1;
+}
+
+message GPBBytesValue {
+	optional bytes value = 1;
+}
+
+message GPBStringValue {
+	optional string value = 1;
+}
+
+message GPBBoolValue {
+	optional bool value = 1;
+}
+
+message GPBUInt32Value {
+	optional uint32 value = 1;
+}
+
+message GPBInt32Value {
+	optional int32 value = 1;
+}
+
+message GPBUInt64Value {
+	optional uint64 value = 1;
+}
+
+message GPBInt64Value {
+	optional int64 value = 1;
+}
+
+message GPBFloatValue {
+	optional float value = 1;
+}
+
+message GPBDoubleValue {
+	optional double value = 1;
+}
+
+message GPBOption {
+	optional string name = 1;
+	optional GPBAny value = 2;
+}
+
+message GPBEnumValue {
+	optional string name = 1;
+	optional int32 number = 2;
+	repeated GPBOption optionsArray = 3;
+}
+
+message GPBEnum {
+	optional string name = 1;
+	repeated GPBEnumValue enumvalueArray = 2;
+	repeated GPBOption optionsArray = 3;
+	optional GPBSourceContext sourceContext = 4;
+	optional GPBSyntax syntax = 5;
+}
+
+message GPBField {
+	optional GPBField_Kind kind = 1;
+	optional GPBField_Cardinality cardinality = 2;
+	optional int32 number = 3;
+	optional string name = 4;
+	optional string typeURL = 6;
+	optional int32 oneofIndex = 7;
+	optional bool packed = 8;
+	repeated GPBOption optionsArray = 9;
+	optional string jsonName = 10;
+	optional string defaultValue = 11;
+}
+
+message GPBType {
+	optional string name = 1;
+	repeated GPBField fieldsArray = 2;
+	repeated string oneofsArray = 3;
+	repeated GPBOption optionsArray = 4;
+	optional GPBSourceContext sourceContext = 5;
+	optional GPBSyntax syntax = 6;
+}
+
+message GPBTimestamp {
+	optional int64 seconds = 1;
+	optional int32 nanos = 2;
+}
+
+message GPBListValue {
+	repeated GPBValue valuesArray = 1;
+}
+
+message GPBValue {
+	optional GPBNullValue nullValue = 1;
+	optional double numberValue = 2;
+	optional string stringValue = 3;
+	optional bool boolValue = 4;
+	optional GPBStruct structValue = 5;
+	optional GPBListValue listValue = 6;
+}
+
+message GPBStruct {
+	map<string, GPBValue> fields = 1;
+}
+
+message GPBSourceContext {
+	optional string fileName = 1;
+}
+
+message GPBFieldMask {
+	repeated string pathsArray = 1;
+}
+
+message GPBEmpty {
+}
+
+message GPBDuration {
+	optional int64 seconds = 1;
+	optional int32 nanos = 2;
+}
+
+message GPBMixin {
+	optional string name = 1;
+	optional string root = 2;
+}
+
+message GPBMethod {
+	optional string name = 1;
+	optional string requestTypeURL = 2;
+	optional bool requestStreaming = 3;
+	optional string responseTypeURL = 4;
+	optional bool responseStreaming = 5;
+	repeated GPBOption optionsArray = 6;
+	optional GPBSyntax syntax = 7;
+}
+
+message GPBApi {
+	optional string name = 1;
+	repeated GPBMethod methodsArray = 2;
+	repeated GPBOption optionsArray = 3;
+	optional string version = 4;
+	optional GPBSourceContext sourceContext = 5;
+	repeated GPBMixin mixinsArray = 6;
+	optional GPBSyntax syntax = 7;
+}
+
+message GPBAny {
+	optional string typeURL = 1;
+	optional bytes value = 2;
+}

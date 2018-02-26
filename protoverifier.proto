@@ -1,0 +1,17 @@
+message Rules {
+	optional bool mustBeSet = 1;
+	optional int64 minInt = 2;
+	optional float minFloat = 3;
+	optional double minDouble = 4;
+	optional int64 maxInt = 5;
+	optional float maxFloat = 6;
+	optional double maxDouble = 7;
+	optional string matchRegex = 8;
+	optional string notMatchRegex = 9;
+	repeated string customRuleArray = 10;
+	optional int32 minStringLength = 11;
+	optional int32 maxStringLength = 12;
+	optional int32 minRepeatedLength = 13;
+	optional int32 maxRepeatedLength = 14;
+	optional bool languageCode = 15;
+}

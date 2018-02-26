@@ -1,0 +1,15 @@
+message EntityId {
+	optional string id_p = 1;
+	optional EntityId_Authority authority = 2;
+}
+
+message SingleEntityRequest {
+	optional GlobalRequestContext context = 1;
+	optional EntityFetchRequest request = 2;
+}
+
+message EntityFetchRequest {
+	optional EntityId entityId = 1;
+	optional string query = 2;
+	optional GPBFieldMask fieldMask = 3;
+}

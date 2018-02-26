@@ -1,0 +1,4 @@
+message CPBRealtimeNotificationSettings {
+	optional CPBRealtimeNotificationSettings_Level level = 1;
+	optional bool blocked = 3;
+}

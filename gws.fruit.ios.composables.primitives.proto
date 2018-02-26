@@ -1,0 +1,37 @@
+message GFIVideoComposable {
+	optional GFIImageComposable thumbnailImage = 1;
+	optional string duration = 2;
+	optional GFIComposableBehavior behavior = 3;
+	optional GFIComposableStyle style = 4;
+}
+
+message GFISpacerComposable {
+	optional int32 width = 1;
+	optional int32 height = 2;
+	optional GFIComposableBehavior behavior = 3;
+	optional GFIComposableStyle style = 4;
+}
+
+message GFILabelComposableAttributedTextRange {
+	optional int32 startIndex = 1;
+	optional int32 length = 2;
+	optional GFITextStyle textStyle = 3;
+	optional GFIComposableInteraction interaction = 4;
+}
+
+message GFILabelComposable {
+	optional string text = 1;
+	repeated GFILabelComposableAttributedTextRange attributedTextRangesArray = 2;
+	optional int32 maximumLineCount = 3;
+	optional GFILabelComposable_TextAlignment textAlignment = 4;
+	optional GFIComposableBehavior behavior = 5;
+	optional GFIComposableStyle style = 6;
+}
+
+message GFIImageComposable {
+	optional string sourceURL = 1;
+	optional int32 width = 2;
+	optional int32 height = 3;
+	optional GFIComposableBehavior behavior = 4;
+	optional GFIComposableStyle style = 5;
+}

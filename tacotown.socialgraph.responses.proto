@@ -1,0 +1,19 @@
+message TSGLoadSocialNetworkResponse {
+	optional TSGdata_PersonList personList = 3;
+}
+
+message TSGLoadCirclesResponse {
+	repeated TSGdata_CircleData circleDataArray = 1;
+	repeated TSGdata_CirclePerson circlePersonArray = 2;
+	optional TSGdata_ContinuationToken continuationToken = 3;
+	optional int32 totalPeople = 4;
+	optional int64 changesSinceMillis = 5;
+}
+
+message TSGLoadBlockedPeopleResponse {
+	repeated TSGdata_CirclePerson personArray = 1;
+}
+
+message TSGBlockUserResponse {
+	optional string versionInfo = 1;
+}

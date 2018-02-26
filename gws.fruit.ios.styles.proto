@@ -1,0 +1,33 @@
+message GFIPadding {
+	optional float top = 1;
+	optional float trailing = 2;
+	optional float bottom = 3;
+	optional float leading = 4;
+}
+
+message GFIStyleExtensions {
+}
+
+message GFILayoutDirection {
+	optional GFILayoutDirection_Direction direction = 1;
+}
+
+message GFIGbotBlockStyle {
+	optional double cornerRadius = 1;
+	optional bool backgroundOpaque = 2;
+}
+
+message GFIFontStyle {
+	optional GFIFontWeight fontWeight = 1;
+	optional bool italic = 2;
+}
+
+message GFITextStyle {
+	optional int32 fontSize = 1;
+	optional int32 lineHeight = 2;
+	optional int32 baselineOffset = 3;
+	optional string fontName = 4;
+	optional GFIFontStyle fontStyle = 5;
+	optional GTPColor color = 6;
+	optional GTPColor highlightColor = 7;
+}

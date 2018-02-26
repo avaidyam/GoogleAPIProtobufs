@@ -1,0 +1,39 @@
+message CLCCBucket {
+	optional int64 key = 1;
+	optional int64 count = 2;
+}
+
+message CLCCCounter {
+	optional fixed64 hashedName = 1;
+	optional string name = 2;
+	repeated CLCCBucket bucketArray = 3;
+}
+
+message CLCCCounters {
+	optional int64 uptimeMillis = 1;
+	repeated CLCCCounter counterArray = 2;
+	optional bytes dimensionsInstance = 3;
+	optional int64 timestampMillis = 4;
+	optional string dimensionsInstanceJs = 5;
+	optional string dimensionsInstanceJson = 6;
+}
+
+message CCABucket {
+	optional int64 key = 1;
+	optional int64 count = 2;
+}
+
+message CCACounter {
+	optional fixed64 hashedName = 1;
+	optional string name = 2;
+	repeated CCABucket bucketArray = 3;
+}
+
+message CCACounters {
+	optional int64 uptimeMillis = 1;
+	repeated CCACounter counterArray = 2;
+	optional bytes dimensionsInstance = 3;
+	optional int64 timestampMillis = 4;
+	optional string dimensionsInstanceJs = 5;
+	optional string dimensionsInstanceJson = 6;
+}

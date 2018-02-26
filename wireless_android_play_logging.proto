@@ -1,0 +1,7 @@
+message PlaySystemHealthMetric {
+	optional GTPLogsSystemHealthMetric systemHealthMetric = 1;
+	optional ConnectionType_Id endConnectionType = 2;
+}
+
+message ConnectionType {
+}

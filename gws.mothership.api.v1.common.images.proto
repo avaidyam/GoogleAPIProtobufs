@@ -1,0 +1,32 @@
+message MSPIImageSource {
+	repeated MSPIRasterImage rasterArray = 1;
+	optional MSPIScalableImage scalable = 2;
+}
+
+message MSPIRasterImage_Data {
+	optional bytes rawBytes = 1;
+	optional MSPIRasterImage_Encoding encoding = 2;
+}
+
+message MSPIRasterImage {
+	optional MSPIRasterImage_Data data_p = 1;
+	optional MSPUrl URL = 2;
+	optional int32 width = 3;
+	optional int32 height = 4;
+}
+
+message MSPIScalableImage {
+	optional string svgText = 1;
+}
+
+message MSPIImageId {
+	optional string encryptedDocid = 1;
+}
+
+message MSPIImage {
+	optional MSPIImageId id_p = 1;
+	optional MSPIImageSource sourceData = 2;
+	optional MSPUrl crawledReferrerURL = 3;
+	optional string crawledReferrerEncryptedDocid = 4;
+	optional bool disallowCropping = 5;
+}

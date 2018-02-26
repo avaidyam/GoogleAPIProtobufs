@@ -1,0 +1,11 @@
+message GTPColor {
+	optional float red = 1;
+	optional float green = 2;
+	optional float blue = 3;
+	optional GPBFloatValue alpha = 4;
+}
+
+message FBGTPLatLng {
+	optional double latitude = 1;
+	optional double longitude = 2;
+}

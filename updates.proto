@@ -1,0 +1,13 @@
+message UpdateSharingTarget {
+	optional string displayName = 2;
+	optional string email = 3;
+	optional string profilePhotoURL = 5;
+	optional string squareCategoryDisplayName = 6;
+}
+
+message UpdateNewUpdatesResponse {
+	optional EMEmbedClientItem deleted4 = 4;
+	optional int64 nextPrefetchTimeMs = 7;
+	optional bool isFromContinuedRequest = 8;
+	repeated string newerThanActivityIdArray = 9;
+}

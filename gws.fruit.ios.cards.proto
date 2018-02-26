@@ -1,0 +1,7 @@
+message GFICardExtensions {
+}
+
+message GFICard {
+	repeated QLTComponent contentArray = 1;
+	optional GFILink link = 2;
+}

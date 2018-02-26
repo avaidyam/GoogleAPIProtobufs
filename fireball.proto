@@ -1,0 +1,38 @@
+message FireballConversationStyle {
+}
+
+message SuggestedActionInfo {
+}
+
+message FireballSmartSuggestionsPosition {
+}
+
+message FireballActivity {
+}
+
+message FireballMessageMediaSource {
+}
+
+message FireballMessageContentType {
+}
+
+message TranscodingCompletionStatus {
+}
+
+message TranscodingMimeCode {
+}
+
+message FireballConversationOrigin {
+}
+
+message FireballConversationStatus {
+}
+
+message FireballMessageSource {
+}
+
+message FireballOpenCause {
+}
+
+message FireballEventType {
+}

@@ -1,0 +1,3 @@
+message LocationLocationResult {
+	optional UpdateLocation location = 1;
+}

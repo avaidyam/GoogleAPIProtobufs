@@ -1,0 +1,47 @@
+message LOGClickTrackingCGI {
+	optional int32 veIndex = 1;
+	optional int32 veType = 2;
+	optional int32 deprecated1 = 3;
+	optional int32 deprecated2 = 4;
+	optional int32 elementIndex = 5;
+	optional int32 resultIndex = 6;
+	optional int32 pageStart = 7;
+	optional int32 style = 8;
+	optional int32 resultGroupElementIndex = 9;
+	optional bool doNotLogURL = 10;
+	optional int32 nonArchivalVeIndex = 11;
+	optional fixed64 resultFprint = 12;
+	optional EIDClientEventIdMessage veEventId = 13;
+	optional int32 youtubeVeCounter = 14;
+}
+
+message LOGToolOption {
+	optional string description_p = 1;
+	optional bool selected = 2;
+	optional int32 tool = 3;
+	optional string value = 4;
+	repeated LOGToolOption_PromotionReason promotionReasonArray = 5;
+	repeated int32 scoreArray = 6;
+}
+
+message GTPLogsGBotSelectionCarouselItemData {
+	optional string itemId = 1;
+	optional string categoryId = 2;
+}
+
+message GTPLogsClickTrackingCGI {
+	optional int32 veIndex = 1;
+	optional int32 veType = 2;
+	optional int32 deprecated1 = 3;
+	optional int32 deprecated2 = 4;
+	optional int32 elementIndex = 5;
+	optional int32 resultIndex = 6;
+	optional int32 pageStart = 7;
+	optional int32 style = 8;
+	optional int32 resultGroupElementIndex = 9;
+	optional bool doNotLogURL = 10;
+	optional int32 nonArchivalVeIndex = 11;
+	optional fixed64 resultFprint = 12;
+	optional GBTClientEventIdMessage veEventId = 13;
+	optional int32 youtubeVeCounter = 14;
+}

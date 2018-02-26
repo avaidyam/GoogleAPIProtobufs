@@ -1,0 +1,24 @@
+message APOAPApiaryFields {
+	optional string name = 1;
+	optional string version = 2;
+	optional string remoteIp = 3;
+	optional uint64 projectId = 4;
+	optional string containerURL = 6;
+	optional string originalURL = 7;
+	optional string acceptLanguage = 8;
+	optional string effectiveUser = 9;
+	optional int32 appVersion = 10;
+	optional bool noLog = 11;
+	optional string sourceInfo = 12;
+	optional string experimentOverride = 13;
+	optional SCSocialClient socialClient = 14;
+	optional string socialClientString = 15;
+	optional APOAPVersion appVersionFull = 16;
+}
+
+message APOAPVersion {
+	optional int32 major = 1;
+	optional int32 minor = 2;
+	optional int32 patch = 3;
+	optional int32 build = 4;
+}

@@ -1,0 +1,5114 @@
+enum GTPPlatform_Type {
+	Prober = 3;
+	Ios = 2;
+	Test = 4;
+	Android = 1;
+	Unknown = 0;
+}
+
+enum FireballConversationStatus_Type {
+	ConversationDeleted = 3;
+	ConversationArchived = 2;
+	ConversationCreated = 4;
+	ConversationOpenedOrCreated = 1;
+	UnknownConversationStatus = 0;
+}
+
+enum CreditCardEntryAction_NfcErrorReason {
+	TimeoutError = 3;
+	IoError = 2;
+	RateLimitError = 4;
+	UnsupportedError = 1;
+	UnknownNfcErrorReason = 0;
+}
+
+enum GTPDApiVersion_Value {
+	V3 = 3;
+	V2 = 2;
+	V4 = 4;
+	V1 = 1;
+	Unknown = 0;
+}
+
+enum WPMNMNetworkConnectionInfo_NetworkType {
+	MobileCbs = 12;
+	Vpn = 17;
+	MobileFota = 10;
+	MobileIa = 14;
+	MobileHipri = 5;
+	MobileEmergency = 15;
+	Bluetooth = 7;
+	MobileSupl = 3;
+	MobileIms = 11;
+	WifiP2P = 13;
+	Proxy = 16;
+	Mobile = 0;
+	MobileMms = 2;
+	Ethernet = 9;
+	MobileDun = 4;
+	Wimax = 6;
+	None = -1;
+	Dummy = 8;
+	Wifi = 1;
+}
+
+enum GFICategoryBrowseStyle {
+	Unknown = 0;
+	Lean = 2;
+	Chain = 4;
+	Hotels = 6;
+	HotelsChain = 7;
+	DepartmentDirectory = 5;
+	Commodity = 3;
+	MediaRich = 1;
+	Transit = 8;
+}
+
+enum GTPInboxMessage_MessageClass {
+	Status = 3;
+	Ephemeral = 2;
+	Notify = 4;
+	Signaling = 1;
+	User = 0;
+}
+
+enum GTPSmartSuggestionType_Type {
+	Location = 2;
+	ShortMessage = 4;
+	SuggestBot = 6;
+	AppAction = 7;
+	SensitiveTopic = 5;
+	Bot = 3;
+	FullMessage = 1;
+	Unknown = 0;
+}
+
+enum GFIFlightDetails_StatusCode {
+	NoStatusCode = 999;
+	Unknown = 0;
+	OnTime = 2;
+	Delayed = 4;
+	InDistress = 9;
+	Diverted = 6;
+	Redirected = 7;
+	Cancelled = 5;
+	Landed = 3;
+	Scheduled = 1;
+	NotOperational = 8;
+}
+
+enum GFIActionButton_Type {
+	Website = 3;
+	Phone = 2;
+	Navigation = 4;
+	Directions = 1;
+	TypeUnspecified = 0;
+}
+
+enum GFILabelComposable_TextAlignment {
+	Justified = 3;
+	Center = 2;
+	Natural = 4;
+	Right = 1;
+	Left = 0;
+}
+
+enum GTPGroupMessage_MessageType {
+	AddGroupUsersPush = 6;
+	KickGroupUsersPush = 7;
+	CreateGroupPush = 5;
+	Unknown = 0;
+	ChangeGroupProfilePush = 8;
+}
+
+enum GFIStackComposable_Direction {
+	Vertical = 0;
+	HorizontalLeftToRight = 1;
+}
+
+enum GTPChallenge_Type {
+	Sms = 2;
+	Unknown = 0;
+	None = 1;
+	CallReadPin = 3;
+}
+
+enum IosSystemHealthMetrics_ApplicationState {
+	ApplicationStateInactive = 2;
+	ApplicationStateForeground = 0;
+	ApplicationStateBackground = 1;
+}
+
+enum SemanticType {
+	StAccountCredential = 2602;
+	StHealthcareInfo = 1203;
+	StUserQuery = 1901;
+	StDemographicInfo = 1601;
+	StAndroidLoggingId2 = 1006;
+	StUserContent = 1900;
+	StIpAddress = 1301;
+	StMandelbreadId = 1005;
+	StSensitiveBackgroundInfo = 1204;
+	StGovernmentIdNumber = 1201;
+	StDebugInfo = 9901;
+	StNetworkEndpoint = 1300;
+	StGoogleRelationshipId = 1800;
+	StCoarseLocation = 1702;
+	StGaiaId = 1105;
+	StNotRequired = 999;
+	StSecurityKey = 2601;
+	StAvocadoId = 2500;
+	StCustomerId = 1801;
+	StAndroidLoggingId = 1401;
+	StIdentifyingId = 1100;
+	StThirdPartyData = 2000;
+	StZwiebackId = 1001;
+	StAnalyticsId = 1004;
+	StCardholderData = 1202;
+	StGservicesAndroidId = 1107;
+	StUsername = 1106;
+	StPhoneNumber = 1104;
+	StSessionId = 2300;
+	StSensitiveTimestamp = 2101;
+	StSecurityMaterial = 2600;
+	StName = 1103;
+	StPreciseLocation = 1701;
+	StNotSpecified = 0;
+	StAnonymousData = 1600;
+	StContentDependent = 9900;
+	StTimestamp = 2100;
+	StKey = 9903;
+	StHardwareId = 1400;
+	StPrefId = 1002;
+	StValue = 9904;
+	StEmailId = 1102;
+	StSpiiId = 1200;
+	StPartnerId = 1802;
+	StUserAgent = 1501;
+	StBiscottiId = 1003;
+	StAcsaId = 1007;
+	StPersonalData = 2400;
+	StAresId = 1108;
+	StPublisherId = 1803;
+	StPseudonymousId = 1000;
+	StSoftwareId = 1500;
+	StLocation = 1700;
+	StKeyValuePair = 9902;
+	StRefererURL = 9905;
+}
+
+enum GFILayoutDirection_Direction {
+	RightToLeft = 2;
+	LayoutDirectionUnspecified = 0;
+	LeftToRight = 1;
+}
+
+enum GTPDNetwork_Type {
+	Unknown = 0;
+	Wifi = 2;
+	Bluetooth = 4;
+	MobileLte = 9;
+	Mobile2G = 6;
+	Mobile3G = 7;
+	MobileUnknown = 5;
+	Wimax = 3;
+	Ethernet = 1;
+	Mobile4G = 8;
+}
+
+enum GTPApiVersion_Value {
+	V3 = 3;
+	V2 = 2;
+	V4 = 4;
+	V1 = 1;
+	Unknown = 0;
+}
+
+enum GTPDMediaClass_Type {
+	Profile = 3;
+	BotAttachment = 2;
+	BistoMedia = 4;
+	Attachment = 1;
+	Unknown = 0;
+}
+
+enum GTPAppAction_Platform {
+	Android = 2;
+	Unknown = 0;
+	Any = 1;
+	Ios = 3;
+}
+
+enum CCAVrClientInfo_VrClientType {
+	Windows = 5;
+	AndroidUnitySdk = 3;
+	IosCardboardSdk = 2;
+	IosUnitySdk = 4;
+	AndroidCardboardSdk = 1;
+	Unknown = 0;
+}
+
+enum MSPDirectionality {
+	Rtl = 2;
+	DirectionalityUnspecified = 0;
+	Ltr = 1;
+}
+
+enum RoutingDestinationConfig_OnOffState {
+	Off = 2;
+	Any = 0;
+	On = 1;
+}
+
+enum MSPFontWeight_Value {
+	Light = 2;
+	Medium = 4;
+	Black = 6;
+	Bold = 5;
+	DefaultWeight = 0;
+	Thin = 1;
+	Normal = 3;
+}
+
+enum AppAction_Platform {
+	Android = 2;
+	Unknown = 0;
+	Any = 1;
+	Ios = 3;
+}
+
+enum LOGToolOption_PromotionReason {
+	DatefilterTwiddler = 0;
+	RecipeTool = 10;
+	ToolBoost = 2;
+	PricesTwiddler = 4;
+	BlockPromoted = 9;
+	GeoBoost = 6;
+	VisitedResults = 7;
+	ItemeisterCategorizer = 5;
+	GwsClrestrict = 3;
+	Universal = 1;
+	ClirBoost = 8;
+}
+
+enum DeviceStatusInfo_NetworkStatus {
+	Unmetered = 2;
+	NetworkUnknown = 0;
+	Metered = 1;
+}
+
+enum GTPRegistrationWarning_Type {
+	VersionCheckBlockApp = 2;
+	Unknown = 0;
+	VersionCheckUpgradeApp = 1;
+	SpamSuspendAccount = 3;
+}
+
+enum FireballEventType_Type {
+	OutgoingMessageSendFailure = 17;
+	MediaDownloadFailure = 41;
+	OutgoingMessageMarkedAsDelivered = 14;
+	AnotherDeviceRegistered = 77;
+	IncomingMessageLightTickle = 30;
+	SuggestedActionClicked = 132;
+	AppToForeground = 74;
+	TransportEvent = 120;
+	Conversation = 3;
+	OobeConfirmCode = 102;
+	IncomingMessageInserted = 32;
+	SuggestedActionShown = 130;
+	IncomingMessageAcked = 34;
+	Transcoding = 6;
+	SmartSuggestionsShow = 50;
+	SuggestedActionTriggerFailed = 131;
+	OobeSelfieTime = 103;
+	SuggestedActionExperimentAssignment = 134;
+	OutgoingMessageServerResponded = 12;
+	ComponentviewClickTrack = 90;
+	UserAndDeviceInfo = 5;
+	SmsInviteClicked = 78;
+	AppStartup = 7;
+	OutgoingMessageSentToServer = 11;
+	OutgoingMessageClientDropped = 16;
+	DeprecatedMessage = 2;
+	SmartSuggestionsAccepted = 51;
+	StickerSetStatusChange = 110;
+	OobeName = 104;
+	IncomingMessageReceived = 31;
+	MatchstickOutgoingMessageImported = 61;
+	AppToBackground = 73;
+	OobeGoogleAccount = 105;
+	ActivityLifecycle = 8;
+	OobePhoneNumber = 101;
+	MediaDownloaded = 40;
+	RegistrationComplete = 71;
+	UnknownEventType = 0;
+	WelcomeComplete = 76;
+	ProfileSetupComplete = 72;
+	OutgoingMessageMarkedAsSent = 13;
+	PermissionCheck = 70;
+	AppInstall = 9;
+	MessageHandoff = 60;
+	AppResume = 1;
+	OutgoingMessageCreated = 10;
+	PushNotificationReceived = 75;
+	OobeWelcome = 100;
+	OutgoingMessageMarkedAsRead = 15;
+	SmartSuggestionsRejected = 52;
+	SuggestedActionDismissed = 133;
+	IncomingMessageMarkedAsRead = 33;
+	SmartSuggestionsBadReported = 54;
+	MatchstickIncomingMessageImported = 62;
+	Search = 4;
+	SmartSuggestionsReceived = 53;
+	ContentWizardEvent = 140;
+}
+
+enum GFIRating_Style {
+	StarsAndRating = 2;
+	Stars = 0;
+	ReviewCount = 1;
+	StarsRatingAndReviewCount = 3;
+}
+
+enum DataType {
+	ContentAdCreativeConversionDatatype = 127379684;
+	FootprintsProfileDatatype = 96039893;
+	FunboxGamesDatatype = 113283001;
+	ImageClickDatatype = 1302028;
+	BookClickDatatype = 3928127;
+	UserLanguageProfileDatatype = 1297687291;
+	LockboxPhoneCallDatatype = 46746964;
+	AdViewDatatype = 37676886;
+	SocialSearchPreferencesDatatype = 79365457;
+	RequestMetadataDatatype = 49889202;
+	GmailNemoClicksDatatype = 122345871;
+	QueryDatatype = 12223638;
+	DocidProfileDatatype = 103379615;
+	ExplicitInterestsDatatype = 117192831;
+	QueryAnnotationDatatype = 86715322;
+	ChromeHistoryDatatype = 45525626;
+	GsxProductSearchQueryDatatype = 51330951;
+	LockboxTaskInfoDatatype = 55933254;
+	FootprintsFrontendUserState = 120750389;
+	CalypsoInstantAppProfileDatatype = 81357279;
+	TravelReservation = 43167878;
+	DiscoverabilityTipImpressionDatatype = 91978530;
+	VoiceCorrectionQueryDatatype = 87640102;
+	PixelPerfectLocationActivityChangeDatatype = 74798161;
+	ContentAdQueryDatatype = 114149066;
+	ResultClickDatatype = 12776522;
+	TeachGoogleFactDatatype = 96969935;
+	BlogSearchClickDatatype = 5182853;
+	AssistantHistoryDatatype = 122156318;
+	FlightsImpressionsListDatatype = 61464199;
+	StoreVisitsVisitEligibleEventDatatype = 128104344;
+	GinaChatMutexDatatype = 126700757;
+	BondEvaluationLogEntryDatatype = 86486555;
+	MapsActivitiesOverviewImpressionDatatype = 92127317;
+	PlayMusicNavigationEventDatatype = 73756281;
+	BondUserEngagementMetadataDatatype = 95387691;
+	ContextManagerUserLocationFamiliarityModelDatatype = 96992516;
+	TestDatatype = 0;
+	UkMortgageClickDatatype = 62667759;
+	QueryEntitiesDatatype = 106395285;
+	MapsResultDatatype = 48895090;
+	SidekickUserProfileDatatype = 58184052;
+	AppidProfileDatatype = 121273166;
+	PixelPerfectProfileDatatype = 79351988;
+	DeviceContactNamesDatatype = 77960278;
+	StoreVisitsAnnotatedClickDatatype = 127858534;
+	TorrenteSpeakerProfileDatatype = 79575488;
+	MapsActivitiesDayImpressionDatatype = 91199883;
+	JuicerVerticalInterestDatatype = 127852440;
+	NowClientActionResponseDisplayInfoDatatype = 62574203;
+	YoutubeSearchEvent = 20783931;
+	DocidProfileIncrementalDatatype = 119763668;
+	WebResultsDatatype = 15658304;
+	GuideImpressionHistoryDatatype = 111072944;
+	WebSearchGeneralProfileDatatype = 91122499;
+	HotelsQueryDatatype = 33886179;
+	UsCreditCardQueryDatatype = 58333511;
+	ChromeSuggestionsSuggestionDatatype = 54219311;
+	AgsaAuthConsentBumpStateDatatype = 105780028;
+	OnTheGoDatatype = 103087671;
+	SidekickLocationAnalysisDatatype = 58183874;
+	UpgradeMetadataDatatype = 120162400;
+	GameUserProfileDatatype = 84347089;
+	MapsClickDatatype = 2707479;
+	AtvUserPreferenceDatatype = 104690809;
+	MapsAliasedLocationsIconsDatatype = 42927133;
+	MyEntitiesBusinessCategoryDatatype = 120462078;
+	AnimaEntityInterestsDatatype = 121051852;
+	UkCreditCardQueryDatatype = 58333510;
+	LanguageSettingsDatatype = 77372592;
+	MustangDynamicUpdateDatatype = 8127903;
+	PixelPerfectPushDatatype = 84830344;
+	ContextManagerExperimentalContextDatatype = 106879161;
+	ViralAdViewsDatatype = 95024166;
+	AudioS3LogDatatype = 64784587;
+	GsxProductSearchClickDatatype = 51969434;
+	VerbspaceEndToEndTestingDatatype = 95883371;
+	StickyDatesDatatype = 66986989;
+	AdImpressionDatatype = 49763573;
+	NowServerResponseDisplayInfoDatatype = 62569321;
+	DialogStateDatatype = 91824011;
+	HobbesPhonePredictionsDatatype = 73656137;
+	MismatchStatsDatatype = 46620624;
+	ContextmanagerInterestRecordDatatype = 93348005;
+	HulkPersonaDatatype = 123704466;
+	DiscoverabilityImpressionDatatype = 81614465;
+	UkMortgageQueryDatatype = 58333512;
+	BondReportedEventDatatype = 98345037;
+	DeprecatedNewsReadStateDatatype = 64604136;
+	GoogleHelpNonPiiEventDatatype = 82011340;
+	ClearcutClientInfoDatatype = 66321687;
+	LockboxSmsMessageDatatype = 46238766;
+	ContextManagerSesameSafeLocationModelDatatype = 102337023;
+	HotelsClickDatatype = 33518044;
+	SenseDatatype = 63261946;
+	UdcSettingsModelDatatype = 101682042;
+	SpeechS3ArbiterDatatype = 124212137;
+	PixelPerfectLocationDatatype = 72597955;
+	BondDeviceInfoDatatype = 70477109;
+	VoiceOnboardingImpressionDatatype = 89695057;
+	PixelPerfectPluginStateDatatype = 85508764;
+	YoutubeUserFeedbackDatatype = 106868619;
+	WebSearchZeitgeistDatatype = 91122500;
+	StarlightMetadataDatatype = 115668293;
+	BondNewDeviceNotificationDatatype = 95734096;
+	PersonalWebActionDatatype = 57567998;
+	DynamicEntityIndexDatatype = 101023133;
+	MyEntitiesUserCurationsetDatatype = 86017201;
+	UkCreditCardClickDatatype = 62667757;
+	ChromeSuggestionsClickDatatype = 55360410;
+	LockboxContactAccountsDatatype = 65304170;
+	MindreaderUserModelsDatatype = 65952648;
+	OldSoundSearchDatatype = 101572491;
+	AnimaEntityTimelineDatatype = 121051651;
+	FootprintsPluginAuditDatatype = 113743980;
+	HulkPlaceVisitSummaryDatatype = 115562473;
+	HulkPlaceVisitDatatype = 92472041;
+	LocationBasedConversionClickDatatype = 45229447;
+	VisualFeaturesDatatype = 69976708;
+	TronSystemUiEventDatatype = 97324405;
+	GinaQueryHistoryDatatype = 100691825;
+	PintsContentItemListDatatype = 117027458;
+	SearchActionLoggingEventDatatype = 109346524;
+	DuffyUserStateDatatype = 78432439;
+	GamePersonasDatatype = 55456393;
+	ContextManagerAuditEntryDatatype = 106622356;
+	ContactAnnotationDatatype = 73329148;
+	NowUserActionDatatype = 49528555;
+	AssistantEphemeralDatatype = 123767286;
+	SavedRecipeDatatype = 121843257;
+	WernickePodcastProgressDatatype = 112408631;
+	CurtaDatatype = 114882566;
+	GoogleHelpGaiaEventDatatype = 81834847;
+	SearchPreferencesDatatype = 99501663;
+	NowShadieNotificationDatatype = 105239738;
+	ExperimentalSearchPreferencesDatatype = 99752919;
+	TextToSpeechDatatype = 50962681;
+	AssistantCastCardsDatatype = 130684815;
+	UserAgentDatatype = 46523525;
+	YoutubeDismissedSearchSuggest = 79171960;
+	SearchActionHistoryDatatype = 69875238;
+	DnaProberFootprintDatatype = 62902257;
+	FreudSearchTopicsDatatype = 72121807;
+	RiddlerQuestionClientImpressionDatatype = 128829111;
+	ActionStateDataDatatype = 105727956;
+	DeviceInstalledAppsDatatype = 78432438;
+	BondCriticalEventDatatype = 83257343;
+	AssistantSettingsDatatype = 119267833;
+	DeviceContactLabelsDatatype = 78202093;
+	UserpanelDatatype = 82181590;
+	EwokFeRedirectDatatype = 28636332;
+	DiscoverabilityProfileDatatype = 122280121;
+	FootprintsAuditEntryDatatype = 60556337;
+	PlayAppsDeveloperConsoleFeatureAnalyticsEventDatatype = 121482723;
+	PixelPerfectAnalyticsDatatype = 91833853;
+	ToolbarDatatype = 45523596;
+	GinaNotificationRuleDatatype = 117444440;
+	AppHistoryEventDatatype = 81368426;
+	PixelPerfectDonationDatatype = 81780541;
+	ContentAdViewDatatype = 115108126;
+	DeviceContactsMetadataDatatype = 116600779;
+	NowThirdPartyCardDatatype = 97258213;
+	SherlockUserModelDatatype = 55384729;
+	GuideResponseAreaDatatype = 110458091;
+	MultidaySearchFeatureDatatype = 82177020;
+	SpeechAnnotationDatatype = 86500642;
+	GaiaClientInfoDatatype = 2910452;
+	TravelLocationIntentSummaryDatatype = 120745816;
+	ListIdSnapshotDatatype = 115959997;
+	UsCreditCardClickDatatype = 62667758;
+	UserSpamAnnotationDatatype = 88928706;
+	KansasCounterDatatype = 105887372;
+	DeviceContactDatatype = 113398290;
+	SupportContentDatatype = 99235802;
+	TravelTimelineDatatype = 126943153;
+	ContextmanagerRegisteredDeviceDatatype = 85469054;
+	ContextmanagerContextDatatype = 82003516;
+	MapsAliasedLocationsDatatype = 79949115;
+	ChromeSuggestionsImpressionDatatype = 55346896;
+	FootprintsRecordingSettingsDatatype = 61392053;
+	RecordedPageDatatype = 104133294;
+	CalypsoInstalledAppListDatatype = 77217969;
+	HomepageVisitDatatype = 30577416;
+	UdcInteractionEventDatatype = 69375668;
+	PixelPerfectEvalGoldenDatatype = 88992417;
+	MapsActivitiesUserViewDatatype = 94070915;
+	VisualSearchAnnotationDatatype = 67130676;
+	PronunciationDatatype = 89626921;
+	FlightsQueryDatatype = 34022466;
+	ViralAdImpressionsDatatype = 93654302;
+	EventIdDatatype = 4156379;
+	TravelFrontendQueryDatatype = 43169793;
+	PixelPerfectDerivedContainerDatatype = 66049158;
+	AssistContextBackgroundModelDatatype = 69401576;
+	VideoClickDatatype = 2880351;
+	AcpContextNamesDatatype = 113268681;
+	GsxOrderDetailDatatype = 74804230;
+	FootprintsStringProtoDatatype = 109222580;
+	BondActivityDatatype = 69463600;
+	AdConversionImpressionDatatype = 124385950;
+	AssistantMultiHotwordDatatype = 129108213;
+	GoogleShoppingProductViewsDatatype = 117487561;
+	DeviceContactsDatatype = 77920006;
+	DestinationsImmersiveActionDatatype = 116796567;
+	NewsWeatherDatatype = 125192826;
+	PixelPerfectSettingDatatype = 64086833;
+	CalypsoInstalledAppIncrementalDatatype = 100844460;
+	LockboxAppUsageDatatype = 51312494;
+	SpellingProfileDatatype = 13498123;
+	AssistDatatype = 66256663;
+	GoldmineAnnotationDatatype = 67024969;
+	GmailUserInterestProfileDatatype = 120246735;
+	TravelFrontendClickDatatype = 43168178;
+	ContentAdPageViewDatatype = 121586494;
+	DeviceTopContactsDatatype = 87856152;
+	PixelPerfectDerivedDatatype = 71744319;
+	PixelPerfectClientStateDatatype = 106185840;
+	TauSearchQueryDatatype = 105511720;
+	FootprintsDeletionMarker = 63496982;
+	DatajamUserProfileDatatype = 121394787;
+	UserDefinedActionsDatatype = 96722401;
+	SalientTermsDatatype = 113394595;
+	CasseEntityIndexDatatype = 123124678;
+	PlayMusicUserProfileDatatype = 94528478;
+	RiddlerQuestionImpressionDatatype = 125352849;
+	UnicommCommunicationDatatype = 107192020;
+	NowUserInputDatatype = 76179426;
+	SidekickAppAnalysisDatatype = 124472030;
+	MapsActivitiesModificationDatatype = 91666885;
+	FlightsClickDatatype = 33919414;
+	NowJoinedLogsDatatype = 64097055;
+	LoserThingsDatatype = 47430250;
+	ProductClickDatatype = 2080110;
+	GinaGenericValueDatatype = 106487385;
+	ElsaPersonalizedPlacesDatatype = 108026902;
+	AdClickDatatype = 2191593;
+	CalypsoIncrementalAppUpdateDatatype = 106344539;
+	StarlightFilterDatatype = 97539426;
+	LockboxAppUsageStatsDatatype = 93083288;
+	RecordedPageDerivedDatatype = 105099944;
+	PoodleUserProfileDatatype = 9192204;
+	FlightsResultsDatatype = 62307221;
+	FinanceDatatype = 33905503;
+	YoutubeVideoWatch = 75836823;
+	PlayMusicPlayerEventDatatype = 76203990;
+	LockboxSystemStateDatatype = 55742738;
+	EntityAuthorityListDatatype = 97171107;
+	PersonalWebPageDatatype = 57616380;
+	FootprintsFrontendDeleteBySearchPendingDelete = 121480544;
+	ChromeSuggestionsProfileDatatype = 54788117;
+	SidekickVersionInfoDatatype = 81984094;
+	MapsLoadDatatype = 60969556;
+	PersonalAppContentDatatype = 58425595;
+	NewsClickDatatype = 1380624;
+}
+
+enum GTPDNode_Type {
+	Exciter = 17;
+	AudiowearAndroidClient = 14;
+	Gcm = 20;
+	TachyonProberClient = 27;
+	Janitor = 24;
+	Clearcut = 3;
+	Unknown = 0;
+	TachyonIosClient = 13;
+	ColliderPusher = 19;
+	ApnsProxy = 21;
+	Suggester = 9;
+	Generator = 6;
+	Collider = 1;
+	TachyonAndroidClient = 12;
+	Userdata = 23;
+	Texter = 25;
+	FireballAndroidClient = 10;
+	Distributor = 5;
+	Extractor = 7;
+	AudiowearIosClient = 15;
+	FireballIosClient = 11;
+	Irradiator = 16;
+	BotRouter = 22;
+	MatchstickAndroidClient = 18;
+	Client = 2;
+	Entangler = 4;
+	CapSmsReceiver = 26;
+	Condenser = 8;
+}
+
+enum FireballMessageSource_Type {
+	UnknownMessageSource = 0;
+	ConversationActivity = 2;
+	NotificationReply = 4;
+	ContentWizard = 9;
+	PhoneQuickReply = 6;
+	Share = 7;
+	WidgetReply = 5;
+	WearableReply = 3;
+	Incoming = 1;
+	Forward = 8;
+}
+
+enum GTPDCellNetwork_Type {
+	EvdoB = 12;
+	Hspa = 10;
+	Ehrpd = 14;
+	Evdo0 = 5;
+	Hspap = 15;
+	Onexrtt = 7;
+	Umts = 3;
+	Iden = 11;
+	Lte = 13;
+	Gsm = 16;
+	Unknown = 0;
+	Edge = 2;
+	Hsupa = 9;
+	Cdma = 4;
+	EvdoA = 6;
+	Hsdpa = 8;
+	Gprs = 1;
+}
+
+enum GTPDRegistrationState_Type {
+	Sms = 3;
+	Notification = 2;
+	None = 4;
+	App = 1;
+	Unknown = 0;
+}
+
+enum ImageCard_Position {
+	Left = 3;
+	Bottom = 2;
+	Right = 4;
+	Top = 1;
+	Unknown = 0;
+}
+
+enum MSPAppInstallStatus {
+	NotInstalled = 2;
+	Unknown = 0;
+	Installed = 1;
+}
+
+enum GTPInboxMessage_MessageType {
+	SystemMessage = 12;
+	PrekeySecure = 10;
+	Group = 5;
+	Userdata = 7;
+	Unknown = 0;
+	Tachyon = 3;
+	RcsMessage = 11;
+	Fireball = 2;
+	Secure = 9;
+	Basic = 4;
+	DeprecatedCallController = 6;
+	MessageReceipt = 8;
+	MessageAck = 1;
+}
+
+enum AuthContext_Mode {
+	GaiaPin = 2;
+	Unknown = 0;
+	GaiaPassword = 1;
+	Fingerprint = 3;
+}
+
+enum CreditCardEntryAction_EntryType {
+	Ocr = 2;
+	UnknownEntryType = 0;
+	Manual = 1;
+	Nfc = 3;
+}
+
+enum GTPVideoCodecCapability_VideoCodecType {
+	Vp9 = 2;
+	UnknownType = 0;
+	Vp8 = 1;
+	H264 = 3;
+}
+
+enum CCCResponseCode_Code {
+	NotFound = 2;
+	Unknown = 0;
+	NormalCallClearing = 1;
+	Handoff = 3;
+}
+
+enum GTPLocationType_Type {
+	UserSelected = 2;
+	Unknown = 0;
+	CurrentLocation = 1;
+}
+
+enum GTPDCallSetupCode_Code {
+	CallIgnoredForCallerBlocked = 106;
+	CallRejectedByUser = 101;
+	CallAttemptTimeout = 100;
+	ApplicationExits = 204;
+	CallAutoDeclinedUserBusy = 102;
+	Unknown = 0;
+	IceDisconnect = 206;
+	DeadlineExceeded = 201;
+	CallError = 202;
+	ClientError = 200;
+	CallAutoDeclinedAppMissingAvAuthorization = 104;
+	Unavailable = 108;
+	WebrtcError = 203;
+	OutgoingCallCancelled = 107;
+	NetworkError = 205;
+	CallAutoDeclinedAppUpgradeNeeded = 105;
+	Success = 1;
+	CallAutoDeclinedAppCannotNotifyUser = 103;
+}
+
+enum ReauthData_AuthTokenFetchType {
+	PrefetchAuthtoken = 2;
+	UnknownPurpose = 0;
+	ReauthSettings = 1;
+	VerifyCredentials = 3;
+}
+
+enum GPBField_Cardinality {
+	CardinalityRequired = 2;
+	CardinalityUnknown = 0;
+	CardinalityOptional = 1;
+	CardinalityRepeated = 3;
+}
+
+enum GTPLogsApplicationInfo_HardwareVariant {
+	Watch = 2;
+	UnknownHardwareVariant = 0;
+	PhoneOrTablet = 1;
+}
+
+enum GTPMuteState_Type {
+	Muted = 2;
+	Unknown = 0;
+	Unmuted = 1;
+}
+
+enum EXHParamPartition_UpdateType {
+	Delete = 2;
+	Replace = 0;
+	Patch = 1;
+}
+
+enum GPBFileOptions_OptimizeMode {
+	CodeSize = 2;
+	LiteRuntime = 3;
+	Speed = 1;
+}
+
+enum GTPVideoCodecCapability_VideoCodecRole {
+	Encoder = 2;
+	UnknownRole = 0;
+	Decoder = 1;
+}
+
+enum GFIHotelAmenityType {
+	LaundryService = 12;
+	SmokeFreeProperty = 17;
+	HotTub = 10;
+	PetsAllowed = 14;
+	WheelchairAccessible = 20;
+	BeachAccess = 5;
+	Restaurant = 15;
+	BusinessCenter = 7;
+	AllInclusiveAvailable = 3;
+	KitchenAvailability = 11;
+	Parking = 13;
+	RoomService = 16;
+	AffiliatedGolfCourse = 0;
+	SwimmingPool = 19;
+	Spa = 18;
+	FitnessCenter = 9;
+	AirportShuttle = 2;
+	BarOrLounge = 4;
+	Breakfast = 6;
+	Wifi = 21;
+	AirConditioned = 1;
+	ChildFriendly = 8;
+}
+
+enum GTPLocationUnavailabilityReason_Reason {
+	Unsupported = 2;
+	Unknown = 0;
+	Transient = 1;
+	NoPermission = 3;
+}
+
+enum GFIFontWeight {
+	FontWeightUnspecified = 0;
+	ExtraLight = 2;
+	Normal = 4;
+	Black = 9;
+	SemiBold = 6;
+	Bold = 7;
+	Medium = 5;
+	Light = 3;
+	Thin = 1;
+	ExtraBold = 8;
+}
+
+enum GFIActionRow_ActionType {
+	GetOnGooglePlay = 2;
+	OpenInGoogleTranslate = 4;
+	MoreWhatIsMyIp = 6;
+	MoreShowtimes = 5;
+	Custom = 0;
+	PlayTrailerOnYoutube = 1;
+	MoreAtWeatherDotCom = 3;
+}
+
+enum GPBSyntax {
+	SyntaxProto2 = 0;
+	SyntaxProto3 = 1;
+}
+
+enum GTPDLocationType_Type {
+	UserSelected = 2;
+	Unknown = 0;
+	CurrentLocation = 1;
+}
+
+enum PlayStoreLiteContextInfo_PlayLiteMode {
+	AvailableButOptedOut = 2;
+	Unknown = 0;
+	AvailableAndActive = 1;
+	Unavailable = 3;
+}
+
+enum CCALogRequest_SchedulerType {
+	QosUnmeteredPeriodic = 5;
+	QosFastOneoff = 3;
+	DefaultPeriodic = 2;
+	QosDefaultPeriodic = 4;
+	Asap = 1;
+	UnknownScheduler = 0;
+}
+
+enum GTPSenderEvent_Event {
+	GameExit = 2;
+	BotConversationActionFinished = 4;
+	PreviewResponse = 6;
+	BotClearMemory = 5;
+	Unknown = 0;
+	NewConversation = 1;
+	OpenConversation = 3;
+}
+
+enum LogRequest_LogSource {
+	Spaces = 383;
+	CorpAndroidAiuto = 415;
+	GmmPrimes = 254;
+	NotificationStats = 182;
+	AwxAndroidPrimes = 222;
+	Social = 32;
+	GearheadAndroidPrimes = 201;
+	GhsAndroidPrimes = 223;
+	Sherlog = 108;
+	Pyroclasm = 153;
+	MetalogCounters = 103;
+	ImageryViewer = 342;
+	ChauffeurIosPrimes = 386;
+	Sesame = 216;
+	Games = 5;
+	RecordedPages = 195;
+	Newsstand = 63;
+	Smartcam = 348;
+	LbAs = 116;
+	AppUsage1P = 11;
+	GmscoreApiCounters = 333;
+	CwPrimes = 242;
+	MeetingsIosPrimes = 364;
+	CwCounters = 243;
+	LbDm = 268;
+	Paisa = 294;
+	GmailIos = 417;
+	SearchliteAndroidPrimes = 425;
+	GraphicsStats = 107;
+	AndroidVerifyApps = 105;
+	FireballCounters = 257;
+	FamilylinkCounters = 274;
+	BugleCounters = 323;
+	CorpAndroidJetset = 402;
+	DriveViewer = 189;
+	SocietyAndroidPrimes = 238;
+	AdwordsMobileAndroidPrimes = 224;
+	PlayMusicAndroidWearStandalonePrimes = 419;
+	LifescienceFrontends = 376;
+	Translate = 375;
+	Chauffeur = 412;
+	WalletSdkGcore = 361;
+	Transom = 114;
+	LbS = 9;
+	OnTheGo = 145;
+	LbCa = 35;
+	UnicommS = 381;
+	DocsAndroidSystemHealth = 152;
+	TachyonAndroidPrimes = 279;
+	GftvMobilePrimes = 416;
+	TrustedFace = 204;
+	WifiAssistantPrimes = 326;
+	Society = 275;
+	PlacesNoGlsConsent = 97;
+	Bigtop = 191;
+	DnaProber = 29;
+	VespaIosPrimes = 331;
+	PersonalLogger = 22;
+	Appmanager = 183;
+	Sheets = 57;
+	FitnessAndroidWearPrimes = 319;
+	Phenotype = 69;
+	SmartSetup = 355;
+	SocialGoodDonationWidget = 340;
+	JamAndroidPrimes = 159;
+	GoogleExpressAndroidPrimes = 229;
+	CalendarClient = 335;
+	SocialAffinity = 41;
+	BatteryStats = 91;
+	WorkStore = 132;
+	Flydroid = 120;
+	HuddleAndroidPrimes = 214;
+	OnTheGoIosPrimes = 368;
+	Photos = 42;
+	DriveAndroidPrimes = 166;
+	YtLiteAndroidPrimes = 158;
+	CastSenderSdk = 67;
+	Links = 394;
+	Unknown = -1;
+	FireballPrimes = 266;
+	MobdogIosPrimes = 389;
+	PhotosDraperAndroidPrimes = 253;
+	FitnessAndroid = 169;
+	Telephony = 211;
+	InboxAndroidPrimes = 180;
+	IosGrowth = 251;
+	YtGamingAndroidPrimes = 156;
+	AndroidIde = 7;
+	Tailormade = 127;
+	Gcm = 43;
+	CastIosPrimes = 344;
+	GvcHarvester = 51;
+	UnicommP = 380;
+	Freighter = 307;
+	NfcProgrammer = 61;
+	WifiAssistant = 66;
+	EarthAndroidPrimes = 414;
+	GmbAndroid = 290;
+	GhsIosPrimes = 392;
+	WebStore = 65;
+	BgInOgb = 407;
+	LbC = 24;
+	GarageIosPrimes = 339;
+	WebContacts = 365;
+	PhenotypeCounters = 70;
+	LbD = 19;
+	FitnessGmsCore = 170;
+	FlydroidCounters = 148;
+	SideloadedMusic = 400;
+	VoiceIosPrimes = 292;
+	JamKioskAndroidPrimes = 160;
+	Madden = 218;
+	ImeCounters = 86;
+	SampleShm = 136;
+	MeetingsLogRequest = 422;
+	Calendar = 111;
+	CpanelApp = 121;
+	NearbyAuth = 426;
+	Googletts = 424;
+	YtMusicAndroidPrimes = 157;
+	Drive = 55;
+	DraperIosPrimes = 347;
+	TapAndPayAndroidPrimes = 227;
+	TapAndPayGcore = 94;
+	Magazines = 4;
+	Hallway = 382;
+	Le = 17;
+	YtMainAppAndroidPrimes = 154;
+	DocsOffline = 306;
+	PhotosScanner = 406;
+	CronetSocial = 68;
+	CorpIosFood = 409;
+	DuoCronet = 396;
+	Blogger = 408;
+	AndroidBackup = 84;
+	HangoutLogRequest = 50;
+	Gpu = 144;
+	AndroidSnetJar = 124;
+	DropBox = 131;
+	WallpaperPickerCounters = 377;
+	AndroidAuth = 25;
+	IosGsa = 118;
+	BondOnegoogle = 78;
+	Findr = 45;
+	Topaz = 367;
+	GarageAndroidPrimes = 338;
+	Books = 2;
+	DynamiteAndroidPrimes = 398;
+	NazdeekCabAndroidPrimes = 316;
+	TachyonLogRequest = 98;
+	AwxIosPrimes = 391;
+	Onegoogle = 373;
+	ClearcutProber = 225;
+	AndroidSnetIdle = 123;
+	Crossdevicenotification = 141;
+	Cw = 27;
+	FingerprintStats = 181;
+	BoondAndroidPrimes = 356;
+	Fido = 387;
+	SetupWizard = 87;
+	LbT = 21;
+	Thunderbird = 370;
+	MapsApiCounters = 143;
+	DriveFs = 280;
+	TranslateIosPrimes = 256;
+	ConsumeriqPrimes = 260;
+	Ipconnectivity = 311;
+	CorpAndroidAssistant = 427;
+	SpectrumCounters = 231;
+	Auditor = 173;
+	FitnessAndroidPrimes = 271;
+	Vr = 85;
+	PaisaMerchantAndroidPrimes = 322;
+	ImprovSharpie = 346;
+	YtKidsAndroidPrimes = 155;
+	TapAndPayAppCounters = 265;
+	Pulpfiction = 371;
+	Adshield = 106;
+	Spectrum = 230;
+	ScoobyEvents = 296;
+	NewsWeather = 38;
+	DasherUserhub = 349;
+	HangoutsAndroidPrimes = 179;
+	SlidesIosPrimes = 309;
+	Bluetooth = 208;
+	Hangout = 39;
+	Nova = 34;
+	AndroidMessaging = 46;
+	GmbIos = 295;
+	A11Ylogger = 95;
+	GoogleFitWearable = 81;
+	ClassroomAndroidPrimes = 369;
+	AndroidContacts = 220;
+	GmailAndroidSystemHealth = 150;
+	YoutubeDirectorIosPrimes = 298;
+	PlayGamesPrimes = 332;
+	LbCb = 237;
+	FamilylinkIosPrimes = 291;
+	WestinghouseCounters = 360;
+	Appstreaming = 289;
+	MobdogAndroidPrimes = 388;
+	FireballIosPrimes = 313;
+	KidsCommunicator = 64;
+	MatchstickCounters = 372;
+	MobilesdkClient = 104;
+	WorkStoreApp = 261;
+	Matchstick = 205;
+	AndroidImeAndroidPrimes = 362;
+	LbP = 8;
+	SvIosPrimes = 354;
+	CalendarAndroidSystemHealth = 151;
+	UnicornFamilyManagement = 172;
+	EarthCounters = 405;
+	FlydroidAndroidPrimes = 259;
+	GoogleExpress = 82;
+	Herrevad = 13;
+	AdwordsExpressAndroidPrimes = 343;
+	PancettaMobileHost = 138;
+	IosSpotlightSearchLibrary = 234;
+	ExpeditionsGuide = 185;
+	Fireball = 149;
+	AndroidGsaCounters = 161;
+	AdwordsMobile = 133;
+	PixelPerfect = 54;
+	BooksAndroidPrimes = 397;
+	AnalyticsAndroidPrimes = 235;
+	DiskStats = 92;
+	TapAndPayApp = 119;
+	GoogleTv = 14;
+	Udr = 30;
+	ClearcutDemo = 177;
+	Video = 3;
+	WalletApp = 198;
+	AppCatalog = 206;
+	Slides = 58;
+	CalendarIosPrimes = 353;
+	ChauffeurAndroidPrimes = 385;
+	SheetsAndroidPrimes = 167;
+	CorpAndroidFood = 284;
+	GmsCoreWalletMerchantError = 23;
+	CorpAndroidDory = 401;
+	TronCounters = 90;
+	WalletAppAndroidPrimes = 232;
+	BeaconGcoreTest = 410;
+	SpacesAndroidPrimes = 236;
+	Familylink = 273;
+	AndroidMigrate = 320;
+	LinksIosPrimes = 411;
+	SheetsIosPrimes = 310;
+	GmscoreAndroidPrimes = 193;
+	PaymentsOcr = 164;
+	GoogleExpressIosPrimes = 374;
+	OrchestrationClientDev = 246;
+	ChromeInfra = 71;
+	Store = 0;
+	Wifi = 209;
+	SampleIosPrimes = 202;
+	Telecom = 210;
+	LiveChannelsAndroidPrimes = 328;
+	WingMarketplaceAndroidPrimes = 282;
+	Gokart = 44;
+	SnapseedIosPrimes = 297;
+	InboxIosPrimes = 262;
+	MobDog = 197;
+	ClientLoggingDemo = 327;
+	AndroidGmail = 135;
+	SpacesIosPrimes = 276;
+	EduStore = 15;
+	Icore = 137;
+	NazdeekCafeAndroidPrimes = 317;
+	AndroidStudio = 302;
+	SpectrumAndroidPrimes = 267;
+	SmartkeyApp = 269;
+	Ink = 219;
+	SnapseedAndroidPrimes = 178;
+	GmmBriimCounters = 129;
+	BatchedLogRequest = 357;
+	LatinIme = 36;
+	ScoobySpamReportLog = 250;
+	CpanelAndroidPrimes = 213;
+	PaisaUserIosPrimes = 329;
+	Myfiber = 194;
+	Telematics = 49;
+	GoogleExpressDev = 215;
+	Movies = 74;
+	GmbIosPrimes = 325;
+	AndroidMessagingPrimes = 285;
+	AndroidContactsPrimes = 350;
+	PaisaUserAndroidPrimes = 321;
+	LaunchpadToys = 102;
+	SocialWeb = 47;
+	ChromecastAppLog = 130;
+	PdfViewer = 190;
+	AndroidDialer = 176;
+	ContextManager = 125;
+	GoogleExpressCourierAndroidPrimes = 228;
+	CorpAndroidGbus = 429;
+	CrossdevicenotificationDev = 142;
+	Sandclock = 341;
+	BoqWeb = 241;
+	GmsCorePeople = 16;
+	CronetFireball = 303;
+	PlayConsoleAppPrimes = 264;
+	TopazAndroidPrimes = 418;
+	BooksIosPrimes = 393;
+	ClouddpcPrimes = 304;
+	PerfProfile = 73;
+	CorpAndroidMoma = 421;
+	AndroidCamera = 26;
+	MapsApi = 79;
+	SettingsStats = 390;
+	PhotosAndroidPrimes = 165;
+	ZagatBurgundyAndroidPrimes = 352;
+	DocsIosPrimes = 308;
+	Sense = 83;
+	Justspeak = 72;
+	ZagatBurgundyIosPrimes = 351;
+	LeUlrCounters = 109;
+	EmergencyAssist = 88;
+	GmmBriimPrimes = 239;
+	CronetAndroidGsa = 80;
+	FamilyCompass = 113;
+	SocietyCounters = 379;
+	GmsCore = 10;
+	YtMain = 281;
+	GmsCorePeopleAutocomplete = 147;
+	KongAndroidPrimes = 358;
+	GoogleKeyboardCounters = 221;
+	Backdrop = 48;
+	VrSdkAndroidPrimes = 404;
+	InstoreWallet = 33;
+	Nqlookup = 174;
+	MagictetherCounters = 378;
+	Snapseed = 413;
+	Gboard = 199;
+	JamImpressions = 162;
+	GplusAndroidSystemHealth = 140;
+	ChromecastAndroidAppPrimes = 288;
+	GmmCounters = 77;
+	GplusIosPrimes = 286;
+	YoutubeDirectorApp = 278;
+	DialerAndroidPrimes = 277;
+	TachyonCounters = 99;
+	VoiceAndroidPrimes = 293;
+	Earth = 334;
+	CronetAndroidYt = 196;
+	DmagentAndroidPrimes = 428;
+	Gel = 28;
+	PlayMusicAndroidWearPrimes = 200;
+	LbA = 6;
+	LeanbackEvent = 134;
+	Icing = 12;
+	InstoreConsumerPrimes = 207;
+	BeaconGcore = 301;
+	PersonalBrowserLogger = 37;
+	PhotosIosPrimes = 337;
+	AdsIntegrityOps = 366;
+	TranslateAndroidPrimes = 255;
+	VrSdkIosPrimes = 403;
+	PlatformStatsCounters = 188;
+	LbCfg = 117;
+	SocialUserLocation = 101;
+	OnTheGoCounters = 146;
+	Chime = 300;
+	OrchestrationClient = 245;
+	MeetingsAndroidPrimes = 363;
+	ClassroomIosPrimes = 359;
+	SocialAppinvite = 76;
+	JamKioskImpressions = 163;
+	SmartlockCounters = 184;
+	YtCreatorAndroidPrimes = 171;
+	Vision = 100;
+	LbIa = 52;
+	Docs = 56;
+	Gdeal = 423;
+	Fuse = 186;
+	Tron = 89;
+	Netstats = 62;
+	ImprovPostit = 345;
+	GoogleAnalytics = 18;
+	Car = 53;
+	GmbAndroidPrimes = 263;
+	Curator = 312;
+	WallpaperPicker = 299;
+	ProcStats = 93;
+	AndroidGsa = 20;
+	NovaAndroidPrimes = 249;
+	PlayConsoleApp = 226;
+	WalletAppIosPrimes = 233;
+	Ime = 59;
+	GoogleKeyboardContent = 217;
+	OnTheGoAndroidPrimes = 330;
+	SlidesAndroidPrimes = 168;
+	GoogleHandwritingInputAndroidPrimes = 314;
+	SvAndroidPrimes = 336;
+	GoogleNowLauncher = 247;
+	SdpIosPrimes = 287;
+	GcmCounters = 96;
+	ClouddpcArcPrimes = 305;
+	ImprovApps = 272;
+	TransomCounters = 115;
+	AppsNotify = 252;
+	DynamiteIosPrimes = 399;
+	GmmUe3 = 110;
+	GmsCoreWallet = 31;
+	ToolkitQuickstart = 384;
+	AndroidGsaHighPriorityEvents = 175;
+	ClinicalStudies = 270;
+	Keep = 128;
+	IdentityFrontend = 212;
+	Copresence = 40;
+	SocialCounters = 420;
+	Dynamite = 283;
+	GoogleExpressStoreomsAndroidPrimes = 240;
+	WhPrimes = 248;
+	Voice = 192;
+	AndroidSnetGcore = 122;
+	CuratorAndroidPrimes = 318;
+	Warp = 60;
+	CronetGmm = 203;
+	Music = 1;
+	Katniss = 75;
+	PancettaMobileHostCounters = 139;
+	NazdeekUserAndroidPrimes = 315;
+	KatnipIosPrimes = 395;
+	Ender = 112;
+	Classroom = 126;
+	PixelPerfectClientStateLogger = 187;
+	FamilylinkAndroidPrimes = 244;
+}
+
+enum GTPChangeGroupProfileRequest_UpdatePolicy {
+	None = 0;
+	ThumbnailMustMatchExisting = 1;
+}
+
+enum FireballMessageContentType_Type {
+	UnknownContentType = 0;
+	Youtube = 10;
+	Image = 2;
+	Audio = 4;
+	GBot = 9;
+	Sticker = 6;
+	Location = 7;
+	Vcard = 5;
+	Video = 3;
+	Text = 1;
+	RichCard = 8;
+}
+
+enum EntityId_Authority {
+	Oyster = 2;
+	Unspecified = 0;
+	KnowledgeGraph = 1;
+	OysterFprint = 3;
+}
+
+enum GTPDAppAction_Platform {
+	Android = 2;
+	Unknown = 0;
+	Any = 1;
+	Ios = 3;
+}
+
+enum GPBNullValue {
+	NullValue = 0;
+}
+
+enum GPBFieldDescriptorProto_Label {
+	LabelRequired = 2;
+	LabelRepeated = 3;
+	LabelOptional = 1;
+}
+
+enum GTPLogsBatteryStatsDiff_SampleInfo {
+	BackgroundToForeground = 2;
+	Unknown = 0;
+	ForegroundToBackground = 1;
+}
+
+enum CheckIabPromoData_CheckIabPromoResult {
+	Ineligible = 2;
+	Unknown = 0;
+	Eligible = 1;
+}
+
+enum GTPDIceCandidateType_Type {
+	Prflx = 3;
+	Stun = 2;
+	Relay = 4;
+	Local = 1;
+	Unknown = 0;
+}
+
+enum CCANetworkConnectionInfo_NetworkType {
+	MobileCbs = 12;
+	Vpn = 17;
+	MobileFota = 10;
+	MobileIa = 14;
+	MobileHipri = 5;
+	MobileEmergency = 15;
+	Bluetooth = 7;
+	MobileSupl = 3;
+	MobileIms = 11;
+	WifiP2P = 13;
+	Proxy = 16;
+	Mobile = 0;
+	MobileMms = 2;
+	Ethernet = 9;
+	MobileDun = 4;
+	Wimax = 6;
+	None = -1;
+	Dummy = 8;
+	Wifi = 1;
+}
+
+enum PlayStoreSurveyEvent_Type {
+	SurveyDialogShown = 5;
+	SurveyAnswered = 3;
+	SurveyDeclinedFromPrompt = 2;
+	SurveyPromptShown = 4;
+	SurveyAcceptedFromPrompt = 1;
+	Unknown = 0;
+}
+
+enum GFIPersonalFlightReservationSmall_FlightStatus {
+	Delayed = 2;
+	Unknown = 0;
+	OnTime = 1;
+	Scheduled = 3;
+}
+
+enum GFIIconType {
+	PlayCircleFilled = 17;
+	Phone = 14;
+	Share = 20;
+	AccessTime = 24;
+	Email = 3;
+	IconTypeUnspecified = 0;
+	Public = 13;
+	WebAsset = 19;
+	Info = 21;
+	BugReport = 9;
+	PlayStore = 6;
+	ArrowForward = 1;
+	Grade = 12;
+	DirectionsWalk = 23;
+	Navigation = 25;
+	VideoYoutube = 10;
+	PlayArrow = 5;
+	ChevronRight = 7;
+	Room = 15;
+	KeyboardArrowDown = 11;
+	Schedule = 16;
+	DirectionsTransit = 22;
+	Directions = 18;
+	DirectionsCar = 2;
+	Place = 4;
+	KeyboardArrowUp = 26;
+	ExpandMore = 8;
+}
+
+enum GTPDMessageType_Type {
+	ResetBadgeCount = 17;
+	SetAcls = 41;
+	RegisterVerifyResponse = 14;
+	AckMessages = 20;
+	ClearConversationHistory = 49;
+	SetProfile = 30;
+	AddSpamSignal = 38;
+	DeliveryReceipt = 3;
+	LookupSenderName = 42;
+	SetContacts = 32;
+	UploadMediaFinal = 58;
+	UserReceipt = 47;
+	LeaveAllGroups = 28;
+	SetPrekeys = 39;
+	RemoveContacts = 34;
+	LookupBlockers = 46;
+	Signalling = 6;
+	GetConversations = 50;
+	Unregister = 12;
+	GetGroupIds = 25;
+	KickGroupUsers = 23;
+	GroupAction = 5;
+	GrpcBind = 7;
+	RemoveAllConversationMutes = 45;
+	ApnsRegisterDevice = 43;
+	RegisterVerify = 11;
+	UnblockUsers = 37;
+	RegisterUnregisterResponse = 16;
+	MediaMessage = 2;
+	GetTempPin = 51;
+	GetProfile = 31;
+	GetGroupInfos = 26;
+	Register = 8;
+	GetPrekey = 40;
+	GetGroupReceipts = 27;
+	ChangeGroupProfile = 24;
+	Unknown = 0;
+	RegisterResponse = 13;
+	DeleteAccountResponse = 19;
+	CreateGroup = 21;
+	RegisterSilent = 9;
+	SetConversationMutes = 44;
+	GetBlockedUsers = 35;
+	Message = 1;
+	RegisterRefresh = 10;
+	GetBotMetadata = 55;
+	RegisterRefreshResponse = 15;
+	NotifyDevice = 52;
+	LookupRegistered = 29;
+	DeleteUserMessages = 48;
+	DownloadMedia = 56;
+	AddContacts = 33;
+	GetBotList = 54;
+	AddGroupUsers = 22;
+	DeleteAccount = 18;
+	ReadReceipt = 4;
+	AddAuxContactInfo = 53;
+	BlockUsers = 36;
+	UploadMediaInitial = 57;
+}
+
+enum PlayLogInAppPurchases_InAppPurchasesApiType {
+	History = 2;
+	Unknown = 0;
+	Default = 1;
+}
+
+enum GTPFireballMedia_MediaLocatorType {
+	Uri = 2;
+	Unknown = 0;
+	MediaId = 1;
+}
+
+enum GFIVisualElementLog_Index_IndexType {
+	None = 2;
+	NotSet = 0;
+	Ordered = 1;
+	Value = 3;
+}
+
+enum GTPDSwitchableFeature_Type {
+	Quic = 2;
+	Unknown = 0;
+	Cronet = 1;
+	LiveRing = 3;
+}
+
+enum QLTLogInfo_Visibility {
+	ChildrenHidden = 2;
+	Visible = 0;
+	Hidden = 1;
+}
+
+enum GTPNode_Type {
+	Exciter = 17;
+	AudiowearAndroidClient = 14;
+	Gcm = 20;
+	TachyonProberClient = 27;
+	Janitor = 24;
+	Clearcut = 3;
+	Unknown = 0;
+	TachyonIosClient = 13;
+	ColliderPusher = 19;
+	ApnsProxy = 21;
+	Suggester = 9;
+	Generator = 6;
+	Collider = 1;
+	TachyonAndroidClient = 12;
+	Userdata = 23;
+	Texter = 25;
+	FireballAndroidClient = 10;
+	Distributor = 5;
+	Extractor = 7;
+	AudiowearIosClient = 15;
+	FireballIosClient = 11;
+	Irradiator = 16;
+	BotRouter = 22;
+	MatchstickAndroidClient = 18;
+	Client = 2;
+	Entangler = 4;
+	CapSmsReceiver = 26;
+	Condenser = 8;
+}
+
+enum GTPLogsContentWizardEventType {
+	ClickedOnEmojiEllipsis = 5;
+	ClickedOnStickerEllipsis = 6;
+	Dismissed = 2;
+	ClickedOnStickerSuggestion = 4;
+	Opened = 1;
+	ClickedOnEmojiSuggestion = 3;
+}
+
+enum MSPPlatform {
+	Ios = 2;
+	Unspecified = 0;
+	Android = 1;
+	Web = 3;
+}
+
+enum GTPAuxiliaryInfo_ContactType {
+	Unknown = 0;
+	IsStarred = 1;
+}
+
+enum GTPBotConversationActionFinished_BotConversationAction {
+	Unknown = 0;
+	GameExit = 1;
+}
+
+enum LogSamplingConfig_Key {
+	Zwieback = 2;
+	LogEvent = 0;
+	Gaia = 1;
+	AndroidId = 3;
+}
+
+enum GTPConversationType_Type {
+	Unknown = 0;
+	Sms = 1;
+}
+
+enum FireballStickerSet_FireballStickerSetStatus {
+	Deleted = 2;
+	UnknownFireballStickerSetStatus = 0;
+	Downloaded = 1;
+}
+
+enum PageType_Id {
+	DeepLink = 5;
+	MyApps = 3;
+	Details = 2;
+	Search = 4;
+	Home = 1;
+	Unknown = 0;
+}
+
+enum FireballConversationStyle_Style {
+	Incognito = 2;
+	Unknown = 0;
+	Regular = 1;
+}
+
+enum WidgetEventData_WidgetClassId {
+	RecommendedWidget = 2;
+	UnknownWidget = 0;
+	MarketWidget = 1;
+	NowplayingWidget = 3;
+}
+
+enum FireballActivity_Type {
+	Profile = 12;
+	Webview = 17;
+	EditConversationTheme = 23;
+	StickerSetOverview = 14;
+	GmsUpdate = 20;
+	PermissionCheck = 10;
+	CreateConversation = 5;
+	SelfProfile = 15;
+	ConversationInfo = 7;
+	BlockedParticipants = 3;
+	PhotoView = 11;
+	StickerMarket = 13;
+	Welcome = 16;
+	UnknownHostActivity = 0;
+	Share = 19;
+	CustomFeedback = 22;
+	ForwardMessage = 18;
+	ExternalCreateConversation = 9;
+	ConversationList = 2;
+	ImageAnnotate = 4;
+	AppSettings = 6;
+	MessageDetails = 21;
+	Conversation = 1;
+	ArchivedConversationList = 8;
+}
+
+enum WidgetEventData_IntentActionId {
+	UpdateOptions = 3;
+	Disabled = 2;
+	Deleted = 4;
+	Enabled = 1;
+	UnknownAction = 0;
+}
+
+enum GFIExpandableVisibility_Visibility {
+	HiddenWhenContainerExpanded = 2;
+	AlwaysVisible = 0;
+	HiddenWhenContainerCollapsed = 1;
+}
+
+enum Month {
+	December = 12;
+	October = 10;
+	May = 5;
+	July = 7;
+	UnknownMonth = 0;
+	March = 3;
+	November = 11;
+	February = 2;
+	September = 9;
+	April = 4;
+	June = 6;
+	August = 8;
+	January = 1;
+}
+
+enum SuggestedActionInfo_Type {
+	ReachableFriends = 2;
+	UnknownType = 0;
+	ChatWithGoogle = 1;
+	StartGroupChat = 3;
+}
+
+enum AuthContext_DelegationReason {
+	UnknownDelegationType = 0;
+	HeadOfHouseholdApproval = 1;
+}
+
+enum GTPUserDataAccessClass_Type {
+	Public = 2;
+	Unknown = 0;
+	Private = 1;
+	Contacts = 3;
+}
+
+enum MSPFontSize_Unit {
+	UnitUnspecified = 0;
+	Pixels = 1;
+}
+
+enum SuggestedActionInfo_Treatment {
+	NoGbotCard = 2;
+	Unknown = 0;
+	NoCards = 1;
+	AllCards = 3;
+}
+
+enum GTPTransportEventDetail_Value {
+	BindClosedByClient = 1203;
+	DroppedSuggestionTexter = 1006;
+	DroppedEphemeralTexter = 1013;
+	RegWarnVersionCheckBlockApp = 1522;
+	GcmAnotherDeviceRegistered = 1541;
+	AppInBackground = 1402;
+	Unknown = 0;
+	RegisterRequestAutoFilled = 1301;
+	RegWarnSpamSuspendAccount = 1523;
+	DeliveredReloadRead = 1103;
+	DroppedUnsupportedContentType = 1012;
+	DroppedUnsupportedInboxmessageType = 1010;
+	DroppedSuggestionMatchstick = 1005;
+	BindClosedTokenRevoked = 1204;
+	RegisterRequestManuallyFilled = 1302;
+	BindClosedSendFail = 1201;
+	DroppedNoDest = 1002;
+	GcmUnknown = 1540;
+	DeliveredBatchRead = 1102;
+	RegWarnVersionCheckUpgradeApp = 1521;
+	DroppedInvalidGbotMsg = 1014;
+	RegisterResponseUnverifiedSms = 1305;
+	VersionCheckBlockApp = 1501;
+	DroppedDbReadFailure = 1003;
+	DeliveredFastPath = 1101;
+	VersionCheckUpgradeApp = 1502;
+	AppInForeground = 1401;
+	DroppedAresDrop = 1007;
+	DroppedExpired = 1001;
+	RegisterResponseUnverifiedNone = 1306;
+	DroppedApnsProxyReject = 1004;
+	BindClosedRecvFail = 1202;
+	RegisterResponseVerified = 1307;
+	DroppedNotWhitelisted = 1008;
+	DroppedNilFireballMessage = 1011;
+	DeliveredSecondBatchRead = 1104;
+	DroppedUnsupportedInboxmessageClass = 1009;
+}
+
+enum MSPSearchRequestOptions_SafeSearchMode {
+	On = 2;
+	Unknown = 0;
+	Off = 1;
+}
+
+enum PlayStoreDeepLinkEvent_ResolvedType {
+	PreResolve = 12;
+	Rewards = 17;
+	MyAccount = 10;
+	InlineDetails = 14;
+	FamilyCreation = 20;
+	HomeHome = 5;
+	PaymentMethods = 15;
+	LaunchDeepLink = 7;
+	Search = 3;
+	InlineAppInstallIntent = 11;
+	BuyGift = 13;
+	OrderHistory = 16;
+	Other = 0;
+	UpdateSubscriptionInstrument = 19;
+	Subscriptions = 18;
+	DirectPurchaseIntent = 9;
+	Browse = 2;
+	DirectPurchaseURL = 4;
+	RedeemGiftcard = 6;
+	FamilyManagement = 21;
+	Details = 1;
+	Wishlist = 8;
+}
+
+enum MSPAppLinkConditions_Platform {
+	Android = 2;
+	Unknown = 0;
+	Any = 1;
+	Ios = 3;
+}
+
+enum MSPTextToSpeech_DataSource {
+	NonResult = 2;
+	DataSourceUnknown = 0;
+	Result = 1;
+}
+
+enum GTPDRegistrationWarning_Type {
+	VersionCheckBlockApp = 2;
+	Unknown = 0;
+	VersionCheckUpgradeApp = 1;
+	SpamSuspendAccount = 3;
+}
+
+enum MSPTextToSpeech_StructuredTextToSpeech_AudioEncoding {
+	OpusInOgg = 2;
+	AudioEncodingUnknown = 0;
+	Mp3 = 1;
+}
+
+enum CCAClientInfo_ClientType {
+	Unknown = 0;
+	Desktop = 2;
+	Android = 4;
+	DriveFs = 9;
+	Python = 6;
+	Vr = 7;
+	PlayCe = 5;
+	Ios = 3;
+	Js = 1;
+	Pancetta = 8;
+}
+
+enum ConnectionType_Id {
+	Unknown = 0;
+	Wired = 2;
+	TwoG = 4;
+	FourG = 6;
+	CellularUnknown = 7;
+	ThreeG = 5;
+	Wifi = 3;
+	None = 1;
+	Bluetooth = 8;
+}
+
+enum GFISeatingClass {
+	First = 3;
+	Business = 2;
+	Suites = 4;
+	EconomyPlus = 1;
+	Economy = 0;
+}
+
+enum GTPMediaInfo_MediaLocatorType {
+	Uri = 2;
+	Unknown = 0;
+	MediaId = 1;
+}
+
+enum GTPSenderStatus_Status {
+	TypingOff = 2;
+	Unknown = 0;
+	TypingOn = 1;
+}
+
+enum GTPSpamSignal_Type {
+	Unknown = 0;
+	NotInContacts = 1;
+}
+
+enum GTPDConnectedCallEndCause_Code {
+	ApplicationExits = 102;
+	Unknown = 0;
+	NetworkError = 101;
+	RemoteUserEnded = 2;
+	WebrtcError = 104;
+	IceDisconnect = 100;
+	CallTerminated = 3;
+	LocalUserEnded = 1;
+	CallError = 103;
+}
+
+enum GTPDCallQualityRating_Type {
+	CallBad = 2;
+	Unknown = 0;
+	CallGood = 1;
+}
+
+enum GTPUserDataMessage_MessageType {
+	UnregisterPush = 2;
+	ChangePresencePush = 4;
+	NeedPreKeysPush = 6;
+	RegistrationChangePush = 5;
+	Unknown = 0;
+	RegisterPush = 1;
+	ChangeProfilePush = 3;
+}
+
+enum EXHCrossAppDescriptor_DiversionProvenance {
+	AlwaysCross = 3;
+	Pseudonymous = 2;
+	Other = 4;
+	Gaia = 1;
+	Unknown = 0;
+}
+
+enum RetentionTag {
+	RtWeek = 10;
+	RtMonth = 20;
+	Rt5Weeks = 21;
+	RtHalfAYear = 40;
+	RtYearAndAHalf = 60;
+	RtArchival = 1000;
+	RtYear = 50;
+	RtQuarter = 30;
+	RtDefault = 0;
+	RtObsolete = 1;
+}
+
+enum AppData_FileType {
+	Obb = 2;
+	Unknown = 0;
+	BaseApk = 1;
+	SplitApk = 3;
+}
+
+enum DeviceStatusInfo_PowerStatus {
+	Stable = 2;
+	PowerUnknown = 0;
+	Discharging = 1;
+}
+
+enum GFIComposableInteraction_GestureType {
+	Tap = 0;
+	LongPress = 1;
+}
+
+enum CCAJsClientInfo_DeviceType {
+	Tablet = 2;
+	Unknown = 0;
+	Mobile = 1;
+	Desktop = 3;
+}
+
+enum SuggestedActionInfo_TriggerDisabledReason {
+	NotEnoughReachableFriends = 2;
+	UnknownReason = 0;
+	ActionAlreadyPerformed = 1;
+}
+
+enum GTPPresenceState_Type {
+	InApp = 2;
+	Unknown = 0;
+	OutApp = 1;
+}
+
+enum CandidateSource {
+	LocationPattern = 17;
+	VerticalCommand = 41;
+	S3Hypothesis = 14;
+	TrustedPattern = 20;
+	VerticalLocalExploratory = 77;
+	VerticalHotels = 49;
+	SingleQueryVerticalNowOnChat = 74;
+	SemanticLocal = 30;
+	SingleQueryGooglebotGrammar = 68;
+	Repeat = 38;
+	KomodoNextQueries = 3;
+	DiscoverabilityPronouns = 42;
+	Question = 58;
+	VerticalLanguage = 59;
+	LocationContextAutomaticPattern = 28;
+	VerticalNutrition = 47;
+	VerticalSports = 39;
+	Calculator = 34;
+	AliasReplacement = 46;
+	SingleQueryGooglebotSuggestion = 67;
+	VerticalRestaurants = 50;
+	VerticalMusic = 81;
+	Command = 12;
+	LocationContextNounReplacement = 25;
+	BruteForce = 5;
+	PrependAdjective = 78;
+	Identity = 7;
+	VerticalMovies = 45;
+	SingleQueryQuite = 63;
+	LocationContextNameMatch = 43;
+	PhoneticReplacements = 11;
+	VerticalWeather = 37;
+	VerticalNowOnChat = 16;
+	GinaPersonality = 64;
+	RepeatedPrefixOrSuffix = 51;
+	ListDisambiguation = 31;
+	LocationContextPrefixSuffixMatch = 26;
+	SingleQueryTrustedPattern = 61;
+	SingleQueryVertical = 66;
+	PronounReplacements = 8;
+	VerticalDirections = 79;
+	SingleQueryConvTermsDropping = 65;
+	VerticalCalendar = 40;
+	LocationContextManualPattern = 27;
+	VerticalGooglebot = 71;
+	Translation = 24;
+	CandidateSourceUnspecified = 0;
+	MergedPronoun = 83;
+	CollectionProperties = 76;
+	SingleQueryGooglebotVertical = 72;
+	CommandPhonetic = 13;
+	Intent = 19;
+	SingleQueryIdentity = 70;
+	NounPhraseReplacements = 21;
+	AddWithPreposition = 9;
+	EntityQ2Concat = 60;
+	VerticalMessages = 44;
+	PronounRefinement = 82;
+	ProductNextQuery = 35;
+	EntityReplacements = 1;
+	DidYouSayCorrection = 80;
+	AddTime = 10;
+	VerticalMoviesNavigational = 75;
+	RewriteToOpenURL = 55;
+	KnowledgeCardAttribute = 15;
+	UniversalGenieDemoRewrite = 52;
+	Dedup = 29;
+	VerticalKerouac = 48;
+	Refinement = 56;
+	NonTopHypothesisWithAnswer = 54;
+	PronounItReplacements = 22;
+	PossessiveEntityReplacements = 62;
+	Local = 18;
+	KomodoCloseQueries = 4;
+	QuestionSuffix = 53;
+	VerticalFlights = 36;
+	QueriesByImportantTerms = 57;
+	SingleQueryGooglebotCanonic = 69;
+}
+
+enum ClientInfo_ClientType {
+	Unknown = 0;
+	IosV2 = 10;
+	Desktop = 2;
+	Android = 4;
+	DriveFs = 9;
+	Python = 6;
+	Vr = 7;
+	PlayCe = 5;
+	Ios = 3;
+	Js = 1;
+	Pancetta = 8;
+}
+
+enum GTPIceCandidatesUpdate_Operation {
+	Remove = 2;
+	Unknown = 0;
+	Add = 1;
+}
+
+enum GTPDMessageClass_Type {
+	Ephemeral = 5;
+	Notify = 3;
+	Signaling = 2;
+	Status = 4;
+	User = 1;
+	Unknown = 0;
+}
+
+enum GTPDLogFile_Type {
+	RtcEventLog = 5;
+	WebrtcTrace = 3;
+	AudioDiagnosticLog = 2;
+	ProfilerTrace = 4;
+	ApplicationLog = 1;
+	Unknown = 0;
+}
+
+enum ReauthData_VerificationMethod {
+	Pin = 2;
+	UnknownMethod = 0;
+	Password = 1;
+}
+
+enum Corpus {
+	HulkPersona = 383;
+	ChromeHistoryInternal = 14;
+	WebSearchZeitgeistLastweek = 254;
+	FreudSearchTopics = 177;
+	PixelPerfectProfile = 182;
+	MapsSearch = 3;
+	BondCriticalEvent = 222;
+	DeviceContactLabels = 198;
+	YoutubeSearchSuggestDismiss = 206;
+	BondDeviceInfoLatest = 201;
+	HulkPlaceVisitSummary = 353;
+	ContentAdsVtcAdClicks = 385;
+	GoogleHelpQueries = 223;
+	BondAggregated = 167;
+	Bond = 153;
+	NowUserAction = 108;
+	Finance = 103;
+	TronSetting = 284;
+	UnicommCall = 342;
+	SidekickAppAnalysis = 401;
+	ContentAdsVtcAdImpressions = 386;
+	Discoverability = 216;
+	BookSearch = 5;
+	ChromeHistoryWebAndAppRaw = 195;
+	FootprintsPluginAudit = 348;
+	LockboxSystemState = 116;
+	AppsSearch = 11;
+	ElsaPersonalizedPlaces = 333;
+	BondEvaluationLogEntry = 232;
+	VoiceSearchOnboarding = 242;
+	NewsWeather = 410;
+	MindreaderUserModelsSitesv1TimeDecayed = 236;
+	StickyDates = 243;
+	CalypsoAppClicksIpad = 268;
+	MindreaderUserModelsNewsstandSitesv1TimeDecayed = 273;
+	SupportContentClick = 294;
+	DeviceContactsMetadata = 364;
+	LockboxSms = 107;
+	DeviceSideloadedMusic = 411;
+	Taba = 105;
+	PixelPerfectClientState = 320;
+	PixelPerfectAnalytics = 257;
+	UniversalLanguageSettings = 193;
+	GeoPersonasLifestyle = 310;
+	AnimaEntityInterestsNow = 374;
+	GinaEphemeralState = 323;
+	SpeechS3Arbiter = 402;
+	WebResultsForStarlight = 189;
+	DeviceInstalledAppsIncremental = 246;
+	GoogleHelpSuggest = 224;
+	AssistContextBackgroundModel = 164;
+	BondUserEngagementMetadata = 274;
+	WebSearchContext = 238;
+	TestCorpus = 0;
+	AppidProfile = 376;
+	DisplayAds = 375;
+	AssistantCastCards = 412;
+	BondCanary = 202;
+	SocialSearchGmailServingReady = 210;
+	SocialSearchGmailFieldTrialOptin = 209;
+	WalletPurchaseRecords = 114;
+	Toolbar = 9;
+	SpeechRecognizerAudio = 145;
+	ContextManagerPowerConnection = 1002;
+	EwokFeRedirect = 282;
+	ListAction = 328;
+	GoogleShoppingProductViews = 361;
+	AssistAppContext = 152;
+	ConversationalDiscoverability = 381;
+	ExperimentalSearchPreferences = 297;
+	UserpanelDerived = 262;
+	NoteAction = 327;
+	DeviceContactNames = 197;
+	SenseGoldmineAnnotations = 135;
+	ChromeUserSpamAnnotation = 279;
+	FootprintsProfile = 276;
+	ChromeHistoryBlocked = 15;
+	NowUserInput = 204;
+	GaiaClientInfo = 275;
+	ContextManagerAuditEntry = 1007;
+	MindreaderUserModelsGeoGcids = 191;
+	RecordedPages = 317;
+	SpacesAppQueries = 326;
+	RadsInstalledAppsIncremental = 302;
+	DthreeSettings = 331;
+	MapsActivitiesUserViews = 267;
+	GoogleHelpClicks = 219;
+	PixelPerfectProfileExperimental = 183;
+	SpeechRecognizerPreamble = 178;
+	NowServerResponseDisplayInfo = 129;
+	GmailAds = 357;
+	CalypsoAppClicksIphone = 269;
+	AgsaAuthConsentBump = 319;
+	PixelPerfectSession = 213;
+	TimerAction = 329;
+	WebSearchOffline = 355;
+	UserpanelDeviceStatus = 250;
+	WernickePodcastProgress = 340;
+	ChromeHistoryWebAndApp = 194;
+	DeviceContactsIncremental = 229;
+	GuideResponseArea = 335;
+	AssistAppContextTransformed = 215;
+	LockboxSmsProcessed = 132;
+	YoutubeUserFeedback = 325;
+	NowUserProfile = 120;
+	CurtaClick = 350;
+	GinaQueryHistory = 321;
+	MapsAliasedLocations = 214;
+	IgsaBrowserHistory = 285;
+	DocidProfileIncremental = 368;
+	ContextManagerInterestRecord = 1005;
+	MindreaderUserModelsGeoCids = 190;
+	NowClientActionResponseDisplayInfo = 130;
+	CulturalInstituteSearchQuery = 394;
+	GmailClicks = 176;
+	PersonalAppScreenshots = 125;
+	ViralAdClicks = 266;
+	ContentAdsVtcWithheldAdImpressions = 389;
+	PixelPerfectPush = 228;
+	WebSearchZeitgeistLastmonth = 253;
+	BondDeviceInfo = 169;
+	GinaUserQueryHistory = 341;
+	SocialSearchGmailAppsSearchIndexingRequested = 211;
+	HobbesPhonePredictions = 180;
+	UserpanelSensorData = 251;
+	MindreaderUserModelsSitesv1 = 156;
+	PersonalImageData = 127;
+	ProductSearch = 7;
+	AcpContext = 344;
+	SpeechPronunciation = 241;
+	OldSoundSearchEvents = 303;
+	PlayAppsDeveloperConsoleFeatureAnalytics = 380;
+	MindreaderUserModelsChromeSitesv1TimeDecayed = 264;
+	CasseEntityIndex = 393;
+	OldSoundSearchMatches = 307;
+	UdcSettingsModel = 304;
+	ContextManagerRegisteredDevice = 1004;
+	UserpanelProfile = 290;
+	GoogleDevelopersIndex = 392;
+	AssistantHistory = 390;
+	StarlightMetadata = 352;
+	AssistantMultiHotword = 407;
+	OnTheGo = 308;
+	UserpanelAppReceipts = 339;
+	Earth = 365;
+	ContentAdsUserStrippedAdviewsSessions = 400;
+	NowUserActionNoMetaData = 109;
+	PixelPerfectExperimental = 170;
+	PersonalBrowserContentStripped = 148;
+	CurtaImpression = 351;
+	SupportContentContactFlow = 292;
+	CalypsoInstalledAppsProfile = 239;
+	PixelPerfectDonation = 218;
+	DnaProberUpdateContent = 136;
+	LockboxAppUsage = 113;
+	Bigtop = 111;
+	Ads = 10;
+	LockboxContactAccounts = 147;
+	Moma = 121;
+	TeachGoogle = 281;
+	LockboxAppUsageLegacy = 358;
+	MindreaderUserModelsSitesv3 = 157;
+	ContentAdsExplicitUserPublisherProfile = 379;
+	MultidaySearchFeature = 221;
+	ContextManagerSnappedToRoadLocation = 1003;
+	DeviceContactsBackup = 347;
+	UniversalLanguageSettingsOverrides = 227;
+	MapsSearchSessions = 404;
+	DriveClicks = 174;
+	Recipes = 378;
+	DeviceInstalledApps = 199;
+	BlogSearch = 4;
+	SherlockUserModelSearch = 382;
+	SearchActionHistory = 162;
+	SpeechRecognizerPreamblePush = 288;
+	PixelPerfectExperimentalAlasdair = 154;
+	BondReportedEvent = 286;
+	DocidProfile = 306;
+	AdsOfflineConversion = 406;
+	ContextManagerUserLocationFamiliarityModel = 1006;
+	BondNewDeviceNotification = 278;
+	VerbspaceEndToEndTesting = 277;
+	JuicerProfile = 408;
+	SupportContentSearch = 293;
+	Riddler = 396;
+	DeviceContacts = 196;
+	GenieDiscoverabilityTip = 258;
+	UserLanguageProfile = 409;
+	HomepageVisit = 334;
+	BondDeviceInfoCanary = 200;
+	ImageSearch = 6;
+	PixelPerfectSetting = 144;
+	LockboxAppUsageProcessed = 124;
+	LockboxPhoneCallsProcessed = 131;
+	SenseVisualSearchResponse = 134;
+	ChromeHistory = 12;
+	YoutubeUserSearches = 207;
+	DatajamUserProfile = 377;
+	RadsInstalledApps = 301;
+	PersonalAppContent = 118;
+	PintsContent = 367;
+	NowThirdPartyCard = 337;
+	AssistantSettings = 366;
+	GenericSuggestWebAndApp = 338;
+	ContextManagerScreen = 1001;
+	NewsSearch = 2;
+	ContentAdsUserAdclicksSessions = 398;
+	WebSearchZeitgeistLastyear = 255;
+	TauSearch = 316;
+	GinaChatMutex = 403;
+	AssistantEphemeral = 391;
+	AnimaEntityInterests = 373;
+	GooglePlayMusic = 188;
+	BigtopQueries = 225;
+	SpeechRecognizerMetadata = 146;
+	PersonalBrowserContent = 117;
+	Travel = 101;
+	Topaz = 123;
+	GooglePlaySearch = 181;
+	DynamicEntityIndex = 300;
+	SalientTermsOffline = 356;
+	ExplicitPreferences = 359;
+	ContentAdsVtcAdActiveViews = 387;
+	DeviceTopContacts = 245;
+	GinaNotification = 363;
+	QueryEntities = 324;
+	SenseImage = 163;
+	MyEntitiesBusinessCategory = 370;
+	NowJoinedLogs = 143;
+	UserDefinedActions = 280;
+	YoutubeVideoAdWatches = 256;
+	SocialSearchMoonshineToggle = 184;
+	CalypsoIosFailedAppClicks = 260;
+	AtvUserPreference = 311;
+	MyEntitiesUserCurations = 231;
+	DriveQueries = 173;
+	CalendarQueries = 171;
+	VisualSearch = 100;
+	ViralAdViews = 271;
+	GinaPersistentState = 322;
+	CalypsoAppInstallData = 186;
+	SalientTerms = 346;
+	ViralAdImpressions = 265;
+	KgSoundSearch = 345;
+	ContextManagerDetectedActivity = 1000;
+	MindreaderUserModelsChromeSitesv1 = 263;
+	GooglePlayMusicQuery = 312;
+	FootprintsFrontend = 371;
+	DeviceContactsStarlight = 299;
+	LockboxPhoneCalls = 106;
+	WebSearchSessions = 230;
+	UserpanelAppScreenshots = 249;
+	BigtopClicks = 226;
+	FunboxGames = 349;
+	EntityAuthorityList = 296;
+	SpeechAnnotation = 233;
+	PixelPerfectLocation = 179;
+	SidekickVersionInfo = 217;
+	MindreaderUserModelsSearchNapaliGcids = 309;
+	LoserThings = 295;
+	UnicommFirstCommunication = 330;
+	GameUserProfileDomain = 168;
+	NowShadieNotification = 314;
+	GuideImpressionHistory = 336;
+	PersonalIntentData = 247;
+	GmailUserInterestProfile = 369;
+	StarlightFilter = 287;
+	SearchPreferences = 298;
+	GinaContext = 332;
+	PersistentCorrections = 237;
+	SesameSafeLocationModel = 305;
+	UserpanelAppContent = 220;
+	SupportContentPage = 291;
+	DuffyUserState = 272;
+	ListIdSnapshot = 360;
+	SpeechUtteranceAnnotation = 289;
+	GamePersonasLifestyle = 115;
+	ContentAdsVtcPyvSearch = 388;
+	WebSearchZeitgeistAlltime = 252;
+	SupportContentInteraction = 313;
+	ContentAdsUserDelayedAdviewsSessions = 399;
+	AnimaEntityTimeline = 372;
+	ShoppingExpress = 110;
+	GsaWindows = 104;
+	YoutubeVideoWatches = 205;
+	HulkPlaceVisit = 261;
+	UserpanelAppContentFiltered = 384;
+	Monastery = 362;
+	GmailQueries = 175;
+	VideoSearch = 8;
+	ClearcutClientInfo = 151;
+	GenericSuggestNoOptIn = 354;
+	PersonalAudioData = 128;
+	CalendarClicks = 172;
+	SpeechSpeakeridGsa = 212;
+	CalypsoAppClicksIpod = 270;
+	DeviceContactsBackupIntermediate = 405;
+	TronNotification = 283;
+	MapsActivitiesClientApplications = 259;
+	ChromeHistoryRaw = 13;
+	PixelPerfectEvalGolden = 240;
+	MindreaderUserModelsSearchPsearchI18N = 248;
+	WebSearchRecent = 192;
+	RecordedPagesDerived = 318;
+	ChromeSuggestions = 122;
+	UnicommSms = 343;
+	BondLatest = 203;
+	WebSearch = 1;
+	PersonalAppContentTransformed = 138;
+	PixelPerfectPluginState = 234;
+	PixelPerfectLocationActivityChange = 185;
+	PersonalDeviceStatus = 149;
+	UdcInteraction = 161;
+	PersonalAppScreenshotsTransformed = 139;
+	DataMonitorSandbox = 315;
+	SenseVisualSearchRequest = 133;
+	MapsAliasedLocationsIcons = 395;
+	ContentAdsUserAdclicksSpam = 397;
+	PersonalIntelligenceUserInputs = 235;
+	TravelContent = 112;
+	PersonalSensorData = 126;
+	ContextManagerExperimental = 1008;
+	GoogleDevelopers = 187;
+	GoogleCompare = 119;
+}
+
+enum GTPLogsPrimesStats_PrimesEvent {
+	PrimesCrashMonitoringInitialized = 2;
+	Unknown = 0;
+	PrimesInitialized = 1;
+	PrimesFirstActivityLaunched = 3;
+}
+
+enum GTPDPermissionStatus_Type {
+	Partial = 2;
+	Unknown = 0;
+	Denied = 1;
+	Granted = 3;
+}
+
+enum GTPDDeviceIdType_Type {
+	IosVendorId = 2;
+	Unknown = 0;
+	AndroidIidToken = 1;
+}
+
+enum FireballMessageMediaSource_Type {
+	Draft = 12;
+	StickerChooser = 10;
+	InkDrawing = 14;
+	LocationCurrent = 5;
+	CameraInkAnnotation = 15;
+	LocationSearch = 7;
+	GalleryChooser = 3;
+	Share = 11;
+	Forward = 13;
+	GalleryInkAnnotation = 16;
+	UnknownMedia = 0;
+	Camera = 2;
+	AudioChooser = 9;
+	GalleryLibrary = 4;
+	LocationBrowse = 6;
+	LocationCustom = 8;
+	TextPart = 1;
+}
+
+enum GTPMessageContent_ContentType {
+	Unknown = 0;
+	SenderEvent = 10;
+	AnyValue = 2;
+	MediaInfo = 4;
+	SenderStatus = 9;
+	Location = 6;
+	Receipt = 7;
+	Sticker = 5;
+	RichText = 3;
+	ConversationStateUpdate = 11;
+	Suggestion = 8;
+}
+
+enum GPBField_Kind {
+	TypeBytes = 12;
+	TypeSint32 = 17;
+	TypeGroup = 10;
+	TypeEnum = 14;
+	TypeInt32 = 5;
+	TypeSfixed32 = 15;
+	TypeFixed32 = 7;
+	TypeInt64 = 3;
+	TypeMessage = 11;
+	TypeUint32 = 13;
+	TypeSfixed64 = 16;
+	TypeUnknown = 0;
+	TypeSint64 = 18;
+	TypeString = 9;
+	TypeFloat = 2;
+	TypeUint64 = 4;
+	TypeFixed64 = 6;
+	TypeBool = 8;
+	TypeDouble = 1;
+}
+
+enum GTPDMethod_Type {
+	GetGroupIds = 30;
+	KickGroupUsers = 27;
+	PushInbox = 24;
+	Send = 3;
+	Unknown = 0;
+	Experiments = 13;
+	LeaveGroup = 28;
+	Echo = 9;
+	InboxSend = 21;
+	Unregister = 6;
+	Join = 1;
+	Verify = 12;
+	InboxPull = 23;
+	CreateGroup = 25;
+	Ping = 10;
+	Register = 5;
+	PushSend = 7;
+	ChangeGroupProfile = 29;
+	Lookup = 11;
+	InboxAck = 22;
+	Leave = 2;
+	SendDirect = 4;
+	GetGroupInfos = 31;
+	AddGroupUsers = 26;
+	PushLeave = 8;
+}
+
+enum GFIAppInstallState_State {
+	Stream = 2;
+	None = 0;
+	Installed = 1;
+}
+
+enum GTPDIceProtocol_Type {
+	Tcp = 2;
+	Unknown = 0;
+	Udp = 1;
+	Ssltcp = 3;
+}
+
+enum GFIComposableLink_Type {
+	Ads = 2;
+	External = 0;
+	Query = 1;
+}
+
+enum UpdateTransition_TransitionHint {
+	AskConfirmation = 2;
+	Unknown = 0;
+	ResetState = 1;
+}
+
+enum GFIVisualElementLog_Visibility {
+	ChildrenHidden = 2;
+	Visible = 0;
+	Hidden = 1;
+}
+
+enum GPBFieldOptions_JSType {
+	JsNumber = 2;
+	JsNormal = 0;
+	JsString = 1;
+}
+
+enum GameId {
+	DoodleClaraRockmore = 17;
+	DoodleHalloween2015 = 14;
+	DoodleDrWho = 20;
+	FunboxTictactoe = 24;
+	GbotGeoQuiz = 3;
+	NoGameId = 0;
+	DoodleBirthdayPinata = 13;
+	DoodleBeethoven = 19;
+	DoodleEijiTsubaraya = 21;
+	GbotEmojiParty = 9;
+	ImmersiveMath = 6;
+	GbotGuessTheMovie = 1;
+	DoodlePacman = 12;
+	FunboxSolitaire = 23;
+	GbotGuessTheBollywoodMovie = 10;
+	ImmersiveEntertainment = 5;
+	ImmersiveVocab = 7;
+	DoodlePonyExpress = 15;
+	DoodleRubiksCube = 11;
+	DoodleEarthDayQuiz = 16;
+	GbotEmojiRiddle = 22;
+	DoodleWilburScoville = 18;
+	GbotMoviesQuiz = 2;
+	ImmersiveGeoQuiz = 4;
+	ImmersiveBollywood = 8;
+}
+
+enum GTPDTransportEventType_Type {
+	BindClosed = 17;
+	GroupMessageQueued = 41;
+	BindRegistered = 14;
+	GcmCalled = 20;
+	JibeCalled = 49;
+	BadgeCountIncremented = 30;
+	BindAckReceived = 38;
+	Sent = 3;
+	DuplicateSkipped = 42;
+	BindSecondBatchRead = 32;
+	RegistrationCheckWarning = 58;
+	LookupBlockersRpcStart = 59;
+	TickleReceived = 28;
+	ExpiredDeleted = 47;
+	BindPingSent = 67;
+	MessageBlocked = 34;
+	GcmRetry = 46;
+	MarkedAsSent = 6;
+	AccountDeletedReregistered = 50;
+	Queued = 12;
+	PendingIdReregistered = 25;
+	VerifiedIdReregistered = 23;
+	Dropped = 5;
+	MarkedAsDelivered = 7;
+	IdvChecked = 45;
+	SmsUserBlockedByTexter = 63;
+	PendingRegChallengedCall = 43;
+	Persisted = 11;
+	BindPingReceived = 37;
+	BindInitBatchPushed = 16;
+	Received = 2;
+	AppBlockedByCap = 64;
+	BindAckSent = 51;
+	TexterCalled = 31;
+	VerifiedIdUnregistered = 26;
+	SmsrelayCalled = 61;
+	BindReloadSent = 66;
+	MarkedAsRead = 8;
+	RegisterBlockedTnPrefix = 65;
+	GroupReceiptsPersisted = 40;
+	PendingIdUnregistered = 27;
+	PendingRegChallengedSms = 24;
+	Unknown = 0;
+	BindOpened = 13;
+	BindReloadReceived = 19;
+	ApnsProxyCalled = 21;
+	OutgoingInserted = 9;
+	LookupBlockersRpcEnd = 60;
+	PendingRegChallengedNone = 44;
+	ReceiptReceived = 35;
+	Created = 1;
+	IncomingInserted = 10;
+	DroidguardCalled = 55;
+	BindBatchRead = 15;
+	OldDeviceNotified = 52;
+	Deleted = 29;
+	AckedDeleted = 48;
+	DroidguardResponded = 56;
+	BindInitSecondBatchPushed = 33;
+	RegistrationAddedDb = 54;
+	ApnsProxyTokenSync = 22;
+	CapnumberCalled = 62;
+	BindReloadPushed = 18;
+	Responded = 4;
+	RegistrationRemovedDb = 53;
+	UserDeleted = 36;
+	VersionCheckWarning = 57;
+}
+
+enum GTPDEvent_Type {
+	RoomBufferFlushed = 17;
+	VerifiedIdReregistered = 14;
+	GrpcBindPingSent = 77;
+	NetworkConnectedOrSwitched = 30;
+	FirstContactsPageLoaded = 68;
+	CrashDumpUploadSucceeded = 99;
+	IceConnectionStateConnected = 3;
+	TurnParamsReceived = 32;
+	LookupRequestError = 58;
+	CallAttemptTimeout = 28;
+	CallAutoDeclinedUserBusy = 84;
+	IceConnectionStateDisconnected = 6;
+	StatsReport = 50;
+	MicUnmuted = 108;
+	TimingInfo = 131;
+	GrpcChannelCreationFailed = 124;
+	VideoDisabledForAppInBackground = 103;
+	UpgradeFromRecommendationScreen = 134;
+	PendingIdVerified = 12;
+	IceCandidatesAdditionSent = 25;
+	PeerconnectionLocalSdpSent = 23;
+	GrpcBindStartOfPullReceived = 90;
+	CallIgnoredForCallerBlocked = 118;
+	IceConnectionStateFailed = 5;
+	GrpcBindCloseSent = 78;
+	AppLogUploadRequested = 45;
+	CameraFirstFrameAvailable = 63;
+	ContactInvitedToRegister = 116;
+	DeviceOrientationPortrait = 37;
+	PendingIdReregistered = 11;
+	RoomSize2 = 2;
+	MicMuted = 107;
+	BackgroundFetchStarted = 105;
+	CrashDumpUploadRequested = 98;
+	CallAutoDeclinedAppUpgradeNeeded = 117;
+	CallAcceptedAuto = 101;
+	HandleBackendRequest = 123;
+	SavingAuthTokenReslut = 141;
+	CallHangUpByUser = 27;
+	FirstActivityOnCreate = 71;
+	RegistrationRequestsSent = 87;
+	Unknown = 0;
+	GrpcBindOpenSent = 76;
+	IncomingCallInitiated = 21;
+	ApplicationFirstLaunchEvents = 114;
+	CallFailure = 9;
+	VideoDisabledForLowBattery = 44;
+	OutgoingVoiceCallStarted = 35;
+	UpgradeFromBlockScreen = 135;
+	CrashDumpUploadFailed = 100;
+	RoomMemberInserted = 15;
+	CallRatingRequested = 52;
+	OutgoingCallCancelled = 29;
+	CallAutoDeclinedAppCannotNotifyUser = 85;
+	LookupRequestSent = 56;
+	IceCandidatesRemovalReceived = 97;
+	GcmIntentServiceRequested = 137;
+	GrpcBindPongReceived = 89;
+	CallRejectedByUser = 22;
+	DroidguardResultsRequested = 129;
+	RoomMessageBuffered = 18;
+	CameraOpenRequested = 62;
+	ContactsCacheQueryRegistrationStarted = 53;
+	LookupRequestCompleted = 57;
+	DeviceOrientationLandscape = 36;
+	FirstIncomingCallPageLoaded = 69;
+	GrpcBindEndOfPullReceived = 91;
+	AudioOutputSpeaker = 41;
+	BackgroundFetchFinished = 106;
+	AudioDiagnosticLogUploaded = 93;
+	OutgoingCallInitiated = 20;
+	FirstRemoteHdVideoFrameRendered = 49;
+	IncomingCallIntentSent = 132;
+	FirstDailyUpdateServiceStarted = 74;
+	CameraSwitchedToBack = 38;
+	MainActivityOnDestroy = 120;
+	VideoEnabledForRecoveredBattery = 102;
+	AudioOutputWiredHeadphone = 42;
+	SmartSuggestionsCreate = 59;
+	AppLogUploadFailed = 47;
+	DroidguardResultsAvailable = 130;
+	CallEnded = 34;
+	CameraSwitchedToFront = 39;
+	FirstRegisterPageLoaded = 67;
+	PermissionStatusChange = 95;
+	GrpcGettingStubFailed = 125;
+	AppLogUploadSucceeded = 46;
+	GcmRegIdUpdated = 81;
+	IceCandidatesRemovalSent = 96;
+	IceConnectionStateChecking = 7;
+	ConnectedCallEnded = 127;
+	AudioOutputBluetoothHeadphone = 43;
+	RoomMemberExpired = 16;
+	SystemLowMemoryWarning = 115;
+	CameraClosed = 64;
+	CallRatedByUser = 51;
+	RemoteVideoSwitchedFullScreen = 110;
+	TurnParamsRequested = 31;
+	VideoEnabledForAppInForeground = 104;
+	IceCandidatesAdditionReceived = 26;
+	MediacodecError = 73;
+	ApplicationLaunched = 66;
+	PendingIdUnregistered = 61;
+	CallAcceptedByUser = 8;
+	GrpcBindError = 79;
+	PeerconnectionThreadTimeout = 65;
+	IncomingCallRinging = 128;
+	AudioOutputEarpiece = 40;
+	PeerconnectionRemoteSdpReceived = 24;
+	UserIdNotFoundForRefreshRegistration = 83;
+	RegistrationRequestsErrorReceived = 82;
+	VerifiedIdUnregistered = 13;
+	FirstActivityOnResume = 72;
+	FirstIncomingCallPageCancelledForExpiredCall = 70;
+	LocalVideoSwitchedFullScreen = 109;
+	RoomMemberLeft = 19;
+	MainActivityOnResume = 122;
+	GrpcBindReloadSent = 88;
+	SignalingTransportClientEvent = 60;
+	CallAutoDeclinedAppMissingAvAuthorization = 86;
+	IncomingMsg = 1;
+	GcmBroardcastReceiverCalled = 136;
+	ExpiredSignalingMessageReceived = 80;
+	VideoDisabledForLowBwe = 111;
+	PendingIdRegistered = 10;
+	ContactsCardStateChanged = 138;
+	MainActivityOnPause = 121;
+	ContactsCacheQueryRegistrationError = 55;
+	IncomingCallMissed = 113;
+	TickleReceived = 75;
+	OutOfOrderSignalingMessageReceived = 139;
+	FirstRemoteVideoFrameRendered = 48;
+	CallRatingSkippedByUser = 133;
+	TurnParamsErrorReceived = 33;
+	ApplicationQuit = 94;
+	ContactsCacheQueryRegistrationCompleted = 54;
+	IceConnectionStateCompleted = 4;
+	VideoEnabledForRecoveredBwe = 112;
+	RegistrationResultReceived = 92;
+	CallSetupEnded = 126;
+	VideoCaptureRuntimeError = 140;
+	MainActivityOnCreate = 119;
+}
+
+enum GFIFabColor {
+	FabGrey = 0;
+	Blue = 1;
+}
+
+enum GBTQLTLogInfo_Visibility {
+	ChildrenHidden = 2;
+	Visible = 0;
+	Hidden = 1;
+}
+
+enum PlayStoreBackgroundActionEvent_Type {
+	MyAccountPaymentMethodsPlayCreditPurchased = 383;
+	SettingsFamilyBulkSharePreviousBooks = 415;
+	PinEntryResult = 501;
+	WearskyEvent9 = 1509;
+	GaiaAuthenticationResult = 502;
+	SearchSuggestionsOffered = 510;
+	SessionEnd = 3;
+	SearchResultsResponse = 523;
+	HomeHomeLastRpcCompleted = 1711;
+	TicklePackageInstall = 201;
+	MainActivityOnStop = 1720;
+	PurchasePromptForFopPlayCreditPurchased = 353;
+	WearskyEvent10 = 1510;
+	MyAccountPaymentMethodsInstrumentEdited = 385;
+	InstallApplyPatch = 108;
+	SelfUpdateCheckSkipped = 153;
+	DeepLinkShimLastRpcCompleted = 1714;
+	WebloginGetAuthTokenResponse = 941;
+	DownloadCancel = 103;
+	RevokeRequest = 850;
+	PurchaseDcb3AddError = 342;
+	ManagedConfigurationsError = 1304;
+	SettingsContentFilter = 401;
+	RpcReport = 5;
+	UpdateSubscriptionInstrumentResponse = 1401;
+	WearskyPackageInstallComplete = 1502;
+	AdClick302Response = 1100;
+	WearskyEvent13 = 1513;
+	AutoAcquirePackageSource = 116;
+	SettingsFamilyFutureSharingApps = 410;
+	SetupWizardPromptForFopSnoozed = 364;
+	PageLoadStart = 1703;
+	RedeemCodeRequest = 800;
+	PurchaseGiGetInitialFlowState = 700;
+	SendGiftTriggered = 1202;
+	InstallStartEncrypted = 107;
+	SettingsFamilyFutureSharingMovies = 411;
+	WebloginGetAuthTokenRequest = 940;
+	InstallRequest = 105;
+	PurchaseBillingProfileCreditCardAdded = 320;
+	PurchaseBillingProfilePlayCreditPurchased = 323;
+	RemoveFromHistory = 506;
+	UpdateAll = 505;
+	SettingsAutoUpdateGlobal = 402;
+	PageLoadInterrupted = 1706;
+	LiteBlobDownloadFailure = 1605;
+	ResolveLinkRequest = 1103;
+	AcquisitionFlowFinished = 601;
+	LiteBlobDownloadInitiated = 1604;
+	Other = 0;
+	ClickTrackingSuccessInlineInstall = 536;
+	BillingServiceResponse = 375;
+	SettingsFamilyFutureSharingBooks = 412;
+	PurchasePmtImSavePageResponse = 721;
+	TicklePackageRemove = 202;
+	Uninstall = 114;
+	SystemHealthMetricReport = 9;
+	WearskyEvent8 = 1508;
+	PurchasePmtAppRedirectValidation = 777;
+	ModuleInstallFinished = 145;
+	ManagedConfigurationsUpdated = 1302;
+	CachedLocationUpToDate = 1002;
+	UpdateSubscriptionInstrumentFlowFinished = 1404;
+	DailyHygieneFinish = 152;
+	MyAccountPaymentMethodsCarrierBillingAdded = 381;
+	MonetaryGiftDetailsRequest = 1200;
+	FlagContentDfeCompleted = 533;
+	IabGetSkuDetailsResponse = 622;
+	BillingProfilePlayCreditAdded = 327;
+	BillingProfileInstrumentCreated = 328;
+	LiteBlobSyncScheduled = 1600;
+	IabGetPurchasesResponse = 624;
+	UninstallWizardGetPackageSizeInfoOutcome = 135;
+	PurchaseGiCreateInstrumentError = 712;
+	SetupWizardPromptForFopCarrierBillingAdded = 361;
+	TickleManagedConfigurationsUpdate = 204;
+	PurchaseAuthResult = 508;
+	WearskyRequestStatusDeleted = 1503;
+	VerifyPinViaReauthApiRequest = 905;
+	BillingProfileCodeRedeemed = 326;
+	ZappModuleDelivery = 137;
+	PurchaseCcAddSuccess = 331;
+	PurchasePrepare = 302;
+	ClickTrackingSuccessDeepLink = 535;
+	AutoUpdateDeferred = 129;
+	ScionPayloadFetchForReportingInAppItemPurchase = 1108;
+	PageLoadFirstRpcInitiated = 1718;
+	ClickTrackingErrorSearchAd = 520;
+	FavoriteEntitiesModifyRequest = 539;
+	PurchasePromptForFopGenericInstrumentAdded = 357;
+	LiteBlobSyncScheduleInitiated = 1602;
+	BillingProfileInstrumentUpdated = 329;
+	AgeVerificationResponse = 518;
+	PurchasePromptForFopAlreadySetup = 355;
+	PurchaseDcb3Adding = 340;
+	InstallPackageAdded = 159;
+	PurchaseDcb2Adding = 335;
+	SendGiftShareTextRequest = 1203;
+	WearDailyHygiene = 132;
+	PurchasePromptForFopCreditCardAdded = 350;
+	PurchaseBillingProfileInstrumentEdited = 325;
+	DeviceConfigurationUpload = 120;
+	PurchaseBillingProfileCarrierBillingAdded = 321;
+	DownloadComplete = 102;
+	SetupWizardPromptForFopOptionalStepEnabled = 368;
+	InstallArtifactDeployed = 158;
+	BrowseDataSyncScheduled = 529;
+	LocationTurnedOff = 1005;
+	PageLoadEnd = 1704;
+	MonetaryGiftDetailsResponse = 1201;
+	PurchasePmtImRefreshPageResponse = 723;
+	VpaRequest = 130;
+	BackupDeviceFetchResponse = 125;
+	ClickTrackingErrorInlineInstall = 522;
+	WearskyEvent14 = 1514;
+	ModuleDownloadCancel = 142;
+	ExternalReferrerDelivered = 517;
+	ExternalReferrerCaptured = 515;
+	PurchaseDcb3AddSuccess = 341;
+	BrowseDataSyncInitiated = 531;
+	InstallCanceled = 156;
+	InstallCopyDownload = 127;
+	NewsstandArticleLoadError = 526;
+	Crash = 7;
+	WearskyEvent18 = 1518;
+	PurchaseBillingProfileResponse = 344;
+	AcquisitionFlowStarted = 600;
+	PurchasePrepared = 303;
+	MyAccountPaymentMethodsCardAdded = 380;
+	AvailablePromoOfferRedeemed = 500;
+	IabConsumePurchaseResponse = 625;
+	WearskyEvent19 = 1519;
+	PurchaseCommit = 304;
+	LiteBlobImportCompleted = 1609;
+	PurchaseErrorLibraryReplicationFinished = 631;
+	SettingsFamilyBulkSharePreviousMovies = 414;
+	HomeHomeFragmentOnCreate = 1709;
+	LocationNotYetAvailable = 1004;
+	ClickTrackingErrorDeepLink = 521;
+	ManagedConfigurationsUpdateSkipped = 1303;
+	PurchasePromptForFopCodeRedeemed = 352;
+	SettingsLocationBasedSuggestions = 407;
+	DetailsFragmentFirstRpcInitiated = 1716;
+	SetupWizardPromptForFopAlreadySetup = 365;
+	WearskyEvent7 = 1507;
+	SettingsPasswordRestrict = 400;
+	InstallActivate = 109;
+	PurchasePromptForFopCarrierBillingAdded = 351;
+	SystemAlertWindowPolicy4 = 148;
+	UpdateSubscriptionInstrumentRequest = 1400;
+	WearskyDataitemProcessingError = 1505;
+	WearskyEvent12 = 1512;
+	PlayshieldSignals = 538;
+	AutoUpdateStart = 160;
+	WearskyRetryRequest = 1504;
+	PageLoadLastRpcCompleted = 1719;
+	PurchasePmtDcbSmsAssociationResult = 771;
+	LiteLdsCleared = 1610;
+	DownloadSizePrediction = 136;
+	RestoreSkip = 113;
+	IabIsBillingSupportedResponse = 621;
+	FilebyfileCompatibilityCheck = 10;
+	PartnerSetupAppInstallTrack = 147;
+	AutoUpdateForegroundPackage = 121;
+	PurchasePmtDcbGetPropertiesResult = 780;
+	AcquisitionCheckIabPromoResponse = 620;
+	InstallPostponed = 157;
+	FamilyLibraryOnboardingBulkSharePrevious = 537;
+	CachedLocationNotRefreshedShortMovement = 1003;
+	InstallError = 111;
+	SettingsAutoUpdateMigrated = 404;
+	ContentFiltersServiceQueried = 519;
+	MainActivityInterrupted = 1721;
+	SettingsFamilyBulkSharePreviousApps = 413;
+	LogDeviceFeatures = 4;
+	VerifyPinViaReauthApiResponse = 906;
+	ContentSync = 162;
+	MyAccountPaymentMethodsCodeRedeemed = 382;
+	PurchaseGiCreateInstrumentMoreInformationRequired = 713;
+	ModuleDownloadStart = 140;
+	RedeemCodeResponse = 801;
+	ReauthApiVerifyRequest = 911;
+	UninstallWizardGetUsageStatsOutcome = 154;
+	ExternalReferrerDropped = 516;
+	GplusSignedUp = 503;
+	PurchaseCvcEscrowed = 306;
+	SettingsSwitchAccount = 406;
+	LocationTurnedOn = 1006;
+	LiteBlobSyncScheduleFailure = 1601;
+	LiteBlobImportInitiated = 1607;
+	SettingsFingerprintAuth = 408;
+	WebviewChallengeNonHTTPS = 504;
+	SettingsGmailItinerariesBasedSuggestions = 409;
+	ReauthSettingsFromDevice = 900;
+	PurchasePmtCreditCardEntryAction = 770;
+	TicklePurchaseDeclined = 200;
+	SendGiftShareTextResponse = 1204;
+	VerifyPasswordAuthTokenFetch = 907;
+	AdidReport = 6;
+	ManagedConfigurationsRequest = 1300;
+	ModuleInstallStart = 144;
+	InstallCopyFromExternal = 124;
+	AutoUpdate = 131;
+	SearchSuggestionClicked = 511;
+	SystemAlertWindowPolicy3 = 134;
+	ReauthSettingsFromServerResponse = 903;
+	CompoundDetailsPageExpandedAction = 1801;
+	DetailsServiceQueried = 512;
+	MainActivityOnStart = 1702;
+	PurchaseFreeAcquired = 301;
+	Details2NdDocumentFetch = 509;
+	RestoreFetchAppList = 118;
+	AdidNotAddedToHeader = 1101;
+	ReauthAuthTokenFetch = 910;
+	SetupWizardPromptForFopGenericInstrumentAdded = 367;
+	SearchSuggestionsRequest = 524;
+	PurchaseDcb2AddError = 337;
+	ReviewAdded = 513;
+	SetupWizardPromptForFopBillingProfileError = 366;
+	VerifyPinAuthTokenFetch = 904;
+	NlpRepairStatus = 2;
+	LocationUpdatedBasedOnCoarseRequest = 1001;
+	LogsUploadDeferredMissingAuthToken = 527;
+	BrowseDataSyncScheduleFailure = 530;
+	PurchasePmtPmSubmitResponse = 725;
+	PurchasePmtAppRedirectFinished = 778;
+	UnsafeAdClickURL = 1106;
+	SettingsAutoUpdateApp = 403;
+	MainActivityOnReady = 1708;
+	PurchasePmtImRefreshPageRequest = 722;
+	ModuleInstallError = 146;
+	AutoAcquirePackageDest = 117;
+	WearskyEvent6 = 1506;
+	DownloadStart = 101;
+	IabGetBuyIntentResponse = 623;
+	RevokeResponse = 851;
+	ModuleDownloadComplete = 141;
+	PurchaseFreeAcquire = 300;
+	PurchasePromptForFopBillingProfileError = 356;
+	SetupWizardPromptForFopPlayCreditPurchased = 363;
+	ApplicationOnCreateComplete = 1701;
+	InstallApplyGzipApk = 123;
+	PurchaseBillingProfileGenericInstrumentAdded = 324;
+	DownloadProgress = 163;
+	PurchaseGiCreateInstrument = 710;
+	WearskyEvent15 = 1515;
+	PurchasePmtImSavePageRequest = 720;
+	MainActivityOnCreate = 1707;
+	PurchasePmtProviderInstalled = 776;
+	SetupWizardPromptForFopCheckInstrumentResponse = 370;
+	ModuleDownloadError = 143;
+	HomeHomeFirstRpcInitiated = 1710;
+	AdidRequest = 1102;
+	UpdateSubscriptionInstrumentFlowStarted = 1403;
+	PurchasePmtPmSubmitRequest = 724;
+	ReauthSettingsFromServerRequest = 902;
+	RedirectedToAddAccountFlow = 528;
+	PurchasePmtPmChallengeStarted = 774;
+	CompoundDetailsPageCondensedAction = 1802;
+	WearskyReceivedInitialRequest = 1501;
+	PurchaseGiCreateInstrumentSuccess = 711;
+	PageLoadError = 1705;
+	VerifyPasswordViaReauthApiResponse = 909;
+	WearskyEvent17 = 1517;
+	DownloadQueued = 100;
+	PurchaseBillingProfileCodeRedeemed = 322;
+	DeepLinkShimFirstRpcInitiated = 1713;
+	LiteBlobImportFailure = 1608;
+	PurchaseChangeFamilyInstrumentResponse = 346;
+	ClickTrackingSuccessSearchAd = 534;
+	ClearCacheFinished = 155;
+	WearskyEvent11 = 1511;
+	PurchaseChangeFamilyInstrumentRequest = 345;
+	PurchaseGiGetInitialFlowStateSuccess = 701;
+	LocationUpdatedFromDeviceLastKnownLocation = 1000;
+	WearskyEventBase = 1500;
+	ReviewsServiceQueried = 514;
+	InstallStart = 106;
+	LiteBlobSyncScheduleCompleted = 1603;
+	ManagedConfigurationsResponse = 1301;
+	ReauthSettingsAuthTokenFetch = 901;
+	PurchaseCcAdding = 330;
+	CompoundDetailsMovedToPeekingPage = 1800;
+	ReportInAppItemPurchaseToGmp = 1105;
+	PurchaseDcb2AddSuccess = 336;
+	SetupWizardPromptForFopCheckInstrumentRequest = 369;
+	DetailsFragmentOnCreate = 1715;
+	PurchaseCcAddError = 332;
+	PurchaseGiGetInitialFlowStateError = 702;
+	PurchaseCommitted = 305;
+	UninstallWizardUninstallationsStarted = 150;
+	FavoriteEntitiesModifyResponse = 540;
+	WearskyEvent16 = 1516;
+	SetupWizardPromptForFopCreditCardAdded = 360;
+	BackstackCleared = 525;
+	WifiAutoUpdateAttempt = 115;
+	InstallFinished = 110;
+	DownloadError = 104;
+	VerifyPasswordViaReauthApiRequest = 908;
+	AdClickErrorResponse = 1107;
+	DeepLinkShimFragmentOnCreate = 1712;
+	MyAccountPaymentMethodsGenericInstrumentAdded = 384;
+	SetupWizardPromptForFopCodeRedeemed = 362;
+	ResolveLinkResponse = 1104;
+	BrowseDataSyncCompleted = 532;
+	EndUserLatencyReport = 8;
+	DailyHygieneStart = 151;
+	PurchasePromptForFopSnoozed = 354;
+	InstalledPackageFirstLaunch = 128;
+	PurchaseErrorLibraryReplicationStarted = 630;
+	DetailsFragmentLastRpcCompleted = 1717;
+	PurchasePmtPmChallengeFinished = 775;
+	UpdateSubscriptionInstrumentDeeplinkAccountMismatch = 1402;
+	WearskyEvent20 = 1520;
+	InstallApplyGzipPatch = 122;
+	PurchaseBillingProfileRequest = 343;
+	TickleAppUpdateCheckNeeded = 203;
+	SessionInfo = 1;
+	PurchasePmtOtpAutofillFromSmsEvent = 773;
+	ReauthApiVerifyResponse = 912;
+	DownloadConnectivityChange = 138;
+	InstallSkipDownload = 149;
+	InstallPostponedWaitingForNetwork = 161;
+	ModuleDownloadQueued = 139;
+	WidgetEvent = 507;
+	SystemAlertWindowPolicy2 = 133;
+	PurchasePmtDcbAttestationResult = 779;
+	InstallAbandoned = 112;
+	SetupWizardFinalHoldTimeout = 126;
+	ApplicationOnCreateStart = 1700;
+	LiteBlobDownloadCompleted = 1606;
+	PurchasePmtWebViewPageLoadEvent = 772;
+	SelfUpdateCheck = 119;
+}
+
+enum EXHParam_ParamStorageType {
+	Unspecified = 0;
+	Gservices = 1;
+}
+
+enum GTPLogsMemoryUsageMetric_MemoryEventCode {
+	AppInForegroundForSeconds = 5;
+	AppToForeground = 3;
+	AppToBackground = 2;
+	AppInBackgroundForSeconds = 4;
+	AppCreated = 1;
+	Unknown = 0;
+}
+
+enum GTPTachyonMessage_MessageType {
+	CancelInvitation = 2;
+	Unknown = 0;
+	Invitation = 1;
+	Normal = 3;
+}
+
+enum SearchSuggestionReport_SuggestionSource {
+	Dfe = 3;
+	PlaySuggestServer = 2;
+	LocalSearchHistory = 4;
+	GoogleSuggestServer = 1;
+	Unknown = 0;
+}
+
+enum MSPBaselineOffset {
+	Subscript = 2;
+	None = 0;
+	Superscript = 1;
+}
+
+enum CCAJsClientInfo_OsType {
+	OsUnknown = 0;
+	Windows = 2;
+	Linux = 4;
+	Ipad = 6;
+	Iphone = 7;
+	ChromeOs = 5;
+	Android = 3;
+	Mac = 1;
+	Ipod = 8;
+}
+
+enum GTPDAppPermission_Type {
+	Camera = 2;
+	ReadContacts = 4;
+	BadgeNotification = 6;
+	AlertNotification = 7;
+	ReadSms = 5;
+	RecordAudio = 3;
+	All = 1;
+	Unknown = 0;
+}
+
+enum GTPDError_Type {
+	MediacodecCriticalError = 17;
+	AppLogUploadHTTPError = 14;
+	PeerconnectionWatchdogTimeout = 20;
+	RegistrationKeyGenerationError = 30;
+	PeerconnectionSetTrackError = 27;
+	PeerconnectionCameraSwitchError = 24;
+	PeerconnectionVideoCapture = 3;
+	Unknown = 0;
+	AppLogUploadIoException = 13;
+	EglCreateFailure = 32;
+	PeerconnectionCloseTimeout = 19;
+	RegistrationMissingGcmToken = 28;
+	PeerconnectionSdpSet = 9;
+	PeerconnectionVideoSourceCreateError = 21;
+	PeerconnectionDataChannel = 6;
+	PeerconnectionCritical = 1;
+	BackendRequestError = 12;
+	PeerconnectionCameraHwFailure = 23;
+	PeerconnectionCameraFreeze = 25;
+	CallActivityUnhandledException = 10;
+	GrpcErrorStatusBegin = 100;
+	PeerconnectionIceFailed = 7;
+	RegistrationSigningError = 29;
+	AppLogUploadFileNotExist = 15;
+	PeerconnectionMediaStream = 5;
+	RoomJoinFailure = 11;
+	IceRestartFailed = 16;
+	PeerconnectionCameraOpenError = 22;
+	GrpcErrorStatusEnd = 199;
+	RemoteUserNotRegistered = 18;
+	PeerconnectionInitialization = 2;
+	PeerconnectionVideoTrack = 4;
+	RegistrationResponseMissingAuthToken = 31;
+	PeerconnectionAudioTrackCreateError = 26;
+	PeerconnectionSdpCreate = 8;
+}
+
+enum PlayLogInAppBuyIntent_InAppBuyApiType {
+	ReplaceSkus = 2;
+	Unknown = 0;
+	Default = 1;
+	ExtraParams = 3;
+}
+
+enum GTPVersionWarning_Type {
+	BlockApp = 2;
+	Unknown = 0;
+	UpgradeApp = 1;
+}
+
+enum GTPDTachyonEventDetailType_Type {
+	SignalingMessageIceCandidate = 17;
+	SignalingMessageAckInvite = 14;
+	SignalingMessageCancelInvite = 20;
+	ContactsCardLoadingCacheOnCompleted = 30;
+	ContactLoaderThreadInterrupted = 40;
+	SaveContactsCacheError = 38;
+	CalleeLiveRingToFirstRemoteFrame = 27;
+	BindToStartOfPull = 24;
+	Unknown = 0;
+	FirstLaunchPermissionsAnswered = 3;
+	SignalingMessageInvite = 13;
+	ContactsCardUpdated = 32;
+	SignalingMessageDeclineInvite = 19;
+	ContactsCardLoadingCacheRequested = 28;
+	CallFromSearchList = 9;
+	LoadContactsCacheError = 39;
+	AuthTokenSavedSuccess = 34;
+	CallFromMissedCallNotification = 6;
+	SignalingMessageBye = 21;
+	AuthTokenSavedFailure = 35;
+	FirstLaunchStarted = 1;
+	ContactInvitedFromDirectDial = 12;
+	SignalingMessageMediaParametersRequest = 23;
+	BindToReceiveMessage = 25;
+	CallFromDirectDial = 10;
+	FirstLaunchRegistrationFinished = 5;
+	CallFromContactCardWithMissedCall = 7;
+	ContactsCardLoadingCacheOnReady = 29;
+	SignalingMessageOffer = 15;
+	ContactsCardUnverifiedItemsRemoved = 33;
+	ContactInvitedFromSearchList = 11;
+	SignalingMessageAnswer = 16;
+	SaveContactsCacheFinished = 37;
+	SignalingMessageToggleVideoMode = 22;
+	SignalingMessageAcceptInvite = 18;
+	FirstLaunchPrivacyPolicyAgreed = 2;
+	FirstLaunchRegistrationRequested = 4;
+	ContactsCardLoadingCallHistoryLoaded = 31;
+	SaveContactsCacheStarted = 36;
+	CalleeAcceptedToFirstRemoteFrame = 26;
+	CallFromContactCardWithoutMissedCall = 8;
+}
+
+enum GTPBindStream_Type {
+	ServerStreamOnly = 2;
+	Unknown = 0;
+	BidiStream = 1;
+	NoStream = 3;
+}
+
+enum GFIComposableLinkAction_Type {
+	Open = 0;
+	Share = 1;
+}
+
+enum GTPDPlatform_Type {
+	Prober = 3;
+	Ios = 2;
+	Test = 4;
+	Android = 1;
+	Unknown = 0;
+}
+
+enum GTPDSmartSuggestionType_Type {
+	Location = 2;
+	ShortMessage = 4;
+	SuggestBot = 6;
+	AppAction = 7;
+	SensitiveTopic = 5;
+	Bot = 3;
+	FullMessage = 1;
+	Unknown = 0;
+}
+
+enum GPBFieldOptions_CType {
+	StringPiece = 2;
+	String = 0;
+	Cord = 1;
+}
+
+enum TranscodingMimeCode_Type {
+	VideoM4V = 12;
+	Video3Gpp = 10;
+	VideoMpeg = 14;
+	AudioMpg = 5;
+	VideoMpeg4 = 15;
+	AudioMp4Latm = 7;
+	AudioMp3 = 3;
+	Video3G2 = 11;
+	VideoMp4 = 13;
+	VideoWebm = 16;
+	MimeUnknown = 0;
+	AudioAac = 2;
+	Video3Gp = 9;
+	AudioMpeg = 4;
+	AudioMp4 = 6;
+	AudioOgg = 8;
+	MimeOther = 1;
+}
+
+enum GTPMessageReceiptDeprecated_Type {
+	Unknown = 0;
+	ReadReceipt = 1;
+}
+
+enum GPBFieldDescriptorProto_Type {
+	TypeBytes = 12;
+	TypeSint32 = 17;
+	TypeGroup = 10;
+	TypeEnum = 14;
+	TypeInt32 = 5;
+	TypeSfixed32 = 15;
+	TypeFixed32 = 7;
+	TypeInt64 = 3;
+	TypeMessage = 11;
+	TypeUint32 = 13;
+	TypeSfixed64 = 16;
+	TypeSint64 = 18;
+	TypeString = 9;
+	TypeFloat = 2;
+	TypeUint64 = 4;
+	TypeFixed64 = 6;
+	TypeBool = 8;
+	TypeDouble = 1;
+}
+
+enum MSPIRasterImage_Encoding {
+	Png = 2;
+	Unspecified = 0;
+	Jpeg = 1;
+	Webp = 3;
+}
+
+enum GTPDIdType_Type {
+	GroupId = 2;
+	CallController = 4;
+	FiId = 6;
+	System = 7;
+	Suggester = 5;
+	FireballBot = 3;
+	PhoneNumber = 1;
+	Unknown = 0;
+}
+
+enum CCADeviceStatus_AutomaticTime {
+	AutoTimeOn = 2;
+	Unknown = 0;
+	AutoTimeOff = 1;
+}
+
+enum CCAPancettaClientInfo_OsType {
+	OsTypeWindows = 2;
+	OsTypeCros = 4;
+	OsTypeOpenbsd = 6;
+	OsTypeLinux = 5;
+	OsTypeUnknown = 0;
+	OsTypeMac = 1;
+	OsTypeAndroid = 3;
+}
+
+enum GTPMethod_Type {
+	GetGroupIds = 30;
+	KickGroupUsers = 27;
+	PushInbox = 24;
+	Send = 3;
+	Unknown = 0;
+	Experiments = 13;
+	LeaveGroup = 28;
+	Echo = 9;
+	InboxSend = 21;
+	Unregister = 6;
+	Join = 1;
+	Verify = 12;
+	InboxPull = 23;
+	CreateGroup = 25;
+	Ping = 10;
+	Register = 5;
+	PushSend = 7;
+	ChangeGroupProfile = 29;
+	Lookup = 11;
+	InboxAck = 22;
+	Leave = 2;
+	SendDirect = 4;
+	GetGroupInfos = 31;
+	AddGroupUsers = 26;
+	PushLeave = 8;
+}
+
+enum MSPClientId_ClientType {
+	Pushkar = 17;
+	Sidekick = 14;
+	CardsWeb = 20;
+	Feeds = 30;
+	OpaAndroidScreenless = 38;
+	Quickstart = 27;
+	Igsa = 24;
+	UnknownClientType = 0;
+	AskjaneIpChat = 3;
+	CardkitIos = 13;
+	AssistantServer = 32;
+	CardServer = 19;
+	NowOnTap = 28;
+	GboardIos = 9;
+	OpaIos = 21;
+	Munin = 34;
+	Agsa = 6;
+	OpaGearhead = 35;
+	Experimental = 1;
+	Zagat = 12;
+	IntegrationTest = 23;
+	SportsMiniapp = 25;
+	Simux = 10;
+	AndroidWearCompanion = 5;
+	MothershipInternal = 7;
+	Bisto = 29;
+	CustomAffinity = 15;
+	Chromecast = 33;
+	AndroidTv = 11;
+	OpaAndroid = 16;
+	GboardIosMessagesExtZeroState = 37;
+	DocsExplore = 22;
+	Gwsdiff = 18;
+	AskjaneSms = 2;
+	AndroidWear = 4;
+	Spaces = 31;
+	GboardIosMessagesExtSearch = 36;
+	GoogleMyBusiness = 26;
+	Searchbox = 8;
+}
+
+enum MSPCardTraits_Size {
+	Widescreen = 2;
+	App = 0;
+	Tray = 1;
+}
+
+enum GTPDeviceIdType_Type {
+	IosVendorId = 2;
+	Unknown = 0;
+	AndroidIidToken = 1;
+}
+
+enum CCAQosTierConfiguration_QosTier {
+	FastIfRadioAwake = 3;
+	UnmeteredOrDaily = 2;
+	Never = 4;
+	UnmeteredOnly = 1;
+	Default = 0;
+}
+
+enum SawmillRoutingDestination_IdCategory {
+	Identifying = 0;
+	Pseudonymous = 1;
+}
+
+enum BotAccess_Type {
+	LegacyPublic = 3;
+	Public = 2;
+	Whitelist = 4;
+	GoogleInternal = 1;
+	Unknown = 0;
+}
+
+enum FireballActivity_LifecycleEvent {
+	Resumed = 2;
+	Stopped = 4;
+	Ready = 6;
+	Created = 5;
+	Unknown = 0;
+	Started = 1;
+	Paused = 3;
+}
+
+enum PurchaseData_ExperienceType {
+	FlashPrime = 2;
+	Unknown = 0;
+	InstantPurchase = 1;
+}
+
+enum GTPBotMetadata_BotType {
+	Google = 3;
+	Curated = 2;
+	Featured = 4;
+	Published = 1;
+	None = 0;
+}
+
+enum GTPRegistrationState_Type {
+	Sms = 3;
+	Notification = 2;
+	None = 4;
+	App = 1;
+	Unknown = 0;
+}
+
+enum GTPDPublicKeyType_Type {
+	Unknown = 0;
+	Curve25519 = 1;
+}
+
+enum GFIVisualElementLog_ResultIndex_ResultIndexType {
+	Value = 2;
+	NotSet = 0;
+	None = 1;
+}
+
+enum CreditCardEntryAction_ExitReason {
+	Canceled = 3;
+	Timeout = 2;
+	Error = 4;
+	Success = 1;
+	UnknownExitReason = 0;
+}
+
+enum GFIIconColor {
+	Googblue = 2;
+	Grey = 0;
+	White = 1;
+}
+
+enum DeviceStatusInfo_IdleStatus {
+	NonInteractive = 2;
+	IdleUnknown = 0;
+	Interactive = 1;
+}
+
+enum MSPFontStyle_Value {
+	Normal = 0;
+	Italic = 1;
+}
+
+enum I18NPHNPhoneNumber_CountryCodeSource {
+	FromNumberWithIdd = 5;
+	FromNumberWithoutPlusSign = 10;
+	FromDefaultCountry = 20;
+	FromNumberWithPlusSign = 1;
+}
+
+enum IosSystemHealthMetrics_MetricEventCode {
+	Unknown = 0;
+	AppToForeground = 2;
+	ViewControllerDisappeared = 4;
+	AppWillTerminate = 9;
+	FirstRunLoopEnded = 6;
+	NetworkStatsLimitReached = 7;
+	AppDidFinishLaunch = 5;
+	ViewControllerAppeared = 3;
+	AppToBackground = 1;
+	AppBecameActive = 8;
+}
+
+enum PlayStoreUiElement_Type {
+	PurchaseAuthScreen = 750;
+	InlineConsumptionAppInstallerDownloadStepCancelButton = 5106;
+	ContentFilterYes = 254;
+	PurchasePmtInfoMessageLink = 1629;
+	CollectionCluster = 443;
+	TubeskyAutoUpdateCard = 10215;
+	SystemUpButton = 602;
+	PurchaseCartExpansionFromVoucher = 717;
+	TubeskyWishlistRemoveItemButton = 10303;
+	SetupWizardBarAppsSelectorButton = 2510;
+	PurchaseAgeChallengeConfirmContinueButton = 1346;
+	MyAccountFamilySharingSettingsAppsRow = 2675;
+	MyAppsLink = 103;
+	MyAccountPaymentMethodsActionsView = 2622;
+	MyAccountListPage = 11;
+	StoryArticlePanel = 6121;
+	DetailsManageSubscriptionsLink = 1840;
+	PreferredEmailActionButton = 1233;
+	RateReviewSectionEditButton = 1202;
+	CancelSubscriptionYes = 243;
+	PurchasePermissionsCancelButton = 294;
+	SingleCardWithButtonCluster = 417;
+	MyMagazinesLink = 107;
+	WebviewChallengeNo = 268;
+	LocationSuggestionsBasedContainerWithNotice = 425;
+	FamilyAuthorizationContinueButton = 5211;
+	InstalledAppsFilterToggleOff = 2915;
+	TubeskyWishlistAddItemButton = 10302;
+	AvatarCluster = 419;
+	PurchaseRedeemCodeZipInput = 1103;
+	FamilyDetailsPageShareToggleYes = 5225;
+	PurchaseProfileActionAddCarrierBilling = 811;
+	SetupAvailablePromoOfferActivity = 890;
+	StoryCardCluster = 437;
+	VisitDevSiteLink = 114;
+	TubeskyCategoryActionGamesCard = 10207;
+	InlineConsumptionAppInstallerDialog = 5100;
+	TestingProgramReviewEditButton = 6022;
+	InlineConsumptionAppInstallerInstallAfterPurchaseStep = 5103;
+	MyAccountFamilyViewRow = 2673;
+	PersonAvatar = 279;
+	CardViewBundlePackage = 520;
+	SubscriptionCancellationInProgressDialog = 326;
+	CardViewMediumPlus = 508;
+	PurchaseChangeSubscriptionScreen = 1280;
+	PurchaseCcSetupErrorDialog = 864;
+	PurchasePmtCancelButton = 1622;
+	CompoundDetailsPageCondensed = 22;
+	PurchaseAgeChallengeEntryContinueButton = 1341;
+	DetailsTestingProgramSectionOptInButton = 1851;
+	CancelAllAppInstallsButton = 2918;
+	StructuredReviewRatingQuestion = 6002;
+	RentHdButton = 229;
+	AppsHomeLink = 132;
+	PurchaseDcbPasswordDialog = 820;
+	PurchaseDcbSetupEditAddressOkButton = 846;
+	FamilyAuthorizationPromptScreen = 5210;
+	FamilyMemberSettingsPage = 5221;
+	BillingProfileButtonUpdateInstrument = 819;
+	TubeskyCategoryRolePlayingGamesCard = 10210;
+	MyAppsFamilyLibraryTab = 433;
+	PurchasePmtInstrumentSelector = 1730;
+	MyAccountSubscriptionCancelButton = 2643;
+	AvailablePromoOfferSkip = 253;
+	CardViewPerson = 515;
+	TubeskyUnclassifiedCluster = 10100;
+	DetailsTestingProgramSectionOptOutButton = 1852;
+	PurchasePmtLegalCountrySelector = 1668;
+	UnclassifiedCard = 500;
+	PurchaseDcbTosDialogAcceptButton = 824;
+	MyAccountFamilySharingSettingsRow = 2674;
+	TagLink = 2922;
+	FamilyMemberSettingsRemoveMemberMenuButton = 5222;
+	SeeMoreButton = 290;
+	EntertainmentOnboardingQuicklinkOverlay = 5000;
+	MyAccountPaymentMethodsErrorView = 2627;
+	YoutubeVideoClusterContent = 2908;
+	MerchandisingCluster = 407;
+	AppStreamingPage = 24;
+	MyAccountSubpagePaymentMethods = 19;
+	FavoriteRemove = 2925;
+	PurchasePmtFixGcoreDialog = 1636;
+	PurchaseAddressChallengeDialog = 1320;
+	PurchaseErrorOkButton = 771;
+	BannerWithContentCluster = 422;
+	GiftingMessageScreen = 5552;
+	PurchasePmtLegalMessageWebView = 1630;
+	PurchasePmtNameForm = 1637;
+	UnsubscribeButton = 227;
+	CardViewAvatar = 519;
+	TubeskyUninstallButton = 10306;
+	RateReviewDialogSaveButton = 1205;
+	PurchasePmtCcAddCardForm = 1650;
+	NotificationWaitingForWifi = 906;
+	RefundDetailsScreenCancelButton = 1153;
+	FamilyPurchaseApprovalsPage = 5231;
+	SetupWizardRedeemedOfferMessageDialog = 1220;
+	PurchaseProfileScreen = 801;
+	PurchaseAcknowledgementChallengeContinueButton = 1291;
+	DetailsShimFragment = 17;
+	SetupWizardRedeemCodeActivity = 898;
+	CardViewWarmWelcome = 516;
+	MyAppsLibraryTab = 406;
+	PromptForFopContinueButton = 1006;
+	MerchBannerCluster = 409;
+	DfeListTab = 408;
+	PinEntryYes = 258;
+	PurchasePmtLoginHelpLink = 1681;
+	PurchaseErrorScreen = 770;
+	RateReviewDialogSubmitButton = 1204;
+	AggregatedHomeLink = 131;
+	SocialHomeLink = 124;
+	AgeVerificationErrorScreen = 1406;
+	PurchaseCcSetupCancelButton = 863;
+	SetupWizardBarAppsSelectorDialogOkButton = 2506;
+	FamilyCorpusSharingSettingsPage = 5224;
+	PromptForFopActivity = 1001;
+	DetailsPage = 2;
+	EntertainmentOnboardingAppsGamesScreen = 5007;
+	MyAccountRewardsMoreButton = 2661;
+	ErrorDialogAckButton = 2903;
+	TubeskyUpdateButton = 10308;
+	OpenFreeBookButton = 225;
+	MyPeoplePageLink = 123;
+	InlineConsumptionAppInstallerDownloadStep = 5105;
+	TubeskySettingsPage = 10003;
+	PurchaseSuccessScreenWithSessionMessage = 776;
+	FamilyAcquisitionDialog = 5213;
+	PurchaseCartSelectVoucher = 718;
+	PurchaseRedeemNowButton = 1109;
+	LaserInThisBundleCard = 2701;
+	DetailsTranslateYes = 256;
+	PurchaseRedeemCodeNameInput = 1102;
+	RateReviewYes = 260;
+	StoryFullViewAvPlayer = 6175;
+	PurchasePmtUsernamePasswordForm = 1680;
+	AgeVerificationSmsCodeScreen = 1403;
+	MyAppsInstalledTabInstalledSection = 2803;
+	PurchaseChangeSubscriptionContinueButton = 1281;
+	PurchaseCartBuyButton = 711;
+	StructuredReviewSection = 6000;
+	PurchaseGiErrorScreen = 1501;
+	EntertainmentOnboardingExitButton = 5005;
+	PurchaseAppsPermissionsScreen = 791;
+	NavDrawer = 5302;
+	EntertainmentOnboardingSplashScreen = 5008;
+	StoreLocatorScreen = 1330;
+	MyAccountFamilyManagementCard = 2670;
+	GaiaAuthenticationYes = 265;
+	StructuredReviewNextQuestionButton = 6006;
+	PromptForFopDialog = 1000;
+	CardViewRate = 514;
+	MyBooksLink = 106;
+	UninstallWizardNegativeButton = 5526;
+	MyAccountSubscriptionMoreButton = 2641;
+	PreregistrationRemoveButton = 296;
+	NotificationSuccessfullyInstalled = 901;
+	RateReviewCardRatingBar = 1208;
+	OtaInstallDialog = 309;
+	TestingProgramReviewDeleteButton = 6024;
+	SystemClosed = 603;
+	DetailsDiscoveryBar = 1800;
+	PurchaseRedeemAddressContinueButton = 1105;
+	EnableButton = 220;
+	PurchasePmtSimpleForm = 1715;
+	AutoUpdateCleanupOkButton = 237;
+	FamilySingupBottomSheetGetStartedButton = 5233;
+	SuggestionClusterTitle = 291;
+	StoryMovieNoTrailerPanel = 6129;
+	PurchaseAcknowledgementChallengeScreen = 1290;
+	PurchaseRedeemConfirmationCancelButton = 1107;
+	RateReviewNo = 261;
+	CancelAppInstallButton = 2917;
+	UninstallWizardScreen = 5520;
+	MyAppsInstalledTabWaitingForWifiSection = 2804;
+	FreeSongOfTheDayPage = 8;
+	PurchaseCcSetupOkButton = 862;
+	MyAppsInstalledTab = 405;
+	FamilySignupBottomSheet = 5232;
+	DetailsDiscoveryBadgePlaceholder = 1807;
+	RefundDetailsScreenContinueButton = 1152;
+	PurchaseDcbSetupEditAddressCancelButton = 847;
+	PurchaseRedeemCodeScreen = 881;
+	MyAccountLandingPageRowPaymentMethods = 2680;
+	PurchasePmtPmFragment = 1619;
+	TaglinksCluster = 447;
+	TubeskyPriceButton = 10300;
+	EntertainmentHomeLink = 133;
+	DetailsDiscoveryBadgeSocialRating = 1803;
+	StructuredReviewPrevQuestionButton = 6007;
+	MyAccountOrderHistoryRow = 2602;
+	PromptForFopMoreDetailsButton = 1009;
+	ArtistGoogleplusLink = 119;
+	PurchaseCcSetupInputErrors = 866;
+	MyAppsListCard = 501;
+	SongSnippetCard = 502;
+	ContinueAndExitButton = 5403;
+	CardViewHighlightsBanner = 523;
+	RefundSurveyScreen = 1154;
+	StructuredReviewFeatureQuestion = 6003;
+	MyAccountPaymentMethodsAccountCompletionNotification = 2630;
+	DetailsSecondaryActionsSection = 1820;
+	ReviewSamplesSection = 1210;
+	PurchasePmtPopupRedirectFullScreen = 1746;
+	PurchaseAgeChallengeConfirmCancelButton = 1347;
+	AgeVerificationAgeChallengeScreen = 1401;
+	BillingProfileOptionAddPlayCredit = 816;
+	BuyHdButton = 232;
+	AddToCirclesCluster = 410;
+	AutoUpdateCleanupNotYetButton = 236;
+	FamilyMemberSettingsLeaveFamilyMenuButton = 5223;
+	PurchaseSuccessAuthChoiceNever = 1253;
+	ShareGplus = 273;
+	TubeskyFreeButton = 10313;
+	TrustedSourceCluster = 411;
+	PurchasePmtInfoMessageShowDetailsLink = 1628;
+	TubeskyDownloadingRow = 10104;
+	UninstallWizardAppRow = 5524;
+	MyAccountOrderHistoryRefundButton = 2603;
+	PurchasePmtSelectableUiFieldGroupForm = 1633;
+	DetailsDocument = 209;
+	PurchasePmtErrorDialog = 1624;
+	PurchasePmtDialog = 1600;
+	MyAccountPaymentMethodsEditButton = 2626;
+	PurchaseAppsDependenciesScreenAcceptButton = 5502;
+	PurchaseSuccessManageSettings = 777;
+	StoreLocatorContinueButton = 1331;
+	PreorderHdButton = 297;
+	RateReviewConfirmGplusSignup = 262;
+	SetupWizardPromptForFopActivity = 892;
+	PurchaseRedeemCodeCancelButton = 889;
+	PurchaseCartContinueButton = 712;
+	RateReviewDialogCancel = 1207;
+	UpdateAllButton = 276;
+	NewsstandArticlePage = 15;
+	RefundSurveyScreenContinueButton = 1156;
+	StoryPersonPanel = 6126;
+	MagazinesHomeLink = 137;
+	WebviewChallengeYes = 267;
+	ContinueLaunchButton = 219;
+	TubeskyBrowseGamesPage = 10001;
+	EntertainmentOnboardingEntertainmentTab = 5010;
+	TubeskyParentalControlsCard = 10213;
+	OtaInstallDialogCancelButton = 250;
+	StoryAppPanel = 6131;
+	CardViewWithButton = 518;
+	PurchaseAddressChallengeContinueButton = 1321;
+	RateReviewDialogV2 = 1203;
+	TubeskyCategoryNewsAppsCard = 10203;
+	PurchaseGiUsernamePasswordFormScreen = 1530;
+	PreregistrationDialog = 321;
+	SearchLink = 102;
+	PurchasePmtImFragment = 1620;
+	FamilyLibraryOnboardingBenefitsScreen = 5227;
+	ViewAppPermissionsLink = 130;
+	RentSdButton = 228;
+	QuicklinksBanner = 429;
+	CardViewPreferredEmail = 517;
+	InlineAppPostPurchaseDialog = 5401;
+	TubeskyFullDescriptionPage = 10006;
+	TrailerButton = 241;
+	GiftLandingPage = 16;
+	PurchaseCartPaymentOptionsLink = 714;
+	SystemBackButton = 600;
+	StructuredReviewFinishButton = 6008;
+	PromptForFopErrorScreen = 1004;
+	BundleContainerCluster = 421;
+	EntertainmentOnboardingQuicklinkOverlayCancelButton = 5002;
+	PurchaseDcbSetupTosScreen = 843;
+	ErrorDialogViewStorageButton = 2904;
+	GearDropdownContainer = 2905;
+	CarouselPreviousButton = 2907;
+	MyAccountPaymentMethodsInstrumentsView = 2621;
+	SetupWizardRedeemedOfferMessageOkButton = 1221;
+	AccessRestrictedDialog = 308;
+	SetupWizardDcbSetupEditAddressScreen = 896;
+	StoryMiniAvPlayer = 6177;
+	AgeVerificationDialog = 1400;
+	TubeskyDownloadButton = 10314;
+	StoryPanelDetailsCard = 6170;
+	PurchaseProfileActionAddCreditCard = 810;
+	ViewGplusProfileButton = 281;
+	PurchaseDisambiguationDialog = 780;
+	InstallButton = 221;
+	MyAccountLandingPageRowOrderHistory = 2684;
+	BillingProfileOptionRedeemCode = 815;
+	StoryClusterPanel = 6120;
+	StoryBookPanel = 6122;
+	RatingsDropDownAll = 288;
+	NetworkDownloadPreferenceSettingsScreen = 6321;
+	AllAccessSignUpButton = 286;
+	PurchasePmtFullScreen = 1601;
+	DrawerSwitchToAccounts = 278;
+	DrawerSwitchToDestinations = 277;
+	CardViewArtist = 504;
+	FreeCancelButton = 293;
+	TubeskyDfeListTab = 10102;
+	LaserViewBundleButton = 2703;
+	PurchaseDcb2SetupDialog = 840;
+	HighlightBanner = 428;
+	DetailsDiscoveryBadgeSocialPlusone = 1804;
+	PurchasePmtOkButton = 1621;
+	AntennaPage = 6;
+	SetupWizardBarAppsActivity = 2500;
+	PurchaseProfileExistingInstrument = 802;
+	CardViewSmall = 511;
+	MyAccountLandingPageRowSubscriptions = 2682;
+	SettingsPage = 12;
+	NotificationOutstandingUpdates = 903;
+	GiftingDialog = 5551;
+	FlagItemDialog = 301;
+	TubeskyUpdateAllCard = 10211;
+	PurchaseAgeChallengeEntryScreen = 1340;
+	NotificationNewUpdatesNeedApproval = 904;
+	PurchasePmtInlineErrorMessage = 1626;
+	TubeskyTrailerButton = 10301;
+	PurchaseDcbSetupDeclineButton = 849;
+	PurchaseRedeemPaymentsHost = 1106;
+	ContentsTab = 403;
+	FamilySignupBottomSheetSkipButton = 5234;
+	QuickLink = 101;
+	PurchasePmtAddressForm = 1667;
+	SetupWizardBarAppsSelectorDialogCancelButton = 2507;
+	PurchasePmtNextScreenButton = 1640;
+	PasswordPromptDialog = 300;
+	StoryVideoPanel = 6127;
+	TubeskyScreenshotCard = 10218;
+	PurchaseDcbAssociationDialog = 842;
+	ReviewFeedbackSpamButton = 1214;
+	ActionableErrorDialog = 324;
+	PurchaseDcbTosDialog = 823;
+	PurchaseCartScreen = 710;
+	FamilyLibraryOnboardingSharingSettingsFirstScreen = 5228;
+	TubeskyMyAppsPage = 10002;
+	DetailsDiscoveryBadgeDownloadCount = 1805;
+	GenericContainerWithNotice = 431;
+	TubeskyCategorySportsGamesCard = 10209;
+	CardViewListingFlat = 528;
+	CategoryLink = 100;
+	FamilyLibraryOnboardingSharingSettingsSecondScreen = 5229;
+	NetworkDownloadPreferenceAlwaysButton = 6325;
+	MyAccountSubscriptionOpenButton = 2644;
+	MyAccountPaymentMethodsActionsSwitcher = 2624;
+	StructuredReviewCommentQuestion = 6004;
+	PurchaseAuthFingerprintOptInCheckbox = 755;
+	PurchaseGiDialog = 1500;
+	RateReviewConfirmGplusAccepted = 263;
+	RateReviewDialog = 312;
+	DotNotification = 299;
+	ClusterNotice = 2900;
+	TubeskyDebugOptionsCard = 10217;
+	TubeskyFlagInappropriateButton = 10315;
+	PurchaseChangeFamilyInstrumentDialog = 5200;
+	MyAccountSubpageFamilySettings = 20;
+	PurchaseAuthForgotCredentials = 756;
+	PurchaseCartRedeemLink = 716;
+	ContainerFilterSelector = 249;
+	SearchBox = 5300;
+	InlineInstallAdCluster = 436;
+	BuyFromButton = 233;
+	UpdateButton = 217;
+	UpdateSubscriptionInstrumentDialog = 5580;
+	MyAccountFamilyCreateRow = 2671;
+	GiftingSendGiftButton = 5550;
+	TubeskyRefundButton = 10305;
+	SelectedTagLink = 2923;
+	RatingsDropDown = 287;
+	ReviewFeedbackHelpfulButton = 1212;
+	PurchaseRedeemConfirmationScreen = 883;
+	MyAccountPaymentMethodsEditFooter = 2623;
+	CardViewImageLink = 525;
+	ImageLinkCardCluster = 434;
+	StoryFullViewTextScreen = 6179;
+	AgeVerificationVerifyButton = 1408;
+	BillingProfileExistingInstrument = 818;
+	NotificationRichUserNotificationPrimaryAction = 908;
+	StoryMovieInfoPanel = 6128;
+	PurchaseRedeemAddressScreen = 1104;
+	DismissItemButton = 212;
+	BundleBannerCluster = 420;
+	DrawerAccountsExpand = 283;
+	DrawerIconBurger = 5301;
+	ScreenshotsButton = 240;
+	TubeskyBrowseHomePage = 10000;
+	WishlistButton = 203;
+	VettedAppFeaturesSection = 6100;
+	SetupWizardDcbAssociationScreen = 897;
+	ContentFilterDialog = 315;
+	CardViewMedium = 507;
+	MyAccountSubscriptionCard = 2640;
+	PurchasePmtOtpButton = 1634;
+	RefundErrorScreenContinueButton = 1162;
+	EntertainmentOnboardingEntertainmentScreen = 5006;
+	PurchaseGiftEmailContinueButton = 1311;
+	TubeskyCategoryCasualGamesCard = 10206;
+	CancelSubscriptionNo = 244;
+	MyCirclesCluster = 415;
+	SignInPromptDialogContinueButton = 2912;
+	CategoryLinksCluster = 440;
+	SetupWizardOptionalPreloadsActivity = 2520;
+	TryButton = 222;
+	StoryMusicPanel = 6125;
+	AcceptAndBuyButton = 201;
+	NetworkDownloadSettingsScreenSettingsButton = 6326;
+	FreeButton = 223;
+	MyWishlistLink = 108;
+	StoryDismissedAvPlayer = 6178;
+	ReviewFeedbackButton = 1211;
+	DeactivateButton = 216;
+	WishlistPage = 5;
+	TubeskySwitchAccountCard = 10219;
+	DeveloperPrivacyLink = 116;
+	ActiveSubscription = 242;
+	PurchaseAgeChallengeConfirmScreen = 1345;
+	PurchsaeAppsDetailedPermissionsScreens = 793;
+	PurchaseProfileDialog = 800;
+	PurchaseDialog = 700;
+	MyMoviesAndTvLink = 105;
+	StoryTvShowPanel = 6130;
+	DetailsTranslateNo = 257;
+	PlayGamesSuggestionInstallButton = 274;
+	SimpleErrorDialog = 323;
+	PromoTab = 402;
+	MyAccountRewardsRedeemButton = 2663;
+	OverflowMenuButton = 238;
+	DownloadButton = 224;
+	LaserExtraItemSnippet = 2702;
+	RefundResultScreenContinueButton = 1159;
+	WishlistCollectionCluster = 448;
+	RateCluster = 412;
+	AgeVerificationResendButton = 1405;
+	RateReviewSectionDeleteButton = 1209;
+	MyAppsPage = 9;
+	AgeVerificationVerifyCodeButton = 1404;
+	PromptForFopScreen = 1002;
+	DistinguishedAdCluster = 435;
+	TubeskyStopDownloadingCard = 10212;
+	NewsstandArticleClusterContent = 2909;
+	RefundErrorScreen = 1161;
+	EmptyCluster = 416;
+	WishlistAddItemButton = 204;
+	PromptForFopMoreToggler = 1007;
+	PlayGamesSuggestionNotNowButton = 275;
+	NotificationPreregistrationReleased = 905;
+	PurchasePmtTaxInfoForm = 1666;
+	FavoriteAdd = 2924;
+	PurchaseRedeemLaterButton = 1108;
+	UninstallWizardProgressDialog = 5523;
+	PurchaseCartExpandedDetails = 715;
+	PurchaseGiftEmailScreen = 1310;
+	PurchasePmtCardForm = 1654;
+	PlusOneDialog = 319;
+	WideAdCluster = 438;
+	TubeskyEnableButton = 10311;
+	MyAccountLandingPageRowFamilySettings = 2681;
+	PlayYoutubeLink = 120;
+	RefundButton = 214;
+	TestingProgramMyReviewSection = 6040;
+	CardViewStory = 529;
+	ClusterNoticeSettingsButton = 2901;
+	GmailItinerarySuggestionsBasedContainerWithNotice = 430;
+	PromptForFopSuccessScreen = 1005;
+	NetworkDownloadPreferenceWaitForWifiOption = 6323;
+	GaiaAuthenticationNo = 266;
+	PurchaseRedeemCodeButton = 882;
+	SeasonSelector = 211;
+	OtaInstallDialogInstallButton = 251;
+	CardViewDistinguishedAd = 526;
+	MyAccountLink = 127;
+	CreatorDetailsPage = 7;
+	TubeskyCategoriesRow = 10101;
+	PurchaseRedeemConfirmationButton = 884;
+	PurchaseDcb3SetupDialog = 841;
+	RefundResultScreen = 1158;
+	GaiaRecoveryDialog = 307;
+	UninstallWizardConfirmationDialog = 5522;
+	ActionBannerCluster = 414;
+	StoryInlinedAvPlayer = 6174;
+	TubeskyRecentlyUpdatedRow = 10103;
+	PurchasePmtCcNfcInfoDialog = 1656;
+	BillingProfileOptionCreateInstrument = 817;
+	TubeskySearchPage = 10007;
+	MyAccountSubscriptionUpdateButton = 2646;
+	UnclassifiedCluster = 400;
+	StoryDetailPageButton = 6173;
+	SetupWizardFinalHoldActivity = 2508;
+	CardActionMenuButton = 292;
+	PurchasePmtBillingAccountForm = 1737;
+	LaunchButton = 218;
+	StoryWishlistButton = 6176;
+	PurchaseSuccessAuthChoiceSession = 1252;
+	BooksHomeLink = 136;
+	PurchasePmtCcOcrButton = 1652;
+	StoryMoviePanel = 6124;
+	SettingsLink = 111;
+	PurchaseGiLoginButton = 1532;
+	FriendReviewCluster = 424;
+	TopChartsNewEntrantCluster = 426;
+	MyAccountPaymentMethodsFamilyInstrumentsButton = 2629;
+	ReviewFeedbackInappropriateButton = 1217;
+	TubeskyCategoryMusicAppsCard = 10202;
+	PromptForFopExistingFopScreen = 1003;
+	MyNewsstandLink = 121;
+	GiftingErrorScreen = 5554;
+	LaserAlsoAvailableInCard = 2700;
+	PurchasePmtInfoMessageSection = 1627;
+	UninstallWizardPositiveButton = 5525;
+	PeoplePage = 4;
+	PurchaseAppsPermissionsAcceptButton = 792;
+	EntertainmentOnboardingAppsGamesTab = 5009;
+	MyAccountRewardsCard = 2660;
+	TubeskyFullDescriptionButton = 10304;
+	NetworkDownloadPreferenceJustOnceButton = 6324;
+	SetupWizardCcActivity = 891;
+	EpisodeSnippetCard = 503;
+	AutoUpdateCleanupDialog = 306;
+	TubeskyPurchaseAuthCard = 10214;
+	SetupWizardBarDeviceSelectorDialog = 2501;
+	MyAccountOrderHistoryRequestRefundButton = 2606;
+	TestingProgramReviewContactDeveloperButton = 6021;
+	PurchaseAuthConfirmButton = 751;
+	NotificationNewUpdates = 900;
+	PurchasePmtCcOcrDialog = 1653;
+	CollectionWithReasonsCluster = 444;
+	PurchaseAddressChallengeCancelButton = 1322;
+	TopChartsClusterActionButton = 1238;
+	StoreLocatorCancelButton = 1332;
+	FortuneCard = 449;
+	TubeskySettingsRow = 10107;
+	TubeskyContinueLaunchButton = 10310;
+	MyAccountOrderHistoryCard = 2601;
+	ArtistYoutubeLink = 118;
+	CardViewEditorialNonApp = 513;
+	PurchaseRedeemLaterScreen = 1110;
+	WebviewChallenge = 316;
+	InlineConsumptionAppInstallerPermissionsStepButton = 5112;
+	CardViewAdWithInlineInstallButton = 527;
+	MoreInfoButton = 2919;
+	PurchaseRedeemCodeDialog = 880;
+	PurchaseDcbPasswordDialogOkButton = 821;
+	UpdateSubscriptionInstrumentProfile = 5581;
+	MyAccountOrderHistoryMoreButton = 2600;
+	PromptForFopMoreDetailsDialog = 1010;
+	StoryPage = 21;
+	PurchasePmtLoadingDialog = 1625;
+	BundleActionButton = 1235;
+	CirclesButton = 280;
+	ClusterNoticeOkButton = 2902;
+	InlineConsumptionAppInstallerShouldInstallStep = 5101;
+	PinEntryDialog = 311;
+	NotificationSuccessfullyUpdated = 902;
+	BuySdButton = 231;
+	TestingProgramReviewSubmitButton = 6023;
+	PurchaseProfileEditInstrumentButton = 803;
+	DetailsDiscoveryBadgeAggregatedRating = 1802;
+	YoutubeVideoCluster = 427;
+	EpisodeExpansionYes = 271;
+	PurchaseDisambiguationEntry = 782;
+	ContentFilterChoiceConfirmationDialog = 322;
+	PurchasePmtValidationErrors = 1623;
+	MiniDetailsCluster = 432;
+	StructuredReviewRatedState = 6001;
+	RateReviewDialogDeleteButton = 1206;
+	PurchaseAppsDependenciesScreen = 5501;
+	SetupWizardPromptForFopScreen = 893;
+	RentFromButton = 230;
+	InlineConsumptionAppInstallerErrorStepButton = 5110;
+	PurchasePmtCustomerForm = 1665;
+	PurchasePmtRedirectForm = 1745;
+	PurchasePaymentDeclinedContinueButton = 1301;
+	PurchaseRedeemCodeInput = 888;
+	PlusOneButton = 208;
+	WarmWelcomeDismissButton = 1231;
+	PreregistrationAddButton = 295;
+	TubeskyCategoryArcadeGamesCard = 10205;
+	CarouselNextButton = 2906;
+	MyAccountLandingPageRowRewards = 2683;
+	BundleInstallAllButton = 1236;
+	InlineConsumptionAppInstallerShouldInstallStepButton = 5102;
+	PurchaseRedeemAddressDialog = 887;
+	InlineConsumptionAppInstallerInstallAfterPurchaseButton = 5104;
+	ClearFamilySafeSearchModeButton = 298;
+	InstalledAppsFilterToggleOn = 2914;
+	PurchaseCvcVerifyButton = 1271;
+	TubeskyCancelInstallButton = 10316;
+	EntertainmentOnboardingQuicklinkOverlayHighlightButton = 5003;
+	RatingsDropDownTopRated = 289;
+	RateReviewConfirmGplusDialog = 313;
+	PurchaseChangeFamilyInstrumentDialogOkButton = 5201;
+	MyMusicLink = 104;
+	RefundResultScreenHelpButton = 1160;
+	WishlistRemoveItemButton = 205;
+	FullWidthListViewCluster = 441;
+	SetupWizardDcb3SetupActivity = 894;
+	TubeskyCategoryPage = 10004;
+	PinEntryNo = 259;
+	AvailablePromoOfferActivity = 13;
+	AgeVerificationAcknowledgeButton = 1407;
+	InlineAppPurchaseDialog = 5400;
+	PreorderButton = 234;
+	PurchaseAuthManageSettings = 754;
+	VettedAppFeature = 6101;
+	TubeskyUpToDateRow = 10106;
+	PreorderCancelButton = 235;
+	PurchaseCcSetupDialog = 860;
+	PurchaseSuccessCancelButton = 779;
+	SetupWizardDcbSetupTosScreen = 895;
+	PromptForFopNoneEntry = 1008;
+	PurchasePmtDocumentUploadForm = 1638;
+	PurchaseCartRemoveVoucher = 719;
+	InlineAppInstallDialog = 14;
+	MyAccountFamilyManageRow = 2672;
+	CardViewSingle = 510;
+	SearchPage = 3;
+	RateAndReviewButton = 206;
+	GiftingErrorOkButton = 5555;
+	TubeskyDeactivateButton = 10307;
+	MyAccountSubscriptionRow = 2642;
+	FamilySharingSettingsPage = 5220;
+	DrawerAccountsCollapse = 284;
+	CompoundDetailsPageExpanded = 23;
+	CategoriesTab = 401;
+	MyAccountPaymentMethodsCard = 2620;
+	PurchaseGiTryAgainButton = 1502;
+	StoryExpandTextButton = 6171;
+	PurchasePmtDummyErrorMessageForm = 1760;
+	PurchasePmtActionBarHomeButton = 1632;
+	EntertainmentOnboarding = 5004;
+	ReviewFeedbackUnhelpfulButton = 1213;
+	TabBubbleEntertainment = 2910;
+	ReviewTip = 1216;
+	PurchaseDcbSetupAcceptButton = 848;
+	SetupWizardBarDeviceSelectorDialogOkButton = 2503;
+	MyAccountPaymentMethodsInstrumentsSwitcher = 2625;
+	BackgroundDataRestrictedDialog = 320;
+	PurchaseAuthOptOutCheckbox = 753;
+	ChooseAccountDialog = 310;
+	StoryPlayButton = 6172;
+	CardViewListingSmall = 506;
+	CardViewLarge = 505;
+	CancelPreorderNo = 246;
+	EntertainmentOnboardingQuicklinkOverlayDismissButton = 5001;
+	SearchListResultsCluster = 442;
+	SystemTapOutside = 601;
+	Other = 0;
+	PurchaseProfileActionTopUp = 813;
+	PurchaseAuthHelpToggle = 752;
+	ShareButton = 202;
+	AutoUpdateStateButton = 210;
+	DetailsTestingProgramSection = 1850;
+	TubeskyAboutCard = 10216;
+	SelfUpdateButton = 282;
+	TestingProgramReviewSection = 6020;
+	RateReviewSection = 1200;
+	PurchaseCcSetupErrorDialogWithChoice = 865;
+	MoviesAndTvHomeLink = 135;
+	PurchasePmtPageScreen = 1639;
+	ArchiveDocsDialog = 317;
+	TopChartsListCluster = 445;
+	ReviewsDialog = 302;
+	FamilyParentGuideLink = 129;
+	ArchiveDocsYes = 269;
+	LoadingSpinner = 213;
+	MyAccountPaymentMethodsTryAgainButton = 2628;
+	RefundSurveyScreenCancelButton = 1157;
+	TubeskyCategoryRacingGamesCard = 10208;
+	UninstallButton = 215;
+	SetupWizardBarSetupAsNewDeviceOption = 2502;
+	SignInPromptDialog = 325;
+	MyAccountRewardsRow = 2662;
+	FamilyLibraryOnboardingMusicPlanPurchaseScreen = 5330;
+	AllAccessListenButton = 285;
+	PurchaseStepPaymentsHost = 740;
+	GiftingMessageContinueButton = 5553;
+	RateReviewSectionRatingBar = 1201;
+	BuyGiftCardLink = 125;
+	CardViewFriendReview = 522;
+	PurchaseCcSetupScreen = 861;
+	TubeskyInstallButton = 10312;
+	ActionBannerActionButton = 1230;
+	NetworkDownloadPreferenceScreen = 6320;
+	WarmWelcomeDialog = 303;
+	RateReviewConfirmGplusNo = 264;
+	WfeVerticalMenu = 418;
+	PurchaseDisambiguationScreen = 781;
+	CancelSubscriptionDialog = 304;
+	StoryLyricsPanel = 6123;
+	PreferredEmailDismissButton = 1234;
+	FamilyDetailsPageShareToggleNo = 5226;
+	PurchaseRedeemSuccessScreen = 885;
+	CardViewFeatured = 521;
+	PurchasePmtLegalMessageSection = 1631;
+	RefundSurveyScreenReason = 1155;
+	PurchasePmtSubform = 1716;
+	FamilyAuthorizationAuthScreen = 5212;
+	RedeemLink = 109;
+	PurchasePmtCcEditCardScreen = 1651;
+	InlineConsumptionAppInstallerErrorStep = 5109;
+	PurchasePmtCcNfcButton = 1655;
+	PurchaseSuccessAuthChoiceAlways = 1251;
+	InfoButton = 239;
+	SetupWizardBarAppsSelectorDialog = 2505;
+	InlineConsumptionAppInstallerReadyToReadStep = 5107;
+	UninstallWizardSelectionDialog = 5521;
+	PurchaseProfileActionRedeemCode = 812;
+	PurchaseSuccessScreenWithAuthChoices = 1250;
+	NetworkDownloadPreferenceDownloadNowOption = 6322;
+	BadgeLink = 113;
+	MyAccountPage = 10;
+	MyAccountOrderHistoryExpansionToggle = 2604;
+	SetupWizardBarDeviceSelectorDialogCancelButton = 2504;
+	MyAppsSubscriptionsTab = 404;
+	TestingProgramMyReviewDeleteButton = 6041;
+	RateAndSuggestCluster = 413;
+	RefundDialog = 1150;
+	AppStreamingButton = 2920;
+	PurchaseCartExpansionToggle = 713;
+	TubeskyDetailsPage = 10005;
+	PurchaseDcbTosDialogDeclineButton = 825;
+	TubeskyCategoryToolsUtilitiesCard = 10204;
+	AvatarCollectionCluster = 446;
+	PriceButton = 200;
+	NotificationRichUserNotification = 907;
+	PurchasePaymentDeclinedScreen = 1300;
+	MyAccountFamilySharingSettingsMoviesRow = 2676;
+	CardViewEditorialApp = 512;
+	MusicHomeLink = 134;
+	DetailsDiscoveryBadgeGeneric = 1801;
+	FlagInappropriateButton = 207;
+	CardViewMini = 509;
+	PurchaseRedeemCodeCountryMenu = 1101;
+	CardViewMiniDetails = 524;
+	PurchaseAppsPermissionsDialog = 790;
+	PurchaseGiLearnMoreButton = 1531;
+	ReviewTipsSection = 1215;
+	PurchaseDcbPasswordDialogCancelButton = 822;
+	ContentFilterNo = 255;
+	PurchaseSuccessOkButton = 778;
+	TubeskyPendindUpdateRow = 10105;
+	ArtistLink = 117;
+	CancelPreorderYes = 245;
+	PurchaseAppsDependenciesDialog = 5500;
+	PurchaseCartCancelButton = 720;
+	PurchaseCvcScreen = 1270;
+	NotificationRichUserNotificationSecondaryAction = 909;
+	MyAppsInstalledTabDownloadingSection = 2800;
+	DownloadNowButton = 2911;
+	NewsArticleCluster = 423;
+	DeepLinkShimFragment = 18;
+	PurchaseDcbSetupEditAddressButton = 844;
+	AgeVerificationCancelButton = 1409;
+	SubscriptionCancellationInProgressDialogButton = 2913;
+	MyAccountFamilySharingSettingsBooksRow = 2677;
+	MyAppsInstalledTabUpdateAvailableSection = 2801;
+	DetailsDiscoveryBadgeSocialPlayer = 1806;
+	TubeskyCategoryMediaAppsCard = 10201;
+	InlineAppMoreDetailsButton = 5402;
+	SubscribePriceButton = 226;
+	InlineConsumptionAppInstallerPermissionsStep = 5111;
+	InlineConsumptionAppInstallerReadyToReadStepReadButton = 5108;
+	TubeskyLaunchButton = 10309;
+	MyAccountSubscriptionHelpButton = 2645;
+	GaiaAuthenticationDialog = 314;
+	GaiaRecoveryYes = 247;
+	PurchasePmtOtpContainer = 1635;
+	CancelPreorderDialog = 305;
+	EpisodeExpansionNo = 272;
+	SendDevEmailLink = 115;
+	AvailablePromoOfferChose = 252;
+	TvSeeEpisodesButton = 2916;
+	AccountsLink = 110;
+	SetupWizardBarDeviceSelectorButton = 2509;
+	PurchaseSuccessScreen = 775;
+	ArchiveDocsNo = 270;
+	TubeskyCard = 10200;
+	BuyGooglePlayCreditLink = 128;
+	MyAccountOrderHistoryOpenButton = 2605;
+	AgeVerificationSubmitButton = 1402;
+	PurchaseProfileActionGenericInstrument = 814;
+	GaiaRecoveryNo = 248;
+	PurchaseDcbSetupEditAddressScreen = 845;
+	MyMoviesLink = 122;
+	PlayGamesSuggestionDialog = 318;
+	RefundDetailsScreen = 1151;
+	ContainerWithNoticeActionButton = 1237;
+	BrowsePage = 1;
+	PurchaseRedeemSuccessButton = 886;
+	MiniTopChartsListCluster = 439;
+	MyAppsInstalledTabRecentlyUpdatedSection = 2802;
+	StructuredReviewFeatureQuestionOption = 6005;
+	AppStreamingFabDrag = 2921;
+	HelpLink = 112;
+	WarmWelcomeActionButton = 1232;
+	CreatorLink = 126;
+	PurchasePmtDcbVerifyAssociationForm = 1700;
+}
+
+enum WPMNMRequestNegotiatedProtocol {
+	RequestNegotiatedProtocolSpdy2 = 2;
+	RequestNegotiatedProtocolSpdy31 = 4;
+	RequestNegotiatedProtocolQuic1Spdy3 = 6;
+	RequestNegotiatedProtocolSpdy4 = 5;
+	RequestNegotiatedProtocolUnknown = 0;
+	RequestNegotiatedProtocolHTTP11 = 1;
+	RequestNegotiatedProtocolSpdy3 = 3;
+}
+
+enum GTPToggleVideoMode_Reason {
+	LowBwe = 3;
+	LowBattery = 2;
+	UserAction = 4;
+	ApplicationInBackground = 1;
+	ReasonUndefined = 0;
+}
+
+enum GBTGameId {
+	DoodlePacman = 12;
+	DoodleClaraRockmore = 17;
+	GbotGuessTheBollywoodMovie = 10;
+	DoodleHalloween2015 = 14;
+	DoodleDrWho = 20;
+	ImmersiveEntertainment = 5;
+	DoodlePonyExpress = 15;
+	ImmersiveVocab = 7;
+	GbotGeoQuiz = 3;
+	DoodleRubiksCube = 11;
+	DoodleBirthdayPinata = 13;
+	DoodleEarthDayQuiz = 16;
+	NoGameId = 0;
+	DoodleBeethoven = 19;
+	GbotEmojiRiddle = 22;
+	DoodleWilburScoville = 18;
+	GbotEmojiParty = 9;
+	GbotMoviesQuiz = 2;
+	ImmersiveGeoQuiz = 4;
+	ImmersiveMath = 6;
+	DoodleEijiTsubaraya = 21;
+	GbotGuessTheMovie = 1;
+	ImmersiveBollywood = 8;
+}
+
+enum GTPFireballMessage_MessageType {
+	Unknown = 0;
+	TypingOn = 2;
+	DeliveryReceipt = 4;
+	BotData = 6;
+	Suggestion = 7;
+	ReadReceipt = 5;
+	TypingOff = 3;
+	Content = 1;
+	NewConvStart = 8;
+}
+
+enum FireballSmartSuggestionsPosition_Type {
+	Notification = 2;
+	Unknown = 0;
+	ConversationBottom = 1;
+}
+
+enum SmartSuggestionSource_Type {
+	HobbesChatShortMessage = 2;
+	ExpanderPhotoReply = 4;
+	NowOnChat = 6;
+	Script = 7;
+	ExpanderSensitiveTopics = 5;
+	HangoutsSnlWhereAreYou = 3;
+	HobbesChatFullMessage = 1;
+	Unknown = 0;
+}
+
+enum CCANetworkConnectionInfo_MobileSubtype {
+	EvdoB = 12;
+	Hspa = 10;
+	Ehrpd = 14;
+	Combined = 100;
+	Hspap = 15;
+	Rtt = 7;
+	Evdo0 = 5;
+	Umts = 3;
+	Iden = 11;
+	Lte = 13;
+	Gsm = 16;
+	UnknownMobileSubtype = 0;
+	Edge = 2;
+	Hsupa = 9;
+	Cdma = 4;
+	EvdoA = 6;
+	Hsdpa = 8;
+	Gprs = 1;
+}
+
+enum CCALogRequest_LogSource {
+	Spaces = 383;
+	GmmPrimes = 254;
+	NotificationStats = 182;
+	AwxAndroidPrimes = 222;
+	Social = 32;
+	GearheadAndroidPrimes = 201;
+	GhsAndroidPrimes = 223;
+	Sherlog = 108;
+	Pyroclasm = 153;
+	MetalogCounters = 103;
+	ImageryViewer = 342;
+	ChauffeurIosPrimes = 386;
+	Sesame = 216;
+	Games = 5;
+	RecordedPages = 195;
+	Newsstand = 63;
+	Smartcam = 348;
+	LbAs = 116;
+	AppUsage1P = 11;
+	GmscoreApiCounters = 333;
+	CwPrimes = 242;
+	MeetingsIosPrimes = 364;
+	CwCounters = 243;
+	LbDm = 268;
+	Paisa = 294;
+	GraphicsStats = 107;
+	AndroidVerifyApps = 105;
+	FireballCounters = 257;
+	FamilylinkCounters = 274;
+	BugleCounters = 323;
+	CorpAndroidJetset = 402;
+	DriveViewer = 189;
+	SocietyAndroidPrimes = 238;
+	AdwordsMobileAndroidPrimes = 224;
+	LifescienceFrontends = 376;
+	Translate = 375;
+	Chauffeur = 412;
+	WalletSdkGcore = 361;
+	Transom = 114;
+	LbS = 9;
+	OnTheGo = 145;
+	LbCa = 35;
+	UnicommS = 381;
+	DocsAndroidSystemHealth = 152;
+	TachyonAndroidPrimes = 279;
+	TrustedFace = 204;
+	WifiAssistantPrimes = 326;
+	Society = 275;
+	PlacesNoGlsConsent = 97;
+	Bigtop = 191;
+	DnaProber = 29;
+	VespaIosPrimes = 331;
+	PersonalLogger = 22;
+	Appmanager = 183;
+	Sheets = 57;
+	FitnessAndroidWearPrimes = 319;
+	Phenotype = 69;
+	SmartSetup = 355;
+	SocialGoodDonationWidget = 340;
+	JamAndroidPrimes = 159;
+	GoogleExpressAndroidPrimes = 229;
+	CalendarClient = 335;
+	SocialAffinity = 41;
+	BatteryStats = 91;
+	WorkStore = 132;
+	Flydroid = 120;
+	HuddleAndroidPrimes = 214;
+	OnTheGoIosPrimes = 368;
+	Photos = 42;
+	DriveAndroidPrimes = 166;
+	YtLiteAndroidPrimes = 158;
+	CastSenderSdk = 67;
+	Links = 394;
+	Unknown = -1;
+	FireballPrimes = 266;
+	MobdogIosPrimes = 389;
+	PhotosDraperAndroidPrimes = 253;
+	FitnessAndroid = 169;
+	Telephony = 211;
+	InboxAndroidPrimes = 180;
+	IosGrowth = 251;
+	YtGamingAndroidPrimes = 156;
+	AndroidIde = 7;
+	Tailormade = 127;
+	Gcm = 43;
+	CastIosPrimes = 344;
+	GvcHarvester = 51;
+	UnicommP = 380;
+	Freighter = 307;
+	NfcProgrammer = 61;
+	WifiAssistant = 66;
+	GmbAndroid = 290;
+	GhsIosPrimes = 392;
+	WebStore = 65;
+	BgInOgb = 407;
+	LbC = 24;
+	GarageIosPrimes = 339;
+	WebContacts = 365;
+	PhenotypeCounters = 70;
+	LbD = 19;
+	FitnessGmsCore = 170;
+	FlydroidCounters = 148;
+	SideloadedMusic = 400;
+	VoiceIosPrimes = 292;
+	JamKioskAndroidPrimes = 160;
+	Madden = 218;
+	ImeCounters = 86;
+	SampleShm = 136;
+	Calendar = 111;
+	CpanelApp = 121;
+	Drive = 55;
+	DraperIosPrimes = 347;
+	YtMusicAndroidPrimes = 157;
+	TapAndPayAndroidPrimes = 227;
+	TapAndPayGcore = 94;
+	Magazines = 4;
+	Hallway = 382;
+	Le = 17;
+	YtMainAppAndroidPrimes = 154;
+	DocsOffline = 306;
+	PhotosScanner = 406;
+	CronetSocial = 68;
+	CorpIosFood = 409;
+	DuoCronet = 396;
+	Blogger = 408;
+	AndroidBackup = 84;
+	HangoutLogRequest = 50;
+	Gpu = 144;
+	AndroidSnetJar = 124;
+	DropBox = 131;
+	WallpaperPickerCounters = 377;
+	AndroidAuth = 25;
+	IosGsa = 118;
+	BondOnegoogle = 78;
+	Findr = 45;
+	Topaz = 367;
+	GarageAndroidPrimes = 338;
+	Books = 2;
+	DynamiteAndroidPrimes = 398;
+	NazdeekCabAndroidPrimes = 316;
+	TachyonLogRequest = 98;
+	AwxIosPrimes = 391;
+	Onegoogle = 373;
+	ClearcutProber = 225;
+	AndroidSnetIdle = 123;
+	Crossdevicenotification = 141;
+	Cw = 27;
+	FingerprintStats = 181;
+	BoondAndroidPrimes = 356;
+	Fido = 387;
+	SetupWizard = 87;
+	LbT = 21;
+	Thunderbird = 370;
+	MapsApiCounters = 143;
+	DriveFs = 280;
+	TranslateIosPrimes = 256;
+	ConsumeriqPrimes = 260;
+	Ipconnectivity = 311;
+	SpectrumCounters = 231;
+	Auditor = 173;
+	FitnessAndroidPrimes = 271;
+	Vr = 85;
+	PaisaMerchantAndroidPrimes = 322;
+	ImprovSharpie = 346;
+	YtKidsAndroidPrimes = 155;
+	TapAndPayAppCounters = 265;
+	Pulpfiction = 371;
+	Adshield = 106;
+	Spectrum = 230;
+	ScoobyEvents = 296;
+	NewsWeather = 38;
+	DasherUserhub = 349;
+	HangoutsAndroidPrimes = 179;
+	SlidesIosPrimes = 309;
+	Bluetooth = 208;
+	Hangout = 39;
+	Nova = 34;
+	AndroidMessaging = 46;
+	GmbIos = 295;
+	A11Ylogger = 95;
+	GoogleFitWearable = 81;
+	ClassroomAndroidPrimes = 369;
+	AndroidContacts = 220;
+	GmailAndroidSystemHealth = 150;
+	YoutubeDirectorIosPrimes = 298;
+	PlayGamesPrimes = 332;
+	LbCb = 237;
+	FamilylinkIosPrimes = 291;
+	WestinghouseCounters = 360;
+	Appstreaming = 289;
+	MobdogAndroidPrimes = 388;
+	FireballIosPrimes = 313;
+	KidsCommunicator = 64;
+	MatchstickCounters = 372;
+	MobilesdkClient = 104;
+	WorkStoreApp = 261;
+	Matchstick = 205;
+	AndroidImeAndroidPrimes = 362;
+	LbP = 8;
+	SvIosPrimes = 354;
+	CalendarAndroidSystemHealth = 151;
+	UnicornFamilyManagement = 172;
+	EarthCounters = 405;
+	FlydroidAndroidPrimes = 259;
+	GoogleExpress = 82;
+	Herrevad = 13;
+	AdwordsExpressAndroidPrimes = 343;
+	PancettaMobileHost = 138;
+	IosSpotlightSearchLibrary = 234;
+	ExpeditionsGuide = 185;
+	Fireball = 149;
+	AndroidGsaCounters = 161;
+	AdwordsMobile = 133;
+	PixelPerfect = 54;
+	BooksAndroidPrimes = 397;
+	AnalyticsAndroidPrimes = 235;
+	DiskStats = 92;
+	TapAndPayApp = 119;
+	GoogleTv = 14;
+	Udr = 30;
+	ClearcutDemo = 177;
+	Video = 3;
+	WalletApp = 198;
+	AppCatalog = 206;
+	Slides = 58;
+	CalendarIosPrimes = 353;
+	ChauffeurAndroidPrimes = 385;
+	SheetsAndroidPrimes = 167;
+	CorpAndroidFood = 284;
+	GmsCoreWalletMerchantError = 23;
+	CorpAndroidDory = 401;
+	TronCounters = 90;
+	WalletAppAndroidPrimes = 232;
+	BeaconGcoreTest = 410;
+	SpacesAndroidPrimes = 236;
+	Familylink = 273;
+	AndroidMigrate = 320;
+	LinksIosPrimes = 411;
+	SheetsIosPrimes = 310;
+	GmscoreAndroidPrimes = 193;
+	PaymentsOcr = 164;
+	GoogleExpressIosPrimes = 374;
+	OrchestrationClientDev = 246;
+	ChromeInfra = 71;
+	Store = 0;
+	Wifi = 209;
+	SampleIosPrimes = 202;
+	Telecom = 210;
+	LiveChannelsAndroidPrimes = 328;
+	WingMarketplaceAndroidPrimes = 282;
+	Gokart = 44;
+	SnapseedIosPrimes = 297;
+	InboxIosPrimes = 262;
+	MobDog = 197;
+	ClientLoggingDemo = 327;
+	AndroidGmail = 135;
+	SpacesIosPrimes = 276;
+	EduStore = 15;
+	Icore = 137;
+	NazdeekCafeAndroidPrimes = 317;
+	AndroidStudio = 302;
+	SpectrumAndroidPrimes = 267;
+	SmartkeyApp = 269;
+	Ink = 219;
+	SnapseedAndroidPrimes = 178;
+	GmmBriimCounters = 129;
+	BatchedLogRequest = 357;
+	LatinIme = 36;
+	ScoobySpamReportLog = 250;
+	CpanelAndroidPrimes = 213;
+	PaisaUserIosPrimes = 329;
+	Myfiber = 194;
+	Telematics = 49;
+	GoogleExpressDev = 215;
+	Movies = 74;
+	GmbIosPrimes = 325;
+	AndroidMessagingPrimes = 285;
+	AndroidContactsPrimes = 350;
+	PaisaUserAndroidPrimes = 321;
+	LaunchpadToys = 102;
+	SocialWeb = 47;
+	ChromecastAppLog = 130;
+	PdfViewer = 190;
+	AndroidDialer = 176;
+	ContextManager = 125;
+	GoogleExpressCourierAndroidPrimes = 228;
+	CrossdevicenotificationDev = 142;
+	Sandclock = 341;
+	BoqWeb = 241;
+	GmsCorePeople = 16;
+	CronetFireball = 303;
+	PlayConsoleAppPrimes = 264;
+	BooksIosPrimes = 393;
+	ClouddpcPrimes = 304;
+	PerfProfile = 73;
+	AndroidCamera = 26;
+	MapsApi = 79;
+	SettingsStats = 390;
+	PhotosAndroidPrimes = 165;
+	ZagatBurgundyAndroidPrimes = 352;
+	DocsIosPrimes = 308;
+	Sense = 83;
+	Justspeak = 72;
+	ZagatBurgundyIosPrimes = 351;
+	LeUlrCounters = 109;
+	EmergencyAssist = 88;
+	GmmBriimPrimes = 239;
+	CronetAndroidGsa = 80;
+	FamilyCompass = 113;
+	SocietyCounters = 379;
+	GmsCore = 10;
+	YtMain = 281;
+	GmsCorePeopleAutocomplete = 147;
+	KongAndroidPrimes = 358;
+	GoogleKeyboardCounters = 221;
+	Backdrop = 48;
+	VrSdkAndroidPrimes = 404;
+	InstoreWallet = 33;
+	Nqlookup = 174;
+	MagictetherCounters = 378;
+	Snapseed = 413;
+	Gboard = 199;
+	JamImpressions = 162;
+	GplusAndroidSystemHealth = 140;
+	ChromecastAndroidAppPrimes = 288;
+	GmmCounters = 77;
+	GplusIosPrimes = 286;
+	YoutubeDirectorApp = 278;
+	DialerAndroidPrimes = 277;
+	TachyonCounters = 99;
+	VoiceAndroidPrimes = 293;
+	Earth = 334;
+	CronetAndroidYt = 196;
+	Gel = 28;
+	PlayMusicAndroidWearPrimes = 200;
+	LbA = 6;
+	LeanbackEvent = 134;
+	Icing = 12;
+	InstoreConsumerPrimes = 207;
+	BeaconGcore = 301;
+	PersonalBrowserLogger = 37;
+	PhotosIosPrimes = 337;
+	AdsIntegrityOps = 366;
+	TranslateAndroidPrimes = 255;
+	VrSdkIosPrimes = 403;
+	PlatformStatsCounters = 188;
+	LbCfg = 117;
+	SocialUserLocation = 101;
+	OnTheGoCounters = 146;
+	Chime = 300;
+	OrchestrationClient = 245;
+	MeetingsAndroidPrimes = 363;
+	ClassroomIosPrimes = 359;
+	SocialAppinvite = 76;
+	JamKioskImpressions = 163;
+	SmartlockCounters = 184;
+	YtCreatorAndroidPrimes = 171;
+	Vision = 100;
+	LbIa = 52;
+	Docs = 56;
+	Fuse = 186;
+	Tron = 89;
+	Netstats = 62;
+	ImprovPostit = 345;
+	GoogleAnalytics = 18;
+	Car = 53;
+	GmbAndroidPrimes = 263;
+	Curator = 312;
+	WallpaperPicker = 299;
+	ProcStats = 93;
+	AndroidGsa = 20;
+	NovaAndroidPrimes = 249;
+	PlayConsoleApp = 226;
+	WalletAppIosPrimes = 233;
+	Ime = 59;
+	GoogleKeyboardContent = 217;
+	OnTheGoAndroidPrimes = 330;
+	SlidesAndroidPrimes = 168;
+	GoogleHandwritingInputAndroidPrimes = 314;
+	SvAndroidPrimes = 336;
+	GoogleNowLauncher = 247;
+	SdpIosPrimes = 287;
+	GcmCounters = 96;
+	ClouddpcArcPrimes = 305;
+	ImprovApps = 272;
+	TransomCounters = 115;
+	AppsNotify = 252;
+	DynamiteIosPrimes = 399;
+	GmmUe3 = 110;
+	GmsCoreWallet = 31;
+	ToolkitQuickstart = 384;
+	AndroidGsaHighPriorityEvents = 175;
+	ClinicalStudies = 270;
+	Keep = 128;
+	IdentityFrontend = 212;
+	Copresence = 40;
+	Dynamite = 283;
+	GoogleExpressStoreomsAndroidPrimes = 240;
+	WhPrimes = 248;
+	Voice = 192;
+	AndroidSnetGcore = 122;
+	CuratorAndroidPrimes = 318;
+	Warp = 60;
+	CronetGmm = 203;
+	Music = 1;
+	Katniss = 75;
+	PancettaMobileHostCounters = 139;
+	NazdeekUserAndroidPrimes = 315;
+	KatnipIosPrimes = 395;
+	Ender = 112;
+	Classroom = 126;
+	PixelPerfectClientStateLogger = 187;
+	FamilylinkAndroidPrimes = 244;
+}
+
+enum GTPDCallQualityFeedback_Type {
+	UnexpectedDisconnect = 3;
+	LowQualityVideo = 2;
+	DetailedFeedback = 4;
+	LowQualityAudio = 1;
+	Unknown = 0;
+}
+
+enum GTPPublicKeyType_Type {
+	Unknown = 0;
+	Curve25519 = 1;
+}
+
+enum PlayStoreRpcReport_VolleyErrorType {
+	UnknownError = 0;
+	NetworkError = 2;
+	AuthFailureError = 4;
+	NoConnectionError = 6;
+	DisplayMessageError = 7;
+	ServerError = 5;
+	ParseError = 3;
+	TimeoutError = 1;
+	NoError = 8;
+}
+
+enum GTPDVersionWarning_Type {
+	BlockApp = 2;
+	Unknown = 0;
+	UpgradeApp = 1;
+}
+
+enum EXHParam_ParamValueType {
+	ExtensionValue = 5;
+	Float64Value = 3;
+	BoolValue = 2;
+	StringValue = 4;
+	IntValue = 1;
+	Unknown = 0;
+}
+
+enum GTPGetBotMetadataResponse_GetBotResult {
+	Single = 2;
+	Unknown = 0;
+	NotFound = 1;
+	Multiple = 3;
+}
+
+enum GFILink_LinkType {
+	Ads = 2;
+	External = 0;
+	Query = 1;
+}
+
+enum NlpRepairStatus_RepairStatus {
+	Unknown = 0;
+	ProviderNeedsRepair = 2;
+	WrongSdkVersion = 4;
+	PackageDisabled = 9;
+	WrongFlags = 6;
+	WrongVersion = 7;
+	PackageNotFound = 5;
+	ProviderRepairHoldoff = 3;
+	ProviderFound = 1;
+	WrongSignature = 8;
+}
+
+enum CCALogEvent_InternalEvent {
+	DeviceBoot = 2;
+	None = 0;
+	WallClockSet = 1;
+}
+
+enum GTPMediaClass_Type {
+	Profile = 3;
+	BotAttachment = 2;
+	BistoMedia = 4;
+	Attachment = 1;
+	Unknown = 0;
+}
+
+enum GTPMessageReceiptType_Type {
+	UserReceipt = 2;
+	Unknown = 0;
+	DeliveryReceipt = 1;
+}
+
+enum GTPIdType_Type {
+	GroupId = 2;
+	CallController = 4;
+	FiId = 6;
+	System = 7;
+	Suggester = 5;
+	FireballBot = 3;
+	PhoneNumber = 1;
+	Unknown = 0;
+}
+
+enum GTPDDirection_Type {
+	Recv = 2;
+	Unknown = 0;
+	Send = 1;
+}
+
+enum SuggestionSource {
+	SuggestionSourceNowOnTapNews = 5;
+	SuggestionSourceImage = 3;
+	SuggestionSourceSingleQuery = 2;
+	SuggestionSourceNowOnTapAddress = 4;
+	SuggestionSourceGenie = 1;
+	SuggestionSourceUnspecified = 0;
+}
+
+enum FireballConversationOrigin_Type {
+	ConversationFromCompose = 2;
+	UnknownConversationOrigin = 0;
+	ConversationFromList = 1;
+}
+
+enum TranscodingCompletionStatus_Type {
+	Failed = 2;
+	UnknownCompletionStatus = 0;
+	Succeeded = 1;
+	Canceled = 3;
+}
+
+enum GFIMobileAppHeaderSubtitle_AppInstalled {
+	AppInstalled = 1;
+}
+
+enum GFIFlightSmall_FlightStatus {
+	Delayed = 2;
+	Unknown = 0;
+	OnTime = 1;
+	Scheduled = 3;
+}
+
+enum GTPDMedia_Type {
+	Video = 2;
+	Unknown = 0;
+	Audio = 1;
+	Data = 3;
+}
+
+enum GFIImage_LoadingMode {
+	Eager = 0;
+	Defer = 1;
+}
+
+enum GTPSystemMessage_Type {
+	Unknown = 0;
+	ThrottledAsSpam = 1;
+}
+
+enum FireballOpenCause_Type {
+	ViaWidget = 2;
+	UnknownOpenCause = 0;
+	ViaNotification = 1;
+}
+
+enum GBTGRPreferredOrientation {
+	Portrait = 2;
+	PreferredOrientationUnspecified = 0;
+	Landscape = 1;
+}

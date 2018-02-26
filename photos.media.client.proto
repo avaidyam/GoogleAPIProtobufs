@@ -1,0 +1,68 @@
+message PhotosMCReadItemsByIdResponse {
+	optional string resumeToken = 1;
+	repeated PhotosMCMediaItem itemArray = 2;
+}
+
+message PhotosMCItemsByIdQuery {
+	repeated PhotosMCItemId itemIdArray = 1;
+	optional string authkey = 2;
+}
+
+message PhotosMCReadItemsByIdRequest {
+	optional PhotosMCItemsByIdQuery query = 1;
+	optional PhotosMCMediaItemMask itemMask = 2;
+	optional string resumeToken = 5;
+}
+
+message PhotosMCItemTypeMask {
+	optional bool placeHolderForApiary = 1;
+	optional PhotosMCAudioMask audio = 4;
+}
+
+message PhotosMCMediaItemMask {
+	optional bool placeHolderForApiary = 2;
+	optional PhotosMCItemTypeMask itemType = 5;
+}
+
+message PhotosMCAudioPropertiesMask_AudioStreamMask {
+	optional bool placeHolderForApiary = 1;
+}
+
+message PhotosMCAudioPropertiesMask {
+	optional bool placeHolderForApiary = 1;
+	optional PhotosMCAudioPropertiesMask_AudioStreamMask audioStream = 2;
+}
+
+message PhotosMCAudioMask {
+	optional bool placeHolderForApiary = 1;
+	optional PhotosMCAudioPropertiesMask audioProperties = 2;
+}
+
+message PhotosMCItemId {
+	optional string mediaKey = 1;
+}
+
+message PhotosMCItemType {
+	optional PhotosMCAudio audio = 4;
+}
+
+message PhotosMCMediaItem {
+	optional string id_p = 1;
+	optional PhotosMCItemType itemType = 5;
+	optional PhotosMCItemId itemId = 6;
+}
+
+message PhotosMCAudioProperties_AudioStream {
+	optional string URL = 2;
+	optional int32 formatId = 3;
+}
+
+message PhotosMCAudioProperties {
+	optional int64 durationMs = 1;
+	repeated PhotosMCAudioProperties_AudioStream audioStreamArray = 2;
+}
+
+message PhotosMCAudio {
+	optional PhotosMCAudioProperties audioProperties = 2;
+	optional string downloadURL = 3;
+}

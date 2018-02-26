@@ -1,0 +1,12 @@
+message LocalizationContext {
+	optional string languageCode = 1;
+	optional string countryCode = 2;
+}
+
+message ClientContext {
+	optional ClientId clientId = 1;
+}
+
+message ClientId {
+	optional string name = 1;
+}

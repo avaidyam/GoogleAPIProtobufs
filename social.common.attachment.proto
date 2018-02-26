@@ -1,0 +1,4 @@
+message Attachment {
+	optional EMEmbedClientItem embedItem = 1;
+	optional string id_p = 3;
+}

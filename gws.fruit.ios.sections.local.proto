@@ -1,0 +1,68 @@
+message GFIDirectionsTitle {
+	optional GFILocalizedMessage startingPoint = 1;
+	optional GFILocalizedMessage destination = 2;
+}
+
+message GFITile {
+	optional GFIDetails details = 1;
+	repeated GFIActionButton actionButtonArray = 2;
+	optional GFICategoryBrowseStyle categoryBrowseStyle = 3;
+	optional bool collapsed = 4;
+	optional GFILink itemViewLink = 5;
+	optional GFIImage thumbnail = 6;
+	optional GFILetterPin letterPin = 7;
+}
+
+message GFIPlaceHeader {
+	optional string title = 1;
+	optional string existenceStatus = 3;
+	optional GFIImageMap imageMap = 4;
+	optional GFIRating rating = 6;
+	optional GFIImage image = 9;
+	optional GFITextAttributeList shortAttributes = 10;
+	optional GFITextAttributeList longAttributes = 11;
+}
+
+message GFIDirectionsSummarySection {
+	optional GFIDirectionsSummary directionsSummary = 1;
+	optional GFIActionButton routeAction = 2;
+	optional GFIDelayTrigger delayTrigger = 3;
+	optional GFILink actionLink = 4;
+}
+
+message GFIImageMap {
+	repeated GFIImage layerArray = 1;
+	optional GFILink targetLink = 2;
+	optional int32 displayWidth = 3;
+	optional int32 displayHeight = 4;
+	optional int32 imageScale = 5;
+}
+
+message GFILocalCategoricalCarousel {
+	repeated GFILocalCategoricalTile tileArray = 1;
+}
+
+message GFIDistanceSummary {
+	optional string distance = 1;
+	optional string description_p = 2;
+}
+
+message GFILinkedTextFact {
+	optional GFILink link = 1;
+	optional GFILocalizedMessage text = 2;
+}
+
+message GFIPlaceFact {
+	optional GFIIcon icon = 1;
+	optional GFIOpeningHoursFact openingHoursFact = 2;
+	optional GFILocalizedMessage textFact = 3;
+	optional GFILinkedTextFact linkedTextFact = 4;
+}
+
+message GFIPlaceFactsSection {
+	repeated GFIPlaceFact placeFactArray = 3;
+}
+
+message GFIActionsBar {
+	repeated GFIActionButton actionButtonArray = 1;
+}

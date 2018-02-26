@@ -1,0 +1,5 @@
+message RtcClient {
+	optional Device device = 1;
+	optional Application application = 2;
+	optional Platform platform = 3;
+}

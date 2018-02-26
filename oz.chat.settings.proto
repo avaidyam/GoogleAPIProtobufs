@@ -1,0 +1,29 @@
+message ChatSettingsChatAclSettings {
+	optional CPBRealtimeNotificationSettings_Level publicLevel = 1;
+	optional CPBRealtimeNotificationSettings_Level extendedCirclesLevel = 2;
+	repeated ChatSettingsCircleChatLevel customCircleLevelArray = 3;
+	optional bool inviteNotificationsEnabled = 4;
+	optional CPBRealtimeNotificationSettings_Level emailLevel = 5;
+	optional CPBRealtimeNotificationSettings_Level phoneLevel = 6;
+	optional ChatSettingsSettingsPreset selectedSettingsPreset = 7;
+}
+
+message ChatSettingsCircleChatLevel {
+	optional string circleId = 1;
+	optional string circleName = 2;
+	optional CPBRealtimeNotificationSettings_Level level = 3;
+}
+
+message ChatSettingsSetChatAclsResponse {
+}
+
+message ChatSettingsGetChatAclsResponse {
+	optional ChatSettingsChatAclSettings settings = 1;
+}
+
+message ChatSettingsSetChatAclsRequest {
+	optional ChatSettingsChatAclSettings settings = 1;
+}
+
+message ChatSettingsGetChatAclsRequest {
+}

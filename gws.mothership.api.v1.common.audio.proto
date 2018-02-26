@@ -1,0 +1,14 @@
+message MSPTextToSpeech_StructuredTextToSpeech {
+	optional string language = 2;
+	optional string voiceName = 3;
+	optional string voiceEngine = 4;
+	optional MSPTextToSpeech_StructuredTextToSpeech_AudioEncoding audioEncoding = 8;
+}
+
+message MSPTextToSpeech {
+	optional string localizedSpokenText = 1;
+	optional MSPTextToSpeech_StructuredTextToSpeech tts = 2;
+	optional int32 searchApiResultIndex = 3;
+	optional bool shouldReopenMic = 4;
+	optional MSPTextToSpeech_DataSource dataSource = 9;
+}

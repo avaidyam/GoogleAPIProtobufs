@@ -1,0 +1,19 @@
+message BotMessageProperties {
+	optional int32 resultType = 1;
+	optional GINAInlineAction inlineAction = 3;
+}
+
+message IOSCard {
+	optional bytes semanticResultProtoBytes = 1;
+	optional MSPRenderedCard renderedCard = 2;
+}
+
+message GBotResult {
+	optional MSPRenderedCard primaryCard = 1;
+	optional string text = 3;
+	optional bytes semanticResultProtoBytes = 4;
+	optional int32 resultType = 5;
+	optional GINAInlineAction inlineAction = 7;
+	optional BotMessageProperties botMessageProperties = 9;
+	optional IOSCard iosCard = 11;
+}

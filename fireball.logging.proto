@@ -1,0 +1,203 @@
+message FireballEvent {
+	optional FireballEventType_Type eventType = 1;
+	optional FireballAppResume fireballAppResume = 2;
+	optional FireballMessage fireballMessage = 3;
+	optional FireballConversation fireballConversation = 4;
+	optional FireballSearch fireballSearch = 5;
+	optional FireballUserAndDeviceInfo fireballUserAndDeviceInfo = 6;
+	optional FireballTranscoding fireballTranscoding = 7;
+	optional FireballStartup fireballStartup = 8;
+	optional GTPLogsId sourceId = 9;
+	optional GTPLogsId deprecatedDestId = 10;
+	optional GTPLogsTransportEvent transportEvent = 11;
+	optional FireballSmartSuggestions smartSuggestions = 12;
+	optional FireballStickerSet fireballStickerSet = 13;
+	optional uint64 eventElapsedTimeNanos = 14;
+	optional uint64 wallClockTimeMs = 15;
+	optional FireballActivityLifecycle fireballActivityLifecycle = 16;
+	optional FireballPermissionEvent permissionEvent = 17;
+	optional InteractionLog interactionLog = 18;
+	optional AppInstallEvent appInstall = 19;
+	optional SuggestedActionEvent suggestedActionEvent = 20;
+	optional GTPLogsContentWizardEvent contentWizardEvent = 21;
+}
+
+message SuggestedActionTriggerDisabledEvent {
+	optional SuggestedActionInfo_TriggerDisabledReason reason = 1;
+}
+
+message SuggestedActionEvent {
+	optional SuggestedActionInfo_Type type = 1;
+	optional int32 position = 2;
+	optional SuggestedActionTriggerDisabledEvent triggerDisabledEvent = 3;
+	optional SuggestedActionInfo_Treatment treatment = 4;
+}
+
+message AppInstallEvent {
+	optional string referrer = 1;
+}
+
+message FireballPermissionEvent {
+	optional FireballHostActivity activity = 1;
+	repeated string requestedArray = 2;
+	repeated string grantedArray = 3;
+	repeated string rejectedArray = 4;
+}
+
+message FireballSticker {
+	optional int32 stickerSetId = 1;
+	optional int32 stickerId = 2;
+	optional bool inMostRecentlyDownloadedSet = 3;
+}
+
+message FireballStickerSet {
+	optional int32 stickerSetId = 1;
+	optional FireballStickerSet_FireballStickerSetStatus stickerSetStatus = 2;
+}
+
+message FireballSmartSuggestions {
+	optional string id_p = 1;
+	optional FireballSmartSuggestionsPosition_Type position = 2;
+	optional FireballSmartSuggestionsShow show = 3;
+	optional FireballSmartSuggestionsAccept accept = 4;
+	optional FireballSmartSuggestionsReport report = 5;
+}
+
+message FireballSmartSuggestionsReport {
+	optional FireballSmartSuggestionInfo suggestion = 1;
+}
+
+message FireballSmartSuggestionsAccept {
+	optional FireballSmartSuggestionInfo suggestion = 1;
+}
+
+message FireballSmartSuggestionsShow {
+	repeated FireballSmartSuggestionInfo suggestionArray = 2;
+}
+
+message FireballSmartSuggestionInfo {
+	optional int32 suggestionId = 1;
+	optional GTPDSmartSuggestionType_Type type = 2;
+}
+
+message FireballStartup {
+	optional int64 timeDurationMillis = 1;
+	optional FireballHostActivity hostActivity = 2;
+}
+
+message FireballHostActivity {
+	optional FireballActivity_Type activity = 1;
+}
+
+message FireballMessageContentMetaData {
+	optional FireballMessageContentType_Type messageContentType = 1;
+	optional int32 countOfContent = 2;
+	optional FireballMessageMediaSource_Type mediaSource = 3;
+}
+
+message FireballMessageMedia {
+	repeated FireballMessageContentMetaData contentMetaArray = 1;
+	optional FireballSticker sticker = 2;
+}
+
+message FireballTimeMeta {
+	optional int64 timeStampMillis = 1;
+	optional int64 timeDurationMillis = 2;
+}
+
+message FireballTranscoding {
+	optional TranscodingCompletionStatus_Type status = 1;
+	optional int32 transcodingTimeMs = 2;
+	optional int32 inputDurationMs = 3;
+	optional int32 inputSize = 4;
+	optional int32 targetSize = 5;
+	optional int32 outputSize = 6;
+	optional TranscodingMimeCode_Type audioMime = 7;
+	optional int32 audioChannels = 8;
+	optional int32 audioSampleRate = 9;
+	optional TranscodingMimeCode_Type videoMime = 10;
+	optional int32 videoWidth = 11;
+	optional int32 videoHeight = 12;
+	optional float videoFrameRate = 13;
+}
+
+message FireballUserAndDeviceInfo {
+	optional FireballTimeMeta timeSpentInAppMillis = 1;
+	optional FireballTimeMeta clientFirstUseMillis = 2;
+	optional bool phoneNumberCanBeFoundInSim = 3;
+	optional int32 numberOfSimSlots = 4;
+	optional int32 timeZoneToUtcOffsetInMillis = 5;
+	optional bool hasWearableDevice = 6;
+	optional int32 numberOfWidgets = 7;
+	optional int32 numberOfStickerSets = 8;
+	optional int32 currentStickerMetadataVersion = 9;
+}
+
+message FireballActivityLifecycle {
+	optional FireballHostActivity activity = 1;
+	optional FireballActivity_LifecycleEvent lifecycleEvent = 2;
+}
+
+message FireballSearch {
+	optional FireballHostActivity hostActivity = 1;
+}
+
+message FireballConversation {
+	optional FireballConversationStatus_Type conversationStatus = 1;
+	optional FireballConversationOrigin_Type conversationOrigin = 2;
+	optional int32 numberOfMessages = 3;
+	optional int32 numberOfParticipants = 4;
+	optional bool isIncognito = 5;
+	optional FireballConversationStyle_Style style = 6;
+}
+
+message FireballMessage {
+	optional int32 deprecatedMessageStatus = 1;
+	optional FireballMessageSource_Type messageSource = 2;
+	optional FireballMessageMedia messageMedia = 3;
+	optional GTPLogsId senderId = 4;
+	optional GTPLogsId conversationId = 5;
+	optional GTPLogsId botCommandId = 6;
+	optional bool isIncognito = 7;
+	optional FireballConversationStyle_Style style = 8;
+}
+
+message InteractionLog {
+	optional GTPLogsClickTracking clickTracking = 1;
+	optional GTPLogsInteractionTracking interactionTracking = 2;
+}
+
+message FireballAppResume {
+	optional FireballOpenCause_Type openCause = 1;
+	optional FireballHostActivity hostActivity = 2;
+	optional bool isSecondaryUser = 4;
+}
+
+message GTPLogsContentWizardEvent {
+	optional GTPLogsContentWizardEventType type = 1;
+	optional GTPLogsContentWizardSuggestionInfo suggestionInfo = 2;
+	optional string emojiModelVersionId = 3;
+	optional string stickerModelVersionId = 4;
+	optional GTPLogsContentWizardClickInfo clickInfo = 5;
+}
+
+message GTPLogsContentWizardClickInfo {
+	optional GTPLogsStickerItem sticker = 1;
+	optional GTPLogsEmojiItem emoji = 2;
+	optional int32 position = 3;
+}
+
+message GTPLogsContentWizardSuggestionInfo {
+	repeated GTPLogsEmojiItem emojisArray = 1;
+	repeated GTPLogsStickerItem stickersArray = 2;
+}
+
+message GTPLogsStickerItem {
+	optional string stickerId = 1;
+	optional string stickerSetId = 2;
+}
+
+message GTPLogsEmojiItem {
+	optional string emoji = 1;
+	optional int32 score = 2;
+}

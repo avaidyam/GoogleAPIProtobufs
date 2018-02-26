@@ -1,0 +1,27 @@
+message MSPAppDisplayInfo {
+	optional MSPIImage appIcon = 1;
+	optional string appTitle = 2;
+	optional string titleTextForEscapeHatch = 4;
+}
+
+message MSPAppIdentifier {
+	optional string packageId = 1;
+}
+
+message MSPAppLaunchInfo {
+	optional MSPUrl appUri = 1;
+	optional MSPUrl installURL = 2;
+	optional MSPAppInstallStatus installationStatus = 3;
+	optional MSPAppIdentifier appIdentifier = 4;
+	optional MSPUrl fallbackURL = 5;
+}
+
+message MSPAppLink {
+	optional MSPAppLaunchInfo appLaunchInfo = 1;
+	optional MSPAppDisplayInfo appDisplayInfo = 2;
+}
+
+message MSPAppLinkConditions {
+	optional MSPAppLinkConditions_Platform platform = 1;
+	optional MSPAppIdentifier appIdentifier = 2;
+}

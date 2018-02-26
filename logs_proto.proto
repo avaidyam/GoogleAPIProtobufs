@@ -1,0 +1,8 @@
+message GTPLogsMessageDetails_Type {
+	required string sourceType = 1;
+	required string logType = 2;
+}
+
+message GTPLogsMessageDetails {
+	repeated GTPLogsMessageDetails_Type mayAppearInArray = 1;
+}

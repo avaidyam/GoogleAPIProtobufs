@@ -1,0 +1,17 @@
+message PhotosTile {
+	optional string tileId = 1;
+	optional string title = 2;
+	repeated string subtitleArray = 3;
+	optional string linkURL = 4;
+	optional Photosdata_Image image = 5;
+	optional string backgroundColor = 6;
+	optional bool defaultRenderingSupported = 7;
+	repeated PhotosTile childrenArray = 8;
+	optional PhotosTileType type = 9;
+	optional Photosdata_User user = 10;
+}
+
+message PhotosPhotoTile {
+	optional Photosdata_Photo photo = 1;
+	optional PhotosMCMediaItem mediaItem = 2;
+}

@@ -1,0 +1,18 @@
+message OZPRPCreateAlbumResponse {
+	optional Photosdata_Album album = 1;
+}
+
+message OZPRPProfileAlbumsResponse {
+	repeated Photosdata_Album aggregateAlbumArray = 1;
+	repeated Photosdata_Album nonAggregateAlbumArray = 2;
+	optional int32 offset = 3;
+	optional Photosdata_User owner = 4;
+	optional string resumeToken = 5;
+	repeated PhotosTile albumTileArray = 6;
+}
+
+message OZPRPGetPhotoResponse {
+	optional Photosdata_Photo photo = 1;
+	optional bool isDownloadable = 2;
+	optional PhotosTile photoTile = 3;
+}

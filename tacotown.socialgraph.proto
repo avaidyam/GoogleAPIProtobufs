@@ -1,0 +1,134 @@
+message TSGdata_PersonList {
+	repeated TSGdata_CirclePerson personArray = 1;
+	optional int32 totalPeople = 2;
+	optional TSGdata_SyncStateToken syncStateToken = 4;
+	repeated TSGdata_CircleMemberId invalidMemberIdArray = 5;
+}
+
+message TSGdata_SyncStateToken {
+	optional int64 lastUpdateTimeMs = 1;
+	optional string versionKey = 2;
+	optional int64 sessionLastUpdateTimeMs = 3;
+	optional TSGdata_ContinuationToken continuationToken = 4;
+}
+
+message TSGdata_MemberToBlock {
+	optional TSGdata_CircleMemberId memberId = 1;
+	optional string name = 2;
+}
+
+message TSGdata_MembersToBlock {
+	repeated TSGdata_MemberToBlock membersArray = 1;
+	optional bool block = 2;
+}
+
+message TSGdata_ContinuationToken {
+	optional int32 personListStartIndex = 1;
+	optional string gggStartToken = 2;
+	optional string focusIncomingEdgesToken = 3;
+}
+
+message TSGdata_CircleData {
+	optional TSGdata_CircleId circleId = 1;
+	optional TSGdata_CircleProperties circleProperties = 2;
+	optional bool deleted = 3;
+	optional TSGdata_ContinuationToken continuationToken = 5;
+}
+
+message TSGdata_CircleProperties {
+	optional string name = 1;
+	optional string email = 2;
+	optional string description_p = 3;
+	optional string lastUpdateTime = 4;
+	optional double interactionsRank = 5;
+	optional string photoURL = 6;
+	optional int32 memberCount = 7;
+	optional int32 memberCountOutsideDomain = 8;
+	optional bool canHaveOutsideMembers = 9;
+	optional int32 circleMode = 11;
+	optional bool selectedForChat = 12;
+	optional string nameSortKey = 13;
+	optional int32 category = 14;
+	optional bool forSharing = 15;
+	optional bool forFollowing = 16;
+	optional string backgroundImageURL = 17;
+}
+
+message TSGdata_CirclePerson {
+	optional TSGdata_CircleMemberId memberId = 1;
+	repeated TSGdata_CircleMemberId joinKeyArray = 2;
+	optional TSGdata_CircleMemberProperties memberProperties = 3;
+	repeated TSGdata_Membership membershipArray = 4;
+}
+
+message TSGdata_Membership {
+	optional string obfuscatedInviterGaiaId = 2;
+	optional TSGdata_CircleId circleId = 3;
+	optional bool deleted = 4;
+}
+
+message TSGdata_CircleMemberProperties {
+	optional string displayName = 1;
+	optional double interactionsRank = 4;
+	optional string lastUpdateTime = 5;
+	optional string firstNameSortKey = 6;
+	optional string lastNameSortKey = 7;
+	optional bool contact = 8;
+	optional string photoURL = 9;
+	optional bool esUser = 11;
+	optional string location = 12;
+	optional string school = 13;
+	optional string company = 14;
+	optional string occupation = 15;
+	optional bool inIncomingCircle = 17;
+	repeated string contactIdArray = 18;
+	optional string interactionsRankSortKey = 20;
+	optional bool verified = 21;
+	optional string tagLine = 22;
+	optional string focusPhotoURL = 25;
+	repeated TSGdata_Email emailArray = 26;
+	repeated TSGdata_Phone phoneArray = 27;
+	optional bool inviter = 28;
+	optional TSGdata_GoogleProfile profileType = 29;
+	optional bool inSameVisibilityGroup = 30;
+	optional string firstName = 31;
+	repeated string verifiedPhoneArray = 34;
+	optional string suggestionId = 35;
+	optional bool isNameResolvedContact = 36;
+	optional string role = 37;
+	optional string fileAs = 38;
+	optional string dasherDomainName = 40;
+}
+
+message TSGdata_Phone {
+	optional int32 standardTag = 1;
+	optional string customTag = 2;
+	required string value = 3;
+	optional bool primary = 4;
+	optional string canonicalizedForm = 5;
+	optional string uri = 6;
+}
+
+message TSGdata_Email {
+	optional int32 standardTag = 1;
+	optional string customTag = 2;
+	required string value = 3;
+	optional bool primary = 4;
+}
+
+message TSGdata_CircleMemberId {
+	optional string email = 1;
+	optional string contactId = 2;
+	optional string obfuscatedGaiaId = 3;
+	optional string phone = 4;
+	optional string URL = 5;
+	optional string syntheticContactId = 6;
+}
+
+message TSGdata_CircleId {
+	optional string focusId = 1;
+	optional string obfuscatedGaiaId = 2;
+}
+
+message TSGdata {
+}

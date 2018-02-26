@@ -1,0 +1,4 @@
+message GlobalRequestContext {
+	optional ClientContext clientContext = 1;
+	optional LocalizationContext localizationContext = 2;
+}

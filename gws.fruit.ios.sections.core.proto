@@ -1,0 +1,391 @@
+message GFIColoredHeader {
+	optional string title = 1;
+	optional string subtitle = 2;
+	optional GFIImage image = 3;
+	optional GTPColor backgroundColor = 4;
+	optional GFILink imageLink = 5;
+	optional GFIShareButton shareButton = 6;
+}
+
+message GFIWeatherHeader {
+	optional string formattedAddress = 1;
+}
+
+message GFITableSection {
+	optional GFITable table = 1;
+}
+
+message GFIBigVideoSection {
+	optional GFILink link = 2;
+	optional GFIVideoThumbnail videoThumbnail = 4;
+}
+
+message GFITranslateBody {
+	optional string translatedText = 1;
+	optional string translatedTextLanguage = 2;
+	optional string translatedTextTransliteration = 3;
+}
+
+message GFIOneLineSitelinks_Sitelink {
+	optional string title = 1;
+	optional GFILink link = 2;
+}
+
+message GFIOneLineSitelinks {
+	repeated GFIOneLineSitelinks_Sitelink sitelinkArray = 1;
+}
+
+message GFIAggregateCarouselItem {
+	optional GFIImage image = 1;
+	optional GFIVideoThumbnail videoThumbnail = 2;
+	optional string title = 3;
+	optional GFISource source = 4;
+	optional GFITimestamp timestamp = 5;
+	optional GFIRating rating = 6;
+	optional GFILink link = 8;
+	optional GTPColor backgroundColor = 9;
+	optional GFITextAttributeList metadata = 10;
+	optional GFIVeLogInfo veLogInfo = 11;
+}
+
+message GFIAggregateCarouselProto {
+	optional string label = 1;
+	repeated GFIAggregateCarouselItem itemArray = 2;
+}
+
+message GFIFallback {
+	optional QLTComponent composableContent = 1;
+}
+
+message GFIMessageSection {
+	optional GFILocalizedMessage message = 1;
+	optional GFIVisualElementLog veLog = 2;
+	optional int32 numMaxLines = 3;
+}
+
+message GFIBigImageSection {
+	optional GFIImage image = 1;
+	optional GFILink link = 2;
+}
+
+message GFINewsArticle {
+	optional string title = 1;
+	optional GFILink link = 2;
+	optional GFISource source = 3;
+	optional GFITimestamp timestamp = 4;
+	optional GFIImage image = 8;
+	optional GFIVideoThumbnail videoThumbnail = 9;
+}
+
+message GFIThumbnailRefinementCarousel {
+	repeated GFIThumbnailRefinementTile refinementArray = 1;
+	optional GFILink moreLink = 2;
+	optional int32 selectedIndex = 3;
+	optional string moreLinkText = 4;
+	optional string title = 5;
+	optional GFIExpandableVisibility expandableVisibility = 6;
+}
+
+message GFIMobileAppInstallRow {
+	optional GFILink appInstallLink = 1;
+	optional GFIRating rating = 2;
+	optional string price = 3;
+	optional string itunesStoreText = 4;
+}
+
+message GFITranslateSource {
+	optional string sourceText = 1;
+	optional string sourceTextLanguage = 2;
+	optional bool useInteractiveTranslateCard = 3;
+	optional GFIVeLogInfo sourceLangSelectorVeLogInfo = 4;
+	optional GFIVeLogInfo targetLangSelectorVeLogInfo = 5;
+	optional GFIVeLogInfo swapButtonVeLogInfo = 6;
+	optional GFIVeLogInfo sourceTextFieldVeLogInfo = 7;
+}
+
+message GFIAdCreative_AdSellerRating {
+	optional GFIRating rating = 1;
+	optional GFILink link = 2;
+	optional string displayText = 3;
+}
+
+message GFIAdCreative_StructuredSnippets {
+	optional string header = 1;
+	repeated string snippetsArray = 2;
+}
+
+message GFIAdCreative_ClickToCall {
+	optional GFILink callLink = 1;
+	optional string formattedNumber = 2;
+	optional string callLinkText = 3;
+	optional int32 dcmTimeoutMillis = 4;
+	optional GFILink dcmLink = 5;
+}
+
+message GFIAdCreative {
+	optional MSPStyledText text = 1;
+	optional GFIAdCreative_ClickToCall clickToCall = 2;
+	repeated GFIAdCreative_StructuredSnippets structuredSnippetsArray = 4;
+	optional int32 numLines = 5;
+	optional GFITextAttributeList callouts = 6;
+	optional string phoneNumberText = 7;
+	optional string callPhoneNumberText = 8;
+	optional GFIAdCreative_AdSellerRating adSellerRating = 9;
+	optional GFIOneLineSitelinks oneLineSitelinks = 10;
+	optional GFITwoLineSitelinks twoLineSitelinks = 11;
+	optional string nameListSeparator = 12;
+	optional string colonText = 13;
+}
+
+message GFIImageCarousel {
+	repeated GFIImageTile itemArray = 1;
+	optional GFILink moreLink = 2;
+	optional string headerText = 3;
+	optional string moreLinkText = 4;
+	optional string jsonMetadata = 5;
+	optional string styleId = 6;
+}
+
+message GFIFinePrintSection {
+	optional GFIFinePrint finePrint = 1;
+}
+
+message GFISpellingCardContent_SpellLink {
+	optional GFILink link = 1;
+	optional MSPStyledText text = 2;
+}
+
+message GFISpellingCardContent_SpellColumn {
+	repeated GFISpellingCardContent_SpellLink spellLinkArray = 1;
+}
+
+message GFISpellingCardContent {
+	optional GFILocalizedMessage headerLinePrefix = 1;
+	optional GFISpellingCardContent_SpellLink headerLineLink = 2;
+	optional GFILocalizedMessage bodyLinePrefix = 3;
+	optional GFISpellingCardContent_SpellLink bodyLineLink = 4;
+	repeated GFISpellingCardContent_SpellColumn multipleSuggestionsArray = 5;
+	optional GFIVisualElementLog veLog = 6;
+	optional bool logOnly = 7;
+}
+
+message GFIGenericCarousel {
+	repeated QLTComponent contentArray = 1;
+	optional int32 selectedIndex = 2;
+}
+
+message GFIListText {
+	repeated string listItemArray = 1;
+}
+
+message GFIWebAnswerContent {
+	optional string shortAnswerText = 1;
+	optional MSPStyledText styledText = 2;
+	optional GFIListText listText = 3;
+	optional GFITable tableText = 4;
+}
+
+message GFIFabFooter {
+	optional string collapsedText = 1;
+	optional GFIFabColor color = 2;
+	optional string expandedText = 3;
+}
+
+message GFIDescription {
+	optional MSPStyledText styledText = 1;
+	optional GFILink attribution = 2;
+	optional string attributionText = 3;
+	optional GFIExpandableVisibility expandableVisibility = 4;
+	optional bool truncate = 5;
+}
+
+message GFIMobileAppHeaderSubtitle {
+	optional string vendor = 1;
+	optional GFIMobileAppHeaderSubtitle_AppInstalled appInstalled = 2;
+	optional string installedText = 3;
+}
+
+message GFIMobileAppHeader {
+	optional string title = 1;
+	optional MSPUrl logoImageURL = 3;
+	optional GFILink link = 4;
+	optional GFIMobileAppHeaderSubtitle subtitle = 5;
+	optional bool isAd = 6;
+	optional GFIRating rating = 7;
+	optional string adBadgeText = 8;
+	optional string colonText = 9;
+	optional GFIWhyThisAdDialog whyThisAdDialog = 10;
+}
+
+message GFICardHeader {
+	optional string text = 1;
+}
+
+message GFIAdAppExtension {
+	optional GFIImage icon = 1;
+	optional string name = 2;
+	optional string appStore = 3;
+	optional string priceString = 4;
+	optional GFILink link = 5;
+	optional GFIRating rating = 6;
+}
+
+message GFIListItem {
+	optional string title = 1;
+	optional GFILink link = 2;
+	optional string metadata1 = 4;
+	optional string metadata2 = 5;
+	optional GFIImageFrame imageFrame = 6;
+	optional string leftMetadata = 7;
+	optional GFIExpandableVisibility expandableVisibility = 8;
+	optional GFITextAttributeList subtitle = 9;
+}
+
+message GFIListSection_MoreLink {
+	optional string text = 1;
+	optional GFILink link = 2;
+}
+
+message GFIListSection {
+	repeated GFIListItem itemArray = 1;
+	optional string title = 2;
+	optional bool indent = 3;
+	optional GFIExpandableVisibility expandableVisibility = 4;
+	optional int32 selectedItem = 6;
+	optional GFIListSection_MoreLink moreLink = 7;
+}
+
+message GFIDisclaimerSmallSection {
+	optional GFIDisclaimerSmall disclaimerSmall = 1;
+}
+
+message GFIActionRow {
+	optional GFIIcon icon = 1;
+	optional string text = 2;
+	optional GFILink link = 3;
+	optional GFIActionRow_ActionType actionType = 4;
+}
+
+message GFIStructuredData_Item {
+	optional string key = 1;
+	optional string value = 2;
+	optional GFIRating rating = 3;
+}
+
+message GFIStructuredData {
+	repeated GFIStructuredData_Item itemArray = 1;
+}
+
+message GFIHotlineHeader {
+	optional string name = 1;
+	optional string helpText = 2;
+	optional string phoneNumber = 3;
+	optional GFILink phoneNumberLink = 4;
+}
+
+message GFIAppsImmersiveRow {
+	repeated GFIAppGridItem appGridItemArray = 1;
+}
+
+message GFIResultHeader {
+	optional string title = 1;
+	optional GFISource source = 2;
+	optional GFIAppInstallState appInstallState = 3;
+	optional GFIImage appIcon = 4;
+	optional GFILink resultLink = 5;
+	optional bool isAd = 6;
+	optional string appInstallStateText = 7;
+	optional string adBadgeText = 8;
+	optional GFIWhyThisAdDialog whyThisAdDialog = 9;
+}
+
+message GFICurrentWeather {
+	optional GFIImage image = 1;
+	optional string temperature = 2;
+	optional bool fahrenheit = 3;
+	optional string time = 4;
+	optional string condition = 5;
+}
+
+message GFINavlink {
+	optional GFILink link = 1;
+	optional string title = 2;
+}
+
+message GFINavlinkGroup {
+	optional GFINavlink link = 1;
+	repeated GFINavlink sublinkArray = 2;
+	optional GFIVeLogInfo submenuGroupVeLog = 4;
+}
+
+message GFISitelinks {
+	repeated GFINavlinkGroup navlinkGroupArray = 1;
+}
+
+message GFIShowtimesSection_Time {
+	optional string time = 1;
+	optional GFILink link = 2;
+}
+
+message GFIShowtimesSection_Variant {
+	optional string name = 1;
+	repeated GFIShowtimesSection_Time timeArray = 2;
+}
+
+message GFIShowtimesSection {
+	optional string name = 1;
+	optional GFILink mapLink = 2;
+	repeated GFIShowtimesSection_Variant variantArray = 3;
+	optional GFILink nameLink = 4;
+	optional string moviesMapText = 5;
+}
+
+message GFIContentPreview_Title {
+	optional string title = 1;
+	optional GFILink resultLink = 2;
+}
+
+message GFIContentPreview_MediaMetadata {
+	repeated GFIFact factArray = 1;
+}
+
+message GFIContentPreview_ResultAnnotations_Annotation {
+	optional string text = 1;
+	optional GFILink link = 2;
+}
+
+message GFIContentPreview_ResultAnnotations {
+	optional string preSnippetAnnotation = 1;
+	repeated string postSnippetInlineAnnotationArray = 2;
+	optional string postSnippetBlockAnnotation = 3;
+	repeated GFIContentPreview_ResultAnnotations_Annotation preSnippetArray = 4;
+	repeated GFIContentPreview_ResultAnnotations_Annotation withSnippetArray = 5;
+	optional GFIContentPreview_ResultAnnotations_Annotation postSnippet = 6;
+}
+
+message GFIContentPreview {
+	optional MSPStyledText snippet = 1;
+	optional GFIContentPreview_ResultAnnotations annotations = 2;
+	optional GFIContentPreview_MediaMetadata mediaMetadata = 5;
+	optional GFIImage image = 7;
+	optional GFIVideoThumbnail videoThumbnail = 8;
+	optional GFILink thumbnailLink = 9;
+	repeated GFIFact postSnippetFactArray = 10;
+	optional GFIStructuredData structuredData = 11;
+	optional GFIOneLineSitelinks oneLineSitelinks = 12;
+	optional GFIFinePrint finePrint = 13;
+	optional string warningText = 14;
+	optional GFILink warningLink = 15;
+	optional uint32 maxSnippetLineCount = 16;
+	optional GFIContentPreview_Title title = 17;
+}
+
+message GFIFlippyPage {
+	repeated QLTComponent contentArray = 1;
+	optional GFIVeLogInfo veLogInfo = 2;
+}
+
+message GFIFlippyCarousel {
+	repeated GFIFlippyPage pageArray = 1;
+	optional int32 selectedPage = 2;
+}

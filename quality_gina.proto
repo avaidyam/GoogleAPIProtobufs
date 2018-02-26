@@ -1,0 +1,60 @@
+message GINAInlineAction {
+	optional string intent = 1;
+	optional string errorMessage = 2;
+	optional string successMessage = 4;
+}
+
+message GBTQActionTime {
+	optional int32 hour = 1;
+	optional int32 minute = 2;
+	optional int32 second = 3;
+}
+
+message GBTQActionDate {
+	optional int32 year = 1;
+	optional int32 month = 2;
+	optional int32 day = 3;
+}
+
+message GBTQIosInlineAction_CalendarAction {
+	optional string account = 1;
+	optional string title = 2;
+	optional GBTQActionDate localDate = 3;
+	optional GBTQActionTime localTime = 4;
+	optional int64 durationMs = 5;
+}
+
+message GBTQIosInlineAction_AlarmAction {
+	optional GBTQActionTime localTime = 1;
+	optional GBTQActionDate localDate = 2;
+}
+
+message GBTQIosInlineAction {
+	optional GBTQIosInlineAction_AlarmAction alarmAction = 1;
+	optional GBTQIosInlineAction_CalendarAction calendarAction = 2;
+}
+
+message GBTQAndroidInlineAction_CalendarAction {
+	optional string account = 1;
+	optional string title = 2;
+	optional GBTQActionDate localDate = 3;
+	optional GBTQActionTime localTime = 4;
+	optional int64 durationMs = 5;
+}
+
+message GBTQAndroidInlineAction_IntentAction {
+	optional string intent = 1;
+}
+
+message GBTQAndroidInlineAction {
+	optional GBTQAndroidInlineAction_IntentAction intentAction = 1;
+	optional GBTQAndroidInlineAction_CalendarAction calendarAction = 2;
+}
+
+message GBTQInlineAction {
+	optional string intent = 1;
+	optional string errorMessage = 2;
+	optional GBTQAndroidInlineAction androidAction = 3;
+	optional string successMessage = 4;
+	optional GBTQIosInlineAction iosAction = 5;
+}

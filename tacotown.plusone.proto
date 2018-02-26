@@ -1,0 +1,10 @@
+message TPOdata_Person {
+	required string nickName = 1;
+	required string obfuscatedId = 2;
+	optional string profileURL = 3;
+	optional string photoURL = 4;
+	optional string userName = 5;
+}
+
+message TPOdata {
+}

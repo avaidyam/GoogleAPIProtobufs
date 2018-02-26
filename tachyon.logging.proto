@@ -1,0 +1,286 @@
+message GTPLogsId {
+	optional GTPDIdType_Type type = 1;
+	optional string id_p = 2;
+	optional string app = 3;
+}
+
+message GTPLogsTransportEvent_EventDetail {
+	optional int32 detailValue = 1;
+	optional string eventDetail = 2;
+}
+
+message GTPLogsTransportEvent {
+	optional string traceId = 1;
+	optional GTPDMessageType_Type messageType = 2;
+	optional string receiptId = 3;
+	optional GTPDTransportEventType_Type eventType = 4;
+	optional GTPDNode_Type currentNode = 5;
+	optional GTPDNode_Type previousNode = 6;
+	optional GTPDNode_Type nextNode = 7;
+	optional int64 clientDeltaTimeUsec = 8;
+	optional GTPLogsTransportEvent_EventDetail eventDetail = 9;
+	optional int64 serverEventTimeUsec = 10;
+	optional GTPDMessageClass_Type messageClass = 11;
+}
+
+message GTPLogsConnectedCallEvent {
+	optional int32 callLengthSec = 1;
+	optional GTPDConnectedCallEndCause_Code endCause = 2;
+}
+
+message GTPLogsCallSetupEvent {
+	optional GTPDCallSetupCode_Code code = 1;
+}
+
+message GTPLogsEventDetail {
+	optional GTPDTachyonEventDetailType_Type type = 1;
+	optional int32 count = 2;
+}
+
+message GTPLogsContactStatusInfo {
+	optional int32 numTotal = 1;
+	optional int32 numRegistered = 2;
+	optional int32 numRecent = 3;
+	optional int32 numBlocked = 4;
+}
+
+message GTPLogsActiveFeatures {
+	repeated GTPDSwitchableFeature_Type enabledFeaturesArray = 1;
+}
+
+message GTPLogsPermissionStatusChangedInfo {
+	optional GTPDAppPermission_Type appPermission = 1;
+	optional GTPDPermissionStatus_Type permissionStatus = 2;
+	optional int32 count = 3;
+}
+
+message GTPLogsBuildInfo {
+	optional bool releaseBuild = 1;
+}
+
+message GTPLogsHobbesPersonalizationStats {
+	optional int32 numTokens = 1;
+}
+
+message GTPLogsFullMessagePredictionInfo {
+	optional float noPredictionScore = 1;
+	optional float clusterScore = 2;
+	optional float messageScore = 3;
+	optional GTPLogsHobbesPersonalizationStats personalizationStats = 4;
+}
+
+message GTPLogsNowOnChatSuggestionInfo {
+	optional CandidateSource candidateSource = 1;
+	optional GTPLogsNowOnChatPatternInfo pattern = 2;
+	optional GTPLogsNowOnChatPatternInfo patternToShow = 3;
+	optional SuggestionSource source = 4;
+	optional string imageEntityMid = 5;
+}
+
+message GTPLogsNowOnChatPatternInfo {
+	optional string pattern = 1;
+}
+
+message GTPLogsSmartSuggestionInfo {
+	optional int32 suggestionId = 1;
+	optional GTPDSmartSuggestionType_Type type = 2;
+	optional string modelId = 3;
+	optional GTPLogsFullMessagePredictionInfo fullMessagePredictionInfo = 4;
+	optional string modelVersion = 5;
+	optional SmartSuggestionSource_Type source = 6;
+	optional GTPLogsNowOnChatSuggestionInfo nowOnChatSuggestionInfo = 7;
+}
+
+message GTPLogsSmartSuggestionsCreateEvent {
+	optional string messageId = 1;
+	repeated GTPLogsSmartSuggestionInfo suggestionsArray = 2;
+	optional string id_p = 3;
+	optional int32 numHistoryMessages = 4;
+	optional string detectedLanguage = 5;
+	repeated int32 experimentIdsArray = 6;
+}
+
+message GTPLogsStatsInfo_MediaTrackInfo {
+	optional GTPDDirection_Type direction = 1;
+	optional GTPDMedia_Type mediaType = 2;
+	optional int64 rttMillis = 3;
+	optional int32 audioInputLevel = 4;
+	optional int32 audioOutputLevel = 5;
+	optional int64 bytesSent = 6;
+	optional int64 bytesRecv = 7;
+	optional int64 packetsSent = 8;
+	optional int64 packetsRecv = 9;
+	optional int64 packetsLost = 10;
+	optional int32 avgEncodeMillis = 11;
+	optional int32 encodeUsage = 12;
+	optional int32 firsSent = 13;
+	optional int32 firsReceived = 14;
+	optional int32 plisSent = 15;
+	optional int32 plisReceived = 16;
+	optional int32 nacksSent = 17;
+	optional int32 nacksReceived = 18;
+	optional int32 frameWidthInput = 19;
+	optional int32 frameHeightInput = 20;
+	optional int32 frameRateInput = 21;
+	optional int32 frameWidthSent = 22;
+	optional int32 frameHeightSent = 23;
+	optional int32 frameRateSent = 24;
+	optional int32 frameWidthReceived = 25;
+	optional int32 frameHeightReceived = 26;
+	optional int32 frameRateReceived = 27;
+	optional int32 frameRateDecoded = 28;
+	optional int32 frameRateOutput = 29;
+	optional int32 minPlayoutDelayMillis = 30;
+	optional int32 targetDelayMillis = 31;
+	optional int32 renderDelayMillis = 32;
+	optional int32 decodeMillis = 33;
+	optional int32 maxDecodeMillis = 34;
+	optional float accelerateRate = 35;
+	optional string codecName = 36;
+	optional int32 delayMillis = 37;
+	optional float expandRate = 38;
+	optional float speechExpandRate = 39;
+	optional float preemptiveExpandRate = 40;
+	optional int32 jitterBufferMillis = 41;
+	optional int32 preferredJitterBufferMillis = 42;
+	optional int32 jitterReceivedMillis = 43;
+	optional float secondaryDecodedRate = 44;
+	optional int32 decodingCtn = 45;
+	optional int32 decodingCng = 46;
+	optional int32 decodingCtsg = 47;
+	optional int32 decodingNormal = 48;
+	optional int32 decodingPlc = 49;
+	optional int32 decodingPlccng = 50;
+	optional int32 echoDelayMedianMillis = 51;
+	optional int32 echoDelayStddevMillis = 52;
+	optional float echoCancellationQualityMin = 53;
+	optional int32 echoChannelReduction = 54;
+	optional int32 echoCancellationReduction = 55;
+}
+
+message GTPLogsStatsInfo_BandwidthEstimationInfo {
+	optional int32 targetEncBitrate = 1;
+	optional int32 actualEncBitrate = 2;
+	optional int32 availSendBitrate = 3;
+	optional int32 availRecvBitrate = 4;
+	optional int32 transmitBitrate = 5;
+	optional int32 retransmitBitrate = 6;
+	optional int32 leakyBucketDelay = 7;
+}
+
+message GTPLogsStatsInfo_ConnectionInfo {
+	optional bool active = 1;
+	optional GTPLogsIceCandidateInfo localCandidate = 2;
+	optional GTPLogsIceCandidateInfo remoteCandidate = 3;
+	optional int64 rttMillis = 4;
+	optional int64 packetsSent = 5;
+	optional int64 packetsRecv = 6;
+	optional int64 packetsDiscarded = 7;
+	optional int64 bytesSent = 8;
+	optional int64 bytesRecv = 9;
+}
+
+message GTPLogsStatsInfo {
+	optional int32 freqMillis = 1;
+	repeated GTPLogsStatsInfo_ConnectionInfo connectionsArray = 2;
+	optional GTPLogsStatsInfo_BandwidthEstimationInfo bandwidthEstimation = 3;
+	repeated GTPLogsStatsInfo_MediaTrackInfo mediaTracksArray = 4;
+}
+
+message GTPLogsNetworkInfo {
+	optional GTPDNetwork_Type type = 1;
+	optional GTPDCellNetwork_Type cellNetworkType = 2;
+}
+
+message GTPLogsSystemInfo {
+	optional int32 totalCpuUsage = 1;
+	optional int32 cpuFreq = 2;
+	optional int32 numCpuCores = 3;
+	optional int32 batteryLevel = 4;
+	optional bool powerSaveMode = 5;
+	optional bool batteryLow = 6;
+	optional bool powerConnected = 7;
+	optional int32 memoryUsageInMb = 8;
+	optional int32 memoryAllocatedInMb = 9;
+}
+
+message GTPLogsLogUploadInfo_UploadedFile {
+	optional GTPDLogFile_Type logType = 1;
+}
+
+message GTPLogsLogUploadInfo {
+	optional string crashReportId = 1;
+	optional int32 bytesUploaded = 2;
+	repeated GTPLogsLogUploadInfo_UploadedFile filesArray = 3;
+}
+
+message GTPLogsIceCandidateInfo {
+	optional GTPDIceCandidateType_Type type = 1;
+	optional GTPDIceProtocol_Type protocol = 2;
+	optional string address = 3;
+}
+
+message GTPLogsErrorInfo {
+	optional GTPDError_Type error = 1;
+}
+
+message GTPLogsMessageInfo {
+	optional GTPDMethod_Type method = 1;
+}
+
+message GTPLogsTachyonId {
+	optional string user = 1;
+	optional string reg = 2;
+	optional int64 android = 3;
+	optional string room = 4;
+	optional GTPLogsId transportId = 5;
+}
+
+message GTPLogsSurveyInfo {
+	optional GTPDCallQualityRating_Type callRating = 1;
+	repeated GTPDCallQualityFeedback_Type callQualityFeedbacksArray = 2;
+}
+
+message GTPLogsTachyonEvent {
+	optional GTPDEvent_Type type = 1;
+	optional GTPDNode_Type recorder = 2;
+	optional GTPDNode_Type reporter = 3;
+	optional GTPLogsTachyonId source = 4;
+	optional GTPLogsTachyonId destination = 5;
+	optional GTPLogsMessageInfo messageInfo = 6;
+	optional GTPLogsErrorInfo errorInfo = 7;
+	optional GTPLogsIceCandidateInfo iceCandidateInfo = 8;
+	optional GTPLogsLogUploadInfo logUploadInfo = 9;
+	optional GTPLogsSurveyInfo surveyInfo = 10;
+	optional int32 millisSinceCallStart = 11;
+	optional GTPLogsSystemInfo system = 12;
+	optional GTPLogsNetworkInfo network = 13;
+	optional GTPLogsStatsInfo statsInfo = 14;
+	optional GTPLogsId deprecatedSourceId = 15;
+	optional GTPLogsId deprecatedDestId = 16;
+	optional GTPLogsTransportEvent transportEvent = 17;
+	optional GTPLogsSmartSuggestionsCreateEvent suggestionsEvent = 18;
+	optional GTPLogsBuildInfo buildInfo = 19;
+	optional GTPLogsPermissionStatusChangedInfo permStatusChangedInfo = 20;
+	optional GTPLogsActiveFeatures activeFeatures = 21;
+	optional GTPLogsContactStatusInfo contactInfo = 22;
+	optional GTPLogsEventDetail detail = 23;
+	optional GTPLogsBackendEvent backendEvent = 24;
+	optional GTPLogsCallSetupEvent callSetupEvent = 25;
+	optional GTPLogsConnectedCallEvent connectedCallEvent = 26;
+}
+
+message GTPLogsTachyonExtension {
+	repeated GTPLogsTachyonEvent eventsArray = 1;
+}
+
+message GTPLogsFireballMessageAttributes {
+	optional double textSizeMultiplier = 1;
+	optional string stickerSetId = 2;
+	optional int32 stickerId = 3;
+}
+
+message GTPLogsBackendEvent {
+	optional string requestId = 1;
+	repeated GTPLogsFireballMessageAttributes fireballMessageAttributesArray = 2;
+}

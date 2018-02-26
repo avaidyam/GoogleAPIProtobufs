@@ -1,0 +1,65 @@
+message VPBPhoneList {
+	repeated VPBPhone phoneArray = 1;
+}
+
+message VPBPhone {
+	optional string name = 1;
+	optional bool verified = 8;
+	optional bool forwardByDefault = 10;
+	optional bool googleChatEndpoint = 12;
+	optional VPBPhoneId id_p = 13;
+	optional VPBPhoneNumber phoneNumber = 101;
+}
+
+message VPBPhoneNumber {
+	optional string e164 = 1;
+}
+
+message VPBPhoneId {
+	optional string userId = 1;
+	optional int32 phoneId = 2;
+}
+
+message VPBPromotion_Inapplicability {
+	optional bool disclose = 1;
+}
+
+message VPBPromotion {
+	optional VPBPromotion_Type type = 1;
+	optional bool applicable = 2;
+	optional VPBPromotion_Inapplicability whyInapplicable = 3;
+}
+
+message VPBRate_InitialFreeRate {
+	optional int32 initialFreeDurationMs = 1;
+	optional int32 initialFreeDisplayDurationMs = 2;
+	optional VPBMoney pricePerMinuteThereafter = 3;
+}
+
+message VPBRate {
+	optional VPBMoney callPricePerMinute = 2;
+	optional VPBRate_RateType rateType = 5;
+	optional VPBRate_InitialFreeRate initialFreeRate = 6;
+	optional int32 rateTtlMs = 7;
+	repeated VPBPromotion promotionArray = 8;
+}
+
+message VPBAccount {
+	optional VPBMoney callingCredit = 21;
+	optional bool hangoutCallingAvailable = 25;
+	optional bool hangoutCallingRequestable = 26;
+	optional string defaultPhoneCountry = 27;
+	repeated string recentlyUsedPhoneCountryArray = 28;
+	repeated string contactsPhoneCountryArray = 29;
+	optional bool emergencyDialingSupported = 30;
+	repeated VPBPromotion promotionArray = 31;
+	optional bool proxyCallingAvailable = 32;
+	repeated VPBPhoneNumber proxyCallingAllowedPhoneArray = 33;
+	optional bool tychoBranding = 34;
+}
+
+message VPBMoney {
+	optional int64 amount = 1;
+	optional string currency = 2;
+	optional string forDisplay = 3;
+}

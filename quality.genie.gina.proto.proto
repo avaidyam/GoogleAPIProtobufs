@@ -1,0 +1,61 @@
+message GBTGRGbotSelectionCarouselHelpItem {
+	optional string title = 1;
+	repeated string exampleArray = 2;
+	optional GBTGRImage image = 3;
+}
+
+message GBTGRGbotSelectionCarouselActionDialogItem {
+	optional string title = 1;
+	optional string description_p = 2;
+	optional GBTGRImage image = 3;
+}
+
+message GBTGRGbotSelectionCarouselVideoItem {
+	optional string title = 1;
+	optional string description_p = 2;
+	optional string thumbnailURL = 3;
+	optional string formattedDuration = 4;
+	optional GBTGRImage thumbnail = 5;
+}
+
+message GBTGRGbotSelectionCarouselStoryItem {
+	optional string title = 1;
+	optional string description_p = 2;
+	optional string imageURL = 3;
+	optional GBTGRImage image = 4;
+}
+
+message GBTGRImage {
+	optional string URL = 1;
+	optional int32 width = 2;
+	optional int32 height = 3;
+}
+
+message GBTGRWebViewAction {
+	optional string webViewURL = 1;
+	optional string color = 2;
+	optional GBTGRPreferredOrientation preferredOrientation = 3;
+	optional bool hideStatusBar = 4;
+	optional bool gameHasCloseButton = 5;
+	optional GBTGameId gameId = 6;
+	optional string veName = 7;
+}
+
+message GBTGRChatReply {
+	optional string text = 1;
+}
+
+message GBTGRGbotSelectionCarouselItem {
+	optional string externalLinkUri = 1;
+	optional GBTGRChatReply reply = 2;
+	optional GBTGRGbotSelectionCarouselStoryItem storyItem = 3;
+	optional GBTGRGbotSelectionCarouselVideoItem videoItem = 4;
+	optional GBTGRWebViewAction webViewAction = 5;
+	optional GBTGRGbotSelectionCarouselActionDialogItem actionDialogItem = 6;
+	optional GBTGRGbotSelectionCarouselHelpItem helpItem = 7;
+	optional GTPLogsGBotSelectionCarouselItemData logData = 8;
+}
+
+message GBTGRGbotSelectionCarouselResult {
+	repeated GBTGRGbotSelectionCarouselItem itemArray = 1;
+}

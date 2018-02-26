@@ -1,0 +1,48 @@
+message PhotoResponseStatus {
+	optional PhotoResponseStatus_Code code = 1;
+	optional string debugMessage = 2;
+}
+
+message PhotoResponseHeader {
+	optional PhotoResponseStatus status = 1;
+}
+
+message PhotoRequestHeader {
+	optional string collectionId = 1;
+	optional string authKey = 2;
+	optional string externalNamespace = 3;
+	optional string mediaId = 4;
+	optional PhotosCollectionMetadata_Type collectionType = 5;
+	optional string ownerId = 6;
+	optional string inviteToken = 7;
+}
+
+message PhotoReadCollectionResponse {
+	optional PhotoResponseHeader header = 1;
+	optional PhotosCollectionMetadata metadata = 2;
+	repeated Photosdata_Photo photosArray = 3;
+	optional string resumeToken = 4;
+	repeated PhotosTile tileArray = 5;
+	optional PhotosViewerData viewerData = 9;
+	optional PhotosTile collectionTile = 10;
+	optional Photosdata_User owner = 12;
+}
+
+message PhotoGroupOptions {
+	optional int32 maxPhotos = 1;
+	optional PhotosCollectionGroupType type = 2;
+	optional string targetUserId = 3;
+}
+
+message PhotoReadCollectionRequest {
+	optional PhotoRequestHeader header = 1;
+	optional PhotoGroupOptions groupOptions = 2;
+	optional string resumeToken = 3;
+	optional bool includeMetadata = 4;
+	optional bool includeDetails = 5;
+	optional bool includeViewerData = 6;
+	optional bool includeCollectionTile = 7;
+	optional bool includeUpdate = 8;
+	optional EMClientEmbedOptions embedOptions = 9;
+	optional bool includeOwner = 12;
+}

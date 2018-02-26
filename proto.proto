@@ -1,0 +1,4 @@
+message TypedMessage {
+	optional int32 typeId = 1;
+	required bytes message = 8;
+}

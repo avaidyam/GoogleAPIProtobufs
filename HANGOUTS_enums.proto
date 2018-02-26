@@ -1,0 +1,3050 @@
+enum CPBClientNotificationLevel {
+	UseGlobalDefault = 100;
+	ImportantOnly = 25;
+	Off = 10;
+	AllEvents = 30;
+	Ding = 20;
+}
+
+enum HOPBCommonAnnouncement_Action {
+	Interrupt = 2;
+	Fyi = 0;
+	Confirm = 1;
+}
+
+enum HOPBHangoutParticipant_Privilege {
+	MayInvite = 3;
+	MaySetPresenter = 2;
+	MayKick = 4;
+	MayAcceptKnock = 1;
+	Unused = 0;
+}
+
+enum HOPBHangout_HangoutType {
+	Business = 2;
+	Lite = 4;
+	BoqExpressLane = 9;
+	Speakeasy = 6;
+	ExpressLane = 7;
+	Broadcast = 3;
+	Consumer = 1;
+	HotLane = 8;
+}
+
+enum HOPBHangoutParticipant_ClientType {
+	Phone = 5;
+	VcRoom = 6;
+	Desktop = 2;
+	Tablet = 4;
+	Other = 1;
+	Mobile = 3;
+}
+
+enum PhotoInsertMediaRequest_AutoEnhanceOverride {
+	Disabled = 2;
+	UnknownAutoEnhanceOverride = 0;
+	Default = 1;
+}
+
+enum CPBClientCallerIdSetting_ClientIneligibilityCause {
+	UnknownIneligibility = 0;
+	DisabledByPhoneStaleness = 1;
+}
+
+enum HOPBBroadcast_AbuseRecordingDetails_Status {
+	Confirm = 2;
+	Unknown = 0;
+	Initialize = 1;
+}
+
+enum ClientInfo_ClientType {
+	Unknown = 0;
+	IosV2 = 10;
+	Desktop = 2;
+	Android = 4;
+	DriveFs = 9;
+	Python = 6;
+	Vr = 7;
+	PlayCe = 5;
+	Ios = 3;
+	Js = 1;
+	Pancetta = 8;
+}
+
+enum CPBClientExperimentValue_LogAction {
+	Log = 2;
+	UnknownLogAction = 0;
+	DontLog = 1;
+}
+
+enum CPBClientDeviceType {
+	Chrome = 5;
+	Ios = 2;
+	Pstn = 4;
+	Android = 1;
+	Glass = 3;
+}
+
+enum POEMAffinity_AffinityType {
+	PhotosFieldsToShareWithSuggestions = 12;
+	EventsAffinity = 17;
+	DynamiteAffinity = 14;
+	WalletPeopleToPaySuggestions = 20;
+	GlassAffinity = 5;
+	ExpoAffinity = 15;
+	PeopleAutocompleteSocial = 7;
+	ChatAutocomplete = 3;
+	PhotosPeopleToShareWithSuggestions = 11;
+	InboxAffinity = 13;
+	UnicornAffinity = 16;
+	AffinityTypeUnknown = 0;
+	DriveAutocomplete = 19;
+	PhotosSuggestionsAffinity = 18;
+	ContactsPlusEmail = 9;
+	ContactsPlusFrequentlyContacted = 2;
+	GplusAutocomplete = 4;
+	GplusStreamYouMayKnow = 6;
+	ContactsPlusContactCentric = 21;
+	EmailAutocomplete = 1;
+	FieldAutocompleteSocial = 8;
+}
+
+enum PhotosCollectionMetadata_Type {
+	Album = 3;
+	PhotoCollection = 2;
+	AdHoc = 4;
+	PlusEvent = 1;
+	Unknown = 0;
+}
+
+enum CPBClientConversation_ClientUserConversationState_InvitationAffinity {
+	Low = 2;
+	UnknownAffinity = 0;
+	High = 1;
+}
+
+enum GtalkLoginRequest_AuthService {
+	AndroidId = 2;
+	Mail = 0;
+	AndroidCloudToDeviceMessage = 1;
+}
+
+enum EMItemType {
+	CommentV2 = 383;
+	ActionV2 = 415;
+	PlusMediaCollectionV2 = 440;
+	Hangout = 254;
+	DepartmentStore = 182;
+	EntryPointV2 = 443;
+	HangoutQuote = 451;
+	Enumeration = 222;
+	TvEpisode = 32;
+	ShoeStore = 201;
+	BookFormatType = 223;
+	Bakery = 108;
+	AccountingService = 103;
+	PostalAddressV2 = 342;
+	MagazineV2 = 386;
+	PresentationObject = 216;
+	Person = 5;
+	MovieRentalStore = 195;
+	SportsEvent = 63;
+	GovernmentOffice = 116;
+	Article = 11;
+	FormObject = 242;
+	DriveObjectV2 = 364;
+	CarouselFrame = 243;
+	AdministrativeArea = 268;
+	BuddhistTemple = 294;
+	ListenActionV2 = 417;
+	UpdateActionV2 = 425;
+	FoodEstablishment = 107;
+	BankOrCreditUnion = 105;
+	Unknown = 257;
+	Aquarium = 274;
+	PlayMusicTrack = 323;
+	BlogV2 = 402;
+	HobbyShop = 189;
+	PostalAddress = 238;
+	ItemAvailability = 224;
+	CreateActionV2 = 419;
+	MusicRecordingV2 = 375;
+	GoogleUserPhotoV2 = 448;
+	YoutubeChannelV2 = 412;
+	PlusMediaObjectV2 = 437;
+	FormObjectV2 = 361;
+	Restaurant = 114;
+	Optician = 145;
+	PlanActionV2 = 435;
+	WebPage = 35;
+	Cemetery = 279;
+	ConsumeActionV2 = 416;
+	ToyStore = 204;
+	RecommendedPeople = 326;
+	Beach = 275;
+	ArtGallery = 97;
+	JewelryStore = 191;
+	Recipe = 29;
+	SquareInvite = 331;
+	VideoObject = 22;
+	ElectronicsStore = 183;
+	PlusAudioV2 = 438;
+	Festival = 57;
+	Continent = 319;
+	ElementarySchool = 69;
+	SquareV2 = 355;
+	PlaceV2 = 340;
+	Hospital = 91;
+	Quantity = 229;
+	ThingV2 = 335;
+	ContactPage = 41;
+	Plumber = 132;
+	DaySpa = 120;
+	AudioObjectV2 = 368;
+	ItemPage = 42;
+	BowlingAlley = 166;
+	DiscoverActionV2 = 430;
+	EducationalOrganization = 67;
+	TvSeriesV2 = 394;
+	Checkin = 266;
+	WriteActionV2 = 433;
+	MobileApplicationV2 = 389;
+	DeprecatedTourObject = 253;
+	GatedResidenceCommunity = 211;
+	ComputerStore = 180;
+	ProductReview = 251;
+	Product = 7;
+	GeneralContractor = 127;
+	ProfilePage = 43;
+	PlusPhotoV2 = 344;
+	WpSidebar = 51;
+	StoryV2 = 380;
+	TrainStation = 307;
+	SaleEvent = 61;
+	Corporation = 66;
+	PlusSoftwareApplicationV2 = 414;
+	Park = 290;
+	ProductReviewV2 = 392;
+	VisualArtsEvent = 65;
+	PlusPhotoCollectionV2 = 407;
+	MusicPlaylist = 24;
+	ImageObjectV2 = 339;
+	BasicInteractionV2 = 365;
+	HighSchool = 70;
+	AudioObject = 19;
+	PublicSwimmingPool = 170;
+	VeterinaryCare = 148;
+	TvEpisodeV2 = 400;
+	PerformingArtsTheater = 292;
+	RadioStation = 160;
+	SpreadsheetObject = 218;
+	MotorcycleRepair = 86;
+	LodgingBusiness = 136;
+	ReactActionV2 = 422;
+	CafeOrCoffeeShop = 111;
+	HairSalon = 121;
+	AddActionV2 = 426;
+	WantActionV2 = 424;
+	Notary = 157;
+	DanceEvent = 55;
+	Language = 227;
+	EntertainmentBusiness = 94;
+	Organization = 4;
+	EmotishareV2 = 382;
+	Map = 17;
+	TaxiStand = 306;
+	EventTimeV2 = 406;
+	CollegeOrUniversity = 68;
+	PollOptionV2 = 409;
+	PollV2 = 408;
+	GoogleChart = 258;
+	GasStation = 84;
+	WpHeader = 50;
+	SoftwareApplicationV2 = 444;
+	MedicalClinic = 144;
+	GoogleUserPhotoAlbum = 449;
+	TattooParlor = 124;
+	MovingCompany = 131;
+	BookV2 = 377;
+	MusicAlbum = 25;
+	HealthAndBeautyBusiness = 118;
+	AutoBodyShop = 78;
+	WebPageElement = 45;
+	OfferV2 = 367;
+	MediaObjectV2 = 338;
+	Event = 2;
+	ReservationV2 = 398;
+	RiverBodyOfWater = 316;
+	Casino = 98;
+	ArticleV2 = 391;
+	MusicGroupV2 = 373;
+	OfferItemCondition = 225;
+	NailSalon = 123;
+	MedicalOrganization = 141;
+	Painting = 27;
+	ConvenienceStore = 181;
+	SquareInviteV2 = 356;
+	PlayObjectV2 = 387;
+	ChildCare = 87;
+	MusicVideoObject = 21;
+	MovieV2 = 370;
+	Crematorium = 280;
+	HangoutConsumer = 256;
+	MusicGroup = 260;
+	Canal = 311;
+	FindActionV2 = 427;
+	Duration = 231;
+	StadiumOrArena = 173;
+	State = 271;
+	MotorcycleDealer = 85;
+	LandmarksOrHistoricalBuildings = 322;
+	CommentActionV2 = 432;
+	FileObject = 265;
+	RatingV2 = 371;
+	InsuranceAgency = 106;
+	Distance = 230;
+	Church = 296;
+	CollectionPage = 38;
+	PlusPhotoAlbumV2 = 349;
+	ClothingStore = 179;
+	Landform = 309;
+	TravelAgency = 208;
+	ImageGallery = 39;
+	TvSeries = 34;
+	SiteNavigationElement = 46;
+	CatholicChurch = 295;
+	AdultEntertainment = 95;
+	AutoRental = 81;
+	AggregateRatingV2 = 369;
+	UserInteraction = 220;
+	LocalPlusPhotoAlbum = 332;
+	Mosque = 298;
+	ContactPoint = 237;
+	ParkingFacility = 291;
+	FileObjectV2 = 360;
+	MusicVenue = 289;
+	ReviewV2 = 388;
+	OceanBodyOfWater = 313;
+	TheaterEvent = 64;
+	MusicAlbumV2 = 372;
+	AutomatedTeller = 104;
+	PlusPhotosAddedToCollection = 261;
+	WholesaleStore = 205;
+	PresentationObjectV2 = 362;
+	VideoObjectV2 = 354;
+	Attorney = 151;
+	SportsClub = 172;
+	StickerV2 = 441;
+	PlusPhotosAddedToCollectionV2 = 405;
+	PerformingGroup = 259;
+	AutoRepair = 82;
+	NewsArticle = 13;
+	GeoCoordinatesV2 = 343;
+	Hostel = 138;
+	Rating = 234;
+	FurnitureStore = 185;
+	ProfessionalService = 149;
+	RealEstateAgent = 161;
+	ChalkboardV2 = 447;
+	RoofingContractor = 133;
+	ComedyEvent = 54;
+	LocalPlusPhotoAlbumV2 = 397;
+	AggregateRating = 235;
+	PoliceStation = 92;
+	BeautySalon = 119;
+	Blog = 14;
+	Review = 30;
+	BikeStore = 177;
+	Intangible = 3;
+	OutletStore = 198;
+	TelevisionStation = 206;
+	FoodEvent = 58;
+	HangoutV2 = 353;
+	PlusPageV2 = 385;
+	ExerciseGym = 167;
+	Courthouse = 284;
+	Movie = 23;
+	PlaceReviewV2 = 401;
+	FireStation = 90;
+	Energy = 232;
+	HoaPlusEventV2 = 410;
+	StructuredValue = 236;
+	Airport = 273;
+	Mountain = 320;
+	VideoGalleryV2 = 411;
+	BodyOfWater = 310;
+	MensClothingStore = 193;
+	ShoppingCenter = 164;
+	MusicPlaylistV2 = 374;
+	Square = 246;
+	MiddleSchool = 71;
+	ViewActionV2 = 442;
+	Thing = 0;
+	Residence = 209;
+	SportingGoodsStore = 202;
+	ApartmentComplex = 210;
+	Magazine = 328;
+	GovernmentBuilding = 282;
+	SearchResultsPage = 44;
+	HinduTemple = 297;
+	DrawingObject = 262;
+	OfficeEquipmentStore = 197;
+	PlusPage = 327;
+	Library = 135;
+	BusStation = 276;
+	Book = 15;
+	BedAndBreakfast = 137;
+	Date = 445;
+	SoftwareApplication = 302;
+	SeaBodyOfWater = 317;
+	Reservation = 267;
+	City = 269;
+	ScholarlyArticle = 219;
+	BookStore = 178;
+	HousePainter = 129;
+	CheckinV2 = 357;
+	AboutPage = 36;
+	PlusPhotoAlbum = 250;
+	TouristAttraction = 213;
+	PlusPost = 329;
+	MobilePhoneStore = 194;
+	WpFooter = 49;
+	UserPlusOnes = 215;
+	GovernmentOrganization = 74;
+	TravelEvent = 325;
+	DefenceEstablishment = 285;
+	PersonV2 = 350;
+	Volcano = 321;
+	FinancialService = 102;
+	Table = 47;
+	Locksmith = 130;
+	HomeGoodsStore = 190;
+	HomeAndConstructionBusiness = 125;
+	Offer = 228;
+	CommunicateActionV2 = 429;
+	Dentist = 142;
+	NutritionInformation = 241;
+	ItemList = 16;
+	MobileApplication = 303;
+	Comment = 264;
+	TradeActionV2 = 418;
+	PlayMusicAlbumV2 = 393;
+	WebApplication = 304;
+	School = 73;
+	BuyActionV2 = 421;
+	MusicRecording = 26;
+	AutoDealer = 79;
+	PlusPostV2 = 390;
+	SportsActivityLocation = 165;
+	EventV2 = 352;
+	Zoo = 308;
+	AutoWash = 83;
+	Preschool = 72;
+	OrganizationV2 = 351;
+	BarOrPub = 109;
+	DryCleaningOrLaundry = 88;
+	GeoCoordinates = 239;
+	AutoPartsStore = 80;
+	IceCreamShop = 113;
+	LocalBusinessV2 = 379;
+	Physician = 147;
+	EventVenue = 281;
+	DocumentObjectV2 = 358;
+	WpAdBlock = 48;
+	PlusEventV2 = 404;
+	TvSeason = 33;
+	TennisComplex = 174;
+	GoogleOfferV2 = 378;
+	CollexionV2 = 413;
+	PawnShop = 199;
+	RecyclingCenter = 162;
+	Motel = 140;
+	Museum = 288;
+	AutomotiveBusiness = 77;
+	Embassy = 286;
+	Campground = 278;
+	BusStop = 277;
+	ComedyClub = 99;
+	PlaceOfWorship = 293;
+	Emotishare = 334;
+	MusicStore = 196;
+	PlusReshareV2 = 446;
+	InteractActionV2 = 428;
+	Photograph = 28;
+	PetStore = 200;
+	Place = 6;
+	InternetCafe = 134;
+	BlogPosting = 12;
+	TouristInformationCenter = 207;
+	RVPark = 301;
+	CheckoutPage = 37;
+	WebPageV2 = 337;
+	InteractionV2 = 366;
+	HangoutBroadcast = 255;
+	BlogPostingV2 = 403;
+	HardwareStore = 188;
+	PostOffice = 117;
+	NightClub = 101;
+	Pharmacy = 146;
+	Playground = 300;
+	ExampleObject = 245;
+	SpreadsheetObjectV2 = 363;
+	DrawingObjectV2 = 359;
+	AnimalShelter = 76;
+	SelfStorage = 163;
+	PlayMusicAlbum = 324;
+	CheckInActionV2 = 431;
+	HangoutChatMessage = 450;
+	Florist = 184;
+	SkiResort = 171;
+	MovieTheater = 100;
+	BusinessEvent = 52;
+	EducationEvent = 56;
+	ReviewActionV2 = 423;
+	GardenStore = 186;
+	EmergencyService = 89;
+	SocialEvent = 62;
+	MediaObject = 18;
+	ChildrensEvent = 53;
+	PlaceReview = 263;
+	LakeBodyOfWater = 312;
+	Synagogue = 299;
+	EmploymentAgengy = 93;
+	ImageObject = 20;
+	PlusPhoto = 249;
+	JobPosting = 226;
+	ReserveActionV2 = 436;
+	Mass = 233;
+	LiteraryEvent = 59;
+	DocumentObject = 217;
+	AppInvite = 330;
+	GolfCourse = 168;
+	Pond = 314;
+	CreativeWorkV2 = 336;
+	LegislativeBuilding = 287;
+	AmusementPark = 96;
+	SubwayStation = 305;
+	CivicStructure = 272;
+	OrganizeActionV2 = 434;
+	Winery = 115;
+	FinancialQuote = 252;
+	PlayMusicTrackV2 = 399;
+	Brewery = 110;
+	Sculpture = 31;
+	FinancialQuoteV2 = 384;
+	Store = 175;
+	Country = 270;
+	HvacBusiness = 128;
+	SingleFamilyResidence = 212;
+	VideoGallery = 40;
+	AssessActionV2 = 420;
+	CityHall = 283;
+	GeoShape = 240;
+	LiquorStore = 192;
+	HealthClub = 122;
+	Waterfall = 318;
+	MusicEvent = 60;
+	TireShop = 203;
+	CreativeWork = 1;
+	NewsArticleV2 = 439;
+	LocalBusiness = 75;
+	Hotel = 139;
+	Reservoir = 315;
+	DeprecatedTourObjectV2 = 395;
+	FastFoodRestaurant = 112;
+	Electrician = 126;
+	GroceryStore = 187;
+	PlusEvent = 244;
+}
+
+enum Platform {
+	UnsetPlatform = 10;
+	Native = 2;
+	UnknownPlatform = 0;
+	Web = 1;
+}
+
+enum CPBClientEasterEggSuggestionInfo_ClientGemHorizontalAlignment {
+	Left = 2;
+	Center = 3;
+	Unknown = 1;
+	Right = 4;
+}
+
+enum CPBClientCallerIdState {
+	CallerIdDisabled = 2;
+	UknownCallerIdState = 0;
+	CallerIdEnabled = 1;
+}
+
+enum EndCause {
+	UnknownSession = 17;
+	UserTakeOver = 41;
+	AdminEnded = 14;
+	SecurityError = 20;
+	NeverConnected = 49;
+	ResourceConstraint = 30;
+	ServerBump = 74;
+	HoaCopyrightViolation = 38;
+	HandoffToPstnErrorNetworkDisconnected = 68;
+	Error = 3;
+	BrowserNotResponse = 102;
+	PluginConnectivityLost = 42;
+	BrowserChannelFailed = 32;
+	WebrtcDenied = 58;
+	LeftConversation = 59;
+	InternalServerError = 28;
+	NeverStarted = 47;
+	HoaAbuseViolation = 39;
+	UnexpectedCodepath = 34;
+	AuthExpired = 46;
+	Unknown = 6;
+	InvalidAccess = 67;
+	PartialNeverConnected = 50;
+	KickConversation = 103;
+	TieBreak = 12;
+	SessionExpired = 25;
+	FailedTransport = 23;
+	Busy = 5;
+	FluteNotEnabled = 7;
+	UserRtcpBye = 45;
+	ClientCloseOrRefresh = 63;
+	EjectedByModerator = 43;
+	Retrying = 11;
+	UserAutoKicked = 37;
+	InitiateFailed = 16;
+	Timeout = 2;
+	KnockingDenied = 64;
+	P2P3RdPartyJoined = 51;
+	NetworkGone = 31;
+	ServerGone = 26;
+	AutoExitOnEmpty = 61;
+	CryptoOutOfSync = 73;
+	HandoffFromPstn = 66;
+	ClientGone = 8;
+	HandoffToPstn = 65;
+	HoaFingerprintViolation = 40;
+	NoConnectivity = 27;
+	BroadcastIneligible = 71;
+	NoCandidates = 24;
+	UserEnded = 0;
+	PlayerError = 13;
+	NeverConnectedExpected = 72;
+	GatewayAppLoadFailure = 70;
+	IncompatibleParameters = 19;
+	MucDropout = 21;
+	Blocked = 9;
+	JoinCallNotInProgress = 60;
+	FailoverFailed = 44;
+	PaymentRequired = 35;
+	Decline = 1;
+	ConnectivityLost = 10;
+	P2PSetupFailed = 55;
+	FatalResponse = 15;
+	P2POtherSideEnded = 52;
+	UndefinedCondition = 29;
+	PartialFailedTransport = 48;
+	SessionServerUnbind = 56;
+	BadRequest = 33;
+	P2PStateMismatch = 54;
+	CommunicationChannel = 22;
+	AnotherCallAnswered = 62;
+	AnotherClientAccepted = 18;
+	LaptopSleeping = 4;
+	P2PJidMismatch = 53;
+	WcsDrained = 36;
+	FluteCrash = 57;
+	AutoExitOnIdle = 69;
+}
+
+enum CallConnectionCandidateInfo_PROTOCOL {
+	ProtocolTcp = 2;
+	ProtocolUnknown = 0;
+	ProtocolUdp = 1;
+	ProtocolSsltcp = 3;
+}
+
+enum APOEAPeople2RequestMask_Field {
+	RelationshipStatus = 17;
+	PlaceDetails = 41;
+	Skills = 14;
+	Im = 20;
+	InteractionSettings = 30;
+	ExternalId = 38;
+	LinkedPerson = 99;
+	Photo = 3;
+	ContactGroupPreference = 42;
+	InAppReachability = 32;
+	CustomSchemaField = 47;
+	Membership = 28;
+	ClientData = 39;
+	Interest = 34;
+	ReadOnlyProfileInfo = 46;
+	Website = 6;
+	Organization = 12;
+	CoverPhoto = 25;
+	BraggingRights = 23;
+	About = 5;
+	Birthday = 7;
+	SocialConnection = 45;
+	InAppNotificationTarget = 43;
+	Phone = 11;
+	Language = 37;
+	Address = 16;
+	Name = 2;
+	FileAs = 31;
+	AgeRange = 26;
+	Gender = 8;
+	EmailCertificate = 40;
+	SortKeys = 27;
+	ProfileURL = 24;
+	UnknownField = 0;
+	Occupation = 13;
+	Relation = 19;
+	Event = 21;
+	Email = 9;
+	BestDisplayName = 44;
+	OtherKeyword = 35;
+	Metadata = 1;
+	Nickname = 10;
+	LegacyFields = 100;
+	Location = 15;
+	PeopleInCommon = 29;
+	SipAddress = 33;
+	UserDefined = 22;
+	RelationshipInterest = 18;
+	Tagline = 4;
+	Calendar = 36;
+}
+
+enum PhotosCollectionGroupType {
+	Taggees = 2;
+	Highlights = 4;
+	Popularity = 6;
+	UserOrder = 7;
+	Chronological = 5;
+	Contributors = 3;
+	Default = 1;
+	UnknownCollectionGroupType = 0;
+}
+
+enum CPBClientEntity_BabelUserState {
+	NonBabel = 2;
+	UnknownUserState = 0;
+	Babel = 1;
+}
+
+enum CPBClientSyncFilter {
+	InvitedLowAffinitySyncFilter = 5;
+	ActiveSyncFilter = 3;
+	ArchiveSyncFilter = 2;
+	InvitedSyncFilter = 4;
+	InboxSyncFilter = 1;
+	UnknownSyncFilter = 0;
+}
+
+enum ChatSettingsSettingsPreset {
+	Default = 2;
+	UnknownPreset = 0;
+	Custom = 1;
+	DefaultAutoinvite = 3;
+}
+
+enum CPBClientConversationView {
+	ArchivedView = 2;
+	UnknownConversationView = 0;
+	InboxView = 1;
+}
+
+enum CallPerfLogEntry_DataPoint_Media_DIRECTION {
+	TypeBandwidthEstimation = 2;
+	TypeSender = 0;
+	TypeReceiver = 1;
+}
+
+enum CallConnectionCandidateInfo_STREAM {
+	StreamVideoRtp = 2;
+	StreamVideoRtcp = 4;
+	StreamDataRtcp = 6;
+	StreamDataRtp = 5;
+	StreamUnknown = 0;
+	StreamAudioRtp = 1;
+	StreamAudioRtcp = 3;
+}
+
+enum GPBField_Kind {
+	TypeBytes = 12;
+	TypeSint32 = 17;
+	TypeGroup = 10;
+	TypeEnum = 14;
+	TypeInt32 = 5;
+	TypeSfixed32 = 15;
+	TypeFixed32 = 7;
+	TypeInt64 = 3;
+	TypeMessage = 11;
+	TypeUint32 = 13;
+	TypeSfixed64 = 16;
+	TypeUnknown = 0;
+	TypeSint64 = 18;
+	TypeString = 9;
+	TypeFloat = 2;
+	TypeUint64 = 4;
+	TypeFixed64 = 6;
+	TypeBool = 8;
+	TypeDouble = 1;
+}
+
+enum CPBClientCallerIdSettingsMask {
+	CallerIdSettingsNotProvided = 2;
+	UnknownCallerIdSettingsMask = 0;
+	CallerIdSettingsProvided = 1;
+}
+
+enum CPBClientRichPresenceType {
+	RpDevice = 2;
+	RpActivity = 4;
+	RpLastSeen = 6;
+	RpGloballyEnabled = 5;
+	RpUnknown = 0;
+	RpInCallState = 1;
+	RpMood = 3;
+}
+
+enum Application {
+	BabelInBigtop = 415;
+	Meetings = 607;
+	VideoHangoutGvc = 402;
+	VideoHangoutHotrod = 420;
+	VideoHangoutTee = 405;
+	Babel = 407;
+	VideoHangoutSdk = 406;
+	VideoHangoutEnvoy = 409;
+	BabelInCallmemaybe = 419;
+	NovaInBabel = 408;
+	UnknownApplication = 0;
+	TinkerbellPstn = 901;
+	Jam = 606;
+	ExpressLane = 412;
+	Castouts = 158;
+	SpeakeasyClient = 604;
+	VideoHangout = 400;
+	SlidesRemote = 602;
+	Tinkerbell = 900;
+	NovaInDialer = 609;
+	SessionServer = 907;
+	ExternalMediaClients = 603;
+	Legacy = 422;
+	Wcs = 903;
+	Mesi = 902;
+	Huddle = 605;
+	VideoHangoutLite = 401;
+	Porthole = 424;
+	GoogleSupport = 608;
+	BabelInQuasar = 416;
+	VideoHangoutHoa = 404;
+	Transcriptionbell = 905;
+	Rigel = 423;
+	WabelMediacall = 410;
+	BabelInOz = 413;
+	VideoCallTestLibrary = 600;
+	RoomServer = 904;
+	BabelInContacts = 418;
+	Reflector = 906;
+	BabelInChromeApp = 417;
+	HotLane = 421;
+	BoqExpressLane = 425;
+	HangoutStartPage = 411;
+	VideoHangoutPresent = 403;
+	BabelInGmail = 414;
+}
+
+enum CallConnectionCandidateInfo_TYPE {
+	TypeStun = 2;
+	TypeUnknown = 0;
+	TypeLocal = 1;
+	TypeRelay = 3;
+}
+
+enum CPBClientUrlRedirectResult_ClientRedirectError {
+	UnknownRedirectError = 0;
+}
+
+enum CPBClientBlockState {
+	Unblock = 2;
+	UnknownBlockState = 0;
+	Block = 1;
+}
+
+enum CPBClientSourceType {
+	Web = 2;
+	UnknownSourceType = 0;
+	Mobile = 1;
+}
+
+enum HOPBMediaSource_VideoDetails_CaptureType {
+	Screencast = 2;
+	Camera = 1;
+}
+
+enum ConnectivityCheckLogEntry_NicInfo_ProxyAuth {
+	AuthUnknown = 2;
+	AuthNone = 0;
+	AuthBasic = 1;
+}
+
+enum CPBClientGroupLinkSharingStatus {
+	LinkSharingOff = 2;
+	UnknownLinkSharingStatus = 0;
+	LinkSharingOn = 1;
+	NotAvailable = 3;
+}
+
+enum CPBActiveClientState {
+	OtherClientIsActive = 2;
+	NoActiveClient = 0;
+	IsActiveClient = 1;
+}
+
+enum CPBClientAnalyticsEvent_EventType {
+	ResponseReceived = 12;
+	Checkpoint = 10;
+	Dropped = 5;
+	InvalidationDelivered = 7;
+	Deprecated3 = 3;
+	Created = 11;
+	ResponseRendered = 13;
+	Forwarded = 2;
+	InvalidationDiscarded = 9;
+	Delivered = 4;
+	Discarded = 6;
+	Received = 1;
+	InvalidationForwarded = 8;
+}
+
+enum CPBClientConversationStatus {
+	Active = 2;
+	UnknownConversationStatus = 0;
+	Invited = 1;
+	Left = 3;
+}
+
+enum ConnectivityCheckLogEntry_Reason {
+	RecvBytesSame = 2;
+	CallEnd = 3;
+	NoWritable = 1;
+}
+
+enum CPBClientRegistrationType {
+	Unregister = 2;
+	Register = 1;
+}
+
+enum CPBClientSuggestion_ClientSuggestionType {
+	Lgtm = 12;
+	Gem = 17;
+	HappyNewYear = 10;
+	LaughterExpression = 14;
+	SmartReply = 20;
+	HappyThanksgiving = 5;
+	ExcitementExpression = 15;
+	HappyBirthday = 7;
+	WhereYouAt = 3;
+	LoveYou = 11;
+	Sgtm = 13;
+	DisappointmentExpression = 16;
+	UnknownType = 0;
+	WhereAmI = 19;
+	DateTime = 18;
+	MerryChristmas = 9;
+	Location = 4;
+	HappyHanukkah = 6;
+	HappyHolidays = 8;
+}
+
+enum CPBClientDomainProperties_ClientDomainDefaultOtrSetting {
+	DefaultHistoryOn = 2;
+	UnknownDomainOtrSetting = 0;
+	DefaultHistoryOff = 1;
+}
+
+enum POEMPersonFieldMetadata_Container {
+	AffinityCluster = 12;
+	GoogleGroup = 10;
+	Account = 5;
+	DomainProfile = 7;
+	Profile = 0;
+	Unknown = 3;
+	Affinity = 11;
+	Circle = 2;
+	DeviceContact = 9;
+	Place = 4;
+	ExternalAccount = 6;
+	DomainContact = 8;
+	Contact = 1;
+}
+
+enum CPBClientGetConversationResponse_ClientGetConversationError {
+	InvalidContinuationToken = 1;
+}
+
+enum CPBClientQueryPresenceRequest_ClientFieldMask {
+	LastSeen = 10;
+	Availability = 2;
+	Location = 4;
+	CalendarPresence = 9;
+	InCall = 6;
+	DeviceStatus = 7;
+	Mood = 5;
+	StatusMessage = 3;
+	Reachability = 1;
+	Activity = 8;
+}
+
+enum CPBClientAdditionalEntityData {
+	HasHadPastHangout = 2;
+	UnknownAdditionalData = 0;
+	IsBabelUser = 1;
+}
+
+enum PhotosAlbumType {
+	UpdatesAlbums = 0;
+	CameraSync = 2;
+	Scrapbook = 4;
+	BunchAlbums = 6;
+	Event = 7;
+	Blogger = 5;
+	AllOthers = 3;
+	ProfilePhotos = 1;
+	PopularPhotos = 8;
+}
+
+enum CPBClientAnalyticsEvent_ChatAction {
+	HangoutOngoing = 706;
+	SendChatMessage = 101;
+	HangoutStarted = 702;
+	HangoutComingSoon = 701;
+	CreateConversation = 100;
+	HangoutLeave = 704;
+	HangoutJoin = 703;
+	UnknownAction = 0;
+	HangoutEnded = 705;
+}
+
+enum CPBClientPresenceStateSetting_ClientPresenceState {
+	Mobile = 10;
+	DesktopIdle = 30;
+	MobileActive = 20;
+	None = 1;
+	DesktopActive = 40;
+}
+
+enum HOPBHangoutInvitationAck_IndirectUserAction {
+	UnknownIndirectAction = 0;
+	Error = 2;
+	UnsupportedNotificationType = 4;
+	UserClientMutedNotifications = 9;
+	TimedOut = 6;
+	NewCall = 7;
+	ServerCancel = 5;
+	UnsupportedHangoutType = 3;
+	InCallOrRing = 1;
+	Shown = 8;
+}
+
+enum APOEAPeople2ConnectedSiteParams_ConnectedSiteType {
+	ConnectedSiteTypeUnknown = 0;
+	AllTypes = 1;
+}
+
+enum SocialSegmentType_SegmentTypeEnum {
+	AllUserMention = 5;
+	UserMention = 3;
+	Link = 2;
+	Hashtag = 4;
+	LineBreak = 1;
+	Text = 0;
+}
+
+enum CPBLNodeDefs_NodeType {
+	Bot = 17;
+	DrivePublisher = 41;
+	XmppInterop = 14;
+	Rooms = 20;
+	HangoutsUserPusher = 49;
+	Lens = 30;
+	Abuseiam = 38;
+	Mcs = 3;
+	Ccs = 42;
+	Reflector = 32;
+	Prefstore = 47;
+	Tinkerbell = 28;
+	MesiSpanner = 39;
+	Platform = 34;
+	Botguard = 46;
+	Ro = 6;
+	Meetings = 50;
+	Papyrus = 12;
+	Focus = 25;
+	Broadcastbell = 23;
+	Fs = 5;
+	Ss = 7;
+	Guns = 45;
+	Speakeasy = 43;
+	Apiary = 11;
+	HangoutsPusher = 37;
+	Glass = 16;
+	Wcs = 2;
+	JidLookup = 51;
+	Viewfinder = 31;
+	Lcs = 26;
+	Gcm = 8;
+	ChatExpunger = 40;
+	LcsClient = 27;
+	Megastore = 24;
+	WcsClient = 13;
+	IosClient = 19;
+	Fanserver = 21;
+	Apns = 9;
+	Transcriptionbell = 44;
+	Calendar = 35;
+	Cs = 1;
+	Conserver = 10;
+	Gti = 15;
+	Guss = 29;
+	Pushkit = 48;
+	Diffractor = 33;
+	Mesi = 22;
+	AndroidClient = 18;
+	Gmail = 4;
+	Party = 36;
+}
+
+enum CPBClientStartPhoneNumberVerificationRequest_ClientPhoneNumberVerificationMethod {
+	SmsToHuman = 2;
+	UnknownVerificationMethod = 0;
+	SmsToApp = 1;
+}
+
+enum UFMobileBugReport_OsType {
+	Android = 0;
+	Ios = 1;
+}
+
+enum CPBLChatDefs_ActiveClientState {
+	IsActiveClient = 2;
+	Unknown = 0;
+	NoActiveClient = 1;
+	OtherClientIsActive = 3;
+}
+
+enum CPBClientConfigurationBitType {
+	BusinessFeaturesEnabled = 17;
+	GvSmsIntegrationPromoShown = 14;
+	RichPresenceLastSeenDesktopPromptShown = 20;
+	GvCallerIdWabelFirstTimeDialogShown = 30;
+	DesktopCompactModeEnabled = 38;
+	PhoneVerificationMobilePromptShown = 27;
+	ReportAbuseNoticeAcknowledged = 24;
+	ChatWithCirclesAccepted = 3;
+	GvSmsIntegrationEnabled = 13;
+	HangoutP2PEnabled = 32;
+	RichPresenceLastSeenMobilePromoShown = 19;
+	CanUseGvCallerIdFeature = 28;
+	RichPresenceDevicePromoShown = 9;
+	RichPresenceLastSeenMobilePromptShown = 21;
+	DesktopAutoEmojiConversionEnabled = 34;
+	GmailChatArchiveEnabled = 6;
+	WarmWelcomeSeen = 35;
+	QuasarMarketingPromoDismissed = 1;
+	CanOptIntoGvSmsIntegration = 12;
+	ConversationInviteSettingsSetToCustom = 23;
+	UnicornUseChildProduct = 25;
+	RichPresenceInCallStatePromoShown = 10;
+	AllowedForDomain = 5;
+	GplusUpgradeAllowedForDomain = 7;
+	PhotoServiceRegistered = 29;
+	BusinessFeaturesEligible = 15;
+	InviteNotificationsEnabled = 33;
+	RichPresenceMoodPromoShown = 11;
+	BusinessFeaturesPromoDismissed = 16;
+	DesktopHostDensitySettingsEnabled = 37;
+	RichPresenceLastSeenDesktopPromoShown = 22;
+	GplusSignupPromoDismissed = 2;
+	ChatWithCirclesPromoDismissed = 4;
+	HangoutP2PNoticeNeedsAcknowledgement = 31;
+	InviteHappyStatePromoSeen = 36;
+	UnicornFullyDisabledByParent = 26;
+	RichPresenceActivityPromoShown = 8;
+}
+
+enum CPBClientUserType {
+	Gaia = 2;
+	MalformedPhoneNumber = 4;
+	AnonymousPhoneNumber = 6;
+	UnknownPhoneNumber = 5;
+	UnknownUserType = 0;
+	Invalid = 1;
+	OffNetworkPhone = 3;
+}
+
+enum CPBClientInCall_ClientCallType {
+	Pstn = 100;
+	Hangout = 200;
+	None = 0;
+}
+
+enum CPBClientEntityProperties_ClientAffinity_ClientAffinityType {
+	AffinityTypeUnknown = 0;
+	ContactsPlusFrequentlyContacted = 2;
+	GplusAutocomplete = 4;
+	ContactsPlusEmail = 9;
+	GplusStreamYouMayKnow = 6;
+	PeopleAutocompleteSocial = 7;
+	GlassAffinity = 5;
+	ChatAutocomplete = 3;
+	EmailAutocomplete = 1;
+	FieldAutocompleteSocial = 8;
+}
+
+enum SCPlatform {
+	UnsetPlatform = 10;
+	Native = 2;
+	UnknownPlatform = 0;
+	Web = 1;
+	TotalPlatform = 20;
+}
+
+enum CPBClientResponseStatus {
+	ErrorInvalidConversation = 8;
+	Unknown = 0;
+	ErrorAccessCheckFailed = 10;
+	ErrorBusy = 2;
+	ErrorInvalidRequest = 4;
+	ErrorVersionMismatch = 9;
+	ErrorForwarded = 6;
+	ErrorQuotaExceeded = 7;
+	ErrorRetryLimit = 5;
+	ErrorUnexpected = 3;
+	Ok = 1;
+	ErrorNotFound = 11;
+}
+
+enum BUZZRtcAction_Id {
+	WabelStartupNewLoad = 12;
+	CallAutoJoin = 17;
+	HangoutStartupCreate = 10;
+	WabelHostClientLoad = 14;
+	NovaStartCall = 5;
+	WabelHostClientNewLoad = 15;
+	HangoutStartup = 7;
+	CallCreate = 3;
+	WabelStartup = 11;
+	WabelStartupReload = 13;
+	WabelHostClientReload = 16;
+	UnknownAction = 0;
+	CallAutoInvite = 18;
+	HangoutAutoJoin = 9;
+	CallJoin = 2;
+	MesiJoin = 4;
+	WabelLatency = 6;
+	HangoutStartupJoin = 8;
+	CallStartup = 1;
+}
+
+enum GPBField_Cardinality {
+	CardinalityRequired = 2;
+	CardinalityUnknown = 0;
+	CardinalityOptional = 1;
+	CardinalityRepeated = 3;
+}
+
+enum CPBClientInvitationStatus {
+	AcceptedInvitation = 2;
+	UnknownInvitationStatus = 0;
+	PendingInvitation = 1;
+	InvitationNeeded = 3;
+}
+
+enum CPBClientInviteSettings_NotificationLevel {
+	Invite = 2;
+	UnknownNotificationLevel = 0;
+	Disable = 1;
+	Ring = 3;
+}
+
+enum CPBLChatDefs_NotificationLevel {
+	UseGlobalDefault = 100;
+	ImportantOnly = 25;
+	Off = 10;
+	AllEvents = 30;
+	Ding = 20;
+}
+
+enum CPBClientClientVersion_ClientId {
+	GoogleVoice = 17;
+	IronmanAndroid = 41;
+	RoomServer = 14;
+	CaptionsBot = 30;
+	Porthole = 49;
+	IronmanWeb = 40;
+	Gmail = 38;
+	AndroidNova = 27;
+	Powwow = 24;
+	UnknownClientId = 0;
+	Quasar = 3;
+	WebSupermolesChromeApp = 13;
+	RealtimeMediaJs = 32;
+	IronmanIos = 42;
+	External = 19;
+	IosShare = 47;
+	RealtimeSupport = 28;
+	GlassServer = 9;
+	Castouts = 39;
+	Expresslane = 34;
+	WebSupermolesGmail = 6;
+	Hotlane = 46;
+	HangoutsStartPage = 44;
+	BoqExpresslane = 50;
+	TestClient = 35;
+	Android = 1;
+	WebSupermolesBigtop = 12;
+	BbBot = 23;
+	OzServer = 25;
+	PstnBot = 10;
+	WebSupermolesOz = 5;
+	Bot = 7;
+	ChatExpunger = 29;
+	WebSupermolesShortlink = 45;
+	AnonymousWebVideoCall = 43;
+	Rigel = 48;
+	WebStandaloneApp = 15;
+	WabelMediacall = 33;
+	Speakeasy = 16;
+	Tee = 11;
+	WebSupermolesCallmemaybe = 37;
+	Prober = 18;
+	Ios = 2;
+	WebSupermoles = 4;
+	Mesi = 31;
+	WebSupermolesContacts = 36;
+	HangoutsPusher = 26;
+	WebVideoCall = 8;
+}
+
+enum Photosdata_Video_Status {
+	Final = 3;
+	Ready = 2;
+	Uploading = 4;
+	Failed = 1;
+	Pending = 0;
+}
+
+enum CPBClientInviteeError_ClientInviteeErrorDetail {
+	ForceHistoryConflict = 3;
+	NotAuthorized = 2;
+	ForceHistoryStateChangeUseFork = 4;
+	InviteeBlocked = 1;
+	UnknownInviteeError = 0;
+}
+
+enum CPBLTransportEvent_EventType {
+	ResponseReceived = 12;
+	Latency = 17;
+	Checkpoint = 10;
+	QueueStatus = 14;
+	Dropped = 5;
+	RpcSent = 15;
+	InvalidationDelivered = 7;
+	Branched = 3;
+	Created = 11;
+	ResponseRendered = 13;
+	DatabaseSizeKb = 16;
+	Database = 18;
+	InvalidationDiscarded = 9;
+	Forwarded = 2;
+	Delivered = 4;
+	Discarded = 6;
+	InvalidationForwarded = 8;
+	Received = 1;
+}
+
+enum CPBClientHangoutEventType {
+	HangoutComingSoon = 5;
+	OngoingHangout = 6;
+	EndHangout = 2;
+	LeaveHangout = 4;
+	StartHangout = 1;
+	JoinHangout = 3;
+}
+
+enum HOPBHangout_HangoutMediaType {
+	AudioOnly = 2;
+	PushToTalk = 3;
+	AudioVideo = 1;
+}
+
+enum CPBLTransportEvent_EventDeliveryMechanism {
+	ChatMessageConversationRequest = 5;
+	ChatMessageColdSync = 3;
+	ChatMessageWarmSync = 2;
+	ChatMessageUserScrollBack = 4;
+	ChatMessageFanOut = 1;
+	Unknown = 0;
+}
+
+enum GPBSyntax {
+	SyntaxProto2 = 0;
+	SyntaxProto3 = 1;
+}
+
+enum CallPerfLogEntry_DataPoint_Media_TYPE {
+	TypeVideo = 2;
+	TypeUnknown = 0;
+	TypeAudio = 1;
+	TypeData = 3;
+}
+
+enum HOPBLogData_LogSource {
+	BuzzIosHangout = 42;
+	BuzzIosBabel = 58;
+	BuzzAndroidBabelHangout = 59;
+	WcsHangoutLite = 55;
+	BuzzGlassHangout = 60;
+	BuzzAndroidHangout = 43;
+	WcsHangout = 37;
+}
+
+enum CallStartupEventCode {
+	HangoutEmptyOnJoin = 229;
+	PhoneCall = 230;
+	ProfileSuspended = 215;
+	NoHangoutToJoin = 226;
+	RoomNotFoundError = 306;
+	NoTelecommConnection = 321;
+	PluspageNoAccess = 214;
+	RingTimeoutClient = 102;
+	NonGplusNotAllowed = 222;
+	KnockDenied = 233;
+	MinorsNotAllowed = 206;
+	Blocked = 201;
+	RoomNotFoundLink = 217;
+	MobileDataNotSupported = 208;
+	AbuseBlocked = 200;
+	SignInTimeout = 309;
+	UnicornChildBlocked = 223;
+	JoinMucTimeout = 314;
+	RingTimeoutServer = 103;
+	ConferenceCallNotSupported = 228;
+	MinorsNotSupported = 207;
+	VideoChatDisabled = 220;
+	NoPlugin = 211;
+	BrokenPlugin = 301;
+	NetworkError = 305;
+	RoomFull = 216;
+	AdditionalDeviceNotAllowed = 237;
+	NotAllowedDomain = 236;
+	InvalidIdentifierProvided = 232;
+	RoomConfigTimeout = 313;
+	JoinError = 303;
+	CreateHangoutIdTimeout = 316;
+	ServiceUnavailble = 307;
+	JoinTimeout = 304;
+	GooglePlusDisabled = 205;
+	NoHandoffNumber = 320;
+	JidLookupTimeout = 310;
+	NoLocalPhoneAccount = 225;
+	OtherDeviceResponded = 101;
+	InternalSetupFailed = 323;
+	ObsoleteClientVersion = 212;
+	AdditionalDeviceInvalid = 238;
+	DisallowedByConfig = 224;
+	AuthenticationFailure = 300;
+	CreateConvTimeout = 308;
+	Success = 0;
+	NotAllowed = 209;
+	NotKnockable = 240;
+	Blocking = 202;
+	NoConnectivity = 210;
+	CallCouldNotStart = 318;
+	DisabledByPolicy = 239;
+	BrowserNotSupported = 203;
+	UnauthorizedHoa = 218;
+	DownloadingCodeTimeout = 311;
+	KnockTimeout = 234;
+	NoIdentifierProvided = 231;
+	Decline = 100;
+	AlreadyInCall = 221;
+	GeoBlocked = 204;
+	InitiateSessionTimeout = 315;
+	UnableToHandoffInactiveCall = 227;
+	UnableToScreencast = 322;
+	HandoffToCellularDueToError = 317;
+	PreviouslyEjected = 235;
+	ClientError = 302;
+	UserCanceled = 219;
+	AndroidTelephonyApiError = 319;
+	PlusspageNotInCircle = 213;
+	RoomDiscoveryTimeout = 312;
+}
+
+enum HOPBCommonAnnouncement_LifeTime {
+	Sticky = 2;
+	Unknown = 0;
+	FireAndForget = 1;
+}
+
+enum CPBLTransportEvent_MessageType {
+	Video = 2;
+	HangoutJoin = 702;
+	HangoutStarted = 701;
+	HangoutEnded = 704;
+	Control = 3;
+	Chat = 1;
+	HangoutLeave = 703;
+}
+
+enum GtalkIqStanza_IqType {
+	Result = 2;
+	Get = 0;
+	Set = 1;
+	Error = 3;
+}
+
+enum CPBClientDeliveryMediumType {
+	GoogleVoiceMedium = 2;
+	UnknownMedium = 0;
+	BabelMedium = 1;
+	LocalSmsMedium = 3;
+}
+
+enum LogRequest_LogSource {
+	Spaces = 383;
+	CorpAndroidAiuto = 415;
+	GmmPrimes = 254;
+	NotificationStats = 182;
+	AwxAndroidPrimes = 222;
+	Social = 32;
+	GearheadAndroidPrimes = 201;
+	GhsAndroidPrimes = 223;
+	Sherlog = 108;
+	Pyroclasm = 153;
+	MetalogCounters = 103;
+	ImageryViewer = 342;
+	ChauffeurIosPrimes = 386;
+	Sesame = 216;
+	Games = 5;
+	RecordedPages = 195;
+	Newsstand = 63;
+	Smartcam = 348;
+	LbAs = 116;
+	AppUsage1P = 11;
+	GmscoreApiCounters = 333;
+	CwPrimes = 242;
+	MeetingsIosPrimes = 364;
+	CwCounters = 243;
+	LbDm = 268;
+	Paisa = 294;
+	GmailIos = 417;
+	SearchliteAndroidPrimes = 425;
+	GraphicsStats = 107;
+	AndroidVerifyApps = 105;
+	FireballCounters = 257;
+	FamilylinkCounters = 274;
+	BugleCounters = 323;
+	CorpAndroidJetset = 402;
+	DriveViewer = 189;
+	SocietyAndroidPrimes = 238;
+	AdwordsMobileAndroidPrimes = 224;
+	PlayMusicAndroidWearStandalonePrimes = 419;
+	LifescienceFrontends = 376;
+	Translate = 375;
+	Chauffeur = 412;
+	WalletSdkGcore = 361;
+	Transom = 114;
+	LbS = 9;
+	OnTheGo = 145;
+	LbCa = 35;
+	UnicommS = 381;
+	DocsAndroidSystemHealth = 152;
+	TachyonAndroidPrimes = 279;
+	GftvMobilePrimes = 416;
+	TrustedFace = 204;
+	WifiAssistantPrimes = 326;
+	Society = 275;
+	PlacesNoGlsConsent = 97;
+	Bigtop = 191;
+	DnaProber = 29;
+	VespaIosPrimes = 331;
+	PersonalLogger = 22;
+	Appmanager = 183;
+	Sheets = 57;
+	FitnessAndroidWearPrimes = 319;
+	Phenotype = 69;
+	SmartSetup = 355;
+	SocialGoodDonationWidget = 340;
+	JamAndroidPrimes = 159;
+	GoogleExpressAndroidPrimes = 229;
+	CalendarClient = 335;
+	SocialAffinity = 41;
+	BatteryStats = 91;
+	WorkStore = 132;
+	Flydroid = 120;
+	HuddleAndroidPrimes = 214;
+	OnTheGoIosPrimes = 368;
+	Photos = 42;
+	DriveAndroidPrimes = 166;
+	YtLiteAndroidPrimes = 158;
+	CastSenderSdk = 67;
+	Links = 394;
+	Unknown = -1;
+	FireballPrimes = 266;
+	MobdogIosPrimes = 389;
+	PhotosDraperAndroidPrimes = 253;
+	FitnessAndroid = 169;
+	Telephony = 211;
+	InboxAndroidPrimes = 180;
+	IosGrowth = 251;
+	YtGamingAndroidPrimes = 156;
+	AndroidIde = 7;
+	Tailormade = 127;
+	Gcm = 43;
+	CastIosPrimes = 344;
+	GvcHarvester = 51;
+	UnicommP = 380;
+	Freighter = 307;
+	NfcProgrammer = 61;
+	WifiAssistant = 66;
+	EarthAndroidPrimes = 414;
+	GmbAndroid = 290;
+	GhsIosPrimes = 392;
+	WebStore = 65;
+	BgInOgb = 407;
+	LbC = 24;
+	GarageIosPrimes = 339;
+	WebContacts = 365;
+	PhenotypeCounters = 70;
+	LbD = 19;
+	FitnessGmsCore = 170;
+	FlydroidCounters = 148;
+	SideloadedMusic = 400;
+	VoiceIosPrimes = 292;
+	JamKioskAndroidPrimes = 160;
+	Madden = 218;
+	ImeCounters = 86;
+	SampleShm = 136;
+	MeetingsLogRequest = 422;
+	Calendar = 111;
+	CpanelApp = 121;
+	NearbyAuth = 426;
+	Googletts = 424;
+	YtMusicAndroidPrimes = 157;
+	Drive = 55;
+	DraperIosPrimes = 347;
+	TapAndPayAndroidPrimes = 227;
+	TapAndPayGcore = 94;
+	Magazines = 4;
+	Hallway = 382;
+	Le = 17;
+	YtMainAppAndroidPrimes = 154;
+	DocsOffline = 306;
+	PhotosScanner = 406;
+	CronetSocial = 68;
+	CorpIosFood = 409;
+	DuoCronet = 396;
+	Blogger = 408;
+	AndroidBackup = 84;
+	HangoutLogRequest = 50;
+	Gpu = 144;
+	AndroidSnetJar = 124;
+	DropBox = 131;
+	WallpaperPickerCounters = 377;
+	AndroidAuth = 25;
+	IosGsa = 118;
+	BondOnegoogle = 78;
+	Findr = 45;
+	Topaz = 367;
+	GarageAndroidPrimes = 338;
+	Books = 2;
+	DynamiteAndroidPrimes = 398;
+	NazdeekCabAndroidPrimes = 316;
+	TachyonLogRequest = 98;
+	AwxIosPrimes = 391;
+	Onegoogle = 373;
+	ClearcutProber = 225;
+	AndroidSnetIdle = 123;
+	Crossdevicenotification = 141;
+	Cw = 27;
+	FingerprintStats = 181;
+	BoondAndroidPrimes = 356;
+	Fido = 387;
+	SetupWizard = 87;
+	LbT = 21;
+	Thunderbird = 370;
+	MapsApiCounters = 143;
+	DriveFs = 280;
+	TranslateIosPrimes = 256;
+	ConsumeriqPrimes = 260;
+	Ipconnectivity = 311;
+	CorpAndroidAssistant = 427;
+	SpectrumCounters = 231;
+	Auditor = 173;
+	FitnessAndroidPrimes = 271;
+	Vr = 85;
+	PaisaMerchantAndroidPrimes = 322;
+	ImprovSharpie = 346;
+	YtKidsAndroidPrimes = 155;
+	TapAndPayAppCounters = 265;
+	Pulpfiction = 371;
+	Adshield = 106;
+	Spectrum = 230;
+	ScoobyEvents = 296;
+	NewsWeather = 38;
+	DasherUserhub = 349;
+	HangoutsAndroidPrimes = 179;
+	SlidesIosPrimes = 309;
+	Bluetooth = 208;
+	Hangout = 39;
+	Nova = 34;
+	AndroidMessaging = 46;
+	GmbIos = 295;
+	A11Ylogger = 95;
+	GoogleFitWearable = 81;
+	ClassroomAndroidPrimes = 369;
+	AndroidContacts = 220;
+	GmailAndroidSystemHealth = 150;
+	YoutubeDirectorIosPrimes = 298;
+	PlayGamesPrimes = 332;
+	LbCb = 237;
+	FamilylinkIosPrimes = 291;
+	WestinghouseCounters = 360;
+	Appstreaming = 289;
+	MobdogAndroidPrimes = 388;
+	FireballIosPrimes = 313;
+	KidsCommunicator = 64;
+	MatchstickCounters = 372;
+	MobilesdkClient = 104;
+	WorkStoreApp = 261;
+	Matchstick = 205;
+	AndroidImeAndroidPrimes = 362;
+	LbP = 8;
+	SvIosPrimes = 354;
+	CalendarAndroidSystemHealth = 151;
+	UnicornFamilyManagement = 172;
+	EarthCounters = 405;
+	FlydroidAndroidPrimes = 259;
+	GoogleExpress = 82;
+	Herrevad = 13;
+	AdwordsExpressAndroidPrimes = 343;
+	PancettaMobileHost = 138;
+	IosSpotlightSearchLibrary = 234;
+	ExpeditionsGuide = 185;
+	Fireball = 149;
+	AndroidGsaCounters = 161;
+	AdwordsMobile = 133;
+	PixelPerfect = 54;
+	BooksAndroidPrimes = 397;
+	AnalyticsAndroidPrimes = 235;
+	DiskStats = 92;
+	TapAndPayApp = 119;
+	GoogleTv = 14;
+	Udr = 30;
+	ClearcutDemo = 177;
+	Video = 3;
+	WalletApp = 198;
+	AppCatalog = 206;
+	Slides = 58;
+	CalendarIosPrimes = 353;
+	ChauffeurAndroidPrimes = 385;
+	SheetsAndroidPrimes = 167;
+	CorpAndroidFood = 284;
+	GmsCoreWalletMerchantError = 23;
+	CorpAndroidDory = 401;
+	TronCounters = 90;
+	WalletAppAndroidPrimes = 232;
+	BeaconGcoreTest = 410;
+	SpacesAndroidPrimes = 236;
+	Familylink = 273;
+	AndroidMigrate = 320;
+	LinksIosPrimes = 411;
+	SheetsIosPrimes = 310;
+	GmscoreAndroidPrimes = 193;
+	PaymentsOcr = 164;
+	GoogleExpressIosPrimes = 374;
+	OrchestrationClientDev = 246;
+	ChromeInfra = 71;
+	Store = 0;
+	Wifi = 209;
+	SampleIosPrimes = 202;
+	Telecom = 210;
+	LiveChannelsAndroidPrimes = 328;
+	WingMarketplaceAndroidPrimes = 282;
+	Gokart = 44;
+	SnapseedIosPrimes = 297;
+	InboxIosPrimes = 262;
+	MobDog = 197;
+	ClientLoggingDemo = 327;
+	AndroidGmail = 135;
+	SpacesIosPrimes = 276;
+	EduStore = 15;
+	Icore = 137;
+	NazdeekCafeAndroidPrimes = 317;
+	AndroidStudio = 302;
+	SpectrumAndroidPrimes = 267;
+	SmartkeyApp = 269;
+	Ink = 219;
+	SnapseedAndroidPrimes = 178;
+	GmmBriimCounters = 129;
+	BatchedLogRequest = 357;
+	LatinIme = 36;
+	ScoobySpamReportLog = 250;
+	CpanelAndroidPrimes = 213;
+	PaisaUserIosPrimes = 329;
+	Myfiber = 194;
+	Telematics = 49;
+	GoogleExpressDev = 215;
+	Movies = 74;
+	GmbIosPrimes = 325;
+	AndroidMessagingPrimes = 285;
+	AndroidContactsPrimes = 350;
+	PaisaUserAndroidPrimes = 321;
+	LaunchpadToys = 102;
+	SocialWeb = 47;
+	ChromecastAppLog = 130;
+	PdfViewer = 190;
+	AndroidDialer = 176;
+	ContextManager = 125;
+	GoogleExpressCourierAndroidPrimes = 228;
+	CorpAndroidGbus = 429;
+	CrossdevicenotificationDev = 142;
+	Sandclock = 341;
+	BoqWeb = 241;
+	GmsCorePeople = 16;
+	CronetFireball = 303;
+	PlayConsoleAppPrimes = 264;
+	TopazAndroidPrimes = 418;
+	BooksIosPrimes = 393;
+	ClouddpcPrimes = 304;
+	PerfProfile = 73;
+	CorpAndroidMoma = 421;
+	AndroidCamera = 26;
+	MapsApi = 79;
+	SettingsStats = 390;
+	PhotosAndroidPrimes = 165;
+	ZagatBurgundyAndroidPrimes = 352;
+	DocsIosPrimes = 308;
+	Sense = 83;
+	Justspeak = 72;
+	ZagatBurgundyIosPrimes = 351;
+	LeUlrCounters = 109;
+	EmergencyAssist = 88;
+	GmmBriimPrimes = 239;
+	CronetAndroidGsa = 80;
+	FamilyCompass = 113;
+	SocietyCounters = 379;
+	GmsCore = 10;
+	YtMain = 281;
+	GmsCorePeopleAutocomplete = 147;
+	KongAndroidPrimes = 358;
+	GoogleKeyboardCounters = 221;
+	Backdrop = 48;
+	VrSdkAndroidPrimes = 404;
+	InstoreWallet = 33;
+	Nqlookup = 174;
+	MagictetherCounters = 378;
+	Snapseed = 413;
+	Gboard = 199;
+	JamImpressions = 162;
+	GplusAndroidSystemHealth = 140;
+	ChromecastAndroidAppPrimes = 288;
+	GmmCounters = 77;
+	GplusIosPrimes = 286;
+	YoutubeDirectorApp = 278;
+	DialerAndroidPrimes = 277;
+	TachyonCounters = 99;
+	VoiceAndroidPrimes = 293;
+	Earth = 334;
+	CronetAndroidYt = 196;
+	DmagentAndroidPrimes = 428;
+	Gel = 28;
+	PlayMusicAndroidWearPrimes = 200;
+	LbA = 6;
+	LeanbackEvent = 134;
+	Icing = 12;
+	InstoreConsumerPrimes = 207;
+	BeaconGcore = 301;
+	PersonalBrowserLogger = 37;
+	PhotosIosPrimes = 337;
+	AdsIntegrityOps = 366;
+	TranslateAndroidPrimes = 255;
+	VrSdkIosPrimes = 403;
+	PlatformStatsCounters = 188;
+	LbCfg = 117;
+	SocialUserLocation = 101;
+	OnTheGoCounters = 146;
+	Chime = 300;
+	OrchestrationClient = 245;
+	MeetingsAndroidPrimes = 363;
+	ClassroomIosPrimes = 359;
+	SocialAppinvite = 76;
+	JamKioskImpressions = 163;
+	SmartlockCounters = 184;
+	YtCreatorAndroidPrimes = 171;
+	Vision = 100;
+	LbIa = 52;
+	Docs = 56;
+	Gdeal = 423;
+	Fuse = 186;
+	Tron = 89;
+	Netstats = 62;
+	ImprovPostit = 345;
+	GoogleAnalytics = 18;
+	Car = 53;
+	GmbAndroidPrimes = 263;
+	Curator = 312;
+	WallpaperPicker = 299;
+	ProcStats = 93;
+	AndroidGsa = 20;
+	NovaAndroidPrimes = 249;
+	PlayConsoleApp = 226;
+	WalletAppIosPrimes = 233;
+	Ime = 59;
+	GoogleKeyboardContent = 217;
+	OnTheGoAndroidPrimes = 330;
+	SlidesAndroidPrimes = 168;
+	GoogleHandwritingInputAndroidPrimes = 314;
+	SvAndroidPrimes = 336;
+	GoogleNowLauncher = 247;
+	SdpIosPrimes = 287;
+	GcmCounters = 96;
+	ClouddpcArcPrimes = 305;
+	ImprovApps = 272;
+	TransomCounters = 115;
+	AppsNotify = 252;
+	DynamiteIosPrimes = 399;
+	GmmUe3 = 110;
+	GmsCoreWallet = 31;
+	ToolkitQuickstart = 384;
+	AndroidGsaHighPriorityEvents = 175;
+	ClinicalStudies = 270;
+	Keep = 128;
+	IdentityFrontend = 212;
+	Copresence = 40;
+	SocialCounters = 420;
+	Dynamite = 283;
+	GoogleExpressStoreomsAndroidPrimes = 240;
+	WhPrimes = 248;
+	Voice = 192;
+	AndroidSnetGcore = 122;
+	CuratorAndroidPrimes = 318;
+	Warp = 60;
+	CronetGmm = 203;
+	Music = 1;
+	Katniss = 75;
+	PancettaMobileHostCounters = 139;
+	NazdeekUserAndroidPrimes = 315;
+	KatnipIosPrimes = 395;
+	Ender = 112;
+	Classroom = 126;
+	PixelPerfectClientStateLogger = 187;
+	FamilylinkAndroidPrimes = 244;
+}
+
+enum VPBRate_RateType {
+	UniformRate = 0;
+	InitialFreeRate = 1;
+}
+
+enum CPBClientFocusType {
+	Unfocus = 2;
+	Focus = 1;
+}
+
+enum CPBClientMembershipChangeType {
+	Leave = 2;
+	Join = 1;
+}
+
+enum Photorequests_DataFormat {
+	Tiles = 2;
+	UnknownDataFormat = 0;
+	TacotownData = 1;
+	Media = 3;
+}
+
+enum GPBNullValue {
+	NullValue = 0;
+}
+
+enum CPBClientUpdateFavoritesError {
+	UnknownModifyFavoritesError = 0;
+	StaleVersion = 1;
+}
+
+enum CPBLXsDefs_ClientType {
+	WebSupermolesChromeApp = 17;
+	IronmanAndroid = 41;
+	PstnBot = 14;
+	GoogleVoice = 20;
+	Porthole = 49;
+	CaptionsBot = 30;
+	Gmail = 38;
+	Quasar = 3;
+	IronmanIos = 42;
+	RealtimeMediaJs = 32;
+	IosShare = 47;
+	RealtimeSupport = 28;
+	Castouts = 39;
+	Expresslane = 34;
+	Hotlane = 46;
+	WebSupermolesGmail = 6;
+	BoqExpresslane = 50;
+	WebVideoCall = 12;
+	BbBot = 23;
+	WebSupermolesOz = 5;
+	RoomServer = 7;
+	WebSupermolesShortlink = 45;
+	AnonymousWebVideoCall = 43;
+	GtiSms = 11;
+	WebSupermolesCallmemaybe = 37;
+	WebSupermolesBigtop = 16;
+	Ios = 2;
+	Mesi = 31;
+	HangoutsPusher = 26;
+	SessionServer = 8;
+	IronmanWeb = 40;
+	AndroidNova = 27;
+	Powwow = 24;
+	UnknownClientId = 0;
+	GlassServer = 13;
+	Speakeasy = 19;
+	Prober = 21;
+	Bot = 9;
+	HangoutsStartPage = 44;
+	TestClient = 35;
+	Android = 1;
+	OzServer = 10;
+	Tee = 15;
+	ChatExpunger = 29;
+	Rigel = 48;
+	WabelMediacall = 33;
+	External = 22;
+	WebStandaloneApp = 18;
+	WebSupermoles = 4;
+	WebSupermolesContacts = 36;
+}
+
+enum CPBClientInvitationAffinity {
+	Low = 2;
+	UnknownAffinity = 0;
+	High = 1;
+}
+
+enum CPBClientOffnetworkAddress_Type {
+	Phone = 0;
+	Email = 1;
+}
+
+enum CPBClientSetActiveClientResponse_ClientSetActiveClientError {
+	InvalidClient = 1;
+}
+
+enum ProfileDeviceLocation_Type {
+	City = 2;
+	Best = 1;
+}
+
+enum CPBClientReplyToInviteType {
+	Decline = 2;
+	UnknownReplyToInviteType = 0;
+	Accept = 1;
+}
+
+enum SDISSaes_SocialAffinityEventSource {
+	GplusPeopleWidgetPeopleToAdd = 17;
+	HangoutsAutocompleteCombinedContacts = 41;
+	GplusCommunitiesHomePageSuggestions = 14;
+	YoutubeSharePanelSuggestions = 20;
+	WalletSendSuggestionsPerson = 77;
+	GmailComposeAutocompleteField = 49;
+	WalletRequestSuggestionsField = 74;
+	HangoutsAutocompleteNotOnHangouts = 30;
+	CalendarAutocompleteField = 68;
+	PhotosSendkitSuggestions = 38;
+	GplusPoepleSearchAutocomplete = 3;
+	HangoutsAutocompleteGroupConversations = 42;
+	YoutubeInviteMorePanelContacts = 32;
+	UnicornSendkitAutocompleteField = 58;
+	UnicornSendkitSuggestionsField = 59;
+	HangoutsAutocompleteInDomain = 28;
+	UnicornSendkitAutocomplete = 47;
+	YoutubeSharePanelGroups = 39;
+	YoutubeContactsContacts = 34;
+	FamilyLinkContactsSendkitSuggestions = 46;
+	YoutubeShareAutocomplete = 6;
+	CalendarAutocompletePerson = 67;
+	PhotosSendkitAutocompleteField = 50;
+	GplusCommunitiesStreamPromo = 12;
+	GplusCommunitiesUnifiedSearchExploreResultsPage = 25;
+	GplusPeopleViewPeopleToAdd = 23;
+	PhotosShareAutocomplete = 5;
+	WalletSendSuggestionsField = 78;
+	GplusStreamFriendSuggestions = 7;
+	FamilyLinkContactsSendkitAutocomplete = 45;
+	EventsAutocompletePerson = 63;
+	DynamiteHomeSearchAutocomplete = 43;
+	GplusFeaturedCollectionsStreamPromo = 11;
+	PhotosSendkitAutocomplete = 37;
+	GplusPeopleWidgetYouMayKnow = 16;
+	GplusSearchBoxAutocomplete = 2;
+	EventsAutocompleteField = 64;
+	PhotosSendkitSuggestionsField = 51;
+	YoutubeSharePanelContacts = 31;
+	HangoutsAutocomplete = 26;
+	DriveShareAutocompleteField = 61;
+	WalletRequestSuggestionsPerson = 73;
+	EventsSuggestionsField = 66;
+	GplusPeopleNotificationHqYouMayKnow = 8;
+	EventsSuggestionsPerson = 65;
+	GplusRelatedzFeaturedCollectionsPage = 40;
+	HangoutsAutocompleteHighAffinity = 27;
+	WalletRequestAutocompletePerson = 71;
+	GplusRecommendedCommunitiesTabPage = 24;
+	Unknown = 0;
+	WalletSendAutocompleteField = 76;
+	WalletRequestAutocompleteField = 72;
+	GplusSuggestedCommunitiesPage = 13;
+	GplusFeaturedCollectionsOnboardingPage = 19;
+	CalendarSuggestionsField = 70;
+	YoutubeContactsSuggestions = 21;
+	GplusPeopleNotificationYouMayKnow = 9;
+	DriveShareAutocomplete = 60;
+	DynamiteComposeAutocomplete = 44;
+	ExpoEditingAutocomplete = 35;
+	GmailComposeAutocomplete = 1;
+	GplusFeaturedCollectionsDestinationPage = 10;
+	WalletSendAutocompletePerson = 75;
+	DynamiteComposeAutocompleteField = 55;
+	GplusPeopleViewYouMayKnow = 15;
+	ExpoEditingAutocompleteField = 52;
+	HangoutsAutocompleteOnHangouts = 29;
+	UnicornSendkitSuggestions = 48;
+	FamilyLinkContactsSendkitAutocompleteField = 56;
+	YoutubeInviteMorePanelSuggestions = 33;
+	DynamiteHomeSearchAutocompleteField = 54;
+	GplusFeaturedCollectionsUnifiedSearchExplorePage = 22;
+	GplusRelatedzRecommendedSquaresPage = 62;
+	GplusPeopleViewPeopleToAddBack = 18;
+	GplusPlusMentionAutocomplete = 4;
+	ExpoSharingAutocompleteField = 53;
+	ExpoSharingAutocomplete = 36;
+	FamilyLinkContactsSendkitSuggestionsField = 57;
+	CalendarSuggestionsPerson = 69;
+}
+
+enum HandoffLogEntry_HandoffType {
+	HangoutP2PCloud = 5;
+	HandoffTypeUnknown = 3;
+	NovaPstnToWifi = 2;
+	HangoutCloudP2P = 4;
+	NovaWifiToPstn = 1;
+	HandoffTypeNoHandoff = 0;
+}
+
+enum HOPBBroadcast_LiveStreamStatus_Status {
+	Finished = 5;
+	PreparingLive = 3;
+	PreviewAvailable = 2;
+	Live = 4;
+	Initializing = 1;
+	Unknown = 0;
+}
+
+enum CPBRealtimeNotificationSettings_Level {
+	Ring = 50;
+	Disable = 10;
+	Deliver = 30;
+	Invite = 20;
+	Ping = 40;
+	Default = 0;
+}
+
+enum CPBClientClientVersion_ClientBuildType {
+	Dogfood = 2;
+	UnknownClientBuildType = 0;
+	Developer = 1;
+	Production = 3;
+}
+
+enum VideoCallOptions_OpusPreference {
+	OpusLowestPriority = 2;
+	OpusDefault = 0;
+	OpusPreferred = 1;
+}
+
+enum HOPBHangoutParticipantAddErrorCode {
+	HpaNotAllowedDomain = 12;
+	HpaPreviouslyEjected = 17;
+	HpaAbuseRecordingTosNotAccepted = 10;
+	HpaAdditionalDeviceInvalid = 14;
+	HpaMinorsNotSupported = 5;
+	HpaDisabledByPolicy = 15;
+	HpaCallIsFull = 7;
+	HpaBlocking = 3;
+	HpaUnicornChildNotAllowed = 11;
+	HpaAdditionalDeviceNotAllowed = 13;
+	HpaNotKnockable = 16;
+	HpaUnknownErrorCode = 0;
+	HpaBlocked = 2;
+	HpaCustomerRecordingTosNotAccepted = 9;
+	HpaMinorsNotAllowed = 4;
+	HpaNotAllowed = 6;
+	HpaHangoutsOnAirTosNotAccepted = 8;
+	HpaUserAbuseBlocked = 1;
+}
+
+enum CPBClientLeaveReason {
+	UserInitiated = 2;
+	LeaveReasonUnknown = 0;
+	ForceHistoryPolicyChange = 1;
+}
+
+enum PhotosTileType {
+	More = 101;
+	Collection = 2;
+	Photo = 4;
+	Promo = 110;
+	Camera = 100;
+	PhotosOfUser = 6;
+	User = 5;
+	Event = 3;
+	Album = 1;
+	Unknown = 0;
+}
+
+enum CPBClientOffTheRecordToggle {
+	Disabled = 2;
+	Enabled = 1;
+}
+
+enum CPBClientOffTheRecordStatus {
+	OnTheRecord = 2;
+	OffTheRecord = 1;
+}
+
+enum CPBClientUpgradeType {
+	Force = 2;
+	DeprecatedClient = 3;
+	Suggest = 1;
+}
+
+enum APOEAPeople2ListParams_Collection {
+	All = 6;
+	Ignored = 2;
+	Circled = 4;
+	Blocked = 1;
+	CircledBy = 3;
+}
+
+enum CPBClientDeleteType {
+	PerEventDelete = 2;
+	UnknownDelete = 0;
+	UpperBoundDelete = 1;
+}
+
+enum CPBClientVerificationStatus {
+	UnknownVerificationStatus = 0;
+	Verified = 1;
+}
+
+enum TSGdata_GoogleProfile {
+	Entity = 3;
+	EmeraldSea = 2;
+	EsUser = 4;
+	Old = 1;
+	None = 0;
+}
+
+enum CPBClientEventType {
+	Deprecated12 = 12;
+	Deprecated10 = 10;
+	GroupLinkSharingModification = 14;
+	RemoveUser = 5;
+	HangoutEvent = 7;
+	Voicemail = 3;
+	Mms = 11;
+	ObservedEvent = 13;
+	UnknownEventType = 0;
+	Sms = 2;
+	OtrModification = 9;
+	AddUser = 4;
+	RenameConversation = 6;
+	PhoneCall = 8;
+	RegularChatMessage = 1;
+}
+
+enum CPBClientConversationType {
+	Group = 2;
+	UnknownConversationType = 0;
+	StickyOneToOne = 1;
+}
+
+enum PhotoResponseStatus_Code {
+	Unknown = 2;
+	InsufficientPermission = 3;
+	Ok = 1;
+	AccessPending = 4;
+}
+
+enum HOPBHangoutParticipant_ParticipantState {
+	KnockingAccepted = 12;
+	RingingEarlymedia = 22;
+	Knocking = 10;
+	Ringing = 2;
+	RingingConnecting = 20;
+	RingingNoearlymedia = 21;
+	Unknown = 0;
+	KnockingDenied = 11;
+	Joined = 1;
+}
+
+enum VPBPromotion_Type {
+	Unknown = 0;
+	FirstMinuteFree = 1;
+}
+
+enum ConnectivityCheckLogEntry_NicInfo_ProxyType {
+	TypeSocks5 = 2;
+	TypeNone = 0;
+	TypeHTTPS = 1;
+	TypeUnknown = 3;
+}
+
+enum CPBClientDomainProperties_ClientChatRestricted {
+	ChatRestrictedToDomain = 2;
+	UnknownChatRestricted = 0;
+	ChatNotRestricted = 1;
+}
+
+enum CPBLXsDefs_ChatAction {
+	RegisterDevice = 501;
+	QueryPresence = 801;
+	SyncAllNewEvents = 106;
+	SetActiveClient = 502;
+	SetAvailability = 503;
+	MarkEventObserved = 120;
+	SetSettings = 504;
+	SendOffnetworkInvitation = 901;
+	AddUser = 102;
+	SetConversationNotificationLevel = 108;
+	SetPresence = 802;
+	RemoveUser = 103;
+	StopOffnetworkInvitation = 903;
+	GetSuggestedEntities = 301;
+	SetConfigurationBit = 305;
+	RecordAnalyticEvents = 118;
+	HangoutStarted = 702;
+	ManifoldExecuteBabelCentBlacklist = 1101;
+	ManifoldExecuteBabelArchiving = 1100;
+	DeleteConversation = 116;
+	UpdateWatermark = 115;
+	HangoutResolve = 1001;
+	SearchEntities = 303;
+	SetSmsEnablingState = 904;
+	MediaSessionLog = 1004;
+	ModifyOtr = 110;
+	Rename = 104;
+	GetEntityById = 304;
+	HangoutLeave = 704;
+	GetConversation = 107;
+	SyncRecent = 105;
+	GetUnreadCount = 117;
+	SendChatMessage = 101;
+	StartSmsToAppVerification = 506;
+	GetSettings = 505;
+	QueryAvailability = 300;
+	UnknownAction = 0;
+	ReplyToInvite = 109;
+	ModifyGroupLinkSharingStatus = 122;
+	SetTyping = 114;
+	HangoutQuery = 1002;
+	HangoutJoin = 703;
+	HangoutOngoing = 706;
+	ModifyConversationView = 111;
+	SetFocus = 113;
+	AcceptOffnetworkInvitation = 902;
+	OpenConversationFromURL = 121;
+	SetRichPresenceEnabledState = 803;
+	CreateConversation = 100;
+	HangoutParticipantSearch = 1003;
+	FinishSmsToAppVerification = 507;
+	GetSmsEnablingState = 905;
+	HangoutEnded = 705;
+	GetSelfInfo = 302;
+	SetHangoutNotificationStatus = 112;
+	HangoutComingSoon = 701;
+	GetUserBadgeCount = 119;
+}
+
+enum CPBClientDeclineSignal {
+	BlockInviter = 2;
+	ReportAbuse = 1;
+}
+
+enum CPBClientConversation_ClientNetworkType {
+	Phone = 2;
+	UnknownNetworkType = 0;
+	Babel = 1;
+}
+
+enum CPBClientGetSelfInfoResponse_AccountAgeGroup {
+	Minor = 2;
+	UnknownAgeGroup = 0;
+	Adult = 1;
+	Child = 3;
+}
+
+enum StartInformation_CallType {
+	CalltypeAudio = 2;
+	CalltypeUnknown = 0;
+	CalltypePstn = 1;
+	CalltypeVideo = 3;
+}
+
+enum CPBClientEventObservedStatus {
+	Unobserved = 2;
+	UnknownObservedStatus = 0;
+	Observed = 1;
+}
+
+enum HOPBAnnouncementType {
+	AbuseRecording = 2;
+	UnknownAnnouncement = 0;
+	CameraAppOn = 1;
+}
+
+enum CPBClientExperimentValue_FlagType {
+	Long = 2;
+	Double = 3;
+	Boolean = 1;
+	String = 4;
+}
+
+enum CPBClientDeviceActivity_Type {
+	InVehicle = 0;
+	OnFoot = 2;
+	Unknown = 4;
+	ExitingVehicle = 6;
+	Walking = 7;
+	Tilting = 5;
+	Still = 3;
+	OnBicycle = 1;
+	Running = 8;
+}
+
+enum SCDevice {
+	UnsetDevice = 100;
+	BorgJob = 7;
+	IosTablet = 5;
+	AndroidTablet = 3;
+	UnknownDevice = 0;
+	TotalDeviceMobile = 201;
+	TotalDeviceMobileAndroid = 202;
+	AndroidPhone = 2;
+	AndroidTv = 9;
+	TotalDevice = 200;
+	IosPhone = 4;
+	Tier23 = 6;
+	TotalDeviceMobileIos = 203;
+	Glass = 8;
+	Desktop = 1;
+}
+
+enum Photosdata_Provider {
+	Flickr = 2;
+	Unknown = 0;
+	Picasa = 1;
+	Youtube = 3;
+}
+
+enum CPBLUmaEventData_HistogramType {
+	Histogram = 0;
+	Linear = 1;
+}
+
+enum HOPBBroadcastUseCase {
+	Speakeasy = 8;
+	VideoVoicemail = 2;
+	EnterpriseStreaming = 4;
+	HangoutAbuseRecording = 5;
+	EnterpriseRecording = 3;
+	HangoutsOnAir = 0;
+	ConsumerRecording = 1;
+}
+
+enum HOPBRole {
+	Moderator = 3;
+	Organizer = 2;
+	Guest = 4;
+	Default = 1;
+	UnknownRole = 0;
+}
+
+enum EMPlusPhoto_PhotoMediaType {
+	Photosphere = 3;
+	Video = 2;
+	AnimatedPhoto = 4;
+	Photo = 1;
+	Unknown = 0;
+}
+
+enum UFCommonData_ReportType {
+	AndroidRunningServicesInternal = 12;
+	ImportData = 17;
+	AndroidBatteryInternal = 10;
+	IosCrashInternal = 14;
+	AndroidCrashExternal = 5;
+	IosUserInitiatedInternal = 15;
+	AndroidAnrExternal = 7;
+	Chrome = 3;
+	AndroidAnrInternal = 11;
+	AndroidUserInitiatedInternal = 13;
+	FeedbackExternal = 16;
+	ChromeAppCrashExternal = 18;
+	AndroidCrashInternal = 9;
+	IeToolbar = 2;
+	ChromeOs = 4;
+	AndroidBatteryExternal = 6;
+	AndroidRunningServicesExternal = 8;
+	WebFeedback = 1;
+}
+
+enum Device {
+	UnknownTelephone = 12;
+	AndroidUnknown = 10;
+	UnsetDevice = 100;
+	BorgJob = 7;
+	IosTablet = 5;
+	AndroidTablet = 3;
+	IosUnknown = 11;
+	UnknownDevice = 0;
+	AndroidPhone = 2;
+	AndroidTv = 9;
+	IosPhone = 4;
+	Tier23 = 6;
+	Desktop = 1;
+	Glass = 8;
+}
+
+enum CPBLClientState_EventState_ClientEventObservedStatus {
+	Unobserved = 2;
+	UnknownObservedStatus = 0;
+	Observed = 1;
+}
+
+enum SLOGSocialAffinityExtension_SocialAffinityEventType {
+	Unknown = 0;
+	Click = 2;
+	JoinSquare = 4;
+	SaveDraft = 9;
+	BullhornDismiss = 6;
+	Dismiss = 7;
+	Reject = 5;
+	Accept = 3;
+	Show = 1;
+	Send = 8;
+}
+
+enum CPBClientEntityProperties_ProfileType {
+	Page = 2;
+	None = 0;
+	EsUser = 1;
+}
+
+enum CPBClientTypingType {
+	Pause = 2;
+	Clear = 3;
+	Start = 1;
+}
+
+enum CPBClientForceHistoryState {
+	ForceOn = 2;
+	ForceHistoryUnknown = 0;
+	NoForce = 1;
+	ForceOff = 3;
+}
+
+enum OZACUploadExternalContactsResponse_StatusEnum {
+	InternalError = 3;
+	FullResyncNeeded = 2;
+	RequestTooBig = 4;
+	EntityDeleted = 1;
+	Success = 0;
+}
+
+enum CPBClientDiscoverabilityStatus {
+	OptedInButNotDiscoverable = 2;
+	UnknownDiscoverabilityStatus = 0;
+	OptedInAndDiscoverable = 1;
+	OptedOut = 3;
+}
+
+enum HOPBBroadcast_RecordingStatus_Status {
+	Started = 2;
+	Starting = 4;
+	Ready = 6;
+	Stopping = 5;
+	Unknown = 0;
+	Initializing = 1;
+	Stopped = 3;
+}
+
+enum HOPBTristate {
+	TristateTrue = 2;
+	TristateUnknown = 0;
+	TristateFalse = 1;
+}
+
+enum OZACWipeoutExternalContactsResponse_StatusEnum {
+	InternalError = 2;
+	Success = 0;
+	NoSuchEntity = 1;
+}
+
+enum BUZZRtcMark_Id {
+	VclibBandwidth500Kbps = 501;
+	FirstLocalFeed = 17;
+	HangoutJoinStart = 14;
+	VclibBandwidth1000Kbps = 502;
+	VclibBandwidth1500Kbps = 503;
+	LookupEntitiesStart = 306;
+	ScrollbackRefresh71OrMoreRendered = 334;
+	HangoutIdResolved = 3;
+	MarkFetchProxyNumberStart = 201;
+	RosterRendered = 353;
+	MarkConnectStart = 200;
+	FirstRemoteFeed = 6;
+	SourcesAddFailed = 108;
+	SessionAddStarted = 103;
+	Bandwidth1500Kbps = 12;
+	FreezeDetectorVideoUnfrozen = 23;
+	FrameChannelHandshakeRoundtrip = 342;
+	MessageTypingChangesComplete = 401;
+	ApiaryLoad = 301;
+	MediaStarted = 5;
+	WindowResponseStart = 1101;
+	WindowNavigationStart = 1100;
+	AppUsable = 348;
+	Bandwidth1000Kbps = 11;
+	ConnectBrowserChannelStart = 337;
+	ScrollbackRefresh31To70Rendered = 333;
+	ConnectBrowserChannel = 338;
+	TestMarkTwo = 1001;
+	CallStart = 2;
+	MoleMaximize = 316;
+	SourcesAddDone = 107;
+	GetConversation = 320;
+	SessionAddFailed = 105;
+	QueryPresenceStart = 310;
+	ParticipantAddDone = 101;
+	SendChatMessageServerStart = 323;
+	ApiaryLoadStart = 300;
+	GetSuggestedPeopleStart = 356;
+	GetPhoneContacts = 359;
+	HostClientLoaded = 363;
+	Unset = 0;
+	SendChatMessageServer = 324;
+	MarkFetchProxyNumberSucceeded = 202;
+	RebuildWatermarkMessages = 328;
+	HostClientChannelStart = 361;
+	FreezeDetectorVideoFrozen = 21;
+	BulkFailed = 114;
+	FirstRemoteEndpointConnected = 9;
+	TestMarkThree = 1002;
+	RebuildWatermarkMessagesStart = 327;
+	QueryPresence = 311;
+	ParticipantAddStarted = 100;
+	AutoInviteSent = 15;
+	MarkFetchProxyNumberTimeout = 204;
+	NewMessages = 326;
+	ScrollbackRefresh10OrLessRendered = 331;
+	SendChatMessage = 322;
+	CssInstallStart = 317;
+	GetSuggestedEntitiesStart = 302;
+	FreezeDetectorAudioUnfrozen = 22;
+	ConnectFrameChannelNewHostapiStart = 346;
+	VideoSwitchRequested = 18;
+	FirstBcChannelError = 345;
+	GetSuggestedPeople = 357;
+	TestMarkOne = 1000;
+	GetConversationStart = 319;
+	ScrollbackRefreshStart = 329;
+	OpenMoleStart = 312;
+	SuggestedEntitiesReady = 355;
+	ConnectFrameChannel = 340;
+	FlyoutOpenStart = 335;
+	SourcesAddStarted = 106;
+	FreezeDetectorAudioFrozen = 20;
+	ColdSyncComplete = 350;
+	BrowserChannelConnected = 349;
+	NewMessagesStart = 325;
+	SendChatMessageStart = 321;
+	ParticipantAddFailed = 102;
+	TestMarkNoInterval = 1005;
+	BatchLookupEntities = 309;
+	ScrollbackRefresh = 330;
+	OpenMoleReady = 314;
+	FlyoutOpen = 336;
+	FrameChannelHandshakeStart = 341;
+	ScrollbackRefresh11To30Rendered = 332;
+	SearchEntities = 305;
+	FirstAudioPacketReceived = 7;
+	HostClientLoadStart = 360;
+	FirstBcChannelOpen = 344;
+	MediaStartInit = 16;
+	OpenMoleFrameReady = 313;
+	VclibCallStart = 500;
+	GetSuggestedEntities = 303;
+	TestMarkFive = 1004;
+	StreamsAddDone = 110;
+	LookupEntities = 307;
+	SearchEntitiesStart = 304;
+	MarkFetchProxyNumberNoInternetConnection = 205;
+	HostClientChannelConnected = 362;
+	SessionAddDone = 104;
+	RingingStarted = 8;
+	RosterWindowAdded = 354;
+	HostPageChannelReady = 352;
+	CallEnd = 24;
+	BatchLookupEntitiesStart = 308;
+	ConnectFrameChannelStart = 339;
+	HangoutIdResolveStart = 13;
+	ExtensionsLoaded = 351;
+	StreamsAddStarted = 109;
+	VideoSwitchDone = 19;
+	CssInstall = 318;
+	MessageTypingChangesStart = 400;
+	FirstBcChannelStart = 343;
+	MarkFetchProxyNumberFailed = 203;
+	UserStart = 1;
+	BulkDone = 113;
+	StreamsAddFailed = 111;
+	Bandwidth500Kbps = 10;
+	GetPhoneContactsStart = 358;
+	ConnectFrameChannelNewHostapi = 347;
+	TestMarkFour = 1003;
+	MoleMaximizeStart = 315;
+	MucConnected = 4;
+	BulkStarted = 112;
+}
+
+enum GBPBCrawledContactId_DataType {
+	SgnDomain = 3;
+	RemoteContactId = 2;
+	SgnPersonalKey = 4;
+	ExternalSiteGroupId = 1;
+	Unknown = 0;
+}
+
+enum SCApplication {
+	Spaces = 501;
+	TotalGplus = 1009;
+	GoogleVoice = 561;
+	GplusSocialcast = 14;
+	MoviemakerPhotos = 502;
+	Unicorn = 177;
+	FamilyCamera = 182;
+	AndroidWear = 510;
+	GplusHangout = 3;
+	Mixx = 523;
+	StreamService = 222;
+	GplusPlusPagesRss = 198;
+	MessageProcessor = 201;
+	EmbedsMigration = 206;
+	SocialEvents = 549;
+	Kwyjibo = 223;
+	GoogleJobs = 167;
+	Reader = 108;
+	Classroom = 153;
+	Fountain = 103;
+	VideoHangoutLite = 401;
+	Fireball = 552;
+	RedboxBackend = 216;
+	GplusSquares = 5;
+	Rigel = 566;
+	OneToday = 195;
+	Glassware = 116;
+	GplusProfile = 11;
+	WabelMediacall = 410;
+	URLSharebox = 107;
+	HangoutStartPage = 411;
+	YoutubeAutoshares = 105;
+	Jetstream = 193;
+	LifescienceFrontends = 568;
+	Docs = 164;
+	YoutubeBackstage = 506;
+	Identity = 505;
+	Ridematch = 189;
+	VideoHangoutGvc = 402;
+	QuickstartComments = 533;
+	YoutubeLive = 536;
+	UnknownApplication = 0;
+	PhotosActivityLog = 543;
+	NakshaConsumer = 571;
+	ExpressLane = 412;
+	EmailProcessor = 202;
+	PlusApiOneoff = 210;
+	PostboxOneoff = 209;
+	PhotosChromeapp = 114;
+	GplusLocal = 9;
+	GoogleChrome = 145;
+	TotalFirstParty = 1002;
+	Drive = 152;
+	SocialPolls = 197;
+	EmergencyAssist = 550;
+	Gmail = 135;
+	AutoDocProber = 204;
+	Hub = 508;
+	TotalFirstPartyWithPrimaryIntentToShareToGplus = 1007;
+	CardboardCamera = 520;
+	GoogleExpress = 191;
+	Maps = 137;
+	DasherUserHub = 535;
+	StreamDelete = 556;
+	StreamIndexing = 219;
+	Ender = 183;
+	FountainYoutubeLegacyGdata = 129;
+	AdwordsMobile = 178;
+	AnnotationServiceStanzaListener = 539;
+	GplusCollexionPipeline = 563;
+	SocialSerendipity = 194;
+	StanzaPeriodic = 213;
+	Tailormade = 518;
+	Authzen = 159;
+	PhotosBackend = 215;
+	Vega = 132;
+	AndroidVrHome = 545;
+	ThirdPartyStreamEverywhereSinglePostWidget = 120;
+	PapyrusPeriodic = 214;
+	GmailHangout = 102;
+	GoogleCast = 158;
+	SimbaMobile = 166;
+	TotalUnknown = 1005;
+	Memegen = 529;
+	AdsIntegrityExplorer = 558;
+	Gmoney = 190;
+	YoutubeWatchPageShare = 130;
+	YoutubeAdmin = 573;
+	DoubleclickCreativePreview = 176;
+	GoogleQuickSearchBox = 125;
+	MadisonPeriodic = 522;
+	WingMarketplace = 564;
+	Stax = 562;
+	PlayBooks = 142;
+	AccountSettingsMobile = 560;
+	Jam = 515;
+	StanzaActivityPostDeleteSync = 211;
+	CloudPlatform = 169;
+	CarApp = 517;
+	AuthGrantCredential = 180;
+	Highlight = 531;
+	LocationSample = 156;
+	FramelessSharebox = 127;
+	TestApplication = 526;
+	GplusGames = 7;
+	DocProber = 551;
+	Apollox = 500;
+	TotalInternal = 1004;
+	EnterpriseEnrollment = 572;
+	Chime = 565;
+	ExpressLaneBoq = 414;
+	PlayDeveloperConsole = 521;
+	Photos = 165;
+	Babel = 407;
+	VideoHangout = 400;
+	GoogleMail = 109;
+	FirefoxBrowser = 170;
+	PromotedPosts = 148;
+	Boond = 538;
+	FountainYoutubeMessages = 160;
+	Abuseiam = 218;
+	Helpouts = 136;
+	Frames = 113;
+	GooglePlayServices = 80;
+	GplusPlusPages = 10;
+	NewsWeather = 147;
+	PlayStore = 121;
+	Youtube = 111;
+	WyloToday = 570;
+	Bigtop = 157;
+	Cultural = 537;
+	Stanza = 221;
+	TotalThirdParty = 1003;
+	VideoHangoutHoa = 404;
+	ActivityLog = 519;
+	Paisa = 555;
+	Blogger = 174;
+	MeetingsAndroid = 413;
+	GplusWeb = 199;
+	GplusEvents = 4;
+	Search = 162;
+	PlayNewsstand = 140;
+	Stories = 154;
+	Huddle = 516;
+	StanzaTest = 503;
+	VideoHangoutSdk = 406;
+	TotalMinusYoutube = 1006;
+	VideoHangoutEnvoy = 409;
+	BabelNova = 408;
+	AdwordsExpress = 504;
+	Profiles = 196;
+	GoogleAdmin = 200;
+	GplusNotifications = 6;
+	PlayMusic = 144;
+	Sidecar = 124;
+	GoogleKeep = 131;
+	Chromecast = 511;
+	PlayMovies = 134;
+	GplusFindPeople = 12;
+	SocialReviewsSync = 207;
+	Onthego = 512;
+	FocusBackendBatch = 574;
+	UnknownFirstPartyApplication = 301;
+	AndroidEduProvisioning = 509;
+	Games = 118;
+	PhotoAlbumArchive = 542;
+	PhotosScanner = 567;
+	ChromeRemoteDesktop = 524;
+	Adsense = 513;
+	TotalZeroParty = 1001;
+	GplusPhotos = 2;
+	Contacts = 527;
+	Society = 530;
+	SupplyChainCentral = 553;
+	VideoHangoutPresent = 403;
+	Atari = 188;
+	LocationFlare = 146;
+	Wabel = 117;
+	PicasaPhotos = 101;
+	GmailRecentPosts = 123;
+	Fitness = 141;
+	YoutubeLegacyCommentMigration = 547;
+	UnsetApplication = 300;
+	Hallway = 181;
+	News = 163;
+	TotalSocialApps = 1010;
+	Instore = 143;
+	MapsViews = 184;
+	SpacesActivityLog = 528;
+	Moviemaker = 171;
+	Snapseed = 173;
+	ThirdParty = 100;
+	Topaz = 186;
+	Dynamite = 534;
+	GoogleAnalytics = 155;
+	Total = 1000;
+	ProjectFi = 514;
+	FocusFrontend = 106;
+	FamilyCompass = 179;
+	PhotosFife = 217;
+	Guns = 208;
+	SocialAnnotationService = 554;
+	YoutubeBlarneyStone = 546;
+	GoogleSettings = 81;
+	YoutubeReactr = 168;
+	StanzaIndexing = 220;
+	CloudDevices = 150;
+	Expeditions = 541;
+	SbePlayground = 540;
+	HotLane = 525;
+	MobileBasic = 115;
+	PlusShare = 110;
+	FountainYoutube = 104;
+	FramesDeleteSync = 205;
+	DevicePolicy = 175;
+	Spectrum = 532;
+	Cpanel = 151;
+	GplusWhatsHot = 8;
+	YoutubeCapture = 128;
+	GoogleStars = 172;
+	GraphProber = 212;
+	VideoHangoutTee = 405;
+	Gammago = 548;
+	GplusPhotoEditor = 13;
+	ConsumerPhotoEditor = 192;
+	GmailInboxPosts = 122;
+	AdsIntegrityReviewer = 559;
+	EngagePipeline = 203;
+	Gplus = 1;
+	Expo = 544;
+	MapsEngineMobile = 138;
+	Tablescape = 185;
+	CloudPrint = 149;
+	Parents = 161;
+	Calendar = 139;
+	YoutubeUnplugged = 507;
+	SocialReviews = 133;
+	Papyrus = 569;
+	Checkin = 112;
+	Sandclock = 557;
+	TotalFirstPartyWithSecondaryIntentToShareToGplus = 1008;
+	Wallet = 126;
+	Fiber = 187;
+	FountainYoutubeDiscuss = 119;
+}
+
+enum CPBClientGetSelfInfoRequest_ClientRequestedFieldMask {
+	RichPresenceEnabledState = 12;
+	ManagedPlusPages = 17;
+	RichClientPresenceMood = 10;
+	DesktopAvailabilitySharingState = 14;
+	MobileExperiments = 20;
+	DesktopOffState = 5;
+	GooglePlusMobileUser = 15;
+	ConfigurationBit = 7;
+	ClientPresence = 3;
+	RichClientPresenceInCallState = 11;
+	BabelUser = 13;
+	DesktopHtml5Notifications = 16;
+	AccountAgeGroup = 19;
+	CallerIdSettings = 22;
+	RichClientPresenceStatusMessage = 18;
+	DesktopSoundSetting = 9;
+	IsKnownMinor = 2;
+	DndState = 4;
+	PhoneData = 6;
+	TalkSharedInvisible = 21;
+	SelfEntity = 1;
+	GooglePlusUser = 8;
+}
+
+enum HOPBMediaType {
+	Video = 2;
+	Data = 3;
+	Audio = 1;
+	Bundle = 4;
+}
+
+enum CPBClientUrlRedirectSpec_ClientRedirectType {
+	UnknownRedirectType = 0;
+	Fife = 1;
+}
+
+enum CPBClientHangoutMediaType {
+	AudioOnly = 2;
+	PushToTalk = 3;
+	AudioVideo = 1;
+}
+
+enum HOPBHangoutInvitationAck_UserAction {
+	Declined = 2;
+	UnknownUserAction = 0;
+	Answered = 1;
+	AnsweredAudioOnly = 3;
+}
+
+enum HOPBBroadcast_Resolution {
+	Resolution854X480 = 2;
+	UnknownResolution = 0;
+	Resolution640X360 = 1;
+	Resolution1280X720 = 3;
+}

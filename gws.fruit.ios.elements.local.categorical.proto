@@ -1,0 +1,28 @@
+message GFILocalCategoricalTile {
+	optional GFILink link = 1;
+	optional GFIImageFrame image = 2;
+	optional string title = 3;
+	optional GFILetterPin letterPin = 4;
+	optional GFIRating rating = 5;
+	optional GFITextAttributeList subtitle = 6;
+	optional string subtext = 7;
+	optional bool lazyLoaded = 8;
+	optional GFIVeLogInfo veLogInfo = 9;
+}
+
+message GFIDetails {
+	optional string title = 1;
+	optional GFIRating rating = 2;
+	optional int32 hotelStars = 5;
+	optional MSPStyledText shortReviewSummary = 9;
+	repeated string aspectArray = 10;
+	optional string phoneNumber = 11;
+	optional string gasPrice = 12;
+	optional MSPStyledText openStatus = 13;
+	optional string zagat = 14;
+	optional MSPStyledText existenceStatus = 16;
+	optional string hotelClass = 17;
+	optional GFITextAttributeList shortAttributes = 18;
+	repeated GFITextAttributeList longAttributesArray = 19;
+	repeated GFIHotelAmenity hotelAmenityArray = 20;
+}

@@ -1,0 +1,7 @@
+message LocationSnapToPlaceRequest {
+	optional int32 latitudeE7 = 1;
+	optional int32 longitudeE7 = 2;
+	optional double precisionMeters = 3;
+	optional string searchQuery = 4;
+	optional bool includeGaiaIdForDisplay = 5;
+}

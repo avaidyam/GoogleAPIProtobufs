@@ -1,0 +1,467 @@
+message EMClientEmbedOptions {
+	repeated EMItemType includeTypeArray = 1;
+}
+
+message EMEmbedClientItem {
+	repeated EMItemType typeArray = 1;
+	optional string id_p = 2;
+	optional string canonicalId = 3;
+	optional string signature = 6;
+	optional string renderId = 8;
+}
+
+message EMPlaceV2 {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional string descriptionTruncated = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional EMEmbedClientItem about = 9;
+	repeated EMEmbedClientItem relatedImageArray = 11;
+	optional string sourceName = 12;
+	optional EMEmbedClientItem address = 24;
+	optional EMEmbedClientItem geo = 25;
+	optional string clusterId = 26;
+	optional string ownerObfuscatedId = 27;
+	optional string mapURL = 28;
+	optional string referenceId = 29;
+	optional string faviconURL = 75;
+	optional EMEmbedClientItem aggregateRating = 82;
+	optional string id_p = 106;
+	optional EMEmbedClientItem representativeImage = 185;
+	optional string telephone = 227;
+	optional string faxNumber = 228;
+	optional string externalId = 254;
+	optional bool isClaimedByOwner = 267;
+	optional string placeId = 280;
+	optional string ampURL = 282;
+	optional string destinationURL = 287;
+}
+
+message EMThumbnail {
+	optional string imageURL = 1;
+	optional int32 boxWidthPx = 2;
+	optional int32 boxHeightPx = 3;
+	optional bool exactWidth = 4;
+	optional bool exactHeight = 5;
+	optional bool recenterVertically = 6;
+	optional string uncroppedImageURL = 7;
+	optional int32 imageHeightPx = 8;
+}
+
+message EMPostalAddressV2 {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional string descriptionTruncated = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional EMEmbedClientItem about = 9;
+	repeated EMEmbedClientItem relatedImageArray = 11;
+	optional string sourceName = 12;
+	optional string addressCountry = 30;
+	optional string addressLocality = 31;
+	optional string addressRegion = 32;
+	optional string postOfficeBoxNumber = 33;
+	optional string postalCode = 34;
+	optional string streetAddress = 35;
+	optional string faviconURL = 75;
+	optional EMEmbedClientItem representativeImage = 185;
+	optional string externalId = 254;
+	optional string ampURL = 282;
+	optional string destinationURL = 287;
+}
+
+message EMGeoCoordinatesV2 {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional string descriptionTruncated = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional EMEmbedClientItem about = 9;
+	repeated EMEmbedClientItem relatedImageArray = 11;
+	optional string sourceName = 12;
+	optional double latitude = 36;
+	optional double longitude = 37;
+	optional string faviconURL = 75;
+	optional EMEmbedClientItem representativeImage = 185;
+	optional string externalId = 254;
+	optional string ampURL = 282;
+	optional string destinationURL = 287;
+}
+
+message EMThingV2 {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional string descriptionTruncated = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional EMEmbedClientItem about = 9;
+	repeated EMEmbedClientItem relatedImageArray = 11;
+	optional string sourceName = 12;
+	optional string faviconURL = 75;
+	optional EMEmbedClientItem representativeImage = 185;
+	optional string externalId = 254;
+	optional string ampURL = 282;
+	optional string destinationURL = 287;
+}
+
+message EMPlusAudioV2 {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional string descriptionTruncated = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional EMEmbedClientItem about = 9;
+	optional string text = 10;
+	repeated EMEmbedClientItem relatedImageArray = 11;
+	optional string sourceName = 12;
+	optional string canonicalFountainStream = 13;
+	repeated string unfilteredFountainStreamArray = 14;
+	repeated string premodFountainStreamArray = 15;
+	repeated string postmodFountainStreamArray = 16;
+	repeated string inboxFountainStreamArray = 17;
+	optional EMEmbedClientItem contentLocation = 18;
+	optional string width = 19;
+	optional string height = 20;
+	optional int32 widthPx = 21;
+	optional int32 heightPx = 22;
+	optional string contentURL = 23;
+	optional string ownerObfuscatedId = 27;
+	optional string albumId = 38;
+	optional string photoId = 39;
+	repeated EMEmbedClientItem associatedMediaArray = 42;
+	optional bool isFamilyFriendly = 65;
+	optional string embedURL = 66;
+	optional string playerType = 67;
+	optional string duration = 68;
+	optional string faviconURL = 75;
+	optional EMEmbedClientItem aggregateRating = 82;
+	repeated EMEmbedClientItem offersArray = 83;
+	optional EMEmbedClientItem audio = 96;
+	optional string dateCreated = 111;
+	optional string dateModified = 112;
+	optional EMEmbedClientItem representativeImage = 185;
+	optional string genre = 188;
+	optional string contentRating = 189;
+	optional string inLanguage = 190;
+	optional string datePublished = 191;
+	optional string clientEmbedURL = 215;
+	optional string contentProfileName = 249;
+	optional string contentProfileId = 252;
+	optional string externalId = 254;
+	optional string mediaKey = 258;
+	optional string ampURL = 282;
+	optional string destinationURL = 287;
+	optional string fileFormat = 289;
+}
+
+message EMPersonV2 {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional string descriptionTruncated = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional EMEmbedClientItem about = 9;
+	repeated EMEmbedClientItem relatedImageArray = 11;
+	optional string sourceName = 12;
+	optional string ownerObfuscatedId = 27;
+	optional string gender = 48;
+	optional string email = 49;
+	optional string faviconURL = 75;
+	optional EMEmbedClientItem representativeImage = 185;
+	optional string externalId = 254;
+	optional string ampURL = 282;
+	optional string destinationURL = 287;
+}
+
+message EMImageObjectV2 {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional string descriptionTruncated = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional EMEmbedClientItem about = 9;
+	optional string text = 10;
+	repeated EMEmbedClientItem relatedImageArray = 11;
+	optional string sourceName = 12;
+	optional string canonicalFountainStream = 13;
+	repeated string unfilteredFountainStreamArray = 14;
+	repeated string premodFountainStreamArray = 15;
+	repeated string postmodFountainStreamArray = 16;
+	repeated string inboxFountainStreamArray = 17;
+	optional EMEmbedClientItem contentLocation = 18;
+	optional string width = 19;
+	optional string height = 20;
+	optional int32 widthPx = 21;
+	optional int32 heightPx = 22;
+	optional string contentURL = 23;
+	repeated EMEmbedClientItem associatedMediaArray = 42;
+	optional bool isFamilyFriendly = 65;
+	optional string embedURL = 66;
+	optional string playerType = 67;
+	optional string duration = 68;
+	optional string faviconURL = 75;
+	optional EMEmbedClientItem aggregateRating = 82;
+	repeated EMEmbedClientItem offersArray = 83;
+	optional EMEmbedClientItem audio = 96;
+	optional string dateCreated = 111;
+	optional string dateModified = 112;
+	optional EMEmbedClientItem representativeImage = 185;
+	optional string genre = 188;
+	optional string contentRating = 189;
+	optional string inLanguage = 190;
+	optional string datePublished = 191;
+	optional string contentProfileName = 249;
+	optional string contentProfileId = 252;
+	optional string externalId = 254;
+	optional string ampURL = 282;
+	optional string destinationURL = 287;
+	optional string fileFormat = 289;
+}
+
+message EMWebPageV2 {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional string descriptionTruncated = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional EMEmbedClientItem about = 9;
+	optional string text = 10;
+	repeated EMEmbedClientItem relatedImageArray = 11;
+	optional string sourceName = 12;
+	optional string canonicalFountainStream = 13;
+	repeated string unfilteredFountainStreamArray = 14;
+	repeated string premodFountainStreamArray = 15;
+	repeated string postmodFountainStreamArray = 16;
+	repeated string inboxFountainStreamArray = 17;
+	optional EMEmbedClientItem contentLocation = 18;
+	repeated EMEmbedClientItem associatedMediaArray = 42;
+	optional bool isFamilyFriendly = 65;
+	optional string faviconURL = 75;
+	optional EMEmbedClientItem aggregateRating = 82;
+	repeated EMEmbedClientItem offersArray = 83;
+	optional EMEmbedClientItem audio = 96;
+	optional string dateCreated = 111;
+	optional string dateModified = 112;
+	optional EMEmbedClientItem representativeImage = 185;
+	optional string genre = 188;
+	optional string contentRating = 189;
+	optional string inLanguage = 190;
+	optional string datePublished = 191;
+	optional string contentProfileName = 249;
+	optional string contentProfileId = 252;
+	optional string externalId = 254;
+	optional string ampURL = 282;
+	optional string destinationURL = 287;
+	optional string fileFormat = 289;
+}
+
+message EMPlusPhotoV2 {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional string descriptionTruncated = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional EMEmbedClientItem about = 9;
+	optional string text = 10;
+	repeated EMEmbedClientItem relatedImageArray = 11;
+	optional string sourceName = 12;
+	optional string canonicalFountainStream = 13;
+	repeated string unfilteredFountainStreamArray = 14;
+	repeated string premodFountainStreamArray = 15;
+	repeated string postmodFountainStreamArray = 16;
+	repeated string inboxFountainStreamArray = 17;
+	optional EMEmbedClientItem contentLocation = 18;
+	optional string width = 19;
+	optional string height = 20;
+	optional int32 widthPx = 21;
+	optional int32 heightPx = 22;
+	optional string contentURL = 23;
+	optional string ownerObfuscatedId = 27;
+	optional string albumId = 38;
+	optional string photoId = 39;
+	optional string onepickMediaId = 40;
+	repeated EMEmbedClientItem associatedMediaArray = 42;
+	optional string relativeURL = 46;
+	repeated string streamIdArray = 47;
+	optional bool isFamilyFriendly = 65;
+	optional string embedURL = 66;
+	optional string playerType = 67;
+	optional string duration = 68;
+	optional string faviconURL = 75;
+	optional EMEmbedClientItem aggregateRating = 82;
+	repeated EMEmbedClientItem offersArray = 83;
+	optional EMEmbedClientItem audio = 96;
+	optional string dateCreated = 111;
+	optional string dateModified = 112;
+	optional EMEmbedClientItem representativeImage = 185;
+	optional string genre = 188;
+	optional string contentRating = 189;
+	optional string inLanguage = 190;
+	optional string datePublished = 191;
+	optional string imageQuality = 195;
+	optional string maxHeight = 196;
+	optional string maxWidth = 197;
+	optional string contentProfileName = 249;
+	optional string contentProfileId = 252;
+	optional string externalId = 254;
+	optional string mediaKey = 258;
+	optional string ampURL = 282;
+	optional string originalMediaPlayerURL = 283;
+	optional string originalMediaContainerURL = 284;
+	optional string originalLightboxPhotoId = 285;
+	optional string originalContentURL = 286;
+	optional string destinationURL = 287;
+	optional string fileFormat = 289;
+}
+
+message EMPlace {
+	optional string name = 1;
+	optional string description_p = 2;
+	optional string URL = 3;
+	optional EMPostalAddress address = 4;
+	optional EMGeoCoordinates geo = 5;
+	optional string clusterId = 6;
+	optional string ownerObfuscatedId = 7;
+	optional string mapURL = 8;
+	optional string imageURL = 9;
+	optional string referenceId = 10;
+	optional EMEmbedClientItem representativeImage = 11;
+	optional EMEmbedClientItem aggregateRating = 12;
+	optional string telephone = 13;
+	optional string faxNumber = 14;
+	optional bool isClaimedByOwner = 15;
+	optional string placeId = 16;
+}
+
+message EMThing {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional EMThumbnail proxiedImage = 5;
+	optional string proxiedFaviconURL = 6;
+	repeated EMEmbedClientItem authorArray = 7;
+	optional string descriptionTruncated = 8;
+	optional EMEmbedClientItem representativeImage = 9;
+	repeated EMImageObject relatedImageArray = 10;
+}
+
+message EMGeoCoordinates {
+	optional double latitude = 1;
+	optional double longitude = 2;
+	optional string imageURL = 3;
+	optional string name = 4;
+	optional string URL = 5;
+	optional EMEmbedClientItem representativeImage = 6;
+}
+
+message EMPostalAddress {
+	optional string name = 1;
+	optional string addressCountry = 2;
+	optional string addressLocality = 3;
+	optional string addressRegion = 4;
+	optional string postOfficeBoxNumber = 5;
+	optional string postalCode = 6;
+	optional string streetAddress = 7;
+	optional string URL = 8;
+	optional EMEmbedClientItem representativeImage = 9;
+}
+
+message EMWebPage {
+	optional string URL = 1;
+	optional string imageURL = 2;
+	optional string name = 3;
+	optional string description_p = 4;
+	optional EMEmbedClientItem about = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional string proxiedFaviconURL = 7;
+	repeated EMEmbedClientItem authorArray = 8;
+	optional string descriptionTruncated = 9;
+	repeated EMImageObject relatedImageArray = 10;
+	optional string sourceName = 11;
+	optional string canonicalFountainStream = 12;
+	repeated string unfilteredFountainStreamArray = 13;
+	repeated string premodFountainStreamArray = 14;
+	repeated string postmodFountainStreamArray = 15;
+	repeated string inboxFountainStreamArray = 16;
+	optional EMEmbedClientItem representativeImage = 17;
+}
+
+message EMPlusPhoto {
+	optional EMImageObject thumbnail = 1;
+	optional string ownerObfuscatedId = 2;
+	optional string albumId = 3;
+	optional string photoId = 4;
+	optional bool isVideo = 5;
+	optional string URL = 6;
+	optional string originalMediaPlayerURL = 7;
+	optional string originalMediaContainerURL = 8;
+	optional string originalLightboxPhotoId = 9;
+	optional string originalContentURL = 10;
+	optional string name = 11;
+	optional string onepickMediaId = 12;
+	optional EMPlusPhoto_PhotoMediaType mediaType = 13;
+	repeated string streamIdArray = 14;
+	optional EMEmbedClientItem representativeImage = 15;
+	optional string imageQuality = 16;
+	optional string maxHeight = 17;
+	optional string maxWidth = 18;
+	optional string relativeURL = 19;
+	optional string downloadURL = 20;
+}
+
+message EMPerson {
+	optional string name = 1;
+	optional string ownerObfuscatedId = 2;
+	optional string imageURL = 3;
+	optional string URL = 4;
+	optional string gender = 5;
+	optional string email = 6;
+	optional EMEmbedClientItem representativeImage = 7;
+}
+
+message EMImageObject {
+	optional string URL = 1;
+	optional string name = 2;
+	optional string description_p = 3;
+	optional string imageURL = 4;
+	optional string thumbnailURL = 5;
+	optional EMThumbnail proxiedImage = 6;
+	optional EMPlace contentLocation = 7;
+	optional string width = 8;
+	optional string height = 9;
+	optional int32 widthPx = 10;
+	optional int32 heightPx = 11;
+	optional string contentURL = 12;
+	optional string sourceDomain = 13;
+	optional EMEmbedClientItem about = 14;
+	optional EMEmbedClientItem representativeImage = 15;
+}
