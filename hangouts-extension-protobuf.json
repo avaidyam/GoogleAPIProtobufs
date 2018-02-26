@@ -1,0 +1,1303 @@
+{
+  "EMThingItemRoot" : {
+    "EMEmbedClientItem" : {
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      },
+      "27535952" : {
+        "packable" : false,
+        "fieldNumber" : 27535952,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMImageObject_imageObject",
+        "msgClass" : "EMImageObject",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      }
+    }
+  },
+  "HOPBHangoutCommonRoot" : {
+
+  },
+  "PhotosTileTypeRoot" : {
+
+  },
+  "CallstatsRoot" : {
+
+  },
+  "BUZZTimingLogEnumRoot" : {
+
+  },
+  "CPBClientRoot" : {
+    "EMEmbedClientItem" : {
+      "35825640" : {
+        "packable" : false,
+        "fieldNumber" : 35825640,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlaceV2_placeV2",
+        "msgClass" : "EMPlaceV2",
+        "repeated" : false
+      }
+    }
+  },
+  "ChatSettingsRequestsRoot" : {
+
+  },
+  "UFImageDataRoot" : {
+
+  },
+  "EMPersonItemRoot" : {
+
+  },
+  "HOPBBroadcastCommonRoot" : {
+
+  },
+  "GPBDurationRoot" : {
+
+  },
+  "CPBLHangoutLogRequestRoot" : {
+
+  },
+  "DataRoot" : {
+
+  },
+  "APOAPCommonFieldsRoot" : {
+
+  },
+  "EMThingV2Root" : {
+    "EMEmbedClientItem" : {
+      "39748951" : {
+        "packable" : false,
+        "fieldNumber" : 39748951,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMThingV2_thingV2",
+        "msgClass" : "EMThingV2",
+        "repeated" : false
+      }
+    }
+  },
+  "PhotosDataRoot" : {
+    "EMEmbedClientItem" : {
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "ClientCapabilityRoot" : {
+
+  },
+  "ClientanalyticsRoot" : {
+
+  },
+  "CPBLClientStateRoot" : {
+
+  },
+  "PhotoInsertmediaRoot" : {
+    "EMEmbedClientItem" : {
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "ChatSettingsResponsesRoot" : {
+
+  },
+  "RtcClientEnumsRoot" : {
+
+  },
+  "PhotosCollectionMetadataRoot" : {
+
+  },
+  "APOEAExternalRequestsRoot" : {
+
+  },
+  "OZPRPResponsesRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "POEMMergedPersonRoot" : {
+
+  },
+  "EMPostalAddressItemRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      }
+    }
+  },
+  "HOPBCommonAnnouncementClientRoot" : {
+    "EMEmbedClientItem" : {
+      "35825640" : {
+        "packable" : false,
+        "fieldNumber" : 35825640,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlaceV2_placeV2",
+        "msgClass" : "EMPlaceV2",
+        "repeated" : false
+      }
+    }
+  },
+  "OZACRequestsRoot" : {
+
+  },
+  "EMImageObjectV2Root" : {
+    "EMEmbedClientItem" : {
+      "40265033" : {
+        "packable" : false,
+        "fieldNumber" : 40265033,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMImageObjectV2_imageObjectV2",
+        "msgClass" : "EMImageObjectV2",
+        "repeated" : false
+      }
+    }
+  },
+  "CommonDataRoot" : {
+
+  },
+  "GtalkGtalkCoreRoot" : {
+
+  },
+  "POSPRequestsRoot" : {
+
+  },
+  "HOPBMediaClientRoot" : {
+    "EMEmbedClientItem" : {
+      "35825640" : {
+        "packable" : false,
+        "fieldNumber" : 35825640,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlaceV2_placeV2",
+        "msgClass" : "EMPlaceV2",
+        "repeated" : false
+      }
+    }
+  },
+  "PhotosPhotoTileRoot" : {
+    "PhotosTile" : {
+      "42239900" : {
+        "packable" : false,
+        "fieldNumber" : 42239900,
+        "dataType" : 15,
+        "containingMessageClass" : "PhotosTile",
+        "wireType" : 2,
+        "singletonName" : "PhotosPhotoTile_photoTile",
+        "msgClass" : "PhotosPhotoTile",
+        "repeated" : false
+      }
+    },
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "UpdateUpdatesDataRoot" : {
+    "EMEmbedClientItem" : {
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "UFMobileCommonRoot" : {
+
+  },
+  "VPBVoiceRoot" : {
+
+  },
+  "CPBNotificationsRoot" : {
+
+  },
+  "HOPBVideoInvitesRoot" : {
+    "EMEmbedClientItem" : {
+      "35825640" : {
+        "packable" : false,
+        "fieldNumber" : 35825640,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlaceV2_placeV2",
+        "msgClass" : "EMPlaceV2",
+        "repeated" : false
+      }
+    }
+  },
+  "PhotosMCItemMaskRoot" : {
+
+  },
+  "PhotosMCIdsRoot" : {
+
+  },
+  "ChatSettingsDataRoot" : {
+
+  },
+  "PhotosViewerDataRoot" : {
+
+  },
+  "UFCommonRoot" : {
+
+  },
+  "EMItemTypesRoot" : {
+
+  },
+  "EMPlaceItemRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "VideooptionsRoot" : {
+
+  },
+  "HOPBBroadcastClientRoot" : {
+    "EMEmbedClientItem" : {
+      "35825640" : {
+        "packable" : false,
+        "fieldNumber" : 35825640,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlaceV2_placeV2",
+        "msgClass" : "EMPlaceV2",
+        "repeated" : false
+      }
+    }
+  },
+  "EMImageObjectItemRoot" : {
+    "EMEmbedClientItem" : {
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      },
+      "27535952" : {
+        "packable" : false,
+        "fieldNumber" : 27535952,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMImageObject_imageObject",
+        "msgClass" : "EMImageObject",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      }
+    }
+  },
+  "LocationResponsesRoot" : {
+    "EMEmbedClientItem" : {
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "EMWebPageItemRoot" : {
+    "EMEmbedClientItem" : {
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      },
+      "27535952" : {
+        "packable" : false,
+        "fieldNumber" : 27535952,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMImageObject_imageObject",
+        "msgClass" : "EMImageObject",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      }
+    }
+  },
+  "PhotosMCAudioRoot" : {
+
+  },
+  "GBPBLocalRoot" : {
+    "EMEmbedClientItem" : {
+      "35825640" : {
+        "packable" : false,
+        "fieldNumber" : 35825640,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlaceV2_placeV2",
+        "msgClass" : "EMPlaceV2",
+        "repeated" : false
+      }
+    }
+  },
+  "SCEnumsRoot" : {
+
+  },
+  "HOPBEnumRoot" : {
+
+  },
+  "PhotosCommonEnumsRoot" : {
+
+  },
+  "EMEmbedClientRoot" : {
+
+  },
+  "CPBLHangoutLogEntryRoot" : {
+
+  },
+  "HOPBPushClientRoot" : {
+    "EMEmbedClientItem" : {
+      "35825640" : {
+        "packable" : false,
+        "fieldNumber" : 35825640,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlaceV2_placeV2",
+        "msgClass" : "EMPlaceV2",
+        "repeated" : false
+      }
+    }
+  },
+  "UFWebRoot" : {
+
+  },
+  "GPBAnyRoot" : {
+
+  },
+  "SCSocialClientRoot" : {
+
+  },
+  "EMPostalAddressV2Root" : {
+    "EMEmbedClientItem" : {
+      "36003298" : {
+        "packable" : false,
+        "fieldNumber" : 36003298,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddressV2_postalAddressV2",
+        "msgClass" : "EMPostalAddressV2",
+        "repeated" : false
+      }
+    }
+  },
+  "PhotosMCAudioMaskRoot" : {
+
+  },
+  "CPBLXsDefsRoot" : {
+
+  },
+  "RtcClientRoot" : {
+
+  },
+  "EMWebPageV2Root" : {
+    "EMEmbedClientItem" : {
+      "40154698" : {
+        "packable" : false,
+        "fieldNumber" : 40154698,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMWebPageV2_webPageV2",
+        "msgClass" : "EMWebPageV2",
+        "repeated" : false
+      }
+    }
+  },
+  "CPBLChatLoggingEnumRoot" : {
+
+  },
+  "EMPlaceV2Root" : {
+    "EMEmbedClientItem" : {
+      "35825640" : {
+        "packable" : false,
+        "fieldNumber" : 35825640,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlaceV2_placeV2",
+        "msgClass" : "EMPlaceV2",
+        "repeated" : false
+      }
+    }
+  },
+  "EMGeoCoordinatesItemRoot" : {
+    "EMEmbedClientItem" : {
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "CPBLHangoutTimingRoot" : {
+
+  },
+  "APIErrorOutputRoot" : {
+
+  },
+  "TPODataRoot" : {
+
+  },
+  "AutoEnhanceSettingsRoot" : {
+
+  },
+  "LocationRequestsRoot" : {
+
+  },
+  "CPBHEligibleCallerIdRoot" : {
+
+  },
+  "GPBTimestampRoot" : {
+
+  },
+  "GPBEmptyRoot" : {
+
+  },
+  "EndcauseRoot" : {
+
+  },
+  "UFIosClientRoot" : {
+
+  },
+  "PhotosMCItemRoot" : {
+
+  },
+  "CPBLNodeDefsRoot" : {
+
+  },
+  "OZACResponsesRoot" : {
+
+  },
+  "EMEmbedCommonRoot" : {
+
+  },
+  "UpdateUpdatesRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "LocationDataRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "OzInternalApiRoot" : {
+    "EMEmbedClientItem" : {
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "EMPersonV2Root" : {
+
+  },
+  "TSGResponsesRoot" : {
+
+  },
+  "PhotosLocationRoot" : {
+
+  },
+  "GPBTypeRoot" : {
+
+  },
+  "EMGeoCoordinatesV2Root" : {
+    "EMEmbedClientItem" : {
+      "36736749" : {
+        "packable" : false,
+        "fieldNumber" : 36736749,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinatesV2_geoCoordinatesV2",
+        "msgClass" : "EMGeoCoordinatesV2",
+        "repeated" : false
+      }
+    }
+  },
+  "ProfileRequestsRoot" : {
+    "EMEmbedClientItem" : {
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "NoiseProfileRoot" : {
+
+  },
+  "GPBApiRoot" : {
+
+  },
+  "PhotoRequestsRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "GPBStructRoot" : {
+
+  },
+  "CPBLTransportEventRoot" : {
+
+  },
+  "SocialSegmentRoot" : {
+
+  },
+  "PhotoReadRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "EMPlusPhotoV2Root" : {
+    "EMEmbedClientItem" : {
+      "40655821" : {
+        "packable" : false,
+        "fieldNumber" : 40655821,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlusPhotoV2_plusPhotoV2",
+        "msgClass" : "EMPlusPhotoV2",
+        "repeated" : false
+      }
+    }
+  },
+  "ChatMessageRoot" : {
+
+  },
+  "PhotoDeletephotoRoot" : {
+
+  },
+  "PhotoCommonRoot" : {
+
+  },
+  "HOPBMediaLoggingRoot" : {
+
+  },
+  "CPBLXsTypesRoot" : {
+
+  },
+  "UpdateSharingrosterRoot" : {
+
+  },
+  "PhotosTileRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "GPBSourceContextRoot" : {
+
+  },
+  "EMPlusAudioV2Root" : {
+    "EMEmbedClientItem" : {
+      "62101782" : {
+        "packable" : false,
+        "fieldNumber" : 62101782,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlusAudioV2_plusAudioV2",
+        "msgClass" : "EMPlusAudioV2",
+        "repeated" : false
+      }
+    }
+  },
+  "GPBFieldMaskRoot" : {
+
+  },
+  "GPBWrappersRoot" : {
+
+  },
+  "SDISSaesRoot" : {
+
+  },
+  "TSGDataRoot" : {
+
+  },
+  "PhotoCreatetagRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "PhotosMCReadItemsByIdRoot" : {
+
+  },
+  "PhotoEmptytrashRoot" : {
+
+  },
+  "BUZZBuzzLogEnumRoot" : {
+
+  },
+  "AttachmentRoot" : {
+
+  },
+  "PropertyEnumRoot" : {
+
+  },
+  "ProfileDataRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "SLOGSocialAffinityExtensionRoot" : {
+
+  },
+  "TSGRequestsRoot" : {
+
+  },
+  "POSPResponsesRoot" : {
+
+  },
+  "GCVTypesRoot" : {
+
+  },
+  "ProfileResponsesRoot" : {
+    "EMEmbedClientItem" : {
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      }
+    }
+  },
+  "EMPlusPhotoItemRoot" : {
+    "EMEmbedClientItem" : {
+      "27639957" : {
+        "packable" : false,
+        "fieldNumber" : 27639957,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlusPhoto_plusPhoto",
+        "msgClass" : "EMPlusPhoto",
+        "repeated" : false
+      },
+      "27364648" : {
+        "packable" : false,
+        "fieldNumber" : 27364648,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMGeoCoordinates_geoCoordinates",
+        "msgClass" : "EMGeoCoordinates",
+        "repeated" : false
+      },
+      "27535952" : {
+        "packable" : false,
+        "fieldNumber" : 27535952,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMImageObject_imageObject",
+        "msgClass" : "EMImageObject",
+        "repeated" : false
+      },
+      "26807906" : {
+        "packable" : false,
+        "fieldNumber" : 26807906,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlace_place",
+        "msgClass" : "EMPlace",
+        "repeated" : false
+      },
+      "27364630" : {
+        "packable" : false,
+        "fieldNumber" : 27364630,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPostalAddress_postalAddress",
+        "msgClass" : "EMPostalAddress",
+        "repeated" : false
+      }
+    }
+  },
+  "UFMathRoot" : {
+
+  },
+  "HOPBHangoutClientRoot" : {
+    "EMEmbedClientItem" : {
+      "35825640" : {
+        "packable" : false,
+        "fieldNumber" : 35825640,
+        "dataType" : 15,
+        "containingMessageClass" : "EMEmbedClientItem",
+        "wireType" : 2,
+        "singletonName" : "EMPlaceV2_placeV2",
+        "msgClass" : "EMPlaceV2",
+        "repeated" : false
+      }
+    }
+  }
+}
